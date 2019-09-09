@@ -1,0 +1,199 @@
+/* CSS Document */
+/* 992 & up */
+
+.mobilescroll {
+	white-space:normal;
+    overflow-x:hidden;
+}
+.partnerpadding {
+	padding-left:40px!important;
+	padding-right:40px!important;
+}
+.biopopbio {
+	overflow-y:auto;
+	overflow-x:hidden;
+	height:55vh;
+	padding: 20px;
+    margin: 20px 60px 40px;
+}
+.xbg {
+	background-image: url('/wp-content/uploads/avidX.svg');
+	background-repeat: no-repeat;
+	background-position: right 0px bottom -220px;
+	background-size: 600px 600px;
+	width:100%;
+	height:100%;
+}
+.xbglg {
+	background-image: url('/wp-content/uploads/avidX.svg');
+	background-repeat: no-repeat;
+	background-position: right -250px bottom -400px;
+	background-size: 1200px 1200px;
+	width:100%;
+	height:100%;
+}
+.xbgg {
+	background-image: url('/wp-content/uploads/avidXresources.svg');
+	background-repeat: no-repeat;
+	background-position: right 0px bottom -310px;
+	background-size: 800px 800px;
+	width:100%;
+	height:100%;
+}
+.greentopsliver {
+	background-color:$secondary-color;
+	width:100%;
+	position: absolute;
+    height: 30px;
+	margin-top: -30px;
+	z-index: -1;
+}
+.greentopsliver:after {
+  background-color:$secondary-color;
+  content: '';
+  display: block;
+  height: 100px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  transform: skewY(-1.6deg);
+  transform-origin: 100%;
+  z-index: -1;
+  top: -83px;
+}
+footer.container { margin-top: 149px; }
+.greenbottomsliver {
+  background: $secondary-color;
+  position: relative;
+  height:10px;
+  margin-bottom: -13.3%;
+  margin-top: 200px;
+  z-index: -1;
+  
+  &:before {
+    background: inherit;
+    content: '';
+    display: block;
+    height: 200px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    -webkit-backface-visibility: hidden; // for Chrome Windows
+  }
+
+  &:before {
+    top: 0;
+    transform: skewY(7deg);
+    transform-origin: 100% 0;
+  }
+}
+.bluebottomsliver {
+  background: $primary-color;
+  position: relative;
+  z-index: -1;
+  
+  &:before {
+    background: inherit;
+    content: '';
+    display: block;
+    height: 200px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    -webkit-backface-visibility: hidden; // for Chrome Windows
+  }
+
+  &:before {
+    top: 0;
+    transform: skewY(-7deg);
+    transform-origin: 100% 0;
+  }
+}
+.graybottomsliver {
+  background: #d8d8d8;
+  position: relative;
+  z-index: -2;
+  
+  &:before {
+    background: inherit;
+    content: '';
+    display: block;
+    height: 100px;
+    bottom: -150px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    -webkit-backface-visibility: hidden; // for Chrome Windows
+  }
+}
+.historydate {
+	padding-top:24px;	
+}
+.historypadding {
+	padding-bottom:46px;
+}
+.taleft {
+	text-align:left;
+}
+.taright {
+	text-align:right;
+}
+.historyline {
+	background-image:url(/wp-content/uploads/2016/10/historyline.gif);
+	background-repeat: repeat-y;
+	background-position: center top;
+}
+.newsloopitem h6, .newsloopitem p, .resourceloopitem h6, .resourceloopitem p {
+	text-align:left;
+	padding: 0px 0px;
+	margin-top:0px;
+}
+.grid figure {
+	position: relative;
+	overflow: hidden;
+	margin: 10px auto;
+	min-width: 320px;
+	max-width: 480px;
+	max-height: 416px;
+	width: 48%;
+	height: auto;
+	background: #3085a3;
+	text-align: center;
+	cursor: pointer;
+	border: 1px solid #f2f2f2;
+}
+.newsloopitem figure.effect-jazz figcaption::after {
+	top: 150px;
+}
+.resourceloopitem figure.effect-jazz figcaption::after {
+	top: 150px;
+}
+.xbggray {
+	background-image: url('/wp-content/uploads/avidXsolutions.svg');
+	background-repeat: no-repeat;
+	background-position: right -120px bottom -360px;
+	background-size: 1000px 1000px;
+	width:100%;
+	height:100%;
+}
+.solutionfooter {
+	margin-top:195px;
+}
+.varyspacer { min-height:20px; }
+.whatisapspacer { padding-left:80px!important; }
+.event-newsletter {
+    float: left;
+    width: 120vw;
+    position: relative;
+    margin-left: -50vw !important;
+    left: 40%;
+}
+.mobilescroll a {
+	padding: 24px 16px;
+	font-size: 16px;
+}
+.subsearchbox { max-width:200px; border: 1px solid #ccc; padding: 5px 0 3px 8px; border-radius: 2px; }
+.morecats { font-size:16px; }

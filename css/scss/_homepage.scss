@@ -1,0 +1,735 @@
+/* Start Wordpress Homepage Page Styles */
+.home-opening {
+		position:relative;
+		height:100vh;
+		min-height:800px;
+		overflow:hidden;
+		background:$grey;
+		@include respond-at(1449px) {
+			min-height:700px;
+		}
+		@include respond-at(999px) {
+			padding:150px 0 0;
+			height:auto;
+			min-height:0;
+		}
+		@include respond-at(699px) {
+			padding:100px 0 0;
+		}
+		.opening-video {
+			position:fixed;
+			opacity:0.25;
+			width:100%;
+			background:$grey;
+			height:100vh;
+			top:0;
+			left:0;
+			z-index:1;
+			overflow:hidden;
+			video {
+				width:auto;
+				height:auto;
+				min-width:100%;
+				min-height:100%;
+				top:0;
+				left:0;
+				position:absolute;
+				z-index:1;
+				max-width:none;
+			}
+		}
+		.opening-demo-form {
+			position:absolute;
+			right:-100%;
+			bottom:0;
+			padding:75px 80px 225px;
+			box-sizing:border-box;
+			text-align:center;
+			z-index:3;
+			transition:right 800ms ease;
+			@include linearGradient($limegreen, #72bd42);
+			@include respond-at(1599px) {
+				padding:50px 50px 200px;
+			}
+			@include respond-at(999px) {
+				right:auto;
+				width:90%;
+				margin:0 auto;
+				display:block;
+				position:relative;
+				max-width:500px;
+				padding:50px 30px 150px;
+			}
+			&.visible {
+				right:0;
+			}
+			.heading {
+				font-family:$font-fam;
+				font-size:24px;
+				text-transform:uppercase;
+				color:#fff;
+				font-weight:$fwblack;
+				letter-spacing:1px;
+				padding-bottom:30px;
+			}
+			form {
+				width:400px;
+				display:block;
+				margin:0 auto;
+				@include respond-at(1099px) {
+					width:90%;
+					max-width:350px;
+				}
+				ul li {
+					display:block;
+					margin-bottom:20px;
+					input {
+						background:#fff;
+						border:none;
+						height:50px;
+						box-sizing:border-box;
+						padding-left:10px;
+						width:100%;
+						@include placeholder {
+							font-family:$font-fam;
+							font-weight:$fwregular;
+							color:$grey;
+							font-size:16px;
+						}
+						&[type="submit"] {
+							@extend %button-style;
+							width:auto;
+						}
+					}
+				}
+			}
+		}
+		.opening-content {
+			position:relative;
+			z-index:2;
+			color:#fff;
+			text-align:left;
+			top:50%;
+			transform:translateY(-50%);
+			@include respond-at(999px) {
+				top:auto;
+				transform:none;
+				width:90%;
+				text-align:center;
+				display:block;
+				margin:0 auto;
+			}
+			.form-cut {
+				padding-left:10.5%;
+				box-sizing:border-box;
+				width:calc(100% - 525px);
+				@include respond-at(1799px) {
+					padding-left:8.5%;
+				}
+				@include respond-at(1699px) {
+					padding-left:5.5%;
+				}
+				@include respond-at(1599px) {
+					padding-left:4.5%;
+				}
+				@include respond-at(1099px) {
+					width:calc(100% - 475px);
+				}
+				@include respond-at(999px) {
+					width:100%;
+					padding:0;
+					margin:0 auto 30px;
+				}
+				h1 {
+					font-size:$heading1;
+					font-weight:$fwblack;
+					color:#fff;
+					text-transform:uppercase;
+					padding-bottom:15px;
+					@include respond-at(1299px) {
+						font-size:55px;
+					}
+					@include respond-at(1199px) {
+						font-size:50px;
+					}
+					@include respond-at(599px) {
+						font-size:45px;
+					}
+					@include respond-at(499px) {
+						font-size:38px;
+					}
+					@include respond-at(449px) {
+						font-size:30px;
+					}
+					span {
+						color:$limegreen;
+					}
+				}
+				p {
+					color:#fff;
+					padding-bottom:20px;
+					width:75%;
+					max-width:850px;
+					@include respond-at(1599px) {
+						width:100%;
+					}
+				}
+				a {
+					display:none;
+				}
+			}
+		}
+		@include angled(bottom, after, -5.0deg, #ffffff);
+}
+
+.home-details {
+		background:#fff;
+		padding:80px 0 350px;
+		@include respond-at(1599px) {
+			padding:0 0 350px;
+		}
+		@include respond-at(999px) {
+			padding:0 0 250px;
+		}
+		.selections{
+			display:inline-block;
+			vertical-align:top;
+			width:40%;
+			text-align:left;
+			padding-top:50px;
+			box-sizing:border-box;
+			@include respond-at(1599px) {
+				padding-left:5%;
+				width:50%;
+			}
+			@include respond-at(999px) {
+				display:none;
+			}
+			ul li {
+				display:block;
+				margin-bottom:30px;
+				cursor:pointer;
+				&:hover, &.open {
+					
+					.heading {
+						color:$brightblue;
+					}
+				}
+				&.open {
+					
+					.heading {
+						padding-bottom:30px;
+					}
+					.info {
+						max-height:1000px;
+						opacity:1;
+					}
+				}
+				.heading {
+					color:$lightgrey;
+					font-family:$font-fam;
+					font-weight:$fwblack;
+					font-size:$heading2;
+					text-transform:uppercase;
+					@include respond-at(1099px) {
+						font-size:$heading3;
+					}
+				}
+				.info {
+					max-height:0;
+					overflow:hidden;
+					transition:max-height 800ms ease, opacity 500ms ease;
+					opacity:0;
+					p {
+						padding-bottom:15px;
+					}
+				}
+			}
+		}
+		.selection-image {
+			float:right;
+			width:50%;
+			text-align:right;
+			height:600px;
+			overflow:hidden;
+			@include respond-at(1599px) {
+				width:45%;
+			}
+			@include respond-at(999px) {
+				display:none;
+			}
+			img {
+				width:auto;
+				max-width:100%;
+				height:auto;
+				max-height:100%;
+			}
+		}
+		.mobile-selections {
+			display:none;
+			max-width:90%;
+			margin:0 auto;
+			@include respond-at(999px) {
+				display:block;
+			}
+			ul li {
+				img {
+					width:90%;
+					max-width:600px;
+					max-height:500px;
+					display:block;
+					margin:0 auto 30px;
+					@include respond-at(699px) {
+						max-height:325px;
+						width:auto;
+						max-width:90%;
+					}
+				}
+				.heading {
+					color:$brightblue;
+					font-family:$font-fam;
+					font-weight:$fwblack;
+					font-size:$heading3;
+					text-transform:uppercase;
+					padding-bottom:15px;
+				}
+				p {
+					font-size:16px;
+					line-height:20px;
+					padding-bottom:20px;
+				}
+			}
+			.bx-wrapper {
+				max-width:90% !important;
+				margin:0 auto;
+				display:block;
+				@include respond-at(699px) {
+					.bx-viewport {
+						min-height:535px !important;
+					}
+				}
+				.bx-controls-direction {
+					display:none;
+				}
+				.bx-pager.bx-default-pager {
+					margin-top:30px;
+					text-align:center;
+				}
+				.bx-pager.bx-default-pager .bx-pager-item {
+					width:18px;
+					height:18px;
+					border-radius:50%;
+					display:inline-block;
+					vertical-align:top;
+					margin:0 8px 8px;
+					transition:width 300ms ease;
+					&:hover a {
+						background:$limegreen;
+						width:18px;
+						height:18px;
+						top:-1px;
+						position:relative;
+					}
+					a {
+						text-indent:-9999px;
+						display:block;
+						width:16px;
+						height:16px;
+						border-radius:50%;
+						background:$grey;
+						&.active {
+							background:$limegreen;
+							width:18px;
+							height:18px;
+							top:-1px;
+							position:relative;
+						}
+					}
+				}
+			}
+		}
+}
+
+.home-search {
+		background:url('../img/home/blueangle_bg2.png') no-repeat;
+		background-size:100% 100%;
+		background-position:center top;
+		padding:300px 0 250px;
+		text-align:center;
+		color:#fff;
+		margin:-220px auto -170px;
+		z-index:4;
+		@include angled(bottom, after, 5.0deg, #ffffff);
+		@include respond-at(999px) {
+			padding:235px 0 150px;
+			margin: -220px auto -115px;
+		}
+		@include respond-at(749px) {
+			padding:150px 0 150px;
+		}
+		h2 {
+			color:#fff;
+			font-size:$heading2;
+			@include respond-at(999px) {
+				font-size:$heading3;
+			}
+			@include respond-at(699px) {
+				font-size:$heading5;
+			}
+		}
+		ul {
+			width:100%;
+			margin:150px auto 150px;
+			display:flex;
+			justify-content:space-around;
+			align-items:center;
+			flex-flow:row wrap;
+			@include respond-at(899px) {
+				margin:80px auto 150px;
+			}
+			li {
+				max-width:22%;
+				min-width:20%;
+				height:200px;
+				margin:0 2% 50px;
+				@include respond-at(1499px) {
+					margin:0 2%;
+				}
+				@include respond-at(999px) {
+					height:auto;
+					margin:0 2% 30px;
+				}
+				@include respond-at(699px) {
+					max-width:40%;
+				}
+				img {
+					width:auto;
+					height:auto;
+					max-width:100%;
+					max-height:150px;
+				}
+			}
+		}
+		.searchbox {
+			background: #eef1f4;
+			padding:80px 60px;
+			box-shadow: 0px 50px 50px -40px #404041;
+			margin:-100px auto;
+			display: block;
+			width: 100%;
+			max-width:1000px;
+			position:relative;
+			z-index:9;
+			box-sizing:border-box;
+			@include respond-at(999px) {
+				padding:50px 30px;
+			}
+			.heading {
+				color:$grey;
+				font-weight:$fwblack;
+				font-size:$heading3;
+				font-family:$font-fam;
+				padding-bottom:50px;
+				text-transform:uppercase;
+				@include respond-at(999px) {
+					font-size:$heading4;
+				}
+			}
+			form {
+				width:90%;
+				display:block;
+				text-align:center;
+				margin:0 auto;
+				@include respond-at(999px) {
+					width:98%;
+				}
+				label {
+					display:inline-block;
+					vertical-align:top;
+					width:calc(100% - 200px);
+					text-align:left;
+					color:$grey;
+					font-family:$font-fam;
+					font-weight:$fwregular;
+					font-size:14px;
+					@include respond-at(749px) {
+						width:100%;
+					}
+					input {
+						box-sizing:border-box;
+						border:1px solid #dadada;
+						padding-left:10px;
+						width:90%;
+						height:43px;
+						margin-top:3px;
+						@include respond-at(749px) {
+							width:100%;
+						}
+					}
+				}
+				button {
+					@extend %button-style;
+					padding:0 40px;
+					margin-top:16px;
+				}
+			}
+		}
+}
+
+.home-industries {
+		padding:200px 0;
+		background:#fff;
+		z-index:3;
+		text-align:center;
+		@include respond-at(1399px) {
+			padding:150px 0 80px;
+		}
+		h2 {
+			font-size:$heading2;
+			padding-bottom:50px;
+			@include respond-at(749px) {
+				font-size:$heading3;
+			}
+		}
+		.next, .prev {
+			display:inline-block;
+			vertical-align:top;
+			margin:0 65px 100px;
+			position:relative;
+			width:50px;
+			@include respond-at(399px) {
+				margin:0 25px 50px;
+			}
+			img {
+				width:100%;
+			}
+			a {
+				display:block;
+				width:100%;
+				height:100%;
+				position:absolute;
+				top:0;
+			}
+		}
+		.bx-wrapper {
+			max-width:100% !important;
+		}
+		ul li {
+			overflow:hidden;
+			max-height:375px;
+			position:relative;
+			@include respond-at(1499px) {
+				max-height:365px;
+			}
+			@include respond-at(699px) {
+				width: 250px !important;
+			}
+			@include respond-at(499px) {
+				max-height:200px;
+			}
+			img {
+				width:100%;
+				clip: rect(0px, 450px, 375px, 0px);
+			}
+			.title {
+				font-family:$font-fam;
+				font-weight:$fwbold;
+				font-size:20px;
+				text-transform:uppercase;
+				color:#fff;
+				letter-spacing:1px;
+				position:absolute;
+				top:30px;
+				left:10px;
+				width:200px;
+				line-height:24px;
+			}
+		}
+}
+
+.home-new-study {
+		@include linearGradient($brightblue, $navy);
+		padding:40px 0;
+		text-align:center;
+		position:relative;
+		.close {
+			cursor:pointer;
+			font-family:$font-fam;
+			font-weight:$fwmedium;
+			font-size:24px;
+			color:#fff;
+			opacity:0.35;
+			position:absolute;
+			text-transform:uppercase;
+			right:-20px;
+			top:-15px;
+			background-color:transparent !important;
+			transition:opacity 500ms ease;
+			&:hover {
+				opacity:0.90;
+			}
+			@include respond-at(699px) {
+				display:none;
+			}
+		}
+		.title {
+			text-transform:uppercase;
+			font-family:$font-fam;
+			color:#fff;
+			letter-spacing:1px;
+			display:inline-block;
+			vertical-align:top;
+			font-weight:$fwblack;
+			margin-right:80px;
+			font-size:24px;
+			margin-top:10px;
+			@include respond-at(1299px) {
+				width:100%;
+				text-align:center;
+				line-height:28px;
+				margin:0 auto 15px;
+				display:block;
+			}
+		}
+		a {
+			background:transparent;
+			border:2px solid $limegreen;
+			display:inline-block;
+			vertical-align:top;
+			color:#fff;
+			height:38px;
+			line-height:37px;
+			&:hover {
+				background:$limegreen;
+				color:#fff;
+			}
+			@include respond-at(1299px) {
+				display:block;
+				margin:0 auto;
+				width:160px;
+			}
+		}
+}
+
+.home-testimonials {
+		background:url('../img/home/grey_angle_bg2.png') no-repeat;
+		background-size:cover;
+		background-position:center bottom;
+		padding:150px 0 250px;
+		z-index:4;
+		text-align:center;
+		@include respond-at(1499px)  {
+			padding:80px 0 250px;
+		}
+		@include respond-at(999px)  {
+			padding:80px 0 165px;
+		}
+		.next, .prev {
+			display:inline-block;
+			vertical-align:top;
+			margin:100px 65px 0;
+			position:relative;
+			width:50px;
+			@include respond-at(399px) {
+				margin:50px 25px 0;
+			}
+			img {
+				width:100%;
+			}
+			a {
+				display:block;
+				width:100%;
+				height:100%;
+				position:absolute;
+				top:0;
+			}
+		}
+		.bx-wrapper {
+			max-width:1000px !important;
+		}
+		ul li {
+			margin-bottom:100px;
+			position:relative;
+			opacity:0;
+			transition:opacity 800ms ease;
+			&.active {
+				opacity:1;
+				transition:opacity 800ms ease;
+			}
+			&:before {
+				content:'';
+				background-image:url('../img/home/quote.png');
+				background-repeat:no-repeat;
+				background-size:100%;
+				background-position:center top;
+				width:100px;
+				height:100px;
+				position:absolute;
+				top:225px;
+				left:0;
+				@include respond-at(1399px) {
+					top:175px;
+				}
+				@include respond-at(1399px) {
+					top:125px;
+				}
+				@include respond-at(699px) {
+					width:65px;
+				}
+			}
+			.img-container {
+				height:200px;
+				width:100%;
+				display:block;
+				text-align:center;
+				@include respond-at(1399px) {
+					height:150px;
+				}
+			}
+			img {
+				width:auto;
+				max-width:400px;
+				max-height:100%;
+				margin:0 auto;
+				display:block;
+				@include respond-at(699px) {
+					max-width:80%;
+				}
+			}
+			.quote {
+				color:#fff;
+				font-weight:$fwregular;
+				font-family:$font-fam;
+				font-size:$heading3;
+				line-height:36px;
+				width:100%;
+				padding-bottom:30px;
+				text-align:left;
+				padding-top:100px;
+				box-sizing:border-box;
+				padding-left:125px;
+				@include respond-at(999px) {
+					padding-top:25px;
+					font-size:$heading5;
+					line-height:30px;
+				}
+				@include respond-at(699px) {
+					padding-left:0;
+					font-size:19px;
+					line-height:25px;
+				}
+			}
+			.person {
+				font-family:$font-fam;
+				font-style:italic;
+				font-weight:$fwlight;
+				font-size:25px;
+				padding-right:5%;
+				color:$limegreen;
+				text-align:right;
+				@include respond-at(699px) {
+					font-size:19px;
+				}
+			}
+		}
+}

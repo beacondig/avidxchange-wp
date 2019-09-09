@@ -1,0 +1,214 @@
+$brightblue: #0684c9;
+$navy:#004e74;
+$green:#00AA9D;
+$limegreen:#a4d137;
+$grey:#404041;
+$lightgrey:#eef1f4;
+$jam:#ab218e;
+$softblue: #dbe7ee;
+$errorcolor: #c32727;
+$caustioncolor: #ffc63e;
+$font-fam: 'Artegra Sans Alt', sans-serif;
+
+
+$heading1:64px;
+$heading2:39px;
+$heading3:32px;
+$heading4:28px;
+$heading5:24px;
+
+$fwblack:900;
+$fwextrabold:800;
+$fwbold:700;
+$fwsemi:600;
+$fwmedium:500;
+$fwregular:400;
+$fwlight:300;
+
+
+@mixin respond-at($media) {
+    @media only screen and (max-width: $media){ @content; }
+}	
+	
+@mixin high-res {
+		@media
+			only screen and (-webkit-min-device-pixel-ratio: 2),
+			only screen and (   -moz-min-device-pixel-ratio: 2),
+			only screen and (     -o-min-device-pixel-ratio: 2/1),
+			only screen and (        min-device-pixel-ratio: 2),
+			only screen and (                min-resolution: 192dpi),
+			only screen and (                min-resolution: 2dppx) { 
+				@content;
+			}
+}	
+	
+@mixin transition($info...) {
+		-webkit-transition:$info;
+		-moz-transition:$info;
+		-o-transition:$info;
+		transition:$info;
+}	
+
+@mixin placeholder {
+  #{if(&, "&", "*")}::-webkit-input-placeholder {@content}
+  #{if(&, "&", "*")}:-moz-placeholder           {@content}
+ #{if(&, "&", "*")}::-moz-placeholder          {@content}
+  #{if(&, "&", "*")}:-ms-input-placeholder      {@content}  
+}
+
+@mixin maintain-ratio($ratio: 1 1) {
+		$width: 100%;
+		$height: percentage(nth($ratio, 2) / nth($ratio, 1));
+		width: $width;
+		height: 0;
+		padding-bottom: $height;
+}
+
+@mixin linearGradient($left, $right){
+		background: $left; /* Old browsers */
+		background: -moz-linear-gradient(left,  $left 0%, $right 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, right top, color-stop(0%,$left), color-stop(100%,$right)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(left,  $left 0%,$right 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(left,  $left 0%,$right 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(left,  $left 0%,$right 100%); /* IE10+ */
+		background: linear-gradient(to right,  $left 0%,$right 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$left', endColorstr='$right',GradientType=0 ); /* IE6-9 */
+}
+
+@mixin angled($tb, $ab, $skew, $color) {
+		&:#{$ab} {
+			#{$tb}:0;
+			background:$color;
+			content:'';
+			display:block;
+			height:200px;
+			left:0;
+			position:absolute;
+			right:0;
+			z-index:4;
+			-webkit-backface-visibility:hidden;
+			transform:skewY($skew);
+			transform-origin:100% 0;
+			@include respond-at(999px) {
+				height:150px;
+			}
+		}
+}
+
+/* Base Styles */
+h1, h2, h3, h4 {
+		color:$grey;
+		font-weight:$fwblack;
+		font-family:$font-fam;
+		text-transform:uppercase;
+		letter-spacing:1px;
+}
+
+p {
+		color:$grey;
+		font-weight:$fwmedium;
+		font-size:18px;
+		line-height:28px;
+		font-family:$font-fam;
+		letter-spacing:1px;
+}
+
+%button-style {
+		text-align:center;
+		font-weight: 700;
+		font-family:$font-fam;
+		color:#fff;
+		text-decoration:none;
+		cursor:pointer;
+		display:inline-block;
+		font-size:17px;
+		line-height:42px;
+		height:42px;
+		position:relative;
+		text-transform:uppercase;
+		padding:0 20px;
+		border:2px solid $brightblue;
+		border-radius:6px;
+		background:$brightblue;
+		width:auto;
+		transition:background 300ms linear;
+		z-index:3;
+		letter-spacing:1px;
+		&:hover {
+			background:#fff;
+			color:$brightblue;
+		}
+		@media all and (-ms-high-contrast:none), (-ms-high-contrast:active) {
+			line-height:50px;
+		}
+}
+
+%link-style {
+		font-weight:$fwmedium;
+		font-family:$font-fam;
+		font-size:18px;
+		text-transform:uppercase;
+		color:$brightblue;
+		text-decoration:none;
+		&:hover {
+			color:$brightblue;
+			text-decoration:none;
+		}
+		i {
+			position:relative;
+			top:1px;
+			right:0;
+			transition:right 500ms ease;
+		}
+		&:hover i {
+			right:-8px;
+		}
+}
+
+.wrapper {
+		width:100%;
+		position:relative;
+		overflow:hidden;
+		display:block;
+}
+
+.container, .b-container {
+		max-width:1500px;
+		width:90%;
+		margin:0 auto;
+		display:block;
+		position:relative;
+		padding:0;
+}
+
+.b-container {
+	width:100%;
+}
+
+body {
+		font-family:$font-fam;
+		font-weight:400;
+		color:$grey;
+		margin:0;
+		padding:0;
+}
+
+header, footer, section {
+		z-index:3;
+}
+
+section {
+		margin:0;
+		padding:0;
+		display:block;
+		position:relative;
+		z-index:3;
+}
+
+.btn {
+		@extend %button-style;
+}
+
+.link {
+		@extend %link-style;
+}

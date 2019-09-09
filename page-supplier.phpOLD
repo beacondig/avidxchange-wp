@@ -1,0 +1,76 @@
+<?php
+/**
+ * Template Name: Page - Supplier
+ * Description: Used as a page template to show page Supplier
+ */
+ ?>
+
+<?php get_header(); ?>
+</div>
+<div class="headerbluebg">
+<div class="xbg">
+<div class="container mobilesquish">
+<h1 class="bbh1"><?php the_field('banner_title'); ?></h1>
+<?php if( get_field('banner_description') ): ?>
+	<p><?php the_field('banner_description'); ?></p>
+<?php endif; ?>
+</div></div></div>
+<!--- <div class="greentopsliver"></div> --->
+<div class="submenuholder"></div>
+
+<?php genesis_before_content_sidebar_wrap(); ?>
+<div id="content-sidebar-wrap">
+
+<?php genesis_before_content(); ?>
+<div id="content" class="hfeed">
+	<div class="site-inner container">
+        <div class="row center rowbottompadding">
+            <div class="col-md-8" style="text-align:left;">
+                <div><?php the_field('leftside_content'); ?></div>
+                <div class="tenspacer"></div>
+            </div>
+            <div class="col-md-4" style="text-align:left;">
+            	<h3><?php the_field('form_title'); ?></h3>
+            	<div class="demoform suppform" style="padding:20px 10px 20px 20px;">
+                	<form action="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+
+                    <input type=hidden name="oid" value="00Di0000000eGkZ">
+                    <input type=hidden name="retURL" value="http://marketing.avidxchange.com/landing/thank-you-supplier">
+                    <input type=hidden name="Campaign_Type__c" id="Campaign_Type__c" value="Supplier Site" />
+                    
+                    <!--  ----------------------------------------------------------------------  -->
+                    <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+                    <!--  these lines if you wish to test in debug mode.                          -->
+                    <!--  <input type="hidden" name="debug" value=1>                              -->
+                    <!--  <input type="hidden" name="debugEmail"                                  -->
+                    <!--  value="creynolds@avidxchange.com">                                      -->
+                    <!--  ----------------------------------------------------------------------  -->
+                    
+                    <label for="first_name">First Name</label><br><input  id="first_name" maxlength="40" name="first_name" size="20" type="text" /><br>
+                    
+                    <label for="last_name">Last Name</label><br><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" /><br>
+                    
+                    <label for="company">Company</label><br><input  id="company" maxlength="40" name="company" size="20" type="text" /><br>
+                    
+                    <label for="email">Email</label><br><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
+                    
+                    <label for="phone">Phone</label><br><input  id="phone" maxlength="40" name="phone" size="20" type="text" /><br>
+                    
+                    <label for="00Ni000000BR4FA">Federal Tax ID:</label><br><input  id="00Ni000000BR4FA" maxlength="10" name="00Ni000000BR4FA" size="20" type="text" /><br>
+                    
+                    <input class="suppbutn" type="submit" name="submit">
+                    
+                    </form>
+                
+				</div>
+                <div class="fourtyspacer"></div>
+            </div>
+        </div>
+    </div>
+</div><!-- end #content -->
+<?php genesis_after_content(); ?>
+
+</div><!-- end #content-sidebar-wrap -->
+<?php genesis_after_content_sidebar_wrap(); ?>
+
+<?php get_footer(); ?>

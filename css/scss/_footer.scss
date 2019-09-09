@@ -1,0 +1,162 @@
+footer {
+		background:#fff;
+		padding:80px 0;
+		z-index:3;
+		position:relative;
+		@include respond-at(849px) {
+			padding:50px 0;
+		}
+		.logo {
+			display:block;
+			text-align:left;
+			width:100%;
+			padding-bottom:30px;
+			border-bottom:1px solid $lightgrey;
+			@include respond-at(849px) {
+				text-align:center;
+			}
+			img {
+				width:126px;
+			}
+		}
+		ul.menu {
+			display:flex;
+			flex-flow: row wrap;
+			justify-content:space-between;
+			align-items:flex-start;
+			padding-bottom:30px;
+			border-bottom:1px solid $lightgrey;
+			@include respond-at(699px) {
+				display:block;
+				text-align:center;
+				width:100%;
+			}
+			li {
+				font-family:$font-fam;
+				font-weight:$fwregular;
+				font-size:16px;
+				line-height:16px;
+				margin-bottom:8px;
+				@include respond-at(799px) {
+					min-width:40%;
+				}
+				a {
+					color:$grey;
+					text-decoration:none;
+					&:hover {
+						color:$brightblue;
+					}
+				}
+				&.heading {
+					font-weight:$fwbold;
+					@include respond-at(699px) {
+						margin-bottom:30px;
+					}
+				}
+				&.heading>a {
+					cursor:text;
+					&:hover {
+						color:$grey;
+					}
+				}
+				ul.sub-menu {
+					padding-top:30px;
+					@include respond-at(699px) {
+						padding-top:15px;
+					}
+					li a {
+						cursor:pointer;
+					}
+				}
+			}
+		}
+		.info {
+			width:100%;
+			display:block;
+			padding:30px 0 50px;
+			ul {
+				float:right;
+				display:inline-block;
+				text-align:right;
+				margin-top:-25px;
+				@include respond-at(849px) {
+					float:none;
+					margin:15px auto;
+					display:block;
+					text-align:center;
+				}
+				li {
+					display:inline-block;
+					vertical-align:top;
+					width:35px;
+					height:35px;
+					margin-right:15px;
+					@include respond-at(849px) {
+						margin:0 7.5px;
+					}
+					a {
+						display:inline-block;
+						position:relative;
+						z-index:1;
+						width:100%;
+						span {
+							display:inline-block;
+							width:100%;
+							object {
+								width:100%;
+								position:relative;
+								z-index:-1;
+							}
+							img {
+								width:100%;
+								position:relative;
+							}
+						}
+					}
+				}
+			}
+			.address {
+				color:$grey;
+				font-family:$font-fam;
+				font-size:16px;
+				font-weight:400;
+				@include respond-at(849px) {
+					width:100%;
+					display:block;
+					text-align:center;
+					line-height:22px;
+				}
+				a {
+					color:$grey;
+					text-decoration:none;
+				}
+			}
+		}
+		.copy {
+			color:$grey;
+			font-family:$font-fam;
+			font-size:16px;
+			font-weight:400;
+			@include respond-at(849px) {
+				width:100%;
+				text-align:center;
+			}
+		}
+		.policy {
+			float:right;
+			color:$grey;
+			font-family:$font-fam;
+			font-size:16px;
+			font-weight:400;
+			@include respond-at(699px) {
+				float:none;
+				text-align:center;
+				padding-bottom:15px;
+				font-size:13px;
+			}
+			a {
+				color:$grey;
+				text-decoration:none;
+			}
+		}
+}

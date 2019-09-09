@@ -1,0 +1,29 @@
+/*************************************************************/
+/********************** CORE VARIABLES ***********************/
+/*************************************************************/
+
+/* ( NOTE: Many existing variables can be found in /supporting/bootstrap/_variables.scss
+/          These variables should be overwritten in the /supporting/variables-bootstrap-override.scss file )
+*/
+$primary-color: #004e74;
+$secondary-color: #00a04d;
+$lightblue: #1e95d3;
+$lightgreen: #93c740;
+$cta-color: #FFFFFF;
+$cta-hover-color: #FFFFFF;
+$cta-bgcolor: #ff8a00;
+$cta-hover-bgcolor: #e86100;
+
+
+/* GENESIS RELATED
+***************************************************************/
+$galleryCaptionColor: $thumbnail-caption-color;
+
+$widgetFontColor: $text-color;
+$widgetBgColor: transparent;
+$widgetBorderColor: $gray-lighter;
+
+$commentBgColor: $body-bg;
+$commentBorderColor: $body-bg;
+$singleCommentBgColor: $panel-default-heading-bg;
+$singleCommentPostAuthorBgColor: $state-warning-bg;

@@ -1,0 +1,198 @@
+/* CSS Document */
+/* 0 - 767 */
+
+.mobilescroll {
+	white-space: nowrap;
+    overflow-x: scroll;
+}
+.partnerpadding {
+	padding-left:15px;
+	padding-right:15px;
+}
+.biopopbio {
+	overflow-y:auto;
+	overflow-x:hidden;
+	height:55vh;
+	padding: 20px;
+    margin: 20px 20px 20px;
+}
+.nav li.cta {
+	margin-left: 0px!important;
+}
+.xbg {
+	background-image: url('/wp-content/uploads/avidX.svg');
+	background-repeat: no-repeat;
+	background-position: right -130px bottom -220px;
+	background-size: 600px 600px;
+	width:100%;
+	height:100%;
+}
+.xbglg {
+	background-image: url('/wp-content/uploads/avidX.svg');
+	background-repeat: no-repeat;
+	background-position: right -200px bottom -45px;
+	background-size: 800px 800px;
+	width:100%;
+	height:100%;
+}
+.xbgg {
+	background-image: url('/wp-content/uploads/avidXresources.svg');
+	background-repeat: no-repeat;
+	background-position: right -130px bottom -220px;
+	background-size: 600px 600px;
+	width:100%;
+	height:100%;
+}
+.greentopsliver {
+	background-color:$secondary-color;
+	width:100%;
+	position: absolute;
+    height: 15px;
+	margin-top: -15px;
+	z-index: -1;
+}
+.greentopsliver:after {
+  background-color:$secondary-color;
+  content: '';
+  display: block;
+  height: 100px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  transform: skewY(-1.6deg);
+  transform-origin: 100%;
+  z-index: -1;
+  top: -83px;
+}
+footer.container { margin-top: 79px; }
+.greenbottomsliver {
+  background: $secondary-color;
+  position: relative;
+  height:10px;
+  margin-bottom: -13.3%;
+  margin-top: 100px;
+  z-index: -1;
+  
+  &:before {
+    background: inherit;
+    content: '';
+    display: block;
+    height: 200px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    -webkit-backface-visibility: hidden; // for Chrome Windows
+  }
+
+  &:before {
+    top: 0;
+    transform: skewY(7deg);
+    transform-origin: 100% 0;
+  }
+}
+.bluebottomsliver {
+  background: $primary-color;
+  position: relative;
+  z-index: -1;
+  
+  &:before {
+    background: inherit;
+    content: '';
+    display: block;
+    height: 200px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    -webkit-backface-visibility: hidden; // for Chrome Windows
+  }
+
+  &:before {
+    top: 0;
+    transform: skewY(-7deg);
+    transform-origin: 100% 0;
+  }
+}
+.graybottomsliver {
+  background: #d8d8d8;
+  position: relative;
+  z-index: -2;
+  
+  &:before {
+    background: inherit;
+    content: '';
+    display: block;
+    height: 100px;
+    bottom: -110px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    -webkit-backface-visibility: hidden; // for Chrome Windows
+  }
+}
+.historydate {
+	padding-top:0px;	
+}
+.historypadding {
+	padding-bottom:0px;
+}
+.taleft {
+	text-align:center;
+}
+.taright {
+	text-align:center;
+}
+.historyline {
+	background:none;
+}
+.newsloopitem h6, .newsloopitem p, .resourceloopitem h6, .resourceloopitem p {
+	text-align:center;
+	padding: 0px 0px;
+	margin-top:0px;
+}
+.grid figure {
+	position: relative;
+	overflow: hidden;
+	margin: 10px auto;
+	min-width: 290px;
+	max-width: 480px;
+	max-height: 416px;
+	width: 48%;
+	height: auto;
+	background: #3085a3;
+	text-align: center;
+	cursor: pointer;
+	border: 1px solid #f2f2f2;
+}
+.newsloopitem figure.effect-jazz figcaption::after {
+	top: 100px;
+}
+.resourceloopitem figure.effect-jazz figcaption::after {
+	top: 100px;
+}
+.xbggray {
+	background-image: url('/wp-content/uploads/avidXsolutions.svg');
+	background-repeat: no-repeat;
+	background-position: right -270px bottom -360px;
+	background-size: 1000px 1000px;
+	width:100%;
+	height:100%;
+}
+.solutionfooter {
+	margin-top:100px;
+}
+.varyspacer { min-height:60px; }
+.whatisapspacer { padding-left:15px; }
+.event-newsletter {
+    float: none;
+    width: 100%;
+    position: relative;
+}
+.mobilescroll a {
+	padding: 24px 12px;
+	font-size: 14px;
+}
+.subsearchbox { max-width:150px; border: 1px solid #ccc; margin-left: 10px; font-size: 14px; padding: 5px 0 3px 8px; border-radius: 2px; }
+.morecats { font-size:14px; }

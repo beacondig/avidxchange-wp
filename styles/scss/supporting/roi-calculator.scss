@@ -1,0 +1,730 @@
+.roi-calculator-form-modal .results {
+    display: none;
+}
+
+.results h2 {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    font-size: 24px;
+    padding: 15px;
+    border-top: 5px solid #0074b9
+}
+.results h2 i {
+    display: none
+}
+
+.results .printResults {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #024e68;
+    color: #fff;
+    border: 1px solid #024e68;
+    padding: 5px;
+    transition: all 400ms ease-in-out;
+    font-weight: 300
+}
+
+.results .printResults:focus {
+    outline: none
+}
+
+.results .printResults:hover {
+    background-color: #026181;
+    cursor: pointer
+}
+
+.results .printResults:disabled {
+    background-color: #aaa;
+    border-color: #aaa
+}
+
+.results .compareYourSavings .processingCosts .monthlySavings .graph .industry,
+.results .compareYourSavings .processingCosts .monthlySavings .graph .avid {
+    width: 30%;
+    display: inline-block;
+    position: relative;
+    line-height: 0 !important;
+    vertical-align: bottom !important;
+}
+.results .compareYourSavings .processingCosts .monthlySavings .graph .industry .marker,
+.results .compareYourSavings .processingCosts .monthlySavings .graph .avid .marker {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border-top: 2px solid black;
+    display: inline-block;
+    left: 110%;
+    background-color: transparent;
+    line-height: 0 !important;
+    vertical-align: top;
+}
+.results {
+    background-color: #fff;
+    padding-bottom: 40px
+}
+.results h2 {
+    text-align: center;
+    line-height: 1.3
+}
+.results h3 {
+    font-size: 24px;
+    font-weight: 300;
+    padding-top: 40px;
+    text-align: center
+}
+
+.results ul {
+    padding: 0 !important;
+}
+
+.results .savings {
+    width: 49%;
+    display: inline-block;
+    font-size: 16px;
+    text-align: center;
+    padding: 10px;
+    padding-top: 40px
+}
+.results .savings .coinBorder {
+    display: none
+}
+.results .savings svg {
+    /* visibility: hidden; */
+    position: absolute;
+}
+.results .savings .amount {
+    display: inline-block;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 150px;
+    width: 150px;
+    background-color: #024e68;
+    color: #fff;
+    border-radius: 50%;
+    line-height: 142px;
+    font-size: 20px;
+    border: 8px solid #03749a;
+    font-size: 28px;
+}
+.results .savings h3 {
+    padding-top: 25px;
+    margin-bottom: 20px;
+    line-height: 1.3
+}
+.results .savings s{
+    display: block;
+    font-weight: 700
+}
+.results .savings {
+    /* visibility: hidden */
+}
+.results .compareYourSavings {
+    /* visibility: hidden */
+}
+.results .savings.visible {
+    height: auto!important;
+    visibility: visible
+}
+.results .compareYourSavings.visible {
+    height: auto!important;
+    visibility: visible
+}
+.results .dollars .amount {
+    background-image: url("https://s3.amazonaws.com/flabs/pig.png");
+}
+.results .manHours .amount {
+    background-image: url("https://s3.amazonaws.com/flabs/person.png");
+    background-size: 30%
+}
+.results .compareYourSavings {
+    width: 100%
+}
+.results .compareYourSavings h3 {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    font-size: 18px;
+    padding: 15px;
+    line-height: 1.5;
+    text-align: center
+}
+.results .compareYourSavings hr {
+    display: none
+}
+.results .compareYourSavings .processingCosts {
+    vertical-align: top;
+    padding-top: 0 !important;
+}
+
+.results .compareYourSavings .processingCosts h4 {
+    font-size: 17px;
+    font-weight: 300;
+    text-align: center;
+    padding-top: 30px;
+    margin-bottom: 20px
+}
+.results .compareYourSavings .processingCosts .compareCosts li {
+    display: inline-block;
+    width: 49%;
+    vertical-align: top;
+    text-align: center
+}
+.results .compareYourSavings .processingCosts .compareCosts li p {
+    font-style: italic;
+    font-size: 15px;
+    margin-bottom: 10px;
+    display: inline-block
+}
+.results .compareYourSavings .processingCosts .compareCosts li p:before {
+    content: " ";
+    height: 25px;
+    width: 25px;
+    display: inline-block;
+    margin-right: 6px;
+    position: relative;
+    top: 6px
+}
+.results .compareYourSavings .processingCosts .compareCosts li.industry .cost {
+    color: #0684c9
+}
+.results .compareYourSavings .processingCosts .compareCosts li.industry p:before {
+    background-color: #0684c9
+}
+.results .compareYourSavings .processingCosts .compareCosts li.avid .cost {
+    color: #a4d137
+}
+.results .compareYourSavings .processingCosts .compareCosts li.avid p:before {
+    background-color: #a4d137
+}
+.results .compareYourSavings .processingCosts .compareCosts .cost {
+    font-size: 18px;
+    display: block
+}
+.results .compareYourSavings .processingCosts .monthlySavings {
+    padding: 40px 20px 0 0;
+    margin-bottom: 40px;
+    height: 200px;
+    display: flex;
+    align-items: center
+}
+.results .compareYourSavings .processingCosts .monthlySavings .info {
+    text-align: center;
+    font-size: 16px;
+    width: 50%;
+    display: inline-block;
+    vertical-align: top
+}
+.results .compareYourSavings .processingCosts .monthlySavings .info .amount {
+    font-size: 20px;
+    font-weight: 700
+}
+.results .compareYourSavings .processingCosts .monthlySavings .graph {
+    padding: 0 20px;
+    vertical-align: top;
+    width: 50%;
+    display: inline-block;
+    height: 100%;
+    border-bottom: 4px solid black;
+    position: relative;
+    margin: 0 auto;
+    max-width: 200px
+}
+.results .compareYourSavings .processingCosts .monthlySavings .graph .industry {
+    background-color: #0684c9;
+}
+.results .compareYourSavings .processingCosts .monthlySavings .graph .avid {
+    background-color: #a4d137;
+    right: 15px;
+}
+.results .compareYourSavings .processingCosts .monthlySavings .graph .percentage {
+    font-size: 36px;
+    position: absolute;
+    bottom: 50%;
+    right: 3%
+}
+.results .printResults {
+    margin: 0 auto;
+    font-size: 26px;
+    display: none
+}
+.results .visible {
+    display: inline-block;
+    opacity: 1
+}
+.results .printResults.visible {
+    display: block!important
+}
+
+svg {
+    display: none;
+}
+
+.results {
+    text-align: center;
+}
+
+.roi-calculator-form-modal .modal-header {
+    border: 0;
+}
+
+.roi-calculator-form-modal .ginput_container {
+    margin-top: 0 !important;
+}
+
+.roi-calculator-form-modal label.gfield_label {
+    margin-bottom: 0;
+    font-weight: normal !important;
+}
+
+.roi-calculator-form-modal h2, .roi-calculator-form-modal span.header {
+    text-align: center;
+    color: #fff;
+    font-size: 32px;
+    margin-bottom: 12.5px;
+    margin-top: 0;
+    font-weight: 500;
+    display: block;
+}
+
+.roi-calculator-form-modal .modal-content {
+    background: #1e95d3;
+    background: -moz-linear-gradient(-30deg, #1e95d3 45%, #00719e 100%);
+    background: -webkit-linear-gradient(-30deg, #1e95d3 45%, #00719e 100%);
+    background: linear-gradient(120deg, #1e95d3 45%, #00719e 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1e95d3', endColorstr='#00719E',GradientType=1);
+    border: 0;
+}
+
+.roi-calculator-form-modal label, .roi-calculator-form-modal h2, .roi-calculator-form-modal h3, .roi-calculator-form-modal button.close span {
+    color: #FFFFFF;
+}
+
+.roi-calculator-form-modal label[for="input_18_4_3"]:not(.gfield_label), .roi-calculator-form-modal label[for="input_18_4_6"], .roi-calculator-form-modal .gsection_description {
+    display: none !important;
+}
+
+.roi-calculator-form-modal .gform_wrapper .gform_footer {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.roi-calculator-form-modal .gform_wrapper .gsection {
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+}
+
+.roi-calculator-form-modal input[type="submit"] {
+    font-weight: bold;
+    background-color: #ff8a00 !important;
+    color: #FFFFFF;
+    padding-right: 10px;
+    width: 100% !important;
+}
+
+.roi-calculator-form-modal input[type="submit"]:hover {
+    background-color: #e86100 !important;
+}
+
+.roi-calculator-form-modal .gform_wrapper .gfield_error .gfield_label, .roi-calculator-form-modal .gform_wrapper .validation_message, .roi-calculator-form-modal .gfield_required {
+    color: #FFCD00 !important;
+}
+
+.roi-calculator-form-modal .validation_error {
+    text-align: center !important;
+    color: #FFCD00 !important;
+}
+
+.roi-calculator-form-modal .modal-header button.close {
+    color: #1e95d3;
+    background: none !important;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+button.close:focus {
+    outline: 0 !important;
+}
+
+.roi-calculator-form .instruction {
+    display: none;
+}
+
+@media only screen and (min-width: 1080px) {
+    svg {
+        display: block;
+    }
+
+    body.notIE .results .savings {
+        opacity: 0;
+        transition: all 2s ease-in-out;
+        -webkit-transition-delay: 500ms;
+        transition-delay: 500ms
+    }
+    .results .savings {
+        position: relative
+    }
+    body.ie11 .results .savings {
+        display: none;
+        opacity: 1!important;
+        visibility: visible!important;
+        transition: none;
+        transition-delay: none
+    }
+    body.ie11 .show.results .savings {
+        display: inline-block
+    }
+    .results .savings svg {
+        visibility: visible;
+        position: absolute;
+        top: 3px;
+        left: 0
+    }
+    .results .savings circle {
+        transition: stroke-dashoffset 1s 1s;
+        -webkit-transition-delay: 1000ms;
+        transition-delay: 1000ms;
+        stroke-dashoffset: 107
+    }
+    .results .savings .amount {
+        width: 200px;
+        height: 200px;
+        line-height: 190px;
+        position: relative;
+        z-index: 800;
+    }
+    body.notIE .results .compareYourSavings {
+        transition-delay: 2500ms
+    }
+    body.ie11 .results .compareYourSavings {
+        display: none;
+        opacity: 1!important;
+        visibility: visible!important;
+        transition-delay: none;
+        transition: none
+    }
+    body.ie11 .show.results .compareYourSavings {
+        display: inline-block
+    }
+    .results .compareYourSavings h3 {
+        background-color: transparent;
+        color: #000;
+        font-weight: 300
+    }
+    .results .compareYourSavings hr {
+        display: block;
+        margin: 0 40px;
+        color: #aaa
+    }
+    .results .compareYourSavings .processingCosts {
+        width: 49%;
+        display: inline-block;
+        padding: 20px 50px
+    }
+    .results .compareYourSavings .processingCosts .monthlySavings {
+        position: relative
+    }
+    .results .compareYourSavings .processingCosts .monthlySavings .info {
+        width: 40%;
+        line-height: 1.5;
+        font-weight: 300;
+        position: relative;
+        left: 40px
+    }
+    .results .compareYourSavings .processingCosts .monthlySavings .info .amount {
+        font-size: 24px
+    }
+    .results .compareYourSavings .processingCosts .monthlySavings .graph {
+        width: 50%
+    }
+    .results .printResults {
+        transition: all 2s ease-in-out;
+        -webkit-transition-delay: 2000ms;
+        transition-delay: 2000ms;
+        opacity: 0;
+        padding: 10px 20px
+    }
+    .results .printResults i {
+        margin-left: 5px
+    }
+    .results .visible {
+        display: inline-block;
+        opacity: 1;
+        visibility: visible
+    }
+    .results .visible svg circle {
+        stroke-dashoffset: 0
+    }
+    .results.full {
+        max-height: none
+    }
+   
+    html.ie9 .results .printResults:disabled {
+        text-indent: -999px;
+        min-width: 127px;
+        height: 38px;
+        background-image: url('http://cdn2.hubspot.net/hub/430000/file-2650867794-gif/ROI_Calculator/next.gif');
+        background-position: center
+    }
+    html.ie9 .company #getResults:disabled {
+        background-image: url('http://cdn2.hubspot.net/hub/430000/file-2655254677-gif/ROI_Calculator/get-my-results.gif')!important
+    }
+}
+
+@media only screen and (max-width: 525px) {
+    .results .savings {
+        width: 100%;
+    }
+}
+
+@media print {
+    .print-logo-img-container {
+        margin: 20px;
+    }
+    .industry .cost {
+        color: #0684c9 !important;
+    }
+    .avid .cost {
+        color: #a4d137 !important;
+    }
+    
+    #roi-calculator .calculatorWrap {
+        padding: 0
+    }
+    .hs-tools-menu.hs-collapsed {
+        display: none!important
+    }
+    #hero {
+        min-height: 0!important;
+        background: none!important
+    }
+    #hero-left {
+        margin: 40px auto 0 auto!important;
+        width: 90%!important
+    }
+    .results h3 {
+        display: none
+    }
+    .results .savings h3 {
+        display: inline-block;
+        font-size: 18px
+    }
+    .results .savings .amount {
+        color: #333
+    }
+    .results .compareYourSavings h3 {
+        display: block;
+        color: #333
+    }
+    .results .compareYourSavings .processingCosts {
+        max-height: 200px;
+        margin-bottom: 100px;
+    }
+    .results .compareYourSavings .processingCosts .compareCosts {
+        width: 57%;
+        display: block;
+        text-align: right;
+        float: left;
+    }
+    .results .compareYourSavings .processingCosts .compareCosts li {
+        width: auto!important;
+        margin: 0 30px
+    }
+
+    .results .compareYourSavings .processingCosts .compareCosts p:before {
+        content: initial !important;
+    }
+    
+    .results .compareYourSavings .processingCosts .monthlySavings .info p {
+        margin-bottom: 5px;
+    }
+    
+    .results .compareYourSavings .processingCosts .monthlySavings .info {
+        width: 100%;
+    }
+
+    .results .compareYourSavings .processingCosts h4 {
+        width: 100%;
+        display: inline-block;
+        padding-top: 0!important
+    }
+    .results .compareYourSavings .processingCosts .monthlySavings {
+        display: inline-block;
+        text-align: center;
+        padding: 9px 108px 0 0;
+        margin: 0;
+        float: left;
+        height: auto;
+        padding-top: 0;
+        padding-left: 30px;
+    }
+    .results .compareYourSavings .processingCosts .monthlySavings .graph {
+        display: none
+    }
+    .nextSteps {
+        display: none
+    }
+    .results .print-results {
+        display: none!important
+    }
+    #share-linkedin {
+        display: none!important
+    }
+    #secondary-ms {
+        padding: 0 0 20px 0!important
+    }
+    #secondary-ms h3 {
+        margin-bottom: 10px!important;
+        font-size: 16pt
+    }
+    #footer {
+        display: none
+    }
+    #wrapper {
+        width: 99%!important;
+        height: 99%!important;
+        overflow: none!important;
+        margin: 0!important;
+        padding: 0!important
+    }
+    
+    
+}
+
+.roi-calculator-form-modal h2 {
+    font-size: 28px;
+    padding-left: 10px;
+    margin-top: 0;
+}
+
+.roi-calculator-form-modal .gform_wrapper h2.gsection_title, .roi-calculator-form-modal .gform_wrapper h3.gsection_title {
+    font-size: 16px !important;
+}
+
+.roi-calculator-form-modal .gform_confirmation_wrapper {
+    display: none;
+}
+
+.user-inputs {
+    display: none;
+}
+
+button.print-results {
+    background-color: #024e68!important;
+    @extend a.secondarybutton;
+    @extend a.mediumbutton;
+    border: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    display: none;
+}
+
+button.print-results:hover {
+    background-color: #135f79 !important;
+}
+
+.roi-calculator-form-modal button.secondarybutton, .roi-calculator-form-modal input[type="button"] {
+    @extend a.secondarybutton;
+    border: 0;
+}
+
+.roi-calculator-form-modal button.mediumbutton, .roi-calculator-form-modal input[type="button"], .roi-calculator-form-modal input[type="submit"] {
+    @extend a.mediumbutton;
+    border: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.roi-calculator-form-modal {
+    .gf_progressbar_wrapper {
+        display: none;
+    }
+}
+
+.roi-calculator-form li .gfield_label {
+    font-size: 16px !important;
+}
+
+li.user-email .ginput_container_email, li.user-email .ginput_container_email input {
+    width: 100% !important;
+}
+
+li.user-phone .ginput_container_phone, li.user-phone .ginput_container_phone input {
+    width: 100% !important;
+}
+
+#gform_18 li:not(.user-email) .gfield_label {
+    width: 75%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#gform_18 li.user-email .gfield_label {
+    margin-bottom: 5px;
+}
+
+#gform_18 li .ginput_container_number {
+    width: 24%;
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 5%;
+}
+
+#gform_18 li .ginput_container_number input {
+    width: 100%;
+}
+
+#gform_18 .gfield_required {
+    display: none;
+}
+
+.roi-calculator-form_wrapper.gform_wrapper li.gfield.gfield_error {
+    border: 0 !important;
+}
+
+.roi-calculator-form_wrapper.gform_wrapper div.validation_error {
+    border: 0;
+    padding: 0;
+    text-align: left;
+    font-size: .8em;
+}
+
+a[data-target="#roi-calculator-form-modal"] {
+    border: 0 !important;
+    text-decoration: none !important;
+}
+
+a[data-target="#roi-calculator-form-modal"]:focus {
+    outline: 0 !important;
+    border: 0 !important;
+}
+
+.page-template-page-results .share {
+    display: table;
+    text-align: center;
+    margin: 0 auto;
+    border-bottom: 1px solid gainsboro;
+
+    .share-text {
+        margin-bottom: 10px;
+        display: block;
+    }
+}
+
+.roi-calculator-form .gform_ajax_spinner {
+    display: block;
+    margin: 0 auto;
+    margin-top: 5px;
+}
+
+.page-template-page-results {
+    .email-cresta-share {
+        display: block;
+    }
+
+    .print-cresta-share {
+        display: block;
+    }
+}

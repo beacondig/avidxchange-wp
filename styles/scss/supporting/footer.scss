@@ -1,0 +1,62 @@
+/* CSS Document */
+
+footer.container {
+	width:100%!important;	
+	background-color:#606060;
+	background-image: url('/wp-content/uploads/avidXfooter.svg');  /* '/wp-content/uploads/2016/10/footerx.png' */
+    background-repeat: no-repeat;
+    background-position: right -160px bottom -200px;
+    background-size: 750px 750px;
+	color:#ffffff;
+	a {
+		color:#ffffff;
+		font-size:14px;
+	}
+	a:hover {
+		text-decoration:underline;			
+	}
+	a i.fa {
+		font-size:44px;
+		margin-right:20px;
+	}
+	a i.last {
+		margin-right:0px!important;
+	}
+	div.row {
+		text-align:center;	
+		width: 100%;
+    	overflow-x: hidden;
+	}
+	h5 {
+		padding-top:10px;	
+	}
+	.ilink a:hover {
+		color:#00a04d!important;	
+	}
+}
+.footpad {
+	padding:60px 0px;	
+}
+.rowspacer {
+	padding-bottom:0px;
+}
+.smfoot {
+	font-size:16px;
+	text-align: center;
+}
+
+@media (min-width: 992px) {
+	.rowspacer {
+		padding-bottom:20px;
+	}
+	footer.container {
+		div.row {
+			text-align:left;
+			width: 100%;
+    		overflow-x: hidden;
+		}
+		h5 {
+			padding-top:0px;	
+		}
+	}
+}

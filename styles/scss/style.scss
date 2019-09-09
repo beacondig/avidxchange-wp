@@ -1,0 +1,123 @@
+/*
+* Sass (http://sass-lang.com/) file to generate theme.css
+*/
+
+/*************************************************************/
+/*************** CUSTOM AVID CORE STYLES BELOW ***************/
+/*************************************************************/
+
+/* Avid New Variables
+------------------------------------------------------------ */
+@import "supporting/variables-avid";
+
+
+
+/*************************************************************/
+/***************** DEFAULT CORE STYLES BELOW *****************/
+/*************************************************************/
+
+/* Bootstrap Core Override Variables
+------------------------------------------------------------ */
+@import "supporting/variables-bootstrap-override";
+
+/* Bootstrap Base
+------------------------------------------------------------ */
+@import "supporting/bootstrap";
+
+/* Screen Reader Classes
+------------------------------------------------------------ */
+@import "supporting/screen-reader-text";
+
+/* Archive/Blog Styling
+------------------------------------------------------------ */
+@import "supporting/archive";
+
+/* Nav Styling
+------------------------------------------------------------ */
+@import "supporting/nav";
+
+/* Widget Styling
+------------------------------------------------------------ */
+@import "supporting/widget";
+
+/* Mixins Styling
+------------------------------------------------------------ */
+@import "supporting/mixins";
+
+/* WordPress Image Styling
+------------------------------------------------------------ */
+@import "supporting/wordpress-image";
+
+
+/* WordPress Responsive Styles
+------------------------------------------------------------ */
+@import "supporting/wordpress-responsive";
+
+
+/* Long nonbreaking path name support
+ * see http://wptest.io/demo/non-breaking-text/
+------------------------------------------------------------ */
+@import "supporting/long-nonbreaking-path-name-support";
+
+
+/* Table Styling
+------------------------------------------------------------ */
+@import "supporting/tables";
+
+
+/* Pagination modifications to accomodate WordPress
+------------------------------------------------------------ */
+@import "supporting/pagination";
+
+/* Comment Styles
+------------------------------------------------------------ */
+@import "supporting/comments";
+
+/* Skip to Main Content - Accessibility Link.
+------------------------------------------------------------ */
+@import "supporting/skip-to-main-content";
+
+
+
+/*************************************************************/
+/****Sitewide CORE Element Styles ( buttons, links, etc )*****/
+/*************************************************************/
+/* Core Element Styles
+------------------------------------------------------------ */
+@import "supporting/core";
+
+/* Footer
+------------------------------------------------------------ */
+@import "supporting/footer";
+
+/* Fixed Header
+------------------------------------------------------------ */
+@import "supporting/fixed-header";
+
+/* ROI Calculator
+------------------------------------------------------------ */
+@import "supporting/roi-calculator";
+
+
+
+/*************************************************************/
+/**************** SCREEN SIZE SPECIFIC STYLES ****************/
+/*************************************************************/
+
+/* Mobile ( < 768 )
+------------------------------------------------------------ */
+@media (max-width: 767px) {
+	@import "supporting/MQ-mobile";
+}
+
+/* Tablet ( 768 to 991 )
+------------------------------------------------------------ */
+@media (min-width: 768px) {
+	@import "supporting/MQ-tablet";
+}
+
+/* Desktop ( 992 and up )
+------------------------------------------------------------ */
+@media (min-width: 992px) {
+	@import "supporting/MQ-desktop";
+}

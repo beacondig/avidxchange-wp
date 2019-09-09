@@ -1,0 +1,342 @@
+/* fix styles for layered navigation menus */
+
+.nav-primary + .nav-secondary {
+    margin-top: -1 * $navbar-margin-bottom;
+    z-index: $zindex-navbar - 1;
+}
+.nav-secondary {
+	margin-bottom: 0px!important;
+	min-height:	 40px!important;
+	overflow: hidden;
+	font-size:14px;
+	display:none;
+}
+#nav-collapse-primary, #nav-collapse-secondary, #nav-collapse-careers, #nav-collapse-suppliers {
+	float: none;	
+}
+#nav-collapse-primary, #nav-collapse-careers, #nav-collapse-suppliers {
+	margin-top: 0px;
+    margin-bottom: 0px;
+	width:100%;
+	text-align:left;
+}
+.nav li.cta {
+	margin: auto;
+	text-align:center;
+	margin-left: 20px;
+}
+#searchshow {
+	background-color:transparent;
+	text-align:center;
+}
+.thirtysidepad {
+	padding-left:10px;
+	padding-right:10px;	
+}
+.nav-primary {
+	.twentyfourtoppad {
+		padding-top:23px;
+		padding-bottom:22px;
+	}
+}
+.nav-careers {
+	display:none;	
+}
+.nav-suppliers {
+	display:none;
+}
+
+.nav-real-estate {
+	display:none;
+}
+
+.nav-mailer {
+	display:none;
+}
+
+.nav-customer {
+	display:none;
+}
+
+.nav-customer ul {
+	float:right;
+}
+
+/* switch default displays on careers section pages */
+.page-template-page-careers nav.nav-primary, .page-template-page-careers nav.nav-secondary,
+.page-template-page-culture nav.nav-primary, .page-template-page-culture nav.nav-secondary,
+.page-template-page-benefits nav.nav-primary, .page-template-page-benefits nav.nav-secondary,
+.page-template-page-events-recruiting nav.nav-primary, .page-template-page-events-recruiting nav.nav-secondary,
+.post-type-archive-locations nav.nav-primary, .post-type-archive-locations nav.nav-secondary,
+.single-locations nav.nav-primary, .single-locations nav.nav-secondary,
+.page-template-page-job-openings nav.nav-primary, .page-template-page-job-openings nav.nav-secondary,
+.page-template-page-campus nav.nav-primary, .page-template-page-campus nav.nav-secondary,
+.page-template-page-micro-home nav.nav-primary, .page-template-page-micro-home nav.nav-secondary,
+.page-template-page-micro-resource nav.nav-primary, .page-template-page-micro-resource nav.nav-secondary,
+.page-template-page-micro-solution nav.nav-primary, .page-template-page-micro-solution nav.nav-secondary,
+.single-real_estate nav.nav-primary, .single-real_estate nav.nav-secondary,
+.page-template-page-customer nav.nav-primary, .page-template-page-customer nav.nav-secondary,
+.page-template-page-mailer nav.nav-primary, .page-template-page-mailer nav.nav-secondary,
+.page-template-page-micro-typ nav.nav-primary, .page-template-page-micro-typ nav.nav-secondary,
+.page-template-page-micro-demo nav.nav-primary, .page-template-page-micro-demo nav.nav-secondary
+{
+	display:none!important;	
+}
+.page-template-page-careers nav.nav-careers,
+.page-template-page-culture nav.nav-careers,
+.page-template-page-benefits nav.nav-careers,
+.page-template-page-events-recruiting nav.nav-careers,
+.post-type-archive-locations nav.nav-careers,
+.single-locations nav.nav-careers,
+.page-template-page-job-openings nav.nav-careers,
+.page-template-page-campus nav.nav-careers
+{
+	display:block!important;	
+}
+.page-template-page-suppliers-landing nav.nav-primary, .page-id-2430 nav.nav-primary, .page-template-page-suppliers-landing nav.nav-secondary, .page-id-2430 nav.nav-secondary, .page-template-page-supplier nav.nav-primary, .page-template-page-supplier nav.nav-secondary, .page-template-page-supplier-drip-one nav.nav-primary,
+.page-template-page-supplier-drip-one nav.nav-secondary, .page-template-page-supplier-drip-two nav.nav-primary,
+.page-template-page-supplier-drip-two nav.nav-secondary
+{
+	display:none!important;
+}
+.page-template-page-suppliers-landing nav.nav-suppliers,
+.page-id-2430 nav.nav-suppliers,
+.page-template-page-supplier nav.nav-suppliers,
+.page-template-page-supplier-drip-one nav.nav-suppliers,
+.page-template-page-supplier-drip-two nav.nav-suppliers
+{
+	display:block!important;
+}
+
+.page-template-page-micro-home nav.nav-real-estate,
+.page-template-page-micro-resource nav.nav-real-estate,
+.page-template-page-micro-solution nav.nav-real-estate,
+.single-real_estate nav.nav-real-estate,
+.page-template-page-micro-typ nav.nav-real-estate,
+.page-template-page-micro-demo nav.nav-real-estate {
+	display:block !important;
+}
+
+.page-template-page-customer nav.nav-customer {
+	display:block !important;
+}
+
+.page-template-page-mailer nav.nav-mailer {
+	display:block !important;
+}
+
+/* Display Bootstrap Nav Secondary Items even when JavaScript is disabled */
+.no-js .menu-item-has-children:hover .dropdown-menu,
+.no-js .menu-item-has-children:focus .dropdown-menu {
+    display: block;
+}
+
+/* style the topnav search bar */
+.menu-item.menu-item-search { float:none; display:none; }
+.menu-search-form { float:none; padding:8px 4px 8px 12px; width:100%; }
+.menu-search-form-banner { 
+	float:none; 
+	padding:8px 4px 8px 12px; 
+	width:100%; 
+	input {
+		padding:8px 4px 8px 12px; 
+		font-size:24px;
+		width:calc(100% - 58px);
+		max-width: calc(800px - 58px);
+		color:#231f20 !important;
+	}
+}
+form.menu-search-form { max-width:260px; }
+form.menu-search-form #s { background:#fff; border:1px solid #999999; font-size:14px; margin:0 2px 0 0; padding:2px; width:80%; float:left; height: 30px; }
+.menu-search-form input#searchsubmit.my-wp-search { color:#231f20; cursor:pointer; float:right; }
+.btn-search {
+	padding: 0px 14px 0px 10px!important;
+	background-color: #ffffff; /* #f9f9f9; */
+}
+.btn-searchon {
+	padding: 1px 12px!important;
+	background-color:$lightgreen;
+	color:#ffffff;
+}
+.btn-searchon:hover {
+	background-color:#63b73c;
+	color:#ffffff;
+}
+.sformdiv {
+	position:relative;
+	background-color: #ffffff;
+	border-color: #ffffff;
+	border-radius: $border-radius-base;
+	width: 260px;
+	margin: auto;
+}
+.baseglass {
+	position: relative;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	z-index:2;
+}
+.menubottom {
+	padding-top:10px;
+	text-align:center;
+}
+.nav-primary li {
+	border-top: 1px solid #dddddd;
+	li {
+		border-bottom: 1px solid #f1f1f1;	
+	}
+}
+.navbar-collapse {
+	padding-top:20px;
+}
+.subclicker {
+    display: block;
+    position: absolute!important;
+    margin-top: -52px;
+    right: 0px;
+    cursor: pointer;
+	padding:0px!important;
+	background-color:#f9f9f9!important;
+	i {
+    	padding: 18px 22px !important;
+	}
+	:hover {
+		background-color:#f9f9f9;	
+	}
+}
+.dropdown-menu {
+	padding: 0px;
+}
+.mfd {
+	display:none!important;	
+}
+.mfm {
+	display:block!important;
+}
+.mfdi {
+	display:none!important;
+}
+
+
+@media (min-width: 768px) {
+	/* style the topnav search bar */
+	.menu-item.menu-item-search { float:right; display:block; }
+	.menu-search-form { float:none; padding:5px 0px 5px 0px; width:310px; }
+	form.menu-search-form { margin-left: 28px; width:320px; max-width:320px;}
+	form.menu-search-form #s { background:#fff; border:1px solid #999999; font-size:14px; margin:0 2px 0 0; padding:2px 2px 2px 8px; width:315px; float:left; height: 30px; }
+	.menu-search-form input#searchsubmit.my-wp-search { color:#231f20; cursor:pointer; float:right; }
+	.btn-search {
+		padding: 0px 16px 0px 12px!important;
+		background-color: #ffffff; /* #f9f9f9; */
+	}
+	.btn-searchon {
+		padding: 1px 16px 1px 12px!important;
+		background-color:$lightgreen;
+		color:#ffffff;
+		font-size: 19px;
+	}
+	.btn-searchon:hover {
+		background-color:#63b73c;
+		color:#ffffff;
+	}
+	.btn-searchonbanner {
+		padding: 3px 16px 4px 16px!important;
+		background-color:$lightgreen;
+		color:#ffffff;
+		font-size: 27px;
+		margin-top:-9px;
+	}
+	.btn-searchonbanner:hover {
+		background-color:#63b73c;
+		color:#ffffff;
+	}
+	.sformdiv {
+		position:absolute;
+		z-index:99;
+		top:-120px;
+		background-color: #ffffff;
+		border-color: #ffffff;
+		right: -3px;
+		width: 402px;
+		margin: auto;
+		opacity:0;
+		filter: alpha(opacity=0);
+		-webkit-transition: opacity 0.6s ease;
+		-moz-transition: opacity 0.6s ease;
+		-o-transition: opacity 0.6s ease;
+		-ms-transition: opacity 0.6s ease;
+		transition: opacity 0.6s ease;
+	}
+	.sformShow {
+		top:0px!important;
+		opacity:1!important;
+		filter: alpha(opacity=100)!important;
+		-webkit-transition: opacity 0.6s ease;
+		-moz-transition: opacity 0.6s ease;
+		-o-transition: opacity 0.6s ease;
+		-ms-transition: opacity 0.6s ease;
+		transition: opacity 0.6s ease;
+	}
+	#nav-collapse-primary, #nav-collapse-secondary, #nav-collapse-careers, #nav-collapse-suppliers {
+		float: right;	
+	}
+	#nav-collapse-primary, #nav-collapse-careers, #nav-collapse-suppliers {
+		margin-top: -6px;
+		margin-bottom: -6px;
+		width:auto;
+	}
+	#searchshow {
+		display: block;
+	}
+	.nav-primary li {
+		border-top: none;
+		li {
+			border-bottom: none;	
+		}
+	}
+	.navbar-collapse {
+		padding-top:0px;
+	}
+	.thirtysidepad {
+		padding-left:20px;
+		padding-right:20px;	
+	}
+	.nav-primary {
+		.twentyfourtoppad {
+			padding-top:23px;
+			padding-bottom:22px;
+		}
+	}
+	.dropdown:hover > ul.dropdown-menu {
+		display:block;	
+	}
+	.hidecaret a span.caret {
+		display:none!important;	
+	}
+	.navbar-nav > li > a {
+	    padding-top:    9px!important;
+	    padding-bottom: 9px!important;
+	}
+	.subclicker {
+		display:none;	
+	}
+	.dropdown-menu {
+		padding: 5px 0;
+	}
+	.mfd {
+		display:block!important;	
+	}
+	.mfm {
+		display:none!important;
+	}
+	.mfdi {
+		display:inline-block!important;
+	}
+}
+
+@media (min-width: 992px) {
+	.thirtysidepad {
+		padding-left:30px!important;
+		padding-right:30px!important;	
+	}
+}
