@@ -10,3 +10,9 @@
 # we do not check in this file since it may be minified
 # and would cause many many conflicts
 styles/css/style.css
+# ignore images, htaccess, and error_log files
+**/img
+*.jpg
+*.xlsx
+*.htaccess
+*error_log
