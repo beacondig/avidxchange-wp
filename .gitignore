@@ -17,3 +17,4 @@ styles/css/style.css
 *.htaccess
 *error_log
 node_modules
+/package-lock.json
