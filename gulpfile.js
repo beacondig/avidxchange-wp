@@ -11,12 +11,13 @@ var scripts = ['js/**/*.js', '!js/vendor/**/*.js']
 gulp.task('watch', function() {
     livereload.listen();
     // Watch .svg files
-    gulp.watch('assets/svg/font/*.svg', ['iconfont']);
+    // gulp.watch('assets/svg/font/*.svg', ['iconfont']);
     // Watch .scss files
-    gulp.watch('styles/scss/**/*.scss', ['styles']);
+    gulp.watch('css/scss/**/*.scss', ['styles']);
     // Watch .js files
-    gulp.watch(scripts, ['jshint']);
-    gulp.watch(scripts, ['scripts']);
+    // gulp.watch(scripts, ['jshint']);
+    // gulp.watch(scripts, ['scripts']);
 });
 
-gulp.task('default', ['iconfont', 'styles', 'jshint', 'scripts', 'sassdoc']);
+// gulp.task('default', ['iconfont', 'styles', 'jshint', 'scripts', 'sassdoc']);
+gulp.task('default', ['styles', 'sassdoc']);

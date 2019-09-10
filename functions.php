@@ -1267,7 +1267,7 @@ function theme_styles() {
 			wp_enqueue_style('theme-styles', get_stylesheet_directory_uri() . '/css/beacon-styles.css', array(), filemtime(get_stylesheet_directory().'/css/beacon-styles.css') );
 			wp_enqueue_style('theme-style-overrides', get_stylesheet_directory_uri() . '/css/qa-custom-overrides.css', array(), filemtime(get_stylesheet_directory().'/css/qa-custom-overrides.css') );
 		}elseif(is_page_template('template-homepage.php')) {
-			wp_enqueue_style('theme-styles', get_stylesheet_directory_uri() . '/css/theme-styles.css', array(), filemtime(get_stylesheet_directory().'/css/theme-styles.css') );
+			wp_enqueue_style('theme-styles', get_stylesheet_directory_uri() . '/css/theme-styles.min.css', array(), filemtime(get_stylesheet_directory().'/css/theme-styles.min.css') );
 			wp_enqueue_style('theme-style-overrides', get_stylesheet_directory_uri() . '/css/qa-custom-overrides.css', array(), filemtime(get_stylesheet_directory().'/css/qa-custom-overrides.css') );
 		}
 }
