@@ -16,3 +16,4 @@ styles/css/style.css
 *.xlsx
 *.htaccess
 *error_log
+node_modules
