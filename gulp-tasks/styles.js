@@ -23,6 +23,7 @@ gulp.task('styles', function() {
 
 		.pipe(gulp.dest("./css/"))
 		.pipe(cleanCss())
+		.pipe(sass({ outputStyle: 'compact', sourceComments: 'map' }))
 		.pipe(sourcemaps.write('./'))
 		.pipe(rename({ suffix: ".min" }))
 		.pipe(gulp.dest("./css/"))
