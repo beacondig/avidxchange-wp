@@ -8,8 +8,11 @@ header {
 		@include respond-at(1449px) {
 			padding:15px 0;
 		}
-		.page-template-template-homepage &, .home & {
+		&.dark {
 			background:transparent;
+		}
+		&.light {
+			background:#fff;
 		}
 		.logo {
 			width:176px;
