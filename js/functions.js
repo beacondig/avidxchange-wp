@@ -4,7 +4,7 @@ jQuery(function () {
 
 	// Animate in form
 	function displayForm() {
-		jQuery('.dvgk-hero .hero-image').addClass('visible');
+		jQuery('.avid-hero .hero-image').addClass('visible');
 	};
 
 	// Opening FadeIn
@@ -37,7 +37,7 @@ jQuery(function () {
 	function moveScroller() {
 		var move = function () {
 			var st = jQuery(window).scrollTop();
-			var ot = jQuery('.dvgk-hero').height();
+			var ot = jQuery('.avid-hero').height();
 			var s = jQuery('.header-scroll');
 			if (st >= ot) {
 				s.addClass('active');
