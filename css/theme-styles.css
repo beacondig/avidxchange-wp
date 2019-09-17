@@ -216,7 +216,7 @@ p {
   letter-spacing: 1px;
 }
 
-.btn, header .mobile-nav a.demo-button, .header-scroll .mobile-nav a.demo-button, header .mobile-nav ul li.demo-request, .header-scroll .mobile-nav ul li.demo-request, .demo-form form input[type="submit"], .home-opening .opening-demo-form form ul li input[type="submit"], .home-search .searchbox form button, .dvgk-hero .hero-demo-form form ul li input[type="submit"], .dvgk-search .searchbox form button {
+.btn, header .mobile-nav a.demo-button, .header-scroll .mobile-nav a.demo-button, header .mobile-nav ul li.demo-request, .header-scroll .mobile-nav ul li.demo-request, .demo-form form input[type="submit"], .home-opening .opening-demo-form form ul li input[type="submit"], .home-search .searchbox form button, .avid-hero .hero-demo-form form ul li input[type="submit"], .avid-search .searchbox form button {
   text-align: center;
   font-weight: 700;
   font-family: "Artegra Sans Alt", sans-serif;
@@ -240,13 +240,13 @@ p {
   letter-spacing: 1px;
 }
 
-.btn:hover, header .mobile-nav a.demo-button:hover, .header-scroll .mobile-nav a.demo-button:hover, header .mobile-nav ul li.demo-request:hover, .header-scroll .mobile-nav ul li.demo-request:hover, .demo-form form input:hover[type="submit"], .home-opening .opening-demo-form form ul li input:hover[type="submit"], .home-search .searchbox form button:hover, .dvgk-hero .hero-demo-form form ul li input:hover[type="submit"], .dvgk-search .searchbox form button:hover {
+.btn:hover, header .mobile-nav a.demo-button:hover, .header-scroll .mobile-nav a.demo-button:hover, header .mobile-nav ul li.demo-request:hover, .header-scroll .mobile-nav ul li.demo-request:hover, .demo-form form input:hover[type="submit"], .home-opening .opening-demo-form form ul li input:hover[type="submit"], .home-search .searchbox form button:hover, .avid-hero .hero-demo-form form ul li input:hover[type="submit"], .avid-search .searchbox form button:hover {
   background: #fff;
   color: #0684c9;
 }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  .btn, header .mobile-nav a.demo-button, .header-scroll .mobile-nav a.demo-button, header .mobile-nav ul li.demo-request, .header-scroll .mobile-nav ul li.demo-request, .demo-form form input[type="submit"], .home-opening .opening-demo-form form ul li input[type="submit"], .home-search .searchbox form button, .dvgk-hero .hero-demo-form form ul li input[type="submit"], .dvgk-search .searchbox form button {
+  .btn, header .mobile-nav a.demo-button, .header-scroll .mobile-nav a.demo-button, header .mobile-nav ul li.demo-request, .header-scroll .mobile-nav ul li.demo-request, .demo-form form input[type="submit"], .home-opening .opening-demo-form form ul li input[type="submit"], .home-search .searchbox form button, .avid-hero .hero-demo-form form ul li input[type="submit"], .avid-search .searchbox form button {
     line-height: 50px;
   }
 }
@@ -2407,8 +2407,14 @@ footer .policy a {
   }
 }
 
-/* Globals */
-.dvgk-hero {
+/**
+ * Custom reusable components beside _settings.scss
+ */
+.top-menu {
+  padding-bottom: 10px;
+}
+
+.avid-hero {
   position: relative;
   height: 100vh;
   min-height: 800px;
@@ -2417,13 +2423,13 @@ footer .policy a {
 }
 
 @media only screen and (max-width: 1449px) {
-  .dvgk-hero {
+  .avid-hero {
     min-height: 700px;
   }
 }
 
 @media only screen and (max-width: 999px) {
-  .dvgk-hero {
+  .avid-hero {
     padding: 150px 0 0;
     height: auto;
     min-height: 0;
@@ -2431,12 +2437,12 @@ footer .policy a {
 }
 
 @media only screen and (max-width: 699px) {
-  .dvgk-hero {
+  .avid-hero {
     padding: 100px 0 0;
   }
 }
 
-.dvgk-hero .hero-video {
+.avid-hero .hero-video {
   position: fixed;
   opacity: 0.25;
   width: 100%;
@@ -2448,7 +2454,7 @@ footer .policy a {
   overflow: hidden;
 }
 
-.dvgk-hero .hero-video video {
+.avid-hero .hero-video video {
   width: auto;
   height: auto;
   min-width: 100%;
@@ -2460,7 +2466,7 @@ footer .policy a {
   max-width: none;
 }
 
-.dvgk-hero .hero-demo-form {
+.avid-hero .hero-demo-form {
   position: absolute;
   right: -100%;
   bottom: 0;
@@ -2486,13 +2492,13 @@ footer .policy a {
 }
 
 @media only screen and (max-width: 1599px) {
-  .dvgk-hero .hero-demo-form {
+  .avid-hero .hero-demo-form {
     padding: 50px 50px 200px;
   }
 }
 
 @media only screen and (max-width: 999px) {
-  .dvgk-hero .hero-demo-form {
+  .avid-hero .hero-demo-form {
     right: auto;
     width: 90%;
     margin: 0 auto;
@@ -2503,11 +2509,11 @@ footer .policy a {
   }
 }
 
-.dvgk-hero .hero-demo-form.visible {
+.avid-hero .hero-demo-form.visible {
   right: 0;
 }
 
-.dvgk-hero .hero-demo-form .heading {
+.avid-hero .hero-demo-form .heading {
   font-family: "Artegra Sans Alt", sans-serif;
   font-size: 24px;
   text-transform: uppercase;
@@ -2517,25 +2523,25 @@ footer .policy a {
   padding-bottom: 30px;
 }
 
-.dvgk-hero .hero-demo-form form {
+.avid-hero .hero-demo-form form {
   width: 400px;
   display: block;
   margin: 0 auto;
 }
 
 @media only screen and (max-width: 1099px) {
-  .dvgk-hero .hero-demo-form form {
+  .avid-hero .hero-demo-form form {
     width: 90%;
     max-width: 350px;
   }
 }
 
-.dvgk-hero .hero-demo-form form ul li {
+.avid-hero .hero-demo-form form ul li {
   display: block;
   margin-bottom: 20px;
 }
 
-.dvgk-hero .hero-demo-form form ul li input {
+.avid-hero .hero-demo-form form ul li input {
   background: #fff;
   border: none;
   height: 50px;
@@ -2545,39 +2551,39 @@ footer .policy a {
   width: 100%;
 }
 
-.dvgk-hero .hero-demo-form form ul li input::-webkit-input-placeholder {
+.avid-hero .hero-demo-form form ul li input::-webkit-input-placeholder {
   font-family: "Artegra Sans Alt", sans-serif;
   font-weight: 400;
   color: #404041;
   font-size: 16px;
 }
 
-.dvgk-hero .hero-demo-form form ul li input:-moz-placeholder {
+.avid-hero .hero-demo-form form ul li input:-moz-placeholder {
   font-family: "Artegra Sans Alt", sans-serif;
   font-weight: 400;
   color: #404041;
   font-size: 16px;
 }
 
-.dvgk-hero .hero-demo-form form ul li input::-moz-placeholder {
+.avid-hero .hero-demo-form form ul li input::-moz-placeholder {
   font-family: "Artegra Sans Alt", sans-serif;
   font-weight: 400;
   color: #404041;
   font-size: 16px;
 }
 
-.dvgk-hero .hero-demo-form form ul li input:-ms-input-placeholder {
+.avid-hero .hero-demo-form form ul li input:-ms-input-placeholder {
   font-family: "Artegra Sans Alt", sans-serif;
   font-weight: 400;
   color: #404041;
   font-size: 16px;
 }
 
-.dvgk-hero .hero-demo-form form ul li input[type="submit"] {
+.avid-hero .hero-demo-form form ul li input[type="submit"] {
   width: auto;
 }
 
-.dvgk-hero .hero-image {
+.avid-hero .hero-image {
   position: absolute;
   right: -100%;
   bottom: 0;
@@ -2603,13 +2609,13 @@ footer .policy a {
 }
 
 @media only screen and (max-width: 1599px) {
-  .dvgk-hero .hero-image {
+  .avid-hero .hero-image {
     padding: 50px 50px 200px;
   }
 }
 
 @media only screen and (max-width: 999px) {
-  .dvgk-hero .hero-image {
+  .avid-hero .hero-image {
     right: auto;
     width: 90%;
     margin: 0 auto;
@@ -2620,11 +2626,11 @@ footer .policy a {
   }
 }
 
-.dvgk-hero .hero-image.visible {
+.avid-hero .hero-image.visible {
   right: 0;
 }
 
-.dvgk-hero .hero-image .heading {
+.avid-hero .hero-image .heading {
   font-family: "Artegra Sans Alt", sans-serif;
   font-size: 24px;
   text-transform: uppercase;
@@ -2634,7 +2640,7 @@ footer .policy a {
   padding-bottom: 30px;
 }
 
-.dvgk-hero .hero-content {
+.avid-hero .hero-content {
   position: relative;
   z-index: 2;
   color: #fff;
@@ -2645,7 +2651,7 @@ footer .policy a {
 }
 
 @media only screen and (max-width: 999px) {
-  .dvgk-hero .hero-content {
+  .avid-hero .hero-content {
     top: auto;
     -webkit-transform: none;
             transform: none;
@@ -2656,7 +2662,7 @@ footer .policy a {
   }
 }
 
-.dvgk-hero .hero-content .hero-cut {
+.avid-hero .hero-content .hero-cut {
   padding-left: 10.5%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -2664,38 +2670,38 @@ footer .policy a {
 }
 
 @media only screen and (max-width: 1799px) {
-  .dvgk-hero .hero-content .hero-cut {
+  .avid-hero .hero-content .hero-cut {
     padding-left: 8.5%;
   }
 }
 
 @media only screen and (max-width: 1699px) {
-  .dvgk-hero .hero-content .hero-cut {
+  .avid-hero .hero-content .hero-cut {
     padding-left: 5.5%;
   }
 }
 
 @media only screen and (max-width: 1599px) {
-  .dvgk-hero .hero-content .hero-cut {
+  .avid-hero .hero-content .hero-cut {
     padding-left: 4.5%;
   }
 }
 
 @media only screen and (max-width: 1099px) {
-  .dvgk-hero .hero-content .hero-cut {
+  .avid-hero .hero-content .hero-cut {
     width: calc(100% - 475px);
   }
 }
 
 @media only screen and (max-width: 999px) {
-  .dvgk-hero .hero-content .hero-cut {
+  .avid-hero .hero-content .hero-cut {
     width: 100%;
     padding: 0;
     margin: 0 auto 30px;
   }
 }
 
-.dvgk-hero .hero-content .hero-cut h1 {
+.avid-hero .hero-content .hero-cut h1 {
   font-size: 64px;
   font-weight: 900;
   color: #fff;
@@ -2704,40 +2710,40 @@ footer .policy a {
 }
 
 @media only screen and (max-width: 1299px) {
-  .dvgk-hero .hero-content .hero-cut h1 {
+  .avid-hero .hero-content .hero-cut h1 {
     font-size: 55px;
   }
 }
 
 @media only screen and (max-width: 1199px) {
-  .dvgk-hero .hero-content .hero-cut h1 {
+  .avid-hero .hero-content .hero-cut h1 {
     font-size: 50px;
   }
 }
 
 @media only screen and (max-width: 599px) {
-  .dvgk-hero .hero-content .hero-cut h1 {
+  .avid-hero .hero-content .hero-cut h1 {
     font-size: 45px;
   }
 }
 
 @media only screen and (max-width: 499px) {
-  .dvgk-hero .hero-content .hero-cut h1 {
+  .avid-hero .hero-content .hero-cut h1 {
     font-size: 38px;
   }
 }
 
 @media only screen and (max-width: 449px) {
-  .dvgk-hero .hero-content .hero-cut h1 {
+  .avid-hero .hero-content .hero-cut h1 {
     font-size: 30px;
   }
 }
 
-.dvgk-hero .hero-content .hero-cut h1 span {
+.avid-hero .hero-content .hero-cut h1 span {
   color: #a4d137;
 }
 
-.dvgk-hero .hero-content .hero-cut p {
+.avid-hero .hero-content .hero-cut p {
   color: #fff;
   padding-bottom: 20px;
   width: 75%;
@@ -2745,16 +2751,16 @@ footer .policy a {
 }
 
 @media only screen and (max-width: 1599px) {
-  .dvgk-hero .hero-content .hero-cut p {
+  .avid-hero .hero-content .hero-cut p {
     width: 100%;
   }
 }
 
-.dvgk-hero .hero-content .hero-cut a {
+.avid-hero .hero-content .hero-cut a {
   display: none;
 }
 
-.dvgk-hero:after {
+.avid-hero:after {
   bottom: 0;
   background: #ffffff;
   content: '';
@@ -2772,12 +2778,12 @@ footer .policy a {
 }
 
 @media only screen and (max-width: 999px) {
-  .dvgk-hero:after {
+  .avid-hero:after {
     height: 150px;
   }
 }
 
-.dvgk-search {
+.avid-search {
   background: url("../img/home/blueangle_bg2.png") no-repeat;
   background-size: 100% 100%;
   background-position: center top;
@@ -2788,7 +2794,7 @@ footer .policy a {
   z-index: 4;
 }
 
-.dvgk-search:after {
+.avid-search:after {
   bottom: 0;
   background: #ffffff;
   content: '';
@@ -2806,42 +2812,42 @@ footer .policy a {
 }
 
 @media only screen and (max-width: 999px) {
-  .dvgk-search:after {
+  .avid-search:after {
     height: 150px;
   }
 }
 
 @media only screen and (max-width: 999px) {
-  .dvgk-search {
+  .avid-search {
     padding: 235px 0 150px;
     margin: -220px auto -115px;
   }
 }
 
 @media only screen and (max-width: 749px) {
-  .dvgk-search {
+  .avid-search {
     padding: 150px 0 150px;
   }
 }
 
-.dvgk-search h2 {
+.avid-search h2 {
   color: #fff;
   font-size: 39px;
 }
 
 @media only screen and (max-width: 999px) {
-  .dvgk-search h2 {
+  .avid-search h2 {
     font-size: 32px;
   }
 }
 
 @media only screen and (max-width: 699px) {
-  .dvgk-search h2 {
+  .avid-search h2 {
     font-size: 24px;
   }
 }
 
-.dvgk-search ul {
+.avid-search ul {
   width: 100%;
   margin: 150px auto 150px;
   display: -webkit-box;
@@ -2859,12 +2865,12 @@ footer .policy a {
 }
 
 @media only screen and (max-width: 899px) {
-  .dvgk-search ul {
+  .avid-search ul {
     margin: 80px auto 150px;
   }
 }
 
-.dvgk-search ul li {
+.avid-search ul li {
   max-width: 22%;
   min-width: 20%;
   height: 200px;
@@ -2872,32 +2878,32 @@ footer .policy a {
 }
 
 @media only screen and (max-width: 1499px) {
-  .dvgk-search ul li {
+  .avid-search ul li {
     margin: 0 2%;
   }
 }
 
 @media only screen and (max-width: 999px) {
-  .dvgk-search ul li {
+  .avid-search ul li {
     height: auto;
     margin: 0 2% 30px;
   }
 }
 
 @media only screen and (max-width: 699px) {
-  .dvgk-search ul li {
+  .avid-search ul li {
     max-width: 40%;
   }
 }
 
-.dvgk-search ul li img {
+.avid-search ul li img {
   width: auto;
   height: auto;
   max-width: 100%;
   max-height: 150px;
 }
 
-.dvgk-search .searchbox {
+.avid-search .searchbox {
   background: #eef1f4;
   padding: 80px 60px;
   -webkit-box-shadow: 0px 50px 50px -40px #404041;
@@ -2913,12 +2919,12 @@ footer .policy a {
 }
 
 @media only screen and (max-width: 999px) {
-  .dvgk-search .searchbox {
+  .avid-search .searchbox {
     padding: 50px 30px;
   }
 }
 
-.dvgk-search .searchbox .heading {
+.avid-search .searchbox .heading {
   color: #404041;
   font-weight: 900;
   font-size: 32px;
@@ -2928,12 +2934,12 @@ footer .policy a {
 }
 
 @media only screen and (max-width: 999px) {
-  .dvgk-search .searchbox .heading {
+  .avid-search .searchbox .heading {
     font-size: 28px;
   }
 }
 
-.dvgk-search .searchbox form {
+.avid-search .searchbox form {
   width: 90%;
   display: block;
   text-align: center;
@@ -2941,12 +2947,12 @@ footer .policy a {
 }
 
 @media only screen and (max-width: 999px) {
-  .dvgk-search .searchbox form {
+  .avid-search .searchbox form {
     width: 98%;
   }
 }
 
-.dvgk-search .searchbox form label {
+.avid-search .searchbox form label {
   display: inline-block;
   vertical-align: top;
   width: calc(100% - 200px);
@@ -2958,12 +2964,12 @@ footer .policy a {
 }
 
 @media only screen and (max-width: 749px) {
-  .dvgk-search .searchbox form label {
+  .avid-search .searchbox form label {
     width: 100%;
   }
 }
 
-.dvgk-search .searchbox form label input {
+.avid-search .searchbox form label input {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border: 1px solid #dadada;
@@ -2974,18 +2980,18 @@ footer .policy a {
 }
 
 @media only screen and (max-width: 749px) {
-  .dvgk-search .searchbox form label input {
+  .avid-search .searchbox form label input {
     width: 100%;
   }
 }
 
-.dvgk-search .searchbox form button {
+.avid-search .searchbox form button {
   padding: 0 40px;
   margin-top: 16px;
 }
 
 /* Page: Industries */
-.dvgk-industries {
+.avid-industries {
   padding: 200px 0;
   background: #fff;
   z-index: 3;
@@ -2993,27 +2999,27 @@ footer .policy a {
 }
 
 @media only screen and (max-width: 1399px) {
-  .dvgk-industries {
+  .avid-industries {
     padding: 150px 0 80px;
   }
 }
 
-.dvgk-industries h2 {
+.avid-industries h2 {
   font-size: 39px;
   padding-bottom: 50px;
 }
 
 @media only screen and (max-width: 749px) {
-  .dvgk-industries h2 {
+  .avid-industries h2 {
     font-size: 32px;
   }
 }
 
-.dvgk-industries .industries .industry {
+.avid-industries .industries .industry {
   position: relative;
 }
 
-.dvgk-industries .industries .industry h3 {
+.avid-industries .industries .industry h3 {
   z-index: 10;
   position: absolute;
   top: 30px;
@@ -3022,7 +3028,7 @@ footer .policy a {
   font-size: 24px;
 }
 
-.dvgk-industries .industries .industry .overlay {
+.avid-industries .industries .industry .overlay {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -3038,12 +3044,12 @@ footer .policy a {
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$left', endColorstr='$right',GradientType=0 );
   /* IE6-9 */
-  -webkit-transition: opacity .3s;
-  transition: opacity .3s;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
   opacity: 0;
 }
 
-.dvgk-industries .industries .industry .overlay:hover {
-  opacity: .5;
+.avid-industries .industries .industry .overlay:hover {
+  opacity: 0.5;
 }
 /*# sourceMappingURL=theme-styles.css.map */

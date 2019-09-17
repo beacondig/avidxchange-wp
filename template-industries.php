@@ -8,7 +8,7 @@
 get_header( 'new' );
 ?>
 
-	<section class="dvgk-hero">
+	<section class="avid-hero">
 		<div class="hero-content">
 			<div class="hero-cut">
 				<h1><?php the_field( 'opening_title' ); ?></h1>
@@ -21,7 +21,7 @@ get_header( 'new' );
 		</div>
 	</section>
 
-	<section class="dvgk-industries">
+	<section class="avid-industries">
 		<div class="b-container">
 			<h2><?php the_field( 'industries_heading' ); ?>Featured Industries</h2>
 			<?php if ( have_rows( 'industries' ) ) : ?>
@@ -43,7 +43,7 @@ get_header( 'new' );
 		</div>
 	</section>
 
-	<section class="dvgk-search">
+	<section class="avid-search">
 		<div class="container">	
 			<div class="searchbox">
 				<div class="heading"><?php the_field( 'accounting_system_search_heading' ); ?></div>
