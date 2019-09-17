@@ -15,17 +15,21 @@
 	min-height: 800px;
 	overflow: hidden;
 	background: $grey;
+
 	@include respond-at(1449px) {
 		min-height: 700px;
 	}
+
 	@include respond-at(999px) {
 		padding: 150px 0 0;
 		height: auto;
 		min-height: 0;
 	}
+
 	@include respond-at(699px) {
 		padding: 100px 0 0;
 	}
+
 	.hero-video {
 		position: fixed;
 		opacity: 0.25;
@@ -36,6 +40,7 @@
 		left: 0;
 		z-index: 1;
 		overflow: hidden;
+
 		video {
 			width: auto;
 			height: auto;
@@ -48,6 +53,7 @@
 			max-width: none;
 		}
 	}
+
 	.hero-demo-form {
 		position: absolute;
 		right: -100%;
@@ -57,10 +63,13 @@
 		text-align: center;
 		z-index: 3;
 		transition: right 800ms ease;
+
 		@include linearGradient($limegreen, #72bd42);
+
 		@include respond-at(1599px) {
 			padding: 50px 50px 200px;
 		}
+
 		@include respond-at(999px) {
 			right: auto;
 			width: 90%;
@@ -70,9 +79,11 @@
 			max-width: 500px;
 			padding: 50px 30px 150px;
 		}
+
 		&.visible {
 			right: 0;
 		}
+
 		.heading {
 			font-family: $font-fam;
 			font-size: 24px;
@@ -82,6 +93,7 @@
 			letter-spacing: 1px;
 			padding-bottom: 30px;
 		}
+
 		form {
 			width: 400px;
 			display: block;
@@ -124,10 +136,13 @@
 		text-align: center;
 		z-index: 3;
 		transition: right 800ms ease;
+
 		@include linearGradient($limegreen, #72bd42);
+
 		@include respond-at(1599px) {
 			padding: 50px 50px 200px;
 		}
+
 		@include respond-at(999px) {
 			right: auto;
 			width: 90%;
@@ -137,9 +152,11 @@
 			max-width: 500px;
 			padding: 50px 30px 150px;
 		}
+
 		&.visible {
 			right: 0;
 		}
+
 		.heading {
 			font-family: $font-fam;
 			font-size: 24px;
@@ -150,6 +167,7 @@
 			padding-bottom: 30px;
 		}
 	}
+
 	.hero-content {
 		position: relative;
 		z-index: 2;
@@ -157,6 +175,7 @@
 		text-align: left;
 		top: 50%;
 		transform: translateY(-50%);
+
 		@include respond-at(999px) {
 			top: auto;
 			transform: none;
@@ -165,52 +184,66 @@
 			display: block;
 			margin: 0 auto;
 		}
+
 		.hero-cut {
 			padding-left: 10.5%;
 			box-sizing: border-box;
 			width: calc(100% - 525px);
+
 			@include respond-at(1799px) {
 				padding-left: 8.5%;
 			}
+
 			@include respond-at(1699px) {
 				padding-left: 5.5%;
 			}
+
 			@include respond-at(1599px) {
 				padding-left: 4.5%;
 			}
+
 			@include respond-at(1099px) {
 				width: calc(100% - 475px);
 			}
+
 			@include respond-at(999px) {
 				width: 100%;
 				padding: 0;
 				margin: 0 auto 30px;
 			}
+
 			h1 {
 				font-size: $heading1;
 				font-weight: $fwblack;
 				color: #fff;
 				text-transform: uppercase;
 				padding-bottom: 15px;
+
 				@include respond-at(1299px) {
 					font-size: 55px;
 				}
+
 				@include respond-at(1199px) {
 					font-size: 50px;
 				}
+
 				@include respond-at(599px) {
 					font-size: 45px;
 				}
+
 				@include respond-at(499px) {
 					font-size: 38px;
 				}
+
 				@include respond-at(449px) {
 					font-size: 30px;
 				}
+
 				span {
 					color: $limegreen;
 				}
 			}
+
 			p {
 				color: #fff;
 				padding-bottom: 20px;
@@ -220,11 +253,13 @@
 					width: 100%;
 				}
 			}
+
 			a {
 				display: none;
 			}
 		}
 	}
+
 	@include angled(bottom, after, -5deg, #ffffff);
 }
 
@@ -238,14 +273,18 @@
 	color: #fff;
 	margin: -220px auto -170px;
 	z-index: 4;
+
 	@include angled(bottom, after, 5deg, #ffffff);
+
 	@include respond-at(999px) {
 		padding: 235px 0 150px;
 		margin: -220px auto -115px;
 	}
+
 	@include respond-at(749px) {
 		padding: 150px 0 150px;
 	}
+
 	h2 {
 		color: #fff;
 		font-size: $heading2;
@@ -256,6 +295,7 @@
 			font-size: $heading5;
 		}
 	}
+
 	ul {
 		width: 100%;
 		margin: 150px auto 150px;
@@ -263,24 +303,30 @@
 		justify-content: space-around;
 		align-items: center;
 		flex-flow: row wrap;
+
 		@include respond-at(899px) {
 			margin: 80px auto 150px;
 		}
+
 		li {
 			max-width: 22%;
 			min-width: 20%;
 			height: 200px;
 			margin: 0 2% 50px;
+
 			@include respond-at(1499px) {
 				margin: 0 2%;
 			}
+
 			@include respond-at(999px) {
 				height: auto;
 				margin: 0 2% 30px;
 			}
+
 			@include respond-at(699px) {
 				max-width: 40%;
 			}
+
 			img {
 				width: auto;
 				height: auto;
@@ -289,6 +335,7 @@
 			}
 		}
 	}
+
 	.searchbox {
 		background: #eef1f4;
 		padding: 80px 60px;
@@ -300,9 +347,11 @@
 		position: relative;
 		z-index: 9;
 		box-sizing: border-box;
+
 		@include respond-at(999px) {
 			padding: 50px 30px;
 		}
+
 		.heading {
 			color: $grey;
 			font-weight: $fwblack;
@@ -310,18 +359,22 @@
 			font-family: $font-fam;
 			padding-bottom: 50px;
 			text-transform: uppercase;
+
 			@include respond-at(999px) {
 				font-size: $heading4;
 			}
 		}
+
 		form {
 			width: 90%;
 			display: block;
 			text-align: center;
 			margin: 0 auto;
+
 			@include respond-at(999px) {
 				width: 98%;
 			}
+
 			label {
 				display: inline-block;
 				vertical-align: top;
@@ -331,9 +384,11 @@
 				font-family: $font-fam;
 				font-weight: $fwregular;
 				font-size: 14px;
+
 				@include respond-at(749px) {
 					width: 100%;
 				}
+
 				input {
 					box-sizing: border-box;
 					border: 1px solid #dadada;
@@ -341,11 +396,13 @@
 					width: 90%;
 					height: 43px;
 					margin-top: 3px;
+
 					@include respond-at(749px) {
 						width: 100%;
 					}
 				}
 			}
+
 			button {
 				@extend %button-style;
 				padding: 0 40px;
@@ -363,9 +420,11 @@
 	background: #fff;
 	z-index: 3;
 	text-align: center;
+
 	@include respond-at(1399px) {
 		padding: 150px 0 80px;
 	}
+
 	h2 {
 		font-size: $heading2;
 		padding-bottom: 50px;
@@ -373,9 +432,11 @@
 			font-size: $heading3;
 		}
 	}
+
 	.industries {
 		.industry {
 			position: relative;
+
 			h3 {
 				z-index: 10;
 				position: absolute;
@@ -384,13 +445,17 @@
 				color: #fff;
 				font-size: 24px;
 			}
+
 			.overlay {
 				position: absolute;
 				width: 100%;
 				height: 100%;
+
 				@include linearGradient($limegreen, #72bd42);
+
 				transition: opacity 0.3s;
 				opacity: 0;
+
 				&:hover {
 					opacity: 0.5;
 				}
