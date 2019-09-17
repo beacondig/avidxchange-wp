@@ -322,6 +322,21 @@ header nav ul li {
 				text-decoration:none;
 			}
 		}
+		&.menu-item-has-children {
+			padding-right:15px;
+			&:after {
+				content:"";
+				position:absolute;
+				background:url('../img/after-arrow.png') no-repeat;
+				background-size:12px;
+				background-position:center;
+				margin-left:5px;
+				cursor:pointer;
+				top:0;
+				width:12px;
+				height:12px;
+			}
+		}
 		&.menu-item-has-children:hover ul.sub-menu {
 			display:inline-flex;
 		}
