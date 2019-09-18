@@ -1,38 +1,56 @@
+(function ($) {
+	function init() {
+		setupHeroImage();
+		setupIndustriesHeight();
+
+		window.addEventListener('resize', function () {
+			setupIndustriesHeight();
+		})
+	}
+
+	function setupHeroImage() {
+		window.onload = setTimeout(function () {
+			$('.avid-hero .hero-image').addClass('visible');
+		}, 1500);
+	}
+
+	function setupIndustriesHeight() {
+		$('.industries .industry').each(function (i, el) {
+			var $el = $(el);
+			$el.height($el.width() / 100 * 75);
+		});
+	}
+
+	init();
+})(jQuery);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Old script
 jQuery(function () {
-
-	/* Industries */
-
-	// Animate in form
-	function displayForm() {
-		jQuery('.avid-hero .hero-image').addClass('visible');
-	};
-
-	// Opening FadeIn
-	window.onload = setTimeout(displayForm, 1500);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	// Sticky menu functionality
 	function moveScroller() {
 		var move = function () {
