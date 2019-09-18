@@ -2429,6 +2429,11 @@ footer .policy a {
   background-color: #fff;
 }
 
+.section.is-medium {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
 .section.is-small {
   padding-top: 25px;
   padding-bottom: 25px;
