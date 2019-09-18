@@ -58,6 +58,10 @@
 		padding-top: 0;
 		padding-bottom: 0;
 	}
+
+	&.bottom-is-gapless {
+		padding-bottom: 0;
+	}
 }
 
 /**
@@ -91,6 +95,14 @@
 
 	&.has-small-gap {
 		margin-bottom: 40px;
+	}
+
+	&.has-smaller-gap {
+		margin-bottom: 30px;
+	}
+
+	&.is-white {
+		color: #fff;
 	}
 }
 
@@ -291,10 +303,16 @@ header .mobile-nav ul li,
  * -----------------------------------
  */
 .avid-search {
+	// Must be on top of request-demo section.
+	z-index: 4;
+
 	.searchbox {
 		background: #eef1f4;
-		padding: 80px 50px;
 		position: relative;
+		padding: 80px 50px;
+		margin-bottom: -200px;
+		// Must be on top of slanted corner.
+		z-index: 5;
 
 		.section-title {
 			text-align: center;
@@ -335,5 +353,43 @@ header .mobile-nav ul li,
 				width: 25%;
 			}
 		}
+	}
+
+	@include angled(bottom, after, -5deg, #fff);
+}
+
+/**
+ * -----------------------------------
+ * Request Demo
+ * -----------------------------------
+ */
+.request-demo {
+	padding-top: 280px;
+	background-color: #98ce45;
+	// I didn't use linearGradient() mixin here because the option is limited.
+	background-image: linear-gradient(45deg, #98ce45 0%, #4fbf43 100%);
+
+	.form-wrapper {
+		padding-left: 40px;
+
+		@include phone-wide-down() {
+			padding-left: 0;
+		}
+	}
+
+	.gfield {
+		margin-top: 0 !important;
+
+		input,
+		select {
+			height: 50px;
+			border: 0;
+			padding-left: 15px !important;
+			padding-right: 15px !important;
+		}
+	}
+
+	.gform_button {
+		@extend %button-style;
 	}
 }

@@ -5,6 +5,8 @@
  * @package avidxchange
  */
 
+defined( 'ABSPATH' ) || die( "Can't access directly" );
+
 get_header( 'new' );
 ?>
 
@@ -49,7 +51,7 @@ get_header( 'new' );
 		</div>
 	</section>
 
-	<section class="section is-medium avid-search">
+	<section class="section is-medium bottom-is-gapless avid-search">
 		<div class="container is-half">	
 			<div class="searchbox">
 				<h2 class="section-title"><?php the_field( 'search_title' ); ?></h2>
@@ -70,6 +72,6 @@ get_header( 'new' );
 		</div>
 	</section>
 
-	<?php get_template_part( 'partials/content', 'demo' ); ?>
+	<?php get_template_part( 'partials/sections/section', 'request-demo' ); ?>
 
 <?php get_footer( 'new' ); ?>
