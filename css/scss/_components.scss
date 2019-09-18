@@ -99,6 +99,11 @@
 	font-weight: $fwbold;
 }
 
+// Adjust the z-index
+.wrapper > header {
+	z-index: 4;
+}
+
 // Adjust mobile menu
 header .mobile-nav ul li,
 .header-scroll .mobile-nav ul li {
