@@ -216,7 +216,7 @@ p {
   letter-spacing: 1px;
 }
 
-.btn, header .mobile-nav a.demo-button, .header-scroll .mobile-nav a.demo-button, header .mobile-nav ul li.demo-request, .header-scroll .mobile-nav ul li.demo-request, .demo-form form input[type="submit"], .home-opening .opening-demo-form form ul li input[type="submit"], .home-search .searchbox form button, .avid-search .searchbox form button {
+.btn, header .mobile-nav a.demo-button, .header-scroll .mobile-nav a.demo-button, header .mobile-nav ul li.demo-request, .header-scroll .mobile-nav ul li.demo-request, .demo-form form input[type="submit"], .home-opening .opening-demo-form form ul li input[type="submit"], .home-search .searchbox form button {
   text-align: center;
   font-weight: 700;
   font-family: "Artegra Sans Alt", sans-serif;
@@ -240,13 +240,13 @@ p {
   letter-spacing: 1px;
 }
 
-.btn:hover, header .mobile-nav a.demo-button:hover, .header-scroll .mobile-nav a.demo-button:hover, header .mobile-nav ul li.demo-request:hover, .header-scroll .mobile-nav ul li.demo-request:hover, .demo-form form input:hover[type="submit"], .home-opening .opening-demo-form form ul li input:hover[type="submit"], .home-search .searchbox form button:hover, .avid-search .searchbox form button:hover {
+.btn:hover, header .mobile-nav a.demo-button:hover, .header-scroll .mobile-nav a.demo-button:hover, header .mobile-nav ul li.demo-request:hover, .header-scroll .mobile-nav ul li.demo-request:hover, .demo-form form input:hover[type="submit"], .home-opening .opening-demo-form form ul li input:hover[type="submit"], .home-search .searchbox form button:hover {
   background: #fff;
   color: #0684c9;
 }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  .btn, header .mobile-nav a.demo-button, .header-scroll .mobile-nav a.demo-button, header .mobile-nav ul li.demo-request, .header-scroll .mobile-nav ul li.demo-request, .demo-form form input[type="submit"], .home-opening .opening-demo-form form ul li input[type="submit"], .home-search .searchbox form button, .avid-search .searchbox form button {
+  .btn, header .mobile-nav a.demo-button, .header-scroll .mobile-nav a.demo-button, header .mobile-nav ul li.demo-request, .header-scroll .mobile-nav ul li.demo-request, .demo-form form input[type="submit"], .home-opening .opening-demo-form form ul li input[type="submit"], .home-search .searchbox form button {
     line-height: 50px;
   }
 }
@@ -2716,49 +2716,49 @@ header .mobile-nav ul li, .header-scroll .mobile-nav ul li,
  */
 .avid-search .searchbox {
   background: #eef1f4;
-  padding: 80px 60px;
+  padding: 80px 50px;
   position: relative;
 }
 
-.avid-search .searchbox .heading {
-  color: #404041;
-  font-weight: 900;
-  font-size: 32px;
-  font-family: "Artegra Sans Alt", sans-serif;
-  padding-bottom: 50px;
-  text-transform: uppercase;
-}
-
-.avid-search .searchbox form {
-  width: 90%;
-  display: block;
+.avid-search .searchbox .section-title {
   text-align: center;
-  margin: 0 auto;
+  line-height: 1.3;
 }
 
-.avid-search .searchbox form label {
-  display: inline-block;
-  vertical-align: top;
-  width: calc(100% - 200px);
+.avid-search .searchbox .searchform .field {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.avid-search .searchbox .searchform .label {
+  display: block;
+  margin: 0 auto 3px;
+  padding-left: 0;
+  width: 90%;
+  font-family: "Artegra Sans Alt", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
   text-align: left;
   color: #404041;
-  font-family: "Artegra Sans Alt", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
 }
 
-.avid-search .searchbox form label input {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border: 1px solid #dadada;
-  padding-left: 10px;
-  width: 90%;
-  height: 43px;
-  margin-top: 3px;
+.avid-search .searchbox .searchform .input-group {
+  width: 75%;
+  padding-right: 25px;
 }
 
-.avid-search .searchbox form button {
-  padding: 0 40px;
-  margin-top: 16px;
+.avid-search .searchbox .searchform .search-input {
+  height: 42px;
+}
+
+.avid-search .searchbox .searchform .search-submit {
+  width: 25%;
 }
 /*# sourceMappingURL=theme-styles.css.map */

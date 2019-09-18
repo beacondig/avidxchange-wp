@@ -49,15 +49,22 @@ get_header( 'new' );
 		</div>
 	</section>
 
-	<section class="avid-search">
-		<div class="container">	
+	<section class="section avid-search">
+		<div class="container is-half">	
 			<div class="searchbox">
-				<div class="heading"><?php the_field( 'accounting_system_search_heading' ); ?></div>
-				<form role="search" method="get" id="searchbox" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-					<label>Enter Your Search Term Here<br />
-						<input type="search" value="" name="s" />
-					</label>
-					<button type="submit" form="searchbox" class="search-submit">Search  <i class="fas fa-search"></i></button>
+				<h2 class="section-title"><?php the_field( 'search_title' ); ?></h2>
+
+				<form role="search" method="get" id="searchform" class="form-inline searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+					<label class="label" for="s"><?php the_field( 'search_label' ); ?></label>
+					<div class="field">
+						<div class="input-group">
+							<input type="search" value="" name="s" class="form-control search-input" placeholder="<?php esc_attr_e( 'Search', 'avidxchange' ); ?>" />
+						</div>
+						<button type="submit" form="searchform" class="btn btn-primary search-submit">
+							<?php esc_html_e( 'Search', 'avidxchange' ); ?>
+							<i class="fas fa-search"></i>
+						</button>
+					</div>
 				</form>
 			</div>
 		</div>
