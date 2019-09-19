@@ -1,0 +1,16 @@
+<div class="thrv-leads-form-box tve_no_drag tve_no_icons thrv_wrapper tve_editor_main_content thrv-leads-in-content tve_empty_dropzone" style="" data-css="tve-u-2759aec08c431a5"><div class="thrv_wrapper thrv-columns" style="" data-css="tve-u-2759aec08c4320c"><div class="tcb-flex-row tcb--cols--2 tcb-resized tcb-mobile-edit" data-css="tve-u-2759aec08c43272"><div class="tcb-flex-col" data-css="tve-u-2859aec08c432cf" style=""><div class="tcb-col tve_empty_dropzone" style=""><div class="thrv_wrapper tve_image_caption" data-css="tve-u-2859aec08c4332c" style=""><span class="tve_image_frame" style="width: 100%;"><img class="tve_image wp-image-2428" alt="" width="165" height="165" title="set_28_icon" data-id="2428" src="{tve_leads_base_url}/images/set_28_icon.png" style="width: 100%;"></span></div></div></div><div class="tcb-flex-col" data-css="tve-u-2859aec08c4338a" style=""><div class="tcb-col tve_empty_dropzone" style="" data-css="tve-u-2859aec08c433e6"><div class="thrv_wrapper thrv_text_element tve_empty_dropzone" style="" data-css="tve-u-2859aec08c4346a"><p data-css="tve-u-2859aec08c434c4" data-default="Enter your text here...">Subscribe to our Newsletter!</p></div><div class="thrv_wrapper thrv_text_element tve_empty_dropzone" style=""><p data-css="tve-u-2859aec08c43522" data-default="Enter your text here...">Aenean sollicitudin, lorem quis bibendum auctor, nisi elit ipsum, nec sagittis sem nibh id elit.</p></div></div></div></div></div><div class="thrv_wrapper thrv_contentbox_shortcode thrv-content-box" style="" data-css="tve-u-2859aec08c43581">
+<div class="tve-content-box-background" data-css="tve-u-2859aec08c435dd"></div>
+<div class="tve-cb tve_empty_dropzone"><div class="thrv_wrapper thrv_lead_generation" data-connection="api" style="" data-css="tve-u-2859aec08c43640"><input type="hidden" class="tve-lg-err-msg" value="{&quot;email&quot;:&quot;Email address invalid&quot;,&quot;phone&quot;:&quot;Phone number invalid&quot;,&quot;password&quot;:&quot;Password invalid&quot;,&quot;passwordmismatch&quot;:&quot;Password mismatch error&quot;,&quot;required&quot;:&quot;Required field missing&quot;}">
+<div class="thrv_lead_generation_container tve_clearfix">
+<form action="#" method="post" novalidate="novalidate">
+<div class="tve_lead_generated_inputs_container tve_clearfix tve_empty_dropzone">
+<div class="thrv_wrapper thrv-columns"><div class="tcb-flex-row tcb--cols--2 tcb-resized"><div class="tcb-flex-col" data-css="tve-u-2859aec08c436a1" style=""><div class="tcb-col tve_empty_dropzone"><div class="tve_lg_input_container tve_lg_input" data-css="tve-u-2859aec08c436fe">
+<input type="email" data-field="email" data-required="1" data-validation="email" name="email" placeholder="Email" data-placeholder="Email" class="" style="">
+</div></div></div><div class="tcb-flex-col" data-css="tve-u-2859aec08c4375d" style=""><div class="tcb-col tve_empty_dropzone"><div class="tve_lg_input_container tve_submit_container tve_lg_submit" data-css="tve-u-2859aec08c437ba">
+<button type="submit" class="tve-froala" style="">SUBSCRIBE</button>
+</div></div></div></div></div>
+</div>
+<input type="hidden" name="__tcb_lg_fc" id="__tcb_lg_fc" value="YTowOnt9"></form>
+</div>
+</div></div>
+</div></div>

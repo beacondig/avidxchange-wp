@@ -1,0 +1,20 @@
+<wpml-config>
+	<admin-texts>
+		<key name="cresta_social_shares_total_text"/>
+		<key name="cresta_social_shares_tooltip_facebook"/>
+		<key name="cresta_social_shares_tooltip_twitter"/>
+		<key name="cresta_social_shares_tooltip_googleplus"/>
+		<key name="cresta_social_shares_tooltip_linkedin"/>
+		<key name="cresta_social_shares_tooltip_pinterest"/>
+		<key name="cresta_social_shares_tooltip_stumbleupon"/>
+		<key name="cresta_social_shares_tooltip_vk"/>
+		<key name="cresta_social_shares_tooltip_buffer"/>
+		<key name="cresta_social_shares_tooltip_reddit"/>
+		<key name="cresta_social_shares_tooltip_ok"/>
+		<key name="cresta_social_shares_tooltip_xing"/>
+		<key name="cresta_social_shares_tooltip_whatsapp"/>
+		<key name="cresta_social_shares_tooltip_telegram"/>
+		<key name="cresta_social_shares_tooltip_email"/>
+		<key name="cresta_social_shares_tooltip_print"/>
+	</admin-texts>
+</wpml-config>

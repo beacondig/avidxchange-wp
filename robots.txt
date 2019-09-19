@@ -1,0 +1,7 @@
+Sitemap: https://www.avidxchange.com/sitemap_index.xml
+
+User-agent: *
+Disallow: /demo-thank-you/
+Disallow: /?sort= 
+Disallow: /landing/
+Disallow: /notice-to-customers/
