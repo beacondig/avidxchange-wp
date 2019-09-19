@@ -9,6 +9,9 @@
 		}
 		.container {
 			height:100%;
+			&:before, &:after {
+				display:none;
+			}
 		}
 		.text {
 			text-align:left;
