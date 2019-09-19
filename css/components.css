@@ -472,10 +472,6 @@ header .mobile-nav ul li,
   }
 }
 
-.avid-hero .hero-body .content a {
-  display: none;
-}
-
 .avid-hero:after {
   bottom: 0;
   background: #ffffff;

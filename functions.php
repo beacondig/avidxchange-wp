@@ -1297,6 +1297,13 @@ function theme_scripts() {
 }
 add_action('wp_enqueue_scripts', 'theme_scripts');
 
+function avid_custom_head_tags() {
+	?>
+	<base href="<?=esc_url( home_url() )?>">
+	<?php
+}
+add_action('wp_head', 'avid_custom_head_tags');
+
 add_filter( 'gform_tabindex', '__return_false' ); 
 /* Setup the Scroll to Top Button
 *********************************************************
