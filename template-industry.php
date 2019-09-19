@@ -12,6 +12,7 @@ get_header( 'new' );
 get_template_part( 'partials/sections/section', 'industry-hero' );
 get_template_part( 'partials/sections/section', 'benefit-values' );
 get_template_part( 'partials/sections/section', 'integrations-logo' );
+get_template_part( 'partials/sections/section', 'customer-logos' );
 get_template_part( 'partials/sections/section', 'request-demo' );
 
 get_footer( 'new' );

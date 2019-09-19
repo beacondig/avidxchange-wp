@@ -8,7 +8,7 @@
 defined( 'ABSPATH' ) || die( "Can't access directly" );
 ?>
 
-<section class="home-search integration-search">
+<section class="home-search integrations-logo">
 	<div class="container">	
 		<h2><?php the_field( 'accounting_system_title' ); ?></h2>
 		<?php if ( have_rows( 'accounting_system_logos' ) ) : ?>
