@@ -139,6 +139,10 @@ section {
   background-color: #fff;
 }
 
+.section.is-light {
+  background-color: #eef1f4;
+}
+
 .section.is-medium {
   padding-top: 70px;
   padding-bottom: 70px;
@@ -240,6 +244,14 @@ section {
 
 .section-title.has-smaller-gap {
   margin-bottom: 30px;
+}
+
+.section-title.has-tiny-gap {
+  margin-bottom: 20px;
+}
+
+.section-title.is-gapless {
+  margin-bottom: 0;
 }
 
 .section-title.is-white {
@@ -952,5 +964,25 @@ header .mobile-nav ul li,
   max-width: 65%;
   margin-left: auto;
   margin-right: auto;
+}
+
+/**
+ * -----------------------------------
+ * Benefit Values
+ * -----------------------------------
+ */
+.benefit-values .intro {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 50%;
+  text-align: center;
+}
+
+.benefit-values .section-title {
+  margin-bottom: 10px;
+}
+
+.benefit-values .description p {
+  font-size: 18px;
 }
 /*# sourceMappingURL=components.css.map */

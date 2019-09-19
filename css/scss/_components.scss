@@ -44,6 +44,10 @@
 		background-color: #fff;
 	}
 
+	&.is-light {
+		background-color: $lightgrey;
+	}
+
 	&.is-medium {
 		padding-top: 70px;
 		padding-bottom: 70px;
@@ -152,6 +156,14 @@
 
 	&.has-smaller-gap {
 		margin-bottom: 30px;
+	}
+
+	&.has-tiny-gap {
+		margin-bottom: 20px;
+	}
+
+	&.is-gapless {
+		margin-bottom: 0;
 	}
 
 	&.is-white {
@@ -732,5 +744,27 @@ header .mobile-nav ul li,
 		max-width: 65%;
 		margin-left: auto;
 		margin-right: auto;
+	}
+}
+
+/**
+ * -----------------------------------
+ * Benefit Values
+ * -----------------------------------
+ */
+.benefit-values {
+	.intro {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 50%;
+		text-align: center;
+	}
+
+	.section-title {
+		margin-bottom: 10px;
+	}
+
+	.description p {
+		font-size: 18px;
 	}
 }

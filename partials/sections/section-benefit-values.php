@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Part: Industry List
+ * Template Part: Benefit Values
  *
  * @package avidxchange
  */
@@ -8,14 +8,19 @@
 defined( 'ABSPATH' ) || die( "Can't access directly" );
 ?>
 
-<section class="section is-small is-white avid-industries">
-	<div class="container is-half">
-		<h2 class="section-title">
-			<?php the_field( 'industries_title' ); ?>
-		</h2>
+<section class="section is-small is-white benefit-values">
+	<div class="container">
+		<div class="intro">
+			<h2 class="section-title has-tiny-gap">
+				<?php the_field( 'benefit_title' ); ?>
+			</h2>
+			<div class="description">
+				<?php the_field( 'benefit_description' ); ?>
+			</div>
+		</div>
 
-		<?php if ( have_rows( 'industries' ) ) : ?>
-			<ul class="row industries">
+		<?php if ( have_rows( 'benefit_values' ) ) : ?>
+			<ul class="row benefits">
 				<?php
 				while ( have_rows( 'industries' ) ) :
 					the_row();
