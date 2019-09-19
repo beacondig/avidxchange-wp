@@ -1,11 +1,14 @@
 (function ($) {
+	var $window = $(window);
+	var $industriesList = $('.avid-industries .industries');
+
 	function init() {
 		setupHeroImage();
-		setupIndustriesHeight();
+		checkIndustriesList();
 
 		window.addEventListener('resize', function () {
-			setupIndustriesHeight();
-		})
+			checkIndustriesList();
+		});
 	}
 
 	function setupHeroImage() {
@@ -14,10 +17,33 @@
 		}, 1500);
 	}
 
+	function checkIndustriesList() {
+		if ($industriesList.hasClass('slick-initialized')) {
+			$industriesList.slick('unslick');
+		}
+
+		setupIndustriesHeight();
+
+		if ($window.width() < 992) {
+			if (!$industriesList.hasClass('slick-initialized')) {
+				setupIndustriesSlider();
+			}
+		}
+	}
+
 	function setupIndustriesHeight() {
 		$('.industries .industry').each(function (i, el) {
 			var $el = $(el);
 			$el.height($el.width() / 100 * 75);
+		});
+	}
+
+	function setupIndustriesSlider() {
+		$industriesList.slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			autoplay: true,
+			autoplaySpeed: 4000,
 		});
 	}
 

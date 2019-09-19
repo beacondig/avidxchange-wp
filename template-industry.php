@@ -39,7 +39,7 @@ get_header( 'new' );
 					while ( have_rows( 'industries' ) ) :
 						the_row();
 						?>
-						<li class="col-xs-12 col-sm-6 item">
+						<li class="col-xs-12 col-md-6 item">
 							<div class="industry height-equal-width" style="background-image: url(<?php the_sub_field( 'industry_image' ); ?>); background-size: cover;">
 								<div class="overlay"></div>
 								<h3 class="item-title"><?php the_sub_field( 'industry_title' ); ?></h3>

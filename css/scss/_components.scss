@@ -248,8 +248,12 @@ header .mobile-nav ul li,
 		z-index: 3;
 		transition: right 750ms ease;
 
+		@include tablet-wide-down() {
+			bottom: 0;
+		}
+
 		@include tablet-down() {
-			bottom: 90px;
+			bottom: 50px;
 
 			img {
 				max-width: 350px;
@@ -326,6 +330,16 @@ header .mobile-nav ul li,
 	}
 
 	@include angled(bottom, after, -5deg, #ffffff);
+
+	&::after {
+		@include tablet-wide-down() {
+			height: 100px;
+		}
+
+		@include phone-down() {
+			height: 50px;
+		}
+	}
 }
 
 /* Page: Industries */
@@ -372,6 +386,49 @@ header .mobile-nav ul li,
 					opacity: 0.5;
 				}
 			}
+		}
+	}
+
+	.slick-prev,
+	.slick-next {
+		top: 45%;
+	}
+
+	.slick-prev {
+		left: -55px;
+	}
+
+	.slick-next {
+		right: -35px;
+	}
+
+	.slick-prev::before,
+	.slick-next::before {
+		font-family: "FontAwesome";
+		color: $limegreen;
+		font-size: 4rem;
+	}
+
+	.slick-prev::before {
+		content: "\f053";
+	}
+
+	.slick-next::before {
+		content: "\f054";
+	}
+
+	@include phone-wide-down() {
+		.slick-prev {
+			left: -20px;
+		}
+
+		.slick-next {
+			right: -15px;
+		}
+
+		.slick-prev::before,
+		.slick-next::before {
+			font-size: 2.2rem;
 		}
 	}
 }
@@ -423,6 +480,10 @@ header .mobile-nav ul li,
 				@include tablet-wide-down() {
 					width: 100%;
 				}
+
+				@include phone-down() {
+					display: block;
+				}
 			}
 
 			.label {
@@ -451,6 +512,7 @@ header .mobile-nav ul li,
 
 				@include phone-down() {
 					padding-right: 0;
+					margin-bottom: 15px;
 					width: 100%;
 				}
 			}
