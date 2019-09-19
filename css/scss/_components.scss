@@ -1,0 +1,522 @@
+/**
+ * Custom reusable components beside _settings.scss
+ */
+
+/**
+ * -----------------------------------
+ * Mixins
+ * -----------------------------------
+ */
+@mixin phone-down() {
+	@media only screen and (max-width: 575.98px) {
+		@content;
+	}
+}
+
+@mixin phone-wide-down() {
+	@media only screen and (max-width: 767.98px) {
+		@content;
+	}
+}
+
+@mixin tablet-down() {
+	@media only screen and (max-width: 991.98px) {
+		@content;
+	}
+}
+
+@mixin tablet-wide-down() {
+	@media only screen and (max-width: 1024.98px) {
+		@content;
+	}
+}
+
+/**
+ * -----------------------------------
+ * Section
+ * -----------------------------------
+ */
+.section {
+	padding-top: 50px;
+	padding-bottom: 50px;
+
+	&.is-white {
+		background-color: #fff;
+	}
+
+	&.is-medium {
+		padding-top: 70px;
+		padding-bottom: 70px;
+	}
+
+	&.is-small {
+		padding-top: 25px;
+		padding-bottom: 25px;
+	}
+
+	&.is-gapless {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+
+	&.bottom-is-gapless {
+		padding-bottom: 0;
+	}
+
+	@include tablet-down() {
+		padding-top: 40px;
+		padding-bottom: 40px;
+
+		&.is-medium {
+			padding-top: 60px;
+			padding-bottom: 60px;
+		}
+	}
+}
+
+/**
+ * -----------------------------------
+ * Container
+ * -----------------------------------
+ */
+.container {
+	&.is-medium {
+		max-width: 70%;
+	}
+
+	&.is-half {
+		max-width: 50%;
+	}
+
+	&.is-small {
+		max-width: 40%;
+	}
+
+	@include tablet-wide-down {
+		&.is-medium {
+			max-width: 80%;
+		}
+
+		&.is-half {
+			max-width: 60%;
+		}
+
+		&.is-small {
+			max-width: 50%;
+		}
+	}
+
+	@include tablet-down {
+		&.is-medium {
+			max-width: 85%;
+		}
+
+		&.is-half {
+			max-width: 70%;
+		}
+
+		&.is-small {
+			max-width: 60%;
+		}
+	}
+
+	@include phone-wide-down {
+		&.is-medium {
+			max-width: 90%;
+		}
+
+		&.is-half {
+			max-width: 80%;
+		}
+
+		&.is-small {
+			max-width: 70%;
+		}
+	}
+}
+
+/**
+ * -----------------------------------
+ * Title
+ * -----------------------------------
+ */
+.section-title {
+	margin-bottom: 60px;
+	font-size: $heading3 - 2;
+	font-weight: $fwblack;
+	line-height: 1.3;
+
+	&.has-small-gap {
+		margin-bottom: 40px;
+	}
+
+	&.has-smaller-gap {
+		margin-bottom: 30px;
+	}
+
+	&.is-white {
+		color: #fff;
+	}
+
+	@include tablet-wide-down() {
+		font-size: $heading3 - 4;
+	}
+
+	@include tablet-down() {
+		font-size: $heading3 - 6;
+	}
+
+	@include phone-wide-down() {
+		font-size: $heading3 - 8;
+	}
+}
+
+.item-title {
+	font-size: $heading5;
+	font-weight: $fwbold;
+	line-height: 1.2;
+
+	@include tablet-wide-down() {
+		font-size: $heading5 - 2;
+	}
+
+	@include tablet-down() {
+		font-size: $heading5 - 4;
+	}
+
+	@include phone-wide-down() {
+		font-size: $heading5 - 6;
+	}
+}
+
+// Adjust the z-index
+.wrapper > header {
+	z-index: 4;
+}
+
+// Adjust mobile menu
+header .mobile-nav ul li,
+.header-scroll .mobile-nav ul li {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: $heading5 - 5;
+}
+
+.m-nav-container {
+	padding-top: 46px;
+}
+
+// Adjust top menu
+.top-menu {
+	// we need this since the current top-menu is too close with main-menu.
+	padding-bottom: 10px;
+}
+
+/**
+ * -----------------------------------
+ * Hero
+ * -----------------------------------
+ */
+.avid-hero {
+	position: relative;
+	height: 90vh;
+	min-height: 800px;
+	overflow: hidden;
+	background: $grey;
+
+	@include tablet-wide-down() {
+		height: 60vh;
+	}
+
+	@include tablet-down() {
+		min-height: 850px;
+	}
+
+	@include phone-wide-down() {
+		min-height: 560px;
+	}
+
+	@include phone-down() {
+		min-height: 800px;
+	}
+
+	.hero-image {
+		position: absolute;
+		right: 0;
+		bottom: 100px;
+		text-align: center;
+		z-index: 3;
+		transition: right 750ms ease;
+
+		@include tablet-down() {
+			bottom: 90px;
+
+			img {
+				max-width: 350px;
+			}
+		}
+
+		@include phone-wide-down() {
+			display: none;
+		}
+	}
+
+	.hero-body {
+		position: relative;
+		z-index: 2;
+		color: #fff;
+		text-align: left;
+		top: 50%;
+		transform: translateY(-50%);
+
+		.content {
+			max-width: 65%;
+
+			@include tablet-wide-down() {
+				max-width: 50%;
+			}
+
+			@include tablet-down() {
+				max-width: 75%;
+			}
+
+			@include phone-wide-down() {
+				max-width: 100%;
+			}
+
+			h1 {
+				font-size: $heading1 - 15;
+				line-height: 1.2;
+				font-weight: $fwbold;
+				color: #fff;
+				text-transform: uppercase;
+				padding-bottom: 15px;
+
+				span {
+					color: $limegreen;
+				}
+
+				@include tablet-wide-down() {
+					font-size: $heading2;
+				}
+
+				@include phone-wide-down() {
+					font-size: $heading3;
+				}
+			}
+
+			p {
+				color: #fff;
+				padding-bottom: 20px;
+				max-width: 75%;
+
+				@include tablet-down() {
+					max-width: 70%;
+				}
+
+				@include phone-wide-down() {
+					max-width: 100%;
+				}
+			}
+
+			a {
+				display: none;
+			}
+		}
+	}
+
+	@include angled(bottom, after, -5deg, #ffffff);
+}
+
+/* Page: Industries */
+
+/**
+ * -----------------------------------
+ * Industries
+ * -----------------------------------
+ */
+.avid-industries {
+	z-index: 3;
+	text-align: center;
+
+	.industries {
+		.item {
+			padding: 10px;
+		}
+
+		.industry {
+			position: relative;
+
+			.item-title {
+				position: absolute;
+				top: 40px;
+				left: 35px;
+				color: #fff;
+				text-align: left;
+				z-index: 10;
+			}
+
+			.overlay {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+
+				@include linearGradient($limegreen, #72bd42);
+
+				transition: opacity 0.3s;
+				opacity: 0;
+
+				&:hover {
+					opacity: 0.5;
+				}
+			}
+		}
+	}
+}
+
+/**
+ * -----------------------------------
+ * Search
+ * -----------------------------------
+ */
+.avid-search {
+	// Must be on top of request-demo section.
+	z-index: 4;
+
+	.searchbox {
+		background: #eef1f4;
+		position: relative;
+		padding: 80px 50px;
+		margin-bottom: -200px;
+		// Must be on top of slanted corner.
+		z-index: 5;
+
+		@include tablet-wide-down() {
+			padding-left: 60px;
+			padding-right: 60px;
+		}
+
+		@include tablet-down() {
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+
+		@include phone-wide-down() {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+
+		.section-title {
+			text-align: center;
+		}
+
+		.searchform {
+			.field {
+				width: 90%;
+				margin-left: auto;
+				margin-right: auto;
+				display: flex;
+				justify-content: center;
+
+				@include tablet-wide-down() {
+					width: 100%;
+				}
+			}
+
+			.label {
+				display: block;
+				margin: 0 auto 3px;
+				padding-left: 0;
+				width: 90%;
+				font-family: $font-fam;
+				font-size: 14px;
+				font-weight: $fwmedium;
+				text-align: left;
+				color: $grey;
+
+				@include tablet-wide-down() {
+					width: 100%;
+				}
+			}
+
+			.input-group {
+				width: 75%;
+				padding-right: 25px;
+
+				@include tablet-wide-down() {
+					width: 70%;
+				}
+
+				@include phone-down() {
+					padding-right: 0;
+					width: 100%;
+				}
+			}
+
+			.search-input {
+				height: 42px;
+			}
+
+			.search-submit {
+				width: 25%;
+
+				@include tablet-wide-down() {
+					width: 30%;
+				}
+
+				@include phone-down() {
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	@include angled(bottom, after, -5deg, #fff);
+}
+
+/**
+ * -----------------------------------
+ * Request Demo
+ * -----------------------------------
+ */
+.request-demo {
+	padding-top: 280px;
+	background-color: #98ce45;
+	// I didn't use linearGradient() mixin here because the option is limited.
+	background-image: linear-gradient(45deg, #98ce45 0%, #4fbf43 100%);
+
+	@include phone-wide-down() {
+		padding-top: 180px;
+	}
+
+	.form-wrapper {
+		padding-left: 40px;
+
+		@include tablet-down() {
+			padding-left: 0;
+			padding-top: 40px;
+		}
+	}
+
+	.gfield {
+		margin-top: 0 !important;
+
+		input,
+		select {
+			height: 50px;
+			border: 0;
+			padding-left: 15px !important;
+			padding-right: 15px !important;
+		}
+
+		select {
+			margin-top: 12px;
+		}
+	}
+
+	.gform_button {
+		@extend %button-style;
+	}
+}
