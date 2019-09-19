@@ -189,9 +189,33 @@
 	}
 }
 
+.hero-title {
+	text-transform: uppercase;
+	font-size: $heading2 - 2;
+	color: #fff;
+	line-height: 1.2;
+	font-weight: $fwbold;
+
+	&.is-green {
+		color: $limegreen;
+	}
+}
+
+.hero-subtitle {
+	text-transform: uppercase;
+	font-size: $heading4 - 2;
+	color: #fff;
+	line-height: 1.2;
+	font-weight: $fwbold;
+
+	&.is-green {
+		color: $limegreen;
+	}
+}
+
 // Adjust the z-index
 .wrapper > header {
-	z-index: 4;
+	z-index: 4; // Must be on top of .header-scroll div.
 }
 
 // Adjust mobile menu
@@ -214,10 +238,10 @@ header .mobile-nav ul li,
 
 /**
  * -----------------------------------
- * Hero
+ * Industries Hero
  * -----------------------------------
  */
-.avid-hero {
+.industries-hero {
 	position: relative;
 	height: 90vh;
 	min-height: 800px;
@@ -358,7 +382,7 @@ header .mobile-nav ul li,
 	}
 }
 
-/* Page: Industries */
+/* Industries Template */
 
 /**
  * -----------------------------------
@@ -669,5 +693,44 @@ header .mobile-nav ul li,
 		color: $brightblue;
 		border-color: #fff;
 		background: #fff;
+	}
+}
+
+/* Industry Template */
+
+/**
+ * -----------------------------------
+ * Industry Hero
+ * -----------------------------------
+ */
+.page-template-template-industry .wrapper > header {
+	background-color: transparent;
+}
+
+.industry-hero {
+	position: relative;
+	background-image: url(../img/gray-header.png);
+	background-size: 100% 100%;
+	background-position: center center;
+
+	.hero-body {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 55vh;
+		min-height: 550px;
+		color: #fff;
+		text-align: center;
+	}
+
+	.hero-subtitle {
+		margin-bottom: 5px;
+	}
+
+	.content {
+		max-width: 65%;
+		margin-left: auto;
+		margin-right: auto;
 	}
 }

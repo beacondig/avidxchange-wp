@@ -1312,6 +1312,23 @@ function avid_custom_head_tags() {
 }
 add_action('wp_head', 'avid_custom_head_tags');
 
+function avid_parse_custom_url($url) {
+	if ( false === stripos( $url, 'http' ) && false === stripos( $url, 'www' ) ) {
+		global $wp;
+
+		$current_url = home_url( $wp->request );
+
+		if ( false !== stripos( $current_url, '#' ) ) {
+			$explode     = explode( '#', $current_url );
+			$current_url = $current_url[0];
+		}
+
+		$url = trailingslashit( $current_url ) . $url;
+	}
+
+	return $url;
+}
+
 add_filter( 'gform_tabindex', '__return_false' ); 
 /* Setup the Scroll to Top Button
 *********************************************************

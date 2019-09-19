@@ -288,6 +288,30 @@ section {
   }
 }
 
+.hero-title {
+  text-transform: uppercase;
+  font-size: 37px;
+  color: #fff;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.hero-title.is-green {
+  color: #a4d137;
+}
+
+.hero-subtitle {
+  text-transform: uppercase;
+  font-size: 26px;
+  color: #fff;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.hero-subtitle.is-green {
+  color: #a4d137;
+}
+
 .wrapper > header {
   z-index: 4;
 }
@@ -309,10 +333,10 @@ header .mobile-nav ul li,
 
 /**
  * -----------------------------------
- * Hero
+ * Industries Hero
  * -----------------------------------
  */
-.avid-hero {
+.industries-hero {
   position: relative;
   height: 90vh;
   min-height: 800px;
@@ -321,30 +345,30 @@ header .mobile-nav ul li,
 }
 
 @media only screen and (max-width: 1024.98px) {
-  .avid-hero {
+  .industries-hero {
     height: 60vh;
   }
 }
 
 @media only screen and (max-width: 991.98px) {
-  .avid-hero {
+  .industries-hero {
     min-height: 850px;
   }
 }
 
 @media only screen and (max-width: 767.98px) {
-  .avid-hero {
+  .industries-hero {
     min-height: 560px;
   }
 }
 
 @media only screen and (max-width: 575.98px) {
-  .avid-hero {
+  .industries-hero {
     min-height: 800px;
   }
 }
 
-.avid-hero .hero-image {
+.industries-hero .hero-image {
   position: absolute;
   right: 0;
   bottom: 50px;
@@ -355,39 +379,39 @@ header .mobile-nav ul li,
 }
 
 @media only screen and (max-width: 1024.98px) {
-  .avid-hero .hero-image {
+  .industries-hero .hero-image {
     bottom: 0;
   }
 }
 
 @media only screen and (max-width: 991.98px) {
-  .avid-hero .hero-image {
+  .industries-hero .hero-image {
     bottom: 50px;
   }
-  .avid-hero .hero-image img {
+  .industries-hero .hero-image img {
     max-width: 350px;
   }
 }
 
 @media only screen and (max-width: 767.98px) {
-  .avid-hero .hero-image {
+  .industries-hero .hero-image {
     z-index: 1;
   }
-  .avid-hero .hero-image img {
+  .industries-hero .hero-image img {
     max-width: 250px;
   }
 }
 
 @media only screen and (max-width: 575.98px) {
-  .avid-hero .hero-image {
+  .industries-hero .hero-image {
     bottom: 0;
   }
-  .avid-hero .hero-image img {
+  .industries-hero .hero-image img {
     max-width: 280px;
   }
 }
 
-.avid-hero .hero-body {
+.industries-hero .hero-body {
   position: relative;
   z-index: 2;
   color: #fff;
@@ -397,37 +421,37 @@ header .mobile-nav ul li,
           transform: translateY(-50%);
 }
 
-.avid-hero .hero-body .content {
+.industries-hero .hero-body .content {
   max-width: 65%;
 }
 
 @media only screen and (max-width: 1024.98px) {
-  .avid-hero .hero-body .content {
+  .industries-hero .hero-body .content {
     max-width: 50%;
   }
 }
 
 @media only screen and (max-width: 991.98px) {
-  .avid-hero .hero-body .content {
+  .industries-hero .hero-body .content {
     max-width: 75%;
   }
 }
 
 @media only screen and (max-width: 767.98px) {
-  .avid-hero .hero-body .content {
+  .industries-hero .hero-body .content {
     max-width: 70%;
   }
 }
 
 @media only screen and (max-width: 575.98px) {
-  .avid-hero .hero-body .content {
+  .industries-hero .hero-body .content {
     position: relative;
     top: -100px;
     max-width: 100%;
   }
 }
 
-.avid-hero .hero-body .content h1 {
+.industries-hero .hero-body .content h1 {
   font-size: 49px;
   line-height: 1.2;
   font-weight: 700;
@@ -436,43 +460,43 @@ header .mobile-nav ul li,
   padding-bottom: 15px;
 }
 
-.avid-hero .hero-body .content h1 span {
+.industries-hero .hero-body .content h1 span {
   color: #a4d137;
 }
 
 @media only screen and (max-width: 1024.98px) {
-  .avid-hero .hero-body .content h1 {
+  .industries-hero .hero-body .content h1 {
     font-size: 39px;
   }
 }
 
 @media only screen and (max-width: 767.98px) {
-  .avid-hero .hero-body .content h1 {
+  .industries-hero .hero-body .content h1 {
     font-size: 28px;
     line-height: 1.3;
   }
 }
 
-.avid-hero .hero-body .content p {
+.industries-hero .hero-body .content p {
   color: #fff;
   padding-bottom: 20px;
   max-width: 75%;
 }
 
 @media only screen and (max-width: 991.98px) {
-  .avid-hero .hero-body .content p {
+  .industries-hero .hero-body .content p {
     max-width: 70%;
   }
 }
 
 @media only screen and (max-width: 767.98px) {
-  .avid-hero .hero-body .content p {
+  .industries-hero .hero-body .content p {
     max-width: 100%;
     font-size: 16px;
   }
 }
 
-.avid-hero:after {
+.industries-hero:after {
   bottom: 0;
   background: #ffffff;
   content: '';
@@ -490,24 +514,24 @@ header .mobile-nav ul li,
 }
 
 @media only screen and (max-width: 999px) {
-  .avid-hero:after {
+  .industries-hero:after {
     height: 150px;
   }
 }
 
 @media only screen and (max-width: 1024.98px) {
-  .avid-hero::after {
+  .industries-hero::after {
     height: 100px;
   }
 }
 
 @media only screen and (max-width: 575.98px) {
-  .avid-hero::after {
+  .industries-hero::after {
     height: 50px;
   }
 }
 
-/* Page: Industries */
+/* Industries Template */
 /**
  * -----------------------------------
  * Industries
@@ -884,5 +908,49 @@ header .mobile-nav ul li,
   color: #0684c9;
   border-color: #fff;
   background: #fff;
+}
+
+/* Industry Template */
+/**
+ * -----------------------------------
+ * Industry Hero
+ * -----------------------------------
+ */
+.page-template-template-industry .wrapper > header {
+  background-color: transparent;
+}
+
+.industry-hero {
+  position: relative;
+  background-image: url(../img/gray-header.png);
+  background-size: 100% 100%;
+  background-position: center center;
+}
+
+.industry-hero .hero-body {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 55vh;
+  min-height: 550px;
+  color: #fff;
+  text-align: center;
+}
+
+.industry-hero .hero-subtitle {
+  margin-bottom: 5px;
+}
+
+.industry-hero .content {
+  max-width: 65%;
+  margin-left: auto;
+  margin-right: auto;
 }
 /*# sourceMappingURL=components.css.map */

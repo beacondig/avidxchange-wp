@@ -8,7 +8,7 @@
 defined( 'ABSPATH' ) || die( "Can't access directly" );
 ?>
 
-<section class="avid-hero">
+<section class="avid-hero industries-hero">
 	<div class="hero-body">
 		<div class="container">
 			<div class="content">
@@ -17,21 +17,9 @@ defined( 'ABSPATH' ) || die( "Can't access directly" );
 				<?php
 				$link_type = get_field( 'opening_link_type' );
 				$link_url  = ! $link_type ? '#demoRequest' : get_field( 'opening_link_' . $link_type . '_url' );
+				$link_url  = avid_parse_custom_url( $link_url );
 				$link_text = get_field( 'opening_link_text' );
 				$link_text = ! empty( $link_text ) ? $link_text : __( 'REQUEST A DEMO', 'avidxchange' );
-
-				if ( false === stripos( $link_url, 'http' ) && false === stripos( $link_url, 'www' ) ) {
-					global $wp;
-
-					$current_url = home_url( $wp->request );
-
-					if ( false !== stripos( $current_url, '#' ) ) {
-						$explode     = explode( '#', $current_url );
-						$current_url = $current_url[0];
-					}
-
-					$link_url = trailingslashit( $current_url ) . $link_url;
-				}
 				?>
 				<a class="btn btn-primary" href="<?php echo esc_url( $link_url ); ?>">
 					<?php echo esc_html( $link_text ); ?>
