@@ -8,23 +8,22 @@
 defined( 'ABSPATH' ) || die( "Can't access directly" );
 ?>
 
-<section class="section is-medium bottom-is-gapless avid-search">
+<section class="home-search integration-search">
 	<div class="container">	
-		<div class="searchbox">
-			<h2 class="section-title"><?php the_field( 'search_title' ); ?></h2>
+		<h2><?php the_field( 'accounting_system_title' ); ?></h2>
+		<?php if ( have_rows( 'accounting_system_logos' ) ) : ?>
+			<ul>
+				<?php
+				while ( have_rows( 'accounting_system_logos' ) ) :
+					the_row();
 
-			<form role="search" method="get" id="searchform" class="form-inline searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-				<label class="label" for="s"><?php the_field( 'search_label' ); ?></label>
-				<div class="field">
-					<div class="input-group">
-						<input type="search" value="" name="s" class="form-control search-input" placeholder="<?php esc_attr_e( 'Search', 'avidxchange' ); ?>" />
-					</div>
-					<button type="submit" form="searchform" class="btn btn-primary search-submit">
-						<?php esc_html_e( 'Search', 'avidxchange' ); ?>
-						<i class="fas fa-search"></i>
-					</button>
-				</div>
-			</form>
-		</div>
+					$logo = get_sub_field( 'logo' );
+					$logo = isset( $logo['sizes'] ) && isset( $logo['sizes']['medium'] ) ? $logo['sizes']['medium'] : '';
+					?>
+
+					<li><img src="<?php echo esc_url( $logo ); ?>" /></li>
+				<?php endwhile; ?>
+			</ul>
+		<?php endif; ?>
 	</div>
 </section>
