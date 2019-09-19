@@ -85,7 +85,7 @@
 	}
 
 	&.is-half {
-		max-width: 50%;
+		max-width: 60%;
 	}
 
 	&.is-small {
@@ -243,7 +243,7 @@ header .mobile-nav ul li,
 	.hero-image {
 		position: absolute;
 		right: 0;
-		bottom: 100px;
+		bottom: 50px;
 		text-align: center;
 		z-index: 3;
 		transition: right 750ms ease;
@@ -261,7 +261,19 @@ header .mobile-nav ul li,
 		}
 
 		@include phone-wide-down() {
-			display: none;
+			z-index: 1; // Should be under the text.
+
+			img {
+				max-width: 250px;
+			}
+		}
+
+		@include phone-down {
+			bottom: 0;
+
+			img {
+				max-width: 280px;
+			}
 		}
 	}
 
@@ -285,6 +297,12 @@ header .mobile-nav ul li,
 			}
 
 			@include phone-wide-down() {
+				max-width: 70%;
+			}
+
+			@include phone-down() {
+				position: relative;
+				top: -100px;
 				max-width: 100%;
 			}
 
@@ -305,7 +323,8 @@ header .mobile-nav ul li,
 				}
 
 				@include phone-wide-down() {
-					font-size: $heading3;
+					font-size: $heading4;
+					line-height: 1.3;
 				}
 			}
 
@@ -320,6 +339,7 @@ header .mobile-nav ul li,
 
 				@include phone-wide-down() {
 					max-width: 100%;
+					font-size: 16px;
 				}
 			}
 
@@ -446,7 +466,8 @@ header .mobile-nav ul li,
 		background: #eef1f4;
 		position: relative;
 		padding: 80px 50px;
-		margin-bottom: -200px;
+		margin: 0 auto -200px;
+		max-width: 1000px;
 		// Must be on top of slanted corner.
 		z-index: 5;
 
@@ -456,8 +477,7 @@ header .mobile-nav ul li,
 		}
 
 		@include tablet-down() {
-			padding-left: 30px;
-			padding-right: 30px;
+			padding: 50px 30px;
 		}
 
 		@include phone-wide-down() {

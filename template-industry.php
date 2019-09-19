@@ -52,7 +52,7 @@ get_header( 'new' );
 	</section>
 
 	<section class="section is-medium bottom-is-gapless avid-search">
-		<div class="container is-half">	
+		<div class="container is-medium">	
 			<div class="searchbox">
 				<h2 class="section-title"><?php the_field( 'search_title' ); ?></h2>
 
