@@ -410,6 +410,23 @@ header .mobile-nav ul li,
 		top: 45%;
 	}
 
+	img.slick-prev,
+	img.slick-next {
+		top: 50%;
+		width: 80px;
+		height: 80px;
+
+		@include phone-wide-down() {
+			width: 60px;
+			height: 60px;
+		}
+
+		@include phone-down() {
+			width: 30px;
+			height: 30px;
+		}
+	}
+
 	.slick-prev {
 		left: -55px;
 	}
@@ -431,6 +448,35 @@ header .mobile-nav ul li,
 
 	.slick-next::before {
 		content: "\f054";
+	}
+
+	img.slick-prev {
+		left: -85px;
+
+		@include phone-wide-down() {
+			left: -45px;
+		}
+
+		@include phone-down() {
+			left: -25px;
+		}
+	}
+
+	img.slick-next {
+		right: -75px;
+
+		@include phone-wide-down() {
+			right: -45px;
+		}
+
+		@include phone-down() {
+			right: -25px;
+		}
+	}
+
+	img.slick-prev::before,
+	img.slick-next::before {
+		display: none;
 	}
 
 	@include phone-wide-down() {

@@ -1293,6 +1293,11 @@ function theme_scripts() {
 		} else {
 			wp_enqueue_script('slick', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js', ['jquery'], null, TRUE);
 			wp_enqueue_script('functions', get_stylesheet_directory_uri() . '/js/functions.js', ['slick'], filemtime(get_stylesheet_directory().'/js/functions.js'), TRUE);
+
+			wp_localize_script( 'functions', 'themeObj', [
+				'homeUrl' => home_url(),
+				'themeUrl' => get_stylesheet_directory_uri(),
+			] );
 		}
 }
 add_action('wp_enqueue_scripts', 'theme_scripts');
