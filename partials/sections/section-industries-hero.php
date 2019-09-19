@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Part: Hero
+ * Template Part: Industries Hero
  *
  * @package avidxchange
  */
