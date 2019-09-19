@@ -760,7 +760,7 @@ header .mobile-nav ul li,
   background-image: url(../img/green-bg.png);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center center;
 }
 
 @media only screen and (max-width: 991.98px) {

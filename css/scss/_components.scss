@@ -566,7 +566,7 @@ header .mobile-nav ul li,
 	background-image: url(../img/green-bg.png);
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-position: center;
+	background-position: center center;
 
 	@include tablet-down() {
 		.section-title {
