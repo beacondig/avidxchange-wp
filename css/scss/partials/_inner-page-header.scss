@@ -1,0 +1,52 @@
+.partial-inner-page-header {
+		@include linearGradient(#4b4c4e, #262824);
+		@include angled(bottom, after, -5.0deg, #ffffff);
+		position:relative;
+		height:90vh;
+		min-height:800px;
+		@include respond-at(1449px) {
+			min-height:700px;
+		}
+		.container {
+			height:100%;
+			&:before, &:after {
+				display:none;
+			}
+		}
+		.text {
+			text-align:left;
+			width:55%;
+			display:inline-block;
+			position:relative;
+			top:50%;
+			transform:translateY(-50%);
+			h1 {
+				font-size:45px;
+				line-height:55px;
+				font-weight:$fwblack;
+				text-transform:uppercase;
+				padding-bottom:30px;
+				color:#fff;
+			}
+			p {
+				color:#fff;
+				font-weight:$fwregular;
+				font-size:20px;
+				line-height:28px;
+				padding-bottom:50px;
+			}
+		}
+		.header-image {
+			position:absolute;
+			right:0;
+			bottom:100px;
+			width:40%;
+			text-align:right;
+			@include respond-at(1599px) {
+				width:45%;
+			}
+			img {
+				width:100%;
+			}
+		}
+}
