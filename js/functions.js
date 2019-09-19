@@ -6,6 +6,10 @@
 		setupHeroImage();
 		checkIndustriesList();
 
+		window.addEventListener('load', function () {
+			setupTestimonyVideos();
+		});
+
 		window.addEventListener('resize', function () {
 			checkIndustriesList();
 		});
@@ -46,6 +50,16 @@
 			autoplaySpeed: 4000,
 			prevArrow: '<img alt="Prev" src="' + themeObj.themeUrl + '/img/arrow-left-blue.png" class="slick-prev">',
 			nextArrow: '<img alt="Next" src="' + themeObj.themeUrl + '/img/arrow-right-blue.png" class="slick-next">'
+		});
+	}
+
+	function setupTestimonyVideos() {
+		$('.testimony-videos .videos').slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			autoplay: false,
+			arrows: false,
+			dots: true
 		});
 	}
 

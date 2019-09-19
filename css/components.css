@@ -177,6 +177,11 @@ section {
  * Container
  * -----------------------------------
  */
+.container.is-full {
+  width: 100%;
+  max-width: 100%;
+}
+
 .container.is-medium {
   max-width: 70%;
 }
@@ -1055,5 +1060,44 @@ header .mobile-nav ul li,
 
 .customer-logos .logo {
   max-width: 60%;
+}
+
+/**
+ * -----------------------------------
+ * Testimony Videos
+ * -----------------------------------
+ */
+.testimony-videos {
+  margin-bottom: -180px;
+}
+
+.testimony-videos .video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.testimony-videos iframe,
+.testimony-videos video {
+  width: 100%;
+}
+
+.testimony-videos video {
+  height: auto;
+}
+
+.testimony-videos iframe {
+  position: absolute;
+  height: 100%;
+}
+
+.testimony-videos .slick-dots li button::before {
+  font-size: 24px;
+  color: #a4d137;
+}
+
+.testimony-videos .slick-dots {
+  bottom: 100px;
 }
 /*# sourceMappingURL=components.css.map */
