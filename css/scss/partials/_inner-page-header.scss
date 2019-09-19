@@ -35,6 +35,16 @@
 				line-height:28px;
 				padding-bottom:50px;
 			}
+			a.second {
+				background:transparent;
+				border:2px solid #fff;
+				margin-left:15px;
+				color:#fff;
+				&:hover {
+					background:$brightblue;
+					color:#fff;
+				}
+			}
 		}
 		.header-image {
 			position:absolute;

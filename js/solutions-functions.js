@@ -2,6 +2,7 @@ jQuery(function() {
 		
 		// Solutions Tabs Change
 		jQuery('.solutions-streamline ul.headers li').on('cilck', function() {
+			alert('header clicked!');
 			var item = jQuery(this).data('item');
 			console.log(item);
 			jQuery('.solutions-streamline ul.headers li.active').removeClass('active');

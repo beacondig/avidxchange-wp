@@ -1,6 +1,6 @@
 <?php /*Template Name: Homepage Page New */ ?>
 <?php get_header('new'); ?>
-		<section class="home-opening">
+		<section class="home-opening opening">
 			<div class="opening-video">
 				<video  poster="<?php echo get_stylesheet_directory_uri();?>/img/home/header_bg.png" height="480" width="100%" loop="true" autobuffer autoplay preload="auto" muted="true" src="<?php echo get_stylesheet_directory_uri();?>/img/home/home-video1920.mp4" type="video/mp4"></video>
 			</div>

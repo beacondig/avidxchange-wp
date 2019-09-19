@@ -26,118 +26,57 @@
 		<section class="solutions-streamline">
 			<div class="container">
 				<h2>Solutions That Help You Streamline</h2>
-				<ul class="headers">
-					<li data-item="solution1" class="active">Solution 1</li>
-					<li data-item="solution2">Solution 2</li>
-					<li data-item="solution3">Solution 3</li>
-					<li data-item="solution4">Solution 4</li>
-					<li data-item="solution5">Solution 5</li>
-					<li data-item="solution6">Solution 6</li>
-				</ul>
-				<ul class="info">
-					<li class="solution1 active">
-						<div class="img-container">
-							<img src="<?php echo get_stylesheet_directory_uri();?>/img/solutions/browser_copy_3@2x.png" />
-						</div>
-						<div class="text">
-							<div class="text-spacer">
-								<div class="title">Lorem Ipsum</div>
-								<ul>
-									<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut e</li>
-									<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut e</li>
-									<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut e</li>
-									<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut e</li>
-								</ul>
-								<a class="btn" href="#">Learn More</a>
+				<div class="desktop">
+					<ul class="headers">
+						<li data-item="solution1" class="active">Solution 1</li>
+						<li data-item="solution2">Solution 2</li>
+						<li data-item="solution3">Solution 3</li>
+						<li data-item="solution4">Solution 4</li>
+						<li data-item="solution5">Solution 5</li>
+						<li data-item="solution6">Solution 6</li>
+					</ul>
+					<ul class="info">
+						<li class="solution1 active">
+							<div class="img-container">
+								<img src="<?php echo get_stylesheet_directory_uri();?>/img/solutions/browser_copy_3@2x.png" />
 							</div>
-						</div>
-					</li>
-					<li class="solution2">
-						<div class="img-container">
-							<img src="<?php echo get_stylesheet_directory_uri();?>/img/solutions/browser_copy_3@2x.png" />
-						</div>
-						<div class="text">
-							<div class="text-spacer">
-								<div class="title">Lorem Ipsum</div>
-								<ul>
-									<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut e</li>
-									<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut e</li>
-									<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut e</li>
-									<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut e</li>
-								</ul>
-								<a class="btn" href="#">Learn More</a>
+							<div class="text">
+								<div class="text-spacer">
+									<div class="title">Lorem Ipsum</div>
+									<ul>
+										<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut e</li>
+										<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut e</li>
+										<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut e</li>
+										<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut e</li>
+									</ul>
+									<a class="btn" href="#">Learn More</a>
+								</div>
 							</div>
-						</div>
-					</li>
-					<li class="solution3">
-						<div class="img-container">
-							<img src="<?php echo get_stylesheet_directory_uri();?>/img/solutions/browser_copy_3@2x.png" />
-						</div>
-						<div class="text">
-							<div class="text-spacer">
-								<div class="title">Lorem Ipsum</div>
-								<ul>
-									<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut e</li>
-									<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut e</li>
-									<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut e</li>
-									<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut e</li>
-								</ul>
-								<a class="btn" href="#">Learn More</a>
+						</li>
+					</ul>
+				</div>
+				<div class="mobile">
+					<div class="next"><img src="<?php echo get_stylesheet_directory_uri();?>/img/solutions/solutions-right-arrow.png" /></div>
+					<div class="prev"><img src="<?php echo get_stylesheet_directory_uri();?>/img/solutions/solutions-left-arrow.png" /></div>
+					<ul>
+						<li class="solution1 active">
+							<div class="img-container">
+								<img src="<?php echo get_stylesheet_directory_uri();?>/img/solutions/browser_copy_3@2x.png" />
 							</div>
-						</div>
-					</li>
-					<li class="solution4">
-						<div class="img-container">
-							<img src="<?php echo get_stylesheet_directory_uri();?>/img/solutions/browser_copy_3@2x.png" />
-						</div>
-						<div class="text">
-							<div class="text-spacer">
-								<div class="title">Lorem Ipsum</div>
-								<ul>
-									<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut e</li>
-									<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut e</li>
-									<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut e</li>
-									<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut e</li>
-								</ul>
-								<a class="btn" href="#">Learn More</a>
+							<div class="text">
+								<div class="text-spacer">
+									<div class="title">Lorem Ipsum</div>
+									<ul>
+										<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut e</li>
+										<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut e</li>
+										<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut e</li>
+										<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut e</li>
+									</ul>
+									<a class="btn" href="#">Learn More</a>
+								</div>
 							</div>
-						</div>
-					</li>
-					<li class="solution5">
-						<div class="img-container">
-							<img src="<?php echo get_stylesheet_directory_uri();?>/img/solutions/browser_copy_3@2x.png" />
-						</div>
-						<div class="text">
-							<div class="text-spacer">
-								<div class="title">Lorem Ipsum</div>
-								<ul>
-									<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut e</li>
-									<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut e</li>
-									<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut e</li>
-									<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut e</li>
-								</ul>
-								<a class="btn" href="#">Learn More</a>
-							</div>
-						</div>
-					</li>
-					<li class="solution6">
-						<div class="img-container">
-							<img src="<?php echo get_stylesheet_directory_uri();?>/img/solutions/browser_copy_3@2x.png" />
-						</div>
-						<div class="text">
-							<div class="text-spacer">
-								<div class="title">Lorem Ipsum</div>
-								<ul>
-									<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut e</li>
-									<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut e</li>
-									<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut e</li>
-									<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut e</li>
-								</ul>
-								<a class="btn" href="#">Learn More</a>
-							</div>
-						</div>
-					</li>
-				</ul>
+						</li>
+				</div>
 			</div>
 		</section>
 		<section class="solutions-find-success">
