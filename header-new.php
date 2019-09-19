@@ -28,7 +28,7 @@
 			);
 		?>
 		<div class="wrapper">
-			<header>
+			<header class="<?php echo get_field('header_style');?>">
 				<div class="container">
 					<div class="top-menu">
 						<?php
