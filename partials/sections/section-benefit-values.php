@@ -8,7 +8,7 @@
 defined( 'ABSPATH' ) || die( "Can't access directly" );
 ?>
 
-<section class="section is-small is-white benefit-values">
+<section class="section benefit-values">
 	<div class="container">
 		<div class="intro">
 			<h2 class="section-title has-tiny-gap">
@@ -22,13 +22,16 @@ defined( 'ABSPATH' ) || die( "Can't access directly" );
 		<?php if ( have_rows( 'benefit_values' ) ) : ?>
 			<ul class="row benefits">
 				<?php
-				while ( have_rows( 'industries' ) ) :
+				while ( have_rows( 'benefit_values' ) ) :
 					the_row();
 					?>
 					<li class="col-xs-12 col-md-6 item">
-						<div class="industry height-equal-width" style="background-image: url(<?php the_sub_field( 'industry_image' ); ?>); background-size: cover;">
-							<div class="overlay"></div>
-							<h3 class="item-title"><?php the_sub_field( 'industry_title' ); ?></h3>
+						<div class="benefit">
+							<img src="<?php the_sub_field( 'icon' ); ?>" alt="Icon" class="icon">
+							<h3 class="item-title"><?php the_sub_field( 'title' ); ?></h3>
+							<div class="description">
+								<?php the_sub_field( 'description' ); ?>
+							</div>
 						</div>
 					</li>
 				<?php endwhile; ?>
