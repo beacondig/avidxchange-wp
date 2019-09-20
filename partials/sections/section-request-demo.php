@@ -25,7 +25,7 @@ defined( 'ABSPATH' ) || die( "Can't access directly" );
 			<div class="col-xs-12 col-md-6">
 				<div class="form-wrapper fadein">
 					<h2 class="section-title is-white has-smaller-gap"><?php the_field( 'request_demo_title' ); ?></h2>
-					<?php echo do_shortcode( '[gravityform id=38 title=false description=false ajax=true tabindex=49]' ); ?>
+					<?php echo do_shortcode( get_field( 'request_demo_shortcode' ) ); ?>
 				</div>
 			</div>
 		</div>
