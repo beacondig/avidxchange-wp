@@ -8,7 +8,7 @@
 defined( 'ABSPATH' ) || die( "Can't access directly" );
 ?>
 
-<section class="section is-white our-solutions">
+<section class="section is-small is-white our-solutions">
 	<div class="container">	
 		<h2 class="section-title"><?php the_field( 'solutions_title' ); ?></h2>
 
@@ -25,7 +25,7 @@ defined( 'ABSPATH' ) || die( "Can't access directly" );
 				$slug = sanitize_title( $name );
 
 				$image     = get_sub_field( 'image' );
-				$image_url = isset( $image['sizes'] ) && isset( $image['sizes']['medium'] ) ? $image['sizes']['medium'] : '';
+				$image_url = isset( $image['sizes'] ) && isset( $image['sizes']['medium_large'] ) ? $image['sizes']['medium_large'] : '';
 
 				$link_type = get_field( 'link_type' );
 				$link_url  = $link_type ? get_field( 'link_' . $link_type . '_url' ) : '';
@@ -46,10 +46,10 @@ defined( 'ABSPATH' ) || die( "Can't access directly" );
 
 				<li class="tab-content-item" data-id="solution-<?php echo esc_attr( $slug ); ?>">
 					<div class="row">
-						<div class="col-xs-12 col-md-6 image-wrapper">
+						<div class="col-xs-12 col-md-5 image-wrapper">
 							<img alt="Image" src="<?php echo esc_url( $image_url ); ?>">
 						</div>
-						<div class="col-xs-12 col-md-6 content-wrapper">
+						<div class="col-xs-12 col-md-7 content-wrapper">
 							<h3 class="item-title">
 								<?php the_sub_field( 'title' ); ?>
 							</h3>
