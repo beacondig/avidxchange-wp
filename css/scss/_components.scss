@@ -801,6 +801,9 @@ header .mobile-nav ul li,
 	}
 
 	.benefits {
+		display: flex;
+		flex-wrap: wrap;
+
 		.item-title {
 			margin-top: 12px;
 			font-weight: $fwblack;
@@ -812,6 +815,7 @@ header .mobile-nav ul li,
 		}
 
 		.item {
+			display: flex;
 			padding: 15px;
 		}
 

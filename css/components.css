@@ -1019,6 +1019,14 @@ header .mobile-nav ul li,
   font-size: 20px;
 }
 
+.benefit-values .benefits {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 .benefit-values .benefits .item-title {
   margin-top: 12px;
   font-weight: 900;
@@ -1030,6 +1038,9 @@ header .mobile-nav ul li,
 }
 
 .benefit-values .benefits .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   padding: 15px;
 }
 
