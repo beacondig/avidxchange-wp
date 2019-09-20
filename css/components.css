@@ -328,6 +328,30 @@ section {
   color: #a4d137;
 }
 
+@media only screen and (max-width: 1024.98px) {
+  .hero-title {
+    font-size: 35px;
+  }
+}
+
+@media only screen and (max-width: 991.98px) {
+  .hero-title {
+    font-size: 32px;
+  }
+}
+
+@media only screen and (max-width: 767.98px) {
+  .hero-title {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 575.98px) {
+  .hero-title {
+    font-size: 26px;
+  }
+}
+
 .hero-subtitle {
   text-transform: uppercase;
   font-size: 26px;
@@ -338,6 +362,24 @@ section {
 
 .hero-subtitle.is-green {
   color: #a4d137;
+}
+
+@media only screen and (max-width: 991.98px) {
+  .hero-subtitle {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (max-width: 767.98px) {
+  .hero-subtitle {
+    font-size: 22px;
+  }
+}
+
+@media only screen and (max-width: 575.98px) {
+  .hero-subtitle {
+    font-size: 20px;
+  }
 }
 
 .has-text-uppercase {
@@ -1008,6 +1050,20 @@ header .mobile-nav ul li,
   text-align: center;
 }
 
+@media only screen and (max-width: 1024.98px) {
+  .industry-hero .hero-body {
+    min-height: 470px;
+    height: 35vh;
+  }
+}
+
+@media only screen and (max-width: 991.98px) {
+  .industry-hero .hero-body {
+    min-height: 400px;
+    height: 40vh;
+  }
+}
+
 .industry-hero .hero-subtitle {
   margin-bottom: 5px;
 }
@@ -1016,6 +1072,18 @@ header .mobile-nav ul li,
   max-width: 65%;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media only screen and (max-width: 1024.98px) {
+  .industry-hero .content {
+    max-width: 90%;
+  }
+}
+
+@media only screen and (max-width: 767.98px) {
+  .industry-hero .content {
+    max-width: 100%;
+  }
 }
 
 /**
@@ -1068,6 +1136,7 @@ header .mobile-nav ul li,
 
 .benefit-values .benefits .benefit {
   padding: 40px;
+  width: 100%;
   background-color: #fff;
   -webkit-box-shadow: 0px 35px 50px -40px #404041;
           box-shadow: 0px 35px 50px -40px #404041;
