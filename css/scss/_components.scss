@@ -959,7 +959,7 @@ header .mobile-nav ul li,
 	z-index: 4; // Must be on top of .testimony-videos section.
 
 	&.is-small {
-		padding-bottom: 80px;
+		padding-bottom: 20px;
 	}
 
 	.container {
@@ -1034,12 +1034,15 @@ header .mobile-nav ul li,
 	}
 
 	.tab-content {
+		position: relative;
 		max-width: 90%;
 		margin-left: auto;
 		margin-right: auto;
+		min-height: 300px;
 
 		.tab-content-item {
 			display: none;
+			position: absolute;
 		}
 
 		.image-wrapper {

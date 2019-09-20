@@ -67,20 +67,39 @@
 
 	function setupAvidTabs() {
 		$tabMenuLinks = $('.avid-tabs .tab-menu-item a');
+		$tabContent = $('.avid-tabs .tab-content');
 		$tabContentItems = $('.avid-tabs .tab-content-item');
 
 		if (!$tabMenuLinks.length || !$tabContentItems.length) return;
 
-		var $activeMenu = $('.avid-tabs .tab-menu').find('is-active');
-		var activeLink;
+		switchTab(getActiveLink());
 
-		if ($activeMenu.length) {
-			activeLink = $activeMenu.find('a')[0];
-		} else {
-			activeLink = $tabMenuLinks[0];
+		function getActiveLink() {
+			var $activeMenu = $('.avid-tabs .tab-menu').find('is-active');
+			var activeLink;
+
+			if ($activeMenu.length) {
+				activeLink = $activeMenu.find('a')[0];
+			} else {
+				activeLink = $tabMenuLinks[0];
+			}
+
+			return activeLink;
 		}
 
-		switchTab(activeLink);
+		function getHashValue(link) {
+			var href = link.href;
+			var hash = href.substr(href.indexOf("#"));
+
+			return hash.replace('#', '');
+		}
+
+		window.addEventListener('resize', function () {
+			var hash = getHashValue(getActiveLink());
+			var $activeTab = $tabContent.find('[data-id="' + hash + '"]');
+
+			$tabContent.height($activeTab.height());
+		});
 
 		$tabMenuLinks.on('click', function (e) {
 			e.preventDefault();
@@ -88,15 +107,15 @@
 		});
 
 		function switchTab(link) {
-			href = link.href;
-			hash = href.substr(href.indexOf("#"));
-			hash = hash.replace('#', '');
+			var hash = getHashValue(link);
+			var $activeTab = $tabContent.find('[data-id="' + hash + '"]');
 
 			$('.avid-tabs .tab-menu-item').removeClass('is-active');
 			link.parentNode.classList.add('is-active');
 
-			$tabContentItems.stop().fadeOut(250);
-			$('.avid-tabs .tab-content').find('[data-id="' + hash + '"]').stop().fadeIn(250);
+			$tabContentItems.hide();
+			$tabContent.height($activeTab.height());
+			$activeTab.stop().fadeIn(500);
 		}
 	}
 

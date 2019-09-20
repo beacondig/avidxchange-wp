@@ -1173,7 +1173,7 @@ header .mobile-nav ul li,
 }
 
 .our-solutions.is-small {
-  padding-bottom: 80px;
+  padding-bottom: 20px;
 }
 
 .our-solutions .container {
@@ -1274,13 +1274,16 @@ header .mobile-nav ul li,
 }
 
 .avid-tabs .tab-content {
+  position: relative;
   max-width: 90%;
   margin-left: auto;
   margin-right: auto;
+  min-height: 300px;
 }
 
 .avid-tabs .tab-content .tab-content-item {
   display: none;
+  position: absolute;
 }
 
 .avid-tabs .tab-content .image-wrapper img {
