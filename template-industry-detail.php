@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Industry
+ * Template Name: Industry Detail
  *
  * @package avidxchange
  */
