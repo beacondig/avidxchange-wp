@@ -934,6 +934,19 @@ header .mobile-nav ul li,
 	padding-top: 240px;
 	padding-bottom: 320px;
 
+	@include tablet-wide-down() {
+		padding-top: 220px;
+		padding-bottom: 280px;
+	}
+
+	@include tablet-down() {
+		padding-bottom: 220px;
+	}
+
+	@include phone-down() {
+		padding-bottom: 200px;
+	}
+
 	&::after {
 		content: "";
 		display: none;

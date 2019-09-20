@@ -1176,6 +1176,25 @@ header .mobile-nav ul li,
   padding-bottom: 320px;
 }
 
+@media only screen and (max-width: 1024.98px) {
+  .integrations-logo {
+    padding-top: 220px;
+    padding-bottom: 280px;
+  }
+}
+
+@media only screen and (max-width: 991.98px) {
+  .integrations-logo {
+    padding-bottom: 220px;
+  }
+}
+
+@media only screen and (max-width: 575.98px) {
+  .integrations-logo {
+    padding-bottom: 200px;
+  }
+}
+
 .integrations-logo::after {
   content: "";
   display: none;
