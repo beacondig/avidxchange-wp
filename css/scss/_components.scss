@@ -238,11 +238,11 @@
 	}
 
 	@include phone-wide-down() {
-		font-size: $heading3 - 2;
+		font-size: $heading4;
 	}
 
 	@include phone-down() {
-		font-size: $heading4 - 2;
+		font-size: $heading5 - 2;
 	}
 }
 
@@ -266,7 +266,7 @@
 	}
 
 	@include phone-down() {
-		font-size: $heading5 - 4;
+		font-size: $heading5 - 6;
 	}
 }
 
@@ -826,21 +826,20 @@ header .mobile-nav ul li,
 	.hero-body {
 		position: relative;
 		display: flex;
+		padding-top: 20px;
+		padding-bottom: 20px;
 		align-items: center;
 		justify-content: center;
-		height: 55vh;
 		min-height: 550px;
 		color: #fff;
 		text-align: center;
 
 		@include tablet-wide-down() {
 			min-height: 470px;
-			height: 35vh;
 		}
 
 		@include tablet-down() {
 			min-height: 400px;
-			height: 40vh;
 		}
 	}
 
