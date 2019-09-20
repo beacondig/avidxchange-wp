@@ -923,7 +923,7 @@ header .mobile-nav ul li,
 	z-index: 4; // Must be on top of .testimony-videos section.
 
 	&.is-small {
-		padding-bottom: 100px;
+		padding-bottom: 80px;
 	}
 
 	.container {
@@ -931,7 +931,22 @@ header .mobile-nav ul li,
 	}
 
 	@include angled(top, before, 5deg, #fff);
-	@include angled(bottom, after, -5deg, #fff);
+
+	// This section needs a special slanted style.
+	&::after {
+		background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHByZXNlcnZlQXNwZWN0UmF0aW89J25vbmUnIHZpZXdCb3g9JzAgMCAxMDAgMTAwJyBmaWxsPSdyZ2IoMjU1LDI1NSwyNTUpJyBmaWxsLW9wYWNpdHk9JzEnPjxwb2x5Z29uIHBvaW50cz0nMCwwIDEwMCwwIDAsMTAwJz48L3BvbHlnb24+PC9zdmc+);
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		content: "";
+		height: 100px;
+		left: 0;
+		position: absolute;
+		right: 0;
+		width: 100%;
+		z-index: 4;
+		bottom: -100px;
+	}
 
 	.section-title {
 		text-align: center;
