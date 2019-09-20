@@ -8,7 +8,7 @@
 defined( 'ABSPATH' ) || die( "Can't access directly" );
 ?>
 
-<section class="avid-hero industries-hero">
+<section class="avid-hero industries-hero opening">
 	<div class="hero-body">
 		<div class="container">
 			<div class="content">
