@@ -248,6 +248,25 @@
 
 /**
  * -----------------------------------
+ * Content
+ * -----------------------------------
+ */
+.content {
+	ul {
+		list-style: disc outside;
+		margin-left: 1em;
+		margin-top: 1em;
+	}
+
+	ol {
+		list-style-position: outside;
+		margin-left: 1em;
+		margin-top: 1em;
+	}
+}
+
+/**
+ * -----------------------------------
  * Override & Adjusments
  * -----------------------------------
  */
@@ -1062,6 +1081,7 @@ header .mobile-nav ul li,
 		}
 
 		.item-title {
+			margin-top: 45px;
 			font-weight: $fwblack;
 		}
 	}

@@ -346,6 +346,23 @@ section {
 
 /**
  * -----------------------------------
+ * Content
+ * -----------------------------------
+ */
+.content ul {
+  list-style: disc outside;
+  margin-left: 1em;
+  margin-top: 1em;
+}
+
+.content ol {
+  list-style-position: outside;
+  margin-left: 1em;
+  margin-top: 1em;
+}
+
+/**
+ * -----------------------------------
  * Override & Adjusments
  * -----------------------------------
  */
@@ -1301,6 +1318,7 @@ header .mobile-nav ul li,
 }
 
 .avid-tabs .tab-content .item-title {
+  margin-top: 45px;
   font-weight: 900;
 }
 /*# sourceMappingURL=components.css.map */
