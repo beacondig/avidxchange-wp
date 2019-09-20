@@ -1,63 +1,5 @@
 [
     {
-        "key": "group_5d811825b712c",
-        "title": "Header Style",
-        "fields": [
-            {
-                "key": "field_5d811ca737ded",
-                "label": "Header Style (light or dark)",
-                "name": "header_style",
-                "type": "select",
-                "instructions": "",
-                "required": 1,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "choices": {
-                    "light": "Light",
-                    "dark-solid": "Dark Solid",
-                    "dark": "Dark Transparent"
-                },
-                "default_value": [
-                    "dark"
-                ],
-                "allow_null": 0,
-                "multiple": 0,
-                "ui": 0,
-                "return_format": "value",
-                "ajax": 0,
-                "placeholder": ""
-            }
-        ],
-        "location": [
-            [
-                {
-                    "param": "post_type",
-                    "operator": "==",
-                    "value": "page"
-                }
-            ],
-            [
-                {
-                    "param": "post_type",
-                    "operator": "==",
-                    "value": "post"
-                }
-            ]
-        ],
-        "menu_order": 0,
-        "position": "normal",
-        "style": "default",
-        "label_placement": "top",
-        "instruction_placement": "label",
-        "hide_on_screen": "",
-        "active": true,
-        "description": ""
-    },
-    {
         "key": "group_5d8129f3786f3",
         "title": "Opening Details",
         "fields": [
@@ -98,6 +40,44 @@
                 "maxlength": "",
                 "rows": 5,
                 "new_lines": "br"
+            },
+            {
+                "key": "field_5d83eeb4a58a7",
+                "label": "Opening Button 2 Link Url",
+                "name": "opening_button_2_link_url",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5d83eec9a58a8",
+                "label": "Opening Button 2 Text",
+                "name": "opening_button_2_text",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Learn More",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
             }
         ],
         "location": [
@@ -106,6 +86,517 @@
                     "param": "post_type",
                     "operator": "==",
                     "value": "page"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": ""
+    },
+    {
+        "key": "group_5d83ce971104b",
+        "title": "Solutions V2",
+        "fields": [
+            {
+                "key": "field_5d83cea33ebe8",
+                "label": "Processes Section",
+                "name": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "left",
+                "endpoint": 0
+            },
+            {
+                "key": "field_5d83d2d83ebe9",
+                "label": "Processes Items",
+                "name": "processes_items",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "field_5d83d31a3ebeb",
+                "min": 3,
+                "max": 3,
+                "layout": "row",
+                "button_label": "Add Item",
+                "sub_fields": [
+                    {
+                        "key": "field_5d83d3073ebea",
+                        "label": "Icon",
+                        "name": "icon",
+                        "type": "image",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "url",
+                        "preview_size": "thumbnail",
+                        "library": "all",
+                        "min_width": "",
+                        "min_height": "",
+                        "min_size": "",
+                        "max_width": "",
+                        "max_height": "",
+                        "max_size": "",
+                        "mime_types": ""
+                    },
+                    {
+                        "key": "field_5d83d31a3ebeb",
+                        "label": "Stat",
+                        "name": "stat",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_5d83d3273ebec",
+                        "label": "Description",
+                        "name": "description",
+                        "type": "text",
+                        "instructions": "Add a very short description",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    }
+                ]
+            },
+            {
+                "key": "field_5d83d4503ebed",
+                "label": "Solutions Section",
+                "name": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "left",
+                "endpoint": 0
+            },
+            {
+                "key": "field_5d83d4623ebee",
+                "label": "Solution Items",
+                "name": "solution_items",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "field_5d83db9a3ebf0",
+                "min": 0,
+                "max": 0,
+                "layout": "row",
+                "button_label": "Add Solution",
+                "sub_fields": [
+                    {
+                        "key": "field_5d83d5b33ebef",
+                        "label": "Solution Image",
+                        "name": "solution_image",
+                        "type": "image",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "url",
+                        "preview_size": "thumbnail",
+                        "library": "all",
+                        "min_width": "",
+                        "min_height": "",
+                        "min_size": "",
+                        "max_width": "",
+                        "max_height": "",
+                        "max_size": "",
+                        "mime_types": ""
+                    },
+                    {
+                        "key": "field_5d83db9a3ebf0",
+                        "label": "Solution Title",
+                        "name": "solution_title",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_5d83dba33ebf1",
+                        "label": "Solutions Bullets",
+                        "name": "solutions_bullets",
+                        "type": "repeater",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "collapsed": "",
+                        "min": 0,
+                        "max": 0,
+                        "layout": "row",
+                        "button_label": "Add Bullet Point",
+                        "sub_fields": [
+                            {
+                                "key": "field_5d83dc753ebf2",
+                                "label": "Bullet",
+                                "name": "bullet",
+                                "type": "text",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": "",
+                                "maxlength": ""
+                            }
+                        ]
+                    },
+                    {
+                        "key": "field_5d83dc913ebf3",
+                        "label": "Solution Link Url",
+                        "name": "solution_link_url",
+                        "type": "text",
+                        "instructions": "Add the learn more link url",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_5d83dca83ebf4",
+                        "label": "Solution Link Button Text",
+                        "name": "solution_link_button_text",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    }
+                ]
+            },
+            {
+                "key": "field_5d83e21d3ebf5",
+                "label": "Success Section",
+                "name": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "left",
+                "endpoint": 0
+            },
+            {
+                "key": "field_5d83e2313ebf6",
+                "label": "Success Items",
+                "name": "success_items",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "field_5d83e28c3ebf8",
+                "min": 0,
+                "max": 0,
+                "layout": "row",
+                "button_label": "Add Item",
+                "sub_fields": [
+                    {
+                        "key": "field_5d83e2513ebf7",
+                        "label": "Wistia Video Iframe Url",
+                        "name": "wistia_video_iframe_url",
+                        "type": "text",
+                        "instructions": "Add the full url for the Wistia Iframe. Add the section after src= in the iframe.",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_5d83e28c3ebf8",
+                        "label": "Name",
+                        "name": "name",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_5d83e2993ebf9",
+                        "label": "Position",
+                        "name": "position",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_5d83e2a23ebfa",
+                        "label": "Short Description",
+                        "name": "short_description",
+                        "type": "textarea",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "maxlength": "",
+                        "rows": 3,
+                        "new_lines": ""
+                    },
+                    {
+                        "key": "field_5d83e2b43ebfb",
+                        "label": "Button Link Url",
+                        "name": "button_link_url",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_5d83e2c43ebfc",
+                        "label": "Button Text",
+                        "name": "button_text",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "Learn More",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    }
+                ]
+            },
+            {
+                "key": "field_5d83e2e53ebfd",
+                "label": "Solutions Accounting Systems",
+                "name": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "left",
+                "endpoint": 0
+            },
+            {
+                "key": "field_5d83e53a3ebfe",
+                "label": "Solutions Accounting Systems Items",
+                "name": "solutions_accounting_systems_items",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "field_5d83e5b43ec00",
+                "min": 0,
+                "max": 4,
+                "layout": "row",
+                "button_label": "Add System",
+                "sub_fields": [
+                    {
+                        "key": "field_5d83e5a53ebff",
+                        "label": "Logo Page Link",
+                        "name": "logo_page_link",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_5d83e5b43ec00",
+                        "label": "Logo Image",
+                        "name": "logo_image",
+                        "type": "image",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "url",
+                        "preview_size": "thumbnail",
+                        "library": "all",
+                        "min_width": "",
+                        "min_height": "",
+                        "min_size": "",
+                        "max_width": "",
+                        "max_height": "",
+                        "max_size": "",
+                        "mime_types": ""
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page_template",
+                    "operator": "==",
+                    "value": "template-solutions.php"
                 }
             ]
         ],

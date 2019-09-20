@@ -8,6 +8,15 @@
 			padding:300px 0 80px;
 			margin-top:-250px;
 		}
+		.page-template-template-solutions & {
+			padding:300px 0 80px;
+			margin-top:-250px;
+		}
+		.page-template-template-about & {
+			@include angled(top, before, 5.0deg, #ffffff);
+			padding:250px 0 80px;
+			margin-top:-25px;
+		}
 		h1 {
 			color:#fff;
 			font-size:$heading2;
