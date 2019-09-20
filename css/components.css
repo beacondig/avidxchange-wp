@@ -1351,6 +1351,12 @@ header .mobile-nav ul li,
   text-align: center;
 }
 
+@media only screen and (max-width: 767.98px) {
+  .our-solutions .section-title {
+    margin-bottom: 30px;
+  }
+}
+
 /**
  * -----------------------------------
  * Avid Tabs
@@ -1375,12 +1381,37 @@ header .mobile-nav ul li,
   border-bottom: 1px solid #eef1f4;
 }
 
+@media only screen and (max-width: 1024.98px) {
+  .avid-tabs .tab-menu {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 767.98px) {
+  .avid-tabs .tab-menu {
+    display: block;
+  }
+}
+
 .avid-tabs .tab-menu-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-left: 10px;
   margin-right: 10px;
+}
+
+@media only screen and (max-width: 1024.98px) {
+  .avid-tabs .tab-menu-item {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+@media only screen and (max-width: 767.98px) {
+  .avid-tabs .tab-menu-item {
+    display: block;
+  }
 }
 
 .avid-tabs .tab-menu-item a {
@@ -1391,6 +1422,12 @@ header .mobile-nav ul li,
   color: #404041;
   -webkit-transition: 250ms all;
   transition: 250ms all;
+}
+
+@media only screen and (max-width: 767.98px) {
+  .avid-tabs .tab-menu-item a {
+    display: block;
+  }
 }
 
 .avid-tabs .tab-menu-item a:hover, .avid-tabs .tab-menu-item a:focus {
@@ -1422,6 +1459,12 @@ header .mobile-nav ul li,
 
 .avid-tabs .tab-content .content-wrapper {
   padding-left: 60px;
+}
+
+@media only screen and (max-width: 991.98px) {
+  .avid-tabs .tab-content .content-wrapper {
+    padding-left: 0;
+  }
 }
 
 .avid-tabs .tab-content .content {

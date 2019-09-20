@@ -1081,6 +1081,10 @@ header .mobile-nav ul li,
 
 	.section-title {
 		text-align: center;
+
+		@include phone-wide-down() {
+			margin-bottom: 30px;
+		}
 	}
 }
 
@@ -1101,6 +1105,14 @@ header .mobile-nav ul li,
 		text-transform: uppercase;
 		line-height: 1.1;
 		border-bottom: 1px solid $lightgrey;
+
+		@include tablet-wide-down() {
+			font-size: 18px;
+		}
+
+		@include phone-wide-down() {
+			display: block;
+		}
 	}
 
 	.tab-menu-item {
@@ -1108,11 +1120,24 @@ header .mobile-nav ul li,
 		margin-left: 10px;
 		margin-right: 10px;
 
+		@include tablet-wide-down() {
+			margin-left: 5px;
+			margin-right: 5px;
+		}
+
+		@include phone-wide-down() {
+			display: block;
+		}
+
 		a {
 			display: flex;
 			padding: 10px 25px 7px;
 			color: $grey;
 			transition: 250ms all;
+
+			@include phone-wide-down() {
+				display: block;
+			}
 
 			&:hover,
 			&:focus {
@@ -1148,6 +1173,10 @@ header .mobile-nav ul li,
 
 		.content-wrapper {
 			padding-left: 60px;
+
+			@include tablet-down() {
+				padding-left: 0;
+			}
 		}
 
 		.content {
