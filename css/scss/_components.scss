@@ -806,6 +806,10 @@ header .mobile-nav ul li,
 .page-template-template-industry .request-demo {
 	margin-top: -100px;
 	padding-top: 200px;
+
+	@include tablet-down() {
+		margin-top: -120px;
+	}
 }
 
 .page-template-template-industry .wrapper > header {
@@ -981,12 +985,35 @@ header .mobile-nav ul li,
 	background-size: 100% 100%;
 	z-index: 5; // Must be on top of .integrations-logo section.
 
+	@include tablet-wide-down() {
+		padding-top: 120px;
+		padding-bottom: 120px;
+		background-size: cover;
+	}
+
+	@include phone-wide-down() {
+		padding-top: 100px;
+		padding-bottom: 100px;
+
+		.section-title {
+			margin-bottom: 30px;
+		}
+	}
+
 	.item {
 		padding: 30px;
+
+		@include phone-wide-down() {
+			padding-top: 20px;
+		}
 	}
 
 	.logo {
 		max-width: 60%;
+
+		@include tablet-down() {
+			max-width: 40%;
+		}
 	}
 }
 
@@ -997,6 +1024,10 @@ header .mobile-nav ul li,
  */
 .testimony-videos {
 	margin-bottom: -230px;
+
+	@include tablet-down() {
+		margin-bottom: -180px;
+	}
 
 	.video-wrapper {
 		position: relative;

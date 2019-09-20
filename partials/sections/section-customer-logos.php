@@ -22,7 +22,7 @@ defined( 'ABSPATH' ) || die( "Can't access directly" );
 					$logo = get_sub_field( 'logo' );
 					$logo = isset( $logo['sizes'] ) && isset( $logo['sizes']['medium'] ) ? $logo['sizes']['medium'] : '';
 					?>
-					<li class="col-xs-12 col-md-3 item">
+					<li class="col-xs-6 col-md-3 item">
 						<div class="customer">
 							<img alt="" src="<?php echo esc_url( $logo ); ?>" class="logo">
 							<h3 class="item-title is-white"><?php the_sub_field( 'name' ); ?></h3>
