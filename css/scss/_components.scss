@@ -390,7 +390,7 @@ header .mobile-nav ul li,
 		}
 	}
 
-	@include angled(bottom, after, -5deg, #ffffff);
+	@include angled(bottom, after, -5deg, #fff);
 
 	&::after {
 		@include tablet-wide-down() {
@@ -853,7 +853,7 @@ header .mobile-nav ul li,
  * -----------------------------------
  */
 .testimony-videos {
-	margin-bottom: -180px;
+	margin-bottom: -230px;
 
 	.video-wrapper {
 		position: relative;
@@ -878,10 +878,38 @@ header .mobile-nav ul li,
 
 	.slick-dots li button::before {
 		font-size: 24px;
-		color: $limegreen;
 	}
 
 	.slick-dots {
-		bottom: 100px;
+		bottom: 150px;
 	}
+
+	.slick-dots li {
+		position: relative;
+		margin: 0 6px;
+		z-index: 3;
+	}
+
+	.slick-dots li.slick-active button::before {
+		color: $limegreen;
+		opacity: 1;
+	}
+
+	.slick-dots li button::before {
+		color: #959396;
+	}
+}
+
+/**
+ * -----------------------------------
+ * Solutions
+ * -----------------------------------
+ */
+.our-solutions {
+	margin-bottom: -110px;
+	min-height: 300px;
+	z-index: 4; // Must be on top of .testimony-videos section.
+
+	@include angled(top, before, 5deg, #fff);
+	@include angled(bottom, after, -5deg, #fff);
 }
