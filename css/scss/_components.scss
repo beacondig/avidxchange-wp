@@ -1029,6 +1029,10 @@ header .mobile-nav ul li,
 		margin-bottom: -180px;
 	}
 
+	@include phone-down() {
+		margin-bottom: -130px;
+	}
+
 	.video-wrapper {
 		position: relative;
 		padding-bottom: 56.25%;
@@ -1084,6 +1088,10 @@ header .mobile-nav ul li,
 	margin-bottom: -110px;
 	z-index: 4; // Must be on top of .testimony-videos section.
 
+	@include phone-down() {
+		margin-bottom: -40px;
+	}
+
 	&.is-small {
 		padding-bottom: 20px;
 	}
@@ -1108,6 +1116,11 @@ header .mobile-nav ul li,
 		width: 100%;
 		z-index: 4;
 		bottom: -100px;
+
+		@include phone-down() {
+			height: 50px;
+			bottom: -50px;
+		}
 	}
 
 	.section-title {

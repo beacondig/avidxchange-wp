@@ -1288,6 +1288,12 @@ header .mobile-nav ul li,
   }
 }
 
+@media only screen and (max-width: 575.98px) {
+  .testimony-videos {
+    margin-bottom: -130px;
+  }
+}
+
 .testimony-videos .video-wrapper {
   position: relative;
   padding-bottom: 56.25%;
@@ -1343,6 +1349,12 @@ header .mobile-nav ul li,
   z-index: 4;
 }
 
+@media only screen and (max-width: 575.98px) {
+  .our-solutions {
+    margin-bottom: -40px;
+  }
+}
+
 .our-solutions.is-small {
   padding-bottom: 20px;
 }
@@ -1387,6 +1399,13 @@ header .mobile-nav ul li,
   width: 100%;
   z-index: 4;
   bottom: -100px;
+}
+
+@media only screen and (max-width: 575.98px) {
+  .our-solutions::after {
+    height: 50px;
+    bottom: -50px;
+  }
 }
 
 .our-solutions .section-title {
