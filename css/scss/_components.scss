@@ -871,6 +871,22 @@ header .mobile-nav ul li,
 		margin: 0 auto 50px;
 		max-width: 50%;
 		text-align: center;
+
+		@include tablet-wide-down() {
+			max-width: 75%;
+		}
+
+		@include tablet-down() {
+			max-width: 85%;
+		}
+
+		@include phone-wide-down() {
+			max-width: 90%;
+		}
+
+		@include phone-down() {
+			max-width: 100%;
+		}
 	}
 
 	.section-title {
