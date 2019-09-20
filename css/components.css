@@ -15,7 +15,7 @@ p {
   font-family: "Artegra Sans Alt", sans-serif;
 }
 
-.btn, .request-demo .gform_button {
+.btn, .btn.is-white, .request-demo .gform_button {
   text-align: center;
   font-weight: 700;
   font-family: "Artegra Sans Alt", sans-serif;
@@ -45,7 +45,7 @@ p {
 }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  .btn, .request-demo .gform_button {
+  .btn, .btn.is-white, .request-demo .gform_button {
     line-height: 50px;
   }
 }
@@ -342,6 +342,17 @@ section {
 
 .has-text-uppercase {
   text-transform: uppercase;
+}
+
+/**
+ * -----------------------------------
+ * Override & Adjusments
+ * -----------------------------------
+ */
+.btn.is-white, .request-demo .gform_button {
+  color: #0684c9;
+  border-color: #fff;
+  background: #fff;
 }
 
 .wrapper > header {
@@ -936,12 +947,6 @@ header .mobile-nav ul li,
   margin-top: 12px;
 }
 
-.request-demo .gform_button {
-  color: #0684c9;
-  border-color: #fff;
-  background: #fff;
-}
-
 /* Industry Template */
 /**
  * -----------------------------------
@@ -1056,9 +1061,27 @@ header .mobile-nav ul li,
  * Integration Logo
  * -----------------------------------
  */
+.integrations-logo {
+  padding-top: 240px;
+  padding-bottom: 320px;
+}
+
 .integrations-logo::after {
   content: "";
   display: none;
+}
+
+.integrations-logo .buttons {
+  text-align: center;
+}
+
+.integrations-logo ul {
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+
+.integrations-logo h2 {
+  font-size: 30px;
 }
 
 /**

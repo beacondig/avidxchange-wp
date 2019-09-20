@@ -246,6 +246,25 @@
 	text-transform: uppercase;
 }
 
+/**
+ * -----------------------------------
+ * Override & Adjusments
+ * -----------------------------------
+ */
+%white-button {
+	@extend %button-style;
+	color: $brightblue;
+	border-color: #fff;
+	background: #fff;
+}
+
+// Adjust white button
+.btn {
+	&.is-white {
+		@extend %white-button;
+	}
+}
+
 // Adjust the z-index
 .wrapper > header {
 	z-index: 4; // Must be on top of .header-scroll div.
@@ -722,10 +741,7 @@ header .mobile-nav ul li,
 	}
 
 	.gform_button {
-		@extend %button-style;
-		color: $brightblue;
-		border-color: #fff;
-		background: #fff;
+		@extend %white-button;
 	}
 }
 
@@ -833,9 +849,25 @@ header .mobile-nav ul li,
  * -----------------------------------
  */
 .integrations-logo {
+	padding-top: 240px;
+	padding-bottom: 320px;
+
 	&::after {
 		content: "";
 		display: none;
+	}
+
+	.buttons {
+		text-align: center;
+	}
+
+	ul {
+		margin-top: 70px;
+		margin-bottom: 70px;
+	}
+
+	h2 {
+		font-size: $heading3 - 2;
 	}
 }
 

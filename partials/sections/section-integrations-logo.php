@@ -6,6 +6,10 @@
  */
 
 defined( 'ABSPATH' ) || die( "Can't access directly" );
+
+$link_type = get_field( 'accounting_system_link_type' );
+$link_url  = $link_type ? get_field( 'accounting_system_link_' . $link_type . '_url' ) : '';
+$link_url  = avid_parse_custom_url( $link_url );
 ?>
 
 <section class="home-search integrations-logo">
@@ -25,5 +29,10 @@ defined( 'ABSPATH' ) || die( "Can't access directly" );
 				<?php endwhile; ?>
 			</ul>
 		<?php endif; ?>
+		<div class="buttons">
+			<a href="<?php echo esc_url( $link_url ); ?>" class="btn is-white">
+				<?php the_field( 'accounting_system_link_text' ); ?>
+			</a>
+		</div>
 	</div>
 </section>
