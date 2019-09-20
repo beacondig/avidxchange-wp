@@ -10,22 +10,73 @@ defined( 'ABSPATH' ) || die( "Can't access directly" );
 
 <section class="section is-white our-solutions">
 	<div class="container">	
-		<!--
-		<h2><?php the_field( 'accounting_system_title' ); ?></h2>
-		<?php if ( have_rows( 'accounting_system_logos' ) ) : ?>
-			<ul>
+		<h2 class="section-title"><?php the_field( 'solutions_title' ); ?></h2>
+
+		<?php
+		$tab_menu    = '';
+		$tab_content = '';
+
+		if ( have_rows( 'solutions' ) ) {
+			while ( have_rows( 'solutions' ) ) {
+				the_row();
+				ob_start();
+
+				$name = get_sub_field( 'name' );
+				$slug = sanitize_title( $name );
+
+				$image     = get_sub_field( 'image' );
+				$image_url = isset( $image['sizes'] ) && isset( $image['sizes']['medium'] ) ? $image['sizes']['medium'] : '';
+
+				$link_type = get_field( 'link_type' );
+				$link_url  = $link_type ? get_field( 'link_' . $link_type . '_url' ) : '';
+				$link_url  = avid_parse_custom_url( $link_url );
+				?>
+
+				<li class="tab-menu-item">
+					<a href="#solution-<?php echo esc_attr( $slug ); ?>">
+						<?php echo esc_html( $name ); ?>
+					</a>
+				</li>
+
 				<?php
-				while ( have_rows( 'accounting_system_logos' ) ) :
-					the_row();
+				$tab_menu .= ob_get_clean();
 
-					$logo = get_sub_field( 'logo' );
-					$logo = isset( $logo['sizes'] ) && isset( $logo['sizes']['medium'] ) ? $logo['sizes']['medium'] : '';
-					?>
+				ob_start();
+				?>
 
-					<li><img src="<?php echo esc_url( $logo ); ?>" /></li>
-				<?php endwhile; ?>
+				<li class="tab-content-item" data-id="solution-<?php echo esc_attr( $slug ); ?>">
+					<div class="row">
+						<div class="col-xs-12 col-md-6 image-wrapper">
+							<img alt="Image" src="<?php echo esc_url( $image_url ); ?>">
+						</div>
+						<div class="col-xs-12 col-md-6 content-wrapper">
+							<h3 class="item-title">
+								<?php the_sub_field( 'title' ); ?>
+							</h3>
+							<div class="content">
+								<?php the_sub_field( 'content' ); ?>
+							</div>
+							<a href="<?php echo esc_url( $link_url ); ?>" class="btn btn-primary">
+								<?php the_sub_field( 'button_text' ); ?>
+							</a>
+						</div>
+					</div>
+				</li>
+
+				<?php
+				$tab_content .= ob_get_clean();
+			}
+		}
+		?>
+
+		<div class="avid-tabs">
+			<ul class="tab-menu">
+				<?php echo $tab_menu; ?>
 			</ul>
-		<?php endif; ?>
-		-->
+			<ul class="tab-content">
+				<?php echo $tab_content; ?>
+			</ul>
+		</div>
+
 	</div>
 </section>

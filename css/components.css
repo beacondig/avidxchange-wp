@@ -124,6 +124,14 @@ section {
  * Mixins
  * -----------------------------------
  */
+.avid-tabs .tab-content .content {
+  color: #404041;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  font-family: "Artegra Sans Alt", sans-serif;
+}
+
 /**
  * -----------------------------------
  * Section
@@ -332,6 +340,10 @@ section {
   color: #a4d137;
 }
 
+.has-text-uppercase {
+  text-transform: uppercase;
+}
+
 .wrapper > header {
   z-index: 4;
 }
@@ -361,7 +373,7 @@ header .mobile-nav ul li,
   height: 90vh;
   min-height: 800px;
   overflow: hidden;
-  background: #404041;
+  background-color: #404041;
 }
 
 @media only screen and (max-width: 1024.98px) {
@@ -1121,8 +1133,8 @@ header .mobile-nav ul li,
  * -----------------------------------
  */
 .our-solutions {
+  padding-top: 145px;
   margin-bottom: -110px;
-  min-height: 300px;
   z-index: 4;
 }
 
@@ -1170,5 +1182,78 @@ header .mobile-nav ul li,
   .our-solutions:after {
     height: 150px;
   }
+}
+
+.our-solutions .section-title {
+  text-align: center;
+}
+
+/**
+ * -----------------------------------
+ * Avid Tabs
+ * -----------------------------------
+ */
+.avid-tabs .tab-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 0 5px;
+  margin: 0 0 70px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-bottom: 1px solid #eef1f4;
+}
+
+.avid-tabs .tab-menu-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.avid-tabs .tab-menu-item a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5px 20px;
+  color: #404041;
+  -webkit-transition: 250ms all;
+  transition: 250ms all;
+}
+
+.avid-tabs .tab-menu-item a.is-active {
+  color: #fff;
+  background-color: #404041;
+}
+
+.avid-tabs .tab-content .tab-content-item {
+  display: none;
+}
+
+.avid-tabs .tab-content .image-wrapper img {
+  -webkit-box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+.avid-tabs .tab-content .content-wrapper {
+  padding-left: 40px;
+}
+
+.avid-tabs .tab-content .content {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.avid-tabs .tab-content .item-title {
+  font-weight: 900;
 }
 /*# sourceMappingURL=components.css.map */

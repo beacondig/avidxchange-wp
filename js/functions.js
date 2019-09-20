@@ -5,8 +5,10 @@
 	function init() {
 		setupHeroImage();
 		checkIndustriesList();
+		setupAvidTabs();
 
 		window.addEventListener('load', function () {
+			setTimeout(setupTestimonyVideos, 250);
 			setupTestimonyVideos();
 		});
 
@@ -61,6 +63,41 @@
 			arrows: false,
 			dots: true
 		});
+	}
+
+	function setupAvidTabs() {
+		$tabMenuLinks = $('.avid-tabs .tab-menu-item a');
+		$tabContentItems = $('.avid-tabs .tab-content-item');
+
+		if (!$tabMenuLinks.length || !$tabContentItems.length) return;
+
+		var $activeMenu = $('.avid-tabs .tab-menu').find('is-active');
+		var activeLink;
+
+		if ($activeMenu.length) {
+			activeLink = $activeMenu.find('a')[0];
+		} else {
+			activeLink = $tabMenuLinks[0];
+		}
+
+		switchTab(activeLink);
+
+		$tabMenuLinks.on('click', function (e) {
+			e.preventDefault();
+			switchTab(this);
+		});
+
+		function switchTab(link) {
+			href = link.href;
+			hash = href.substr(href.indexOf("#"));
+			hash = hash.replace('#', '');
+
+			$('.avid-tabs .tab-menu-item').removeClass('is-active');
+			link.parentNode.classList.add('is-active');
+
+			$tabContentItems.stop().fadeOut(250);
+			$('.avid-tabs .tab-content').find('[data-id="' + hash + '"]').stop().fadeIn(250);
+		}
 	}
 
 	init();

@@ -31,6 +31,14 @@
 	}
 }
 
+%content {
+	color: $grey;
+	font-weight: $fwregular;
+	font-size: 18px;
+	line-height: 28px;
+	font-family: $font-fam;
+}
+
 /**
  * -----------------------------------
  * Section
@@ -234,6 +242,10 @@
 	}
 }
 
+.has-text-uppercase {
+	text-transform: uppercase;
+}
+
 // Adjust the z-index
 .wrapper > header {
 	z-index: 4; // Must be on top of .header-scroll div.
@@ -267,7 +279,7 @@ header .mobile-nav ul li,
 	height: 90vh;
 	min-height: 800px;
 	overflow: hidden;
-	background: $grey;
+	background-color: $grey;
 
 	@include tablet-wide-down() {
 		height: 60vh;
@@ -906,10 +918,79 @@ header .mobile-nav ul li,
  * -----------------------------------
  */
 .our-solutions {
+	padding-top: 145px;
 	margin-bottom: -110px;
-	min-height: 300px;
 	z-index: 4; // Must be on top of .testimony-videos section.
 
 	@include angled(top, before, 5deg, #fff);
 	@include angled(bottom, after, -5deg, #fff);
+
+	.section-title {
+		text-align: center;
+	}
+}
+
+/**
+ * -----------------------------------
+ * Avid Tabs
+ * -----------------------------------
+ */
+.avid-tabs {
+	.tab-menu {
+		display: flex;
+		padding: 0 0 5px;
+		margin: 0 0 70px;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		font-size: $heading5;
+		font-weight: $fwbold;
+		text-transform: uppercase;
+		border-bottom: 1px solid $lightgrey;
+	}
+
+	.tab-menu-item {
+		display: flex;
+		margin-left: 10px;
+		margin-right: 10px;
+
+		a {
+			display: flex;
+			padding: 5px 20px;
+			color: $grey;
+			transition: 250ms all;
+
+			&.is-active {
+				color: #fff;
+				background-color: $grey;
+			}
+		}
+	}
+
+	.tab-content {
+		.tab-content-item {
+			display: none;
+		}
+
+		.image-wrapper {
+			img {
+				box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3),
+					0 15px 12px rgba(0, 0, 0, 0.22);
+			}
+		}
+
+		.content-wrapper {
+			padding-left: 40px;
+		}
+
+		.content {
+			margin-top: 30px;
+			margin-bottom: 30px;
+			@extend %content;
+		}
+
+		.item-title {
+			font-weight: $fwblack;
+		}
+	}
 }
