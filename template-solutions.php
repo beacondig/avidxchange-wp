@@ -87,6 +87,7 @@
 					<div class="prev"><img src="<?php echo get_stylesheet_directory_uri();?>/img/solutions/solutions-left-arrow.png" /></div>
 					<?php if(have_rows('solution_items')): ?>
 						<ul>
+							<?php while(have_rows('solution_items')): the_row();?>	
 								<li>
 									<div class="img-container">
 											<img src="<?php echo the_sub_field('solution_image');?>" />

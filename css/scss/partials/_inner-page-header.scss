@@ -3,11 +3,11 @@
 		@include angled(bottom, after, -5.0deg, #ffffff);
 		position:relative;
 		height:90vh;
-		min-height:800px;
+		min-height:900px;
 		@include respond-at(1449px) {
 			min-height:700px;
 		}
-		@include respond-at(599px) {
+		@include respond-at(899px) {
 			height:auto;
 		}
 		.container {
@@ -15,10 +15,8 @@
 			&:before, &:after {
 				display:none;
 			}
-			@include respond-at(799px) {
+			@include respond-at(899px) {
 				width:100%;
-			}
-			@include respond-at(599px) {
 				height:auto;
 			}
 		}
@@ -33,7 +31,7 @@
 				width:40%;
 				padding-left:5%;
 			}
-			@include respond-at(599px) {
+			@include respond-at(899px) {
 				width:100%;
 				display:block;
 				text-align:center;
@@ -54,7 +52,7 @@
 					font-size:35px;
 					line-height:45px;
 				}
-				@include respond-at(599px) {
+				@include respond-at(899px) {
 					font-size:25px;
 					line-height:35px;
 				}
@@ -81,10 +79,6 @@
 					color:#fff;
 				}
 				@include respond-at(899px) {
-					margin-top:10px;
-					margin-left:0;
-				}
-				@include respond-at(599px) {
 					display:inline-block;
 					margin:10px auto;
 				}
@@ -100,13 +94,11 @@
 				width:45%;
 			}
 			@include respond-at(899px) {
-				width:55%;
-			}
-			@include respond-at(599px) {
 				width:90%;
 				margin:0 auto;
 				display:block;
 				position:relative;
+				max-width:400px;
 			}
 			img {
 				width:100%;
