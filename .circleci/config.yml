@@ -3,7 +3,7 @@ version: 2.1
 defaults: &defaults
     docker:
         - image: circleci/node:10.13.0
-    working_directory: ~/avid
+    working_directory: ~/avidxchange-wp
 
 jobs:
     build:
@@ -49,14 +49,14 @@ jobs:
                     done
 
             - persist_to_workspace:
-                root: ~/avid
+                root: ~/avidxchange-wp
                 paths: .
 
     # deploy_production:
     #     <<: *defaults
     #     steps:
     #         - attach_workspace:
-    #             at: ~/avid
+    #             at: ~/avidxchange-wp
 
     #         - add_ssh_keys:
     #             fingerprints:
@@ -79,7 +79,7 @@ jobs:
         <<: *defaults
         steps:
             - attach_workspace:
-                at: ~/avid
+                at: ~/avidxchange-wp
 
             - add_ssh_keys:
                 fingerprints:
@@ -102,7 +102,7 @@ jobs:
         <<: *defaults
         steps:
             - attach_workspace:
-                at: ~/avid
+                at: ~/avidxchange-wp
 
             - add_ssh_keys:
                 fingerprints:
