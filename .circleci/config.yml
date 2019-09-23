@@ -113,7 +113,7 @@ jobs:
                     echo -e "\tStrictHostKeyChecking no\n\tUserKnownHostsFile=/dev/null\n\tHostName git.wpengine.com\n\tUser git" >> ~/.ssh/config
                     git config --global user.email "dennis@beacondigitalmarketing.com"
                     git config --global user.name "avidhosting16-dennis"
-                    git clone git@git.wpengine.com:development/bdmsampledev.git tmp_remote
+                    git clone git@git.wpengine.com:production/bdmsampledev.git tmp_remote
                     rm -rf .git
                     mv tmp_remote/.git .git
                     rm -rf tmp_remote
