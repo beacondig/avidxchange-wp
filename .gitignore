@@ -18,3 +18,5 @@ styles/css/style.css
 *error_log
 node_modules
 /package-lock.json
+downloads
+wp-config.php
