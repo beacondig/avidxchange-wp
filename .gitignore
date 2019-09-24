@@ -23,7 +23,8 @@ node_modules
 /package-lock.json
 downloads
 wp-config.php
-
+*.sql
+*.zip
 #wpengine recommended ignored
 *~
 .DS_Store
