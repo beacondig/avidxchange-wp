@@ -13,6 +13,7 @@ styles/css/style.css
 # ignore images, htaccess, and error_log files
 **/img
 *.jpg
+*.mp4
 *.xlsx
 *.htaccess
 *error_log
