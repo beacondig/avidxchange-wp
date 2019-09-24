@@ -3,122 +3,63 @@
 		<?php get_template_part('partials/content', 'inner-page-header'); ?>
 		<section class="about-transform-companies">
 			<div class="container">
-				<h2>Outdated Processes Are Dragging Down Your Business</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
-				<ul>
-					<li>
-						<div class="img-c"><img src="<?php echo get_stylesheet_directory_uri();?>/img/solutions/processes-icon2.png" /></div>
-						<div class="stat">500,000</div>
-						<p>lorem ipsum dolor sit amet, consectetur.</p>
-					</li>
-					<li>
-						<div class="img-c"><img src="<?php echo get_stylesheet_directory_uri();?>/img/about/processes-icon4.png" /></div>
-						<div class="stat">9.5 Million</div>
-						<p>of mid-size companies measure ROI due to outdated processes</p>
-					</li>
-					<li>
-						<div class="img-c"><img src="<?php echo get_stylesheet_directory_uri();?>/img/solutions/processes-icon1.png" /></div>
-						<div class="stat">9.5 Million</div>
-						<p>lorem ipsum dolor sit amet, consectetur.</p>
-					</li>
-				</ul>
+				<h2><?php echo get_field('about_section_1_heading');?></h2>
+				<p><?php echo get_field('about_section_1_intro_paragraph');?></p>
+				<?php if(have_rows('about_section_1_items')): ?>
+					<ul>
+						<?php while(have_rows('about_section_1_items')): the_row();?>	
+							<li>
+								<div class="img-c"><img src="<?php echo the_sub_field('icon');?>" /></div>
+								<div class="stat"><?php echo the_sub_field('stat');?></div>
+								<p><?php echo the_sub_field('description');?></p>
+							</li>
+						<?php endwhile; ?>
+					</ul>
+				<?php endif; ?>
 			</div>
 		</section>
 		<section class="about-locations">
 			<div class="container">
 				<div class="main-office">
 					<div class="map">
-						<a href="#" target="_blank">
-							<img src="<?php echo get_stylesheet_directory_uri();?>/img/about/map@2x.png" />
+						<?php
+							$address = ''.get_field('about_corporate_street_address').' '.get_field('about_corporate_city').' '.get_field('about_corporate_state_letters').' '.get_field('about_corporate_zip_code').'';
+							$address = urlencode(strtolower(str_replace(',','', $address)));
+						?>
+						<a href="https://maps.google.com/maps?q=<?php echo $address;?>" target="_blank">
+							<img src="<?php echo get_field('about_corporate_office_map_image');?>" />
 						</a>
 					</div>
 					<div class="office-info">
 						<p>Corporate HQ</p>
-						<p>1210 AvidXchange Lane</p>
-						<p>Charlotte, NC 28206</p>
-						<p class="phone"><i class="fas fa-phone-alt"></i> 800.560.9305</p>
+						<p><?php echo get_field('about_corporate_street_address');?></p>
+						<p><?php echo get_field('about_corporate_city');?>, <?php echo get_field('about_corporate_state_letters');?> <?php echo get_field('about_corporate_zip_code');?></p>
+						<p class="phone"><a href="tel:+1<?php echo get_field('about_corporate_contact_phone_number');?>"><i class="fas fa-phone-alt"></i> <?php echo get_field('about_corporate_contact_phone_number');?></a></p>
 					</div>
 				</div>
-				<ul>
-					<li>
-						<a href="#" target="_blank">	
-							<div class="city-view">
-								<img src="<?php echo get_stylesheet_directory_uri();?>/img/about/SaltlakeCityimage@2x.png" />
-								<div class="city-name">Salt Lake City, UT</div>
-							</div>
-							<div class="city-info">
-								<p>Regional Office</p>
-								<p>1210 AvidXchange Lane</p>
-								<p>Salt Lake City, UT 28206</p>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a href="#" target="_blank">	
-							<div class="city-view">
-								<img src="<?php echo get_stylesheet_directory_uri();?>/img/about/SaltlakeCityimage@2x.png" />
-								<div class="city-name">Salt Lake City, UT</div>
-							</div>
-							<div class="city-info">
-								<p>Regional Office</p>
-								<p>1210 AvidXchange Lane</p>
-								<p>Salt Lake City, UT 28206</p>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a href="#" target="_blank">	
-							<div class="city-view">
-								<img src="<?php echo get_stylesheet_directory_uri();?>/img/about/SaltlakeCityimage@2x.png" />
-								<div class="city-name">Salt Lake City, UT</div>
-							</div>
-							<div class="city-info">
-								<p>Regional Office</p>
-								<p>1210 AvidXchange Lane</p>
-								<p>Salt Lake City, UT 28206</p>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a href="#" target="_blank">	
-							<div class="city-view">
-								<img src="<?php echo get_stylesheet_directory_uri();?>/img/about/SaltlakeCityimage@2x.png" />
-								<div class="city-name">Salt Lake City, UT</div>
-							</div>
-							<div class="city-info">
-								<p>Regional Office</p>
-								<p>1210 AvidXchange Lane</p>
-								<p>Salt Lake City, UT 28206</p>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a href="#" target="_blank">	
-							<div class="city-view">
-								<img src="<?php echo get_stylesheet_directory_uri();?>/img/about/SaltlakeCityimage@2x.png" />
-								<div class="city-name">Salt Lake City, UT</div>
-							</div>
-							<div class="city-info">
-								<p>Regional Office</p>
-								<p>1210 AvidXchange Lane</p>
-								<p>Salt Lake City, UT 28206</p>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a href="#" target="_blank">	
-							<div class="city-view">
-								<img src="<?php echo get_stylesheet_directory_uri();?>/img/about/SaltlakeCityimage@2x.png" />
-								<div class="city-name">Salt Lake City, UT</div>
-							</div>
-							<div class="city-info">
-								<p>Regional Office</p>
-								<p>1210 AvidXchange Lane</p>
-								<p>Salt Lake City, UT 28206</p>
-							</div>
-						</a>
-					</li>
-				</ul>
+				<?php if(have_rows('about_regional_offices')): ?>
+					<ul>
+						<?php while(have_rows('about_regional_offices')): the_row();?>	
+							<?php
+								$r_address = ''.the_sub_field('about_corporate_street_address').' '.the_sub_field('about_corporate_city').' '.the_sub_field('about_corporate_state_letters').' '.the_sub_field('about_corporate_zip_code').'';
+								$r_address = urlencode(strtolower(str_replace(',','', $address)));
+							?>
+							<li>
+								<a href="https://maps.google.com/maps?q=<?php echo $r_address;?>" target="_blank">
+									<div class="city-view">
+										<img src="<?php echo the_sub_field('office_background_image');?>" />
+										<div class="city-name"><?php echo the_sub_field('office_city_name');?>, <?php echo the_sub_field('office_state_letters');?></div>
+									</div>
+									<div class="city-info">
+										<p><?php echo the_sub_field('office_title');?></p>
+										<p><?php echo the_sub_field('office_street_address');?></p>
+										<p><?php echo the_sub_field('office_city_name');?> <?php echo the_sub_field('office_state_letters');?>, <?php echo the_sub_field('office_zip_code');?></p>
+									</div>
+								</a>
+							</li>
+						<?php endwhile; ?>
+					</ul>
+				<?php endif; ?>
 			</div>
 		</section>
 		<section class="about-press-room">
@@ -146,11 +87,11 @@
 				</ul>
 				<a class="btn" href="#">Seel All News</a>
 				<div class="about-leadership">
-					<div class="leader-image"><img src="<?php echo get_stylesheet_directory_uri();?>/img/about/LeadershipImage@2x.png" /></div>
+					<div class="leader-image"><img src="<?php echo get_field('about_leadership_team_image');?>" /></div>
 					<div class="leader-info">
-						<p>Michael Praeger is the Co-Founder and Chief Executive Officer of AvidXchange, the leading provider of on-demand accounts payables management and automated payment solutions. Since founding AvidXchange, Michael has led the company to secure the coveted title of Global Unicorn by CB Insights three years in a row, with a $1 billion-plus valuation by investors and 5,500 customers and 470,000 suppliers nationwide.</p>
-						<div class="name">Michael Praeger,</div>
-						<div class="position">Cheif Executive Officer, Co-Founder & Board Member</div>
+						<p><?php echo get_field('about_leadership_team_description');?></p>
+						<div class="name"><?php echo get_field('about_leadership_team_name');?>,</div>
+						<div class="position"><?php echo get_field('about_leadership_team_position');?></div>
 						<a class="btn" href="#">Leadership Team</a>
 					</div>
 				</div>
@@ -158,25 +99,25 @@
 		</section>
 		<section class="about-join">
 			<div class="container">
-				<h2>Join Our Team</h2>
+				<h2><?php echo get_field('about_join_section_title');?></h2>
 				<div class="about-flex">
-					<div class="section-image"><img src="<?php echo get_stylesheet_directory_uri();?>/img/about/Jointeamimage@2x.png" /></div>
+					<div class="section-image"><img src="<?php echo get_field('about_join_image');?>" /></div>
 					<div class="section-info">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incidi ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat ullamco laboris nisi ut aliquip ex. ea commodo conseq. Duis aute irure dolor in rep rehender</p>
-						<a class="btn" href="#">Learn More</a>
+						<p><?php echo get_field('about_join_description');?></p>
+						<a class="btn" href="<?php echo get_field('about_join_button_url');?>"><?php echo get_field('about_join_button_text');?></a>
 					</div>
 				</div>
 			</div>
 		</section>
 		<section class="about-foundation">
 			<div class="container">
-				<h2>Adivxchange Foundation</h2>
+				<h2><?php echo get_field('about_foundation_section_title');?></h2>
 					<div class="about-flex">
 					<div class="section-info">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incidi ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat ullamco laboris nisi ut aliquip ex. ea commodo conseq. Duis aute irure dolor in rep rehender</p>
-						<a class="btn" href="#">Learn More</a>
+						<p><?php echo get_field('about_foundation_description');?></p>
+						<a class="btn" href="<?php echo get_field('about_foundation_button_url');?>"><?php echo get_field('about_foundation_button_text');?></a>
 					</div>
-					<div class="section-image"><img src="<?php echo get_stylesheet_directory_uri();?>/img/about/AvifFoundationImage@2x.png" /></div>
+					<div class="section-image"><img src="<?php echo get_field('about_foundation_image');?>" /></div>
 				</div>
 			</div>
 		</section>

@@ -1,8 +1,14 @@
 .about-transform-companies {
 		@extend .solutions-outdated-processes;
+		@include respond-at(1099px) {
+			padding:0;
+		}
 		ul li .stat {
 			text-transform:uppercase;
 			font-size:40px;
+			@include respond-at(999px) {
+				font-size:30px;
+			}
 		}
 		p {
 			max-width:1200px;
@@ -22,6 +28,17 @@
 				display:inline-block;
 				vertical-align:bottom;
 				width:45%;
+				@include respond-at(1399px) {
+					width:50%;
+				}
+				@include respond-at(999px) {
+					width:53%;
+				}
+				@include respond-at(699px) {
+					width:100%;
+					display:block;
+					margin:0 auto 15px;
+				}
 				img {
 					width:100%;
 				}
@@ -35,12 +52,33 @@
 				font-size:28px;
 				letter-spacing:1px;
 				font-weight:$fwmedium;
+				@include respond-at(699px) {
+					display:block;
+					text-align:center;
+					width:100%;
+					margin:0 auto;
+				}
 				p {
 					font-size:28px;
 					line-height:32px;
+					@include respond-at(999px) {
+						font-size:25px;
+					}
+					@include respond-at(799px) {
+						font-size:20px;
+						line-height:25px;
+					}
+					@include respond-at(649px) {
+						font-size:25px;
+						line-height:32px;
+					}
 				}
 				p.phone {
 					margin-top:30px;
+					a {
+						color:$grey;
+						text-decoration:none;
+					}
 					i {
 						color:$brightblue;
 					}
@@ -51,14 +89,29 @@
 			display:flex;
 			flex-flow: row wrap;
 			justify-content:space-between;
+			@include respond-at(599px) {
+				flex-flow:column wrap;
+				justify-content:center;
+			}
 			li {
 				width:30%;
 				margin:0 0 50px;
+				@include respond-at(999px) {
+					width:45%;
+				}
+				@include respond-at(699px) {
+					width:48%;
+				}
+				@include respond-at(599px) {
+					width:100%;
+					margin:0 auto 40px;
+				}
 				a {
 					text-decoration:none;
 				}
 				.city-view {
-					height:235px;
+					height:0;
+					padding-bottom:52.25%;
 					width:100%;
 					overflow:hidden;
 					position:relative;
@@ -76,6 +129,9 @@
 						width:100%;
 						text-align:center;
 						color:#fff;
+						@include respond-at(1299px) {
+							font-size:21px;
+						}
 					}
 				}
 				.city-info {
@@ -96,6 +152,24 @@
 		background-position:center bottom;
 		background-color:#fff;
 		text-align:center;
+		@include respond-at(1499px) {
+			background-size:auto 985px;
+		}
+		@include respond-at(1199px) {
+			background-size:auto 1024px;
+		}
+		@include respond-at(899px) {
+			background-size:auto 1285px;
+		}
+		@include respond-at(799px) {
+			background-size:auto 1315px;
+		}
+		@include respond-at(549px) {
+			background-size:auto 1355px;
+		}
+		@include respond-at(499px) {
+			background-size:auto 1450px;
+		}
 		h2 {
 			font-size:$heading3;
 			text-align:center;
@@ -106,10 +180,18 @@
 			flex-flow:row nowrap;
 			justify-content:space-evenly;
 			margin:100px 0 80px;
+			@include respond-at(899px) {
+				flex-flow:column nowrap;
+				justify-content:center;
+			}
 			li {
 				width:25%;
 				text-align:center;
 				font-family:$font-fam;
+				@include respond-at(899px) {
+					width:90%;
+					margin:0 auto 50px;
+				}
 				.title {
 					color:$grey;
 					font-weight:$fwbold;
@@ -145,6 +227,25 @@
 			@include respond-at(1599px) {
 				padding:8% 0 20%;
 			}
+			@include respond-at(1199px) {
+				padding:5% 0 24%;
+				margin-top:165px;
+			}
+			@include respond-at(899px) {
+				padding:0;
+				margin-top:122px;
+				height:850px;
+				margin-bottom:-100px;
+			}
+			@include respond-at(799px) {
+				height:880px;
+			}
+			@include respond-at(549px) {
+				height:915px;
+			}
+			@include respond-at(499px) {
+				height:965px;
+			}
 			.leader-image {
 				border-radius:50%;
 				width:200px;
@@ -156,6 +257,10 @@
 				overflow:hidden;
 				position:relative;
 				margin-top:15px;
+				@include respond-at(899px) {
+					display:block;
+					margin:0 auto 30px;
+				}
 				img {
 					width: 200px;
 					height: auto;
@@ -170,11 +275,26 @@
 				text-align:left;
 				margin-left:50px;
 				color:#fff;
+				@include respond-at(899px) {
+					margin:0 auto;
+					width:90%;
+					display:block;
+					text-align:center;
+				}
+				@include respond-at(699px) {
+					width:100%;
+				}
 				p {
 					font-size:24px;
 					line-height:28px;
 					padding-bottom:30px;
 					color:#fff;
+					@include respond-at(1199px) {
+						font-size:21px;
+					}
+					@include respond-at(699px) {
+						font-size:18px;
+					}
 				}
 				.name, .position {
 					font-size:24px;
@@ -182,6 +302,12 @@
 					letter-spacing:1px;
 					padding-bottom:10px;
 					display:block;
+					@include respond-at(1099px) {
+						font-size:20px;
+					}
+					@include respond-at(699px) {
+						font-size:18px;
+					}
 				}
 				.position {
 					font-weight:$fwmedium;
@@ -201,6 +327,7 @@
 
 .about-join, .about-foundation {
 		text-align:center;
+		z-index:5;
 		h2 {
 			font-size:$heading3;
 			padding-bottom:50px;
@@ -211,18 +338,49 @@
 			justify-content:space-between;
 			align-items:center;
 			margin-bottom:100px;
+			@include respond-at(899px) {
+				justify-content:center;
+				flex-flow:column wrap;
+			}
 			.section-info {
 				text-align:left;
 				width:48%;
+				@include respond-at(899px) {
+					width:90%;
+					text-align:center;
+				}
+				@include respond-at(599px) {
+					width:100%;
+				}
 				p {
 					padding-bottom:30px;
 				}
 			}
 			.section-image {
 				width:48%;
+				@include respond-at(899px) {
+					width:90%;
+					margin:0 auto 30px;
+				}
+				@include respond-at(599px) {
+					width:100%;
+				}
 				img {
 					width:100%;
 				}
+			}
+		}
+}
+
+.about-foundation {
+		@include respond-at(899px) {
+			.about-flex {
+				flex-flow:column-reverse wrap;
+			}
+		}
+		@include respond-at(499px) {
+			.about-flex {
+				margin-bottom:0;
 			}
 		}
 }
