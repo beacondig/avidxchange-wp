@@ -1,0 +1,168 @@
+.tabs-module {	
+	.desktop {
+			display:block;
+			@include respond-at(899px) {
+				display:none;
+			}
+			ul.headers {
+				border-bottom:1px solid #dadada;
+				margin-top:100px;
+				display:flex;
+				flex-flow:row nowrap;
+				justify-content:space-between;
+				li {
+					font-family:$font-fam;
+					text-transform:uppercase;
+					font-weight:$fwbold;
+					font-size:20px;
+					line-height:20px;
+					padding:12px 15px 10px;
+					background:#fff;
+					color:$grey;
+					&:hover, &.active {
+						background:$grey;
+						color:#fff;
+						cursor:pointer
+					}
+				}
+			}
+			ul.info {
+				background: rgba(250,251,251,1);
+				background: -moz-linear-gradient(top, rgba(250,251,251,1) 0%, rgba(255,255,255,1) 57%, rgba(255,255,255,1) 100%);
+				background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(250,251,251,1)), color-stop(57%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,1)));
+				background: -webkit-linear-gradient(top, rgba(250,251,251,1) 0%, rgba(255,255,255,1) 57%, rgba(255,255,255,1) 100%);
+				background: -o-linear-gradient(top, rgba(250,251,251,1) 0%, rgba(255,255,255,1) 57%, rgba(255,255,255,1) 100%);
+				background: -ms-linear-gradient(top, rgba(250,251,251,1) 0%, rgba(255,255,255,1) 57%, rgba(255,255,255,1) 100%);
+				background: linear-gradient(to bottom, rgba(250,251,251,1) 0%, rgba(255,255,255,1) 57%, rgba(255,255,255,1) 100%);
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafbfb', endColorstr='#ffffff', GradientType=0 );
+				padding:50px 30px;
+				box-sizing:border-box;
+				width:100%;
+				position:relative;
+				>li {
+					display:flex;
+					flex-flow:row nowrap;
+					justifiy-content:space-between;
+					align-items:center;
+					width:100%;
+					position:absolute;
+					top:0;
+					left:0;
+					opacity:0;
+					visibility:hidden;
+					transition:opacity 800ms ease, visibility 500ms ease;
+					&.active {
+						opacity:1;
+						visibility:visible;
+						position:relative;
+					}
+					.img-container {
+						max-width:45%;
+						img {
+							width:100%;
+							box-shadow:0 0 20px -5px rgba(0,0,0,0.3);
+						}
+					}
+					.text {
+						text-align:left;
+						max-width:45%;
+						margin-left:5%;
+						.title {
+							color:$grey;
+							padding-bottom:30px;
+							text-transform:uppercase;
+							font-weight:$fwblack;
+							font-size:24px;
+						}
+						ul {
+							list-style:disc;
+							display:block;
+							margin-bottom:30px;
+							margin-left:16px;
+							li {
+								display:list-item;
+								color:$grey;
+								font-family:$font-fam;
+								font-weight:$fwregular;
+								font-size:16px;
+								line-height:20px;
+								margin-bottom:10px;
+							}
+						}
+					}
+				}
+			}
+		}
+		.mobile {
+			position:relative;
+			margin-top:30px;
+			.next {
+				position:absolute;
+				top:50%;
+				transform:translateY(-50%);
+				right:0;
+				a {
+					display:block;
+					width:100%;
+					height:100%;
+					top:0;
+					position:absolute;
+					opacity:0;
+				}
+			}
+			.prev {
+				position:absolute;
+				top:50%;
+				transform:translateY(-50%);
+				left:0;
+				a {
+					display:block;
+					width:100%;
+					height:100%;
+					top:0;
+					position:absolute;
+					opacity:0;
+				}
+			}
+			.bx-wrapper {
+				max-width:80% !important;
+			}
+			ul li {
+				.img-container {
+					width:90%;
+					margin:0 auto 30px;
+					img {
+						width:100%;
+						box-shadow:0 0 20px -5px rgba(0,0,0,0.3);
+					}
+				}
+				.title {
+					color:$grey;
+					padding-bottom:30px;
+					text-transform:uppercase;
+					font-weight:$fwblack;
+					font-size:24px;
+				}
+				ul {
+					list-style:disc;
+					display:block;
+					margin-bottom:30px;
+					margin-left:16px;
+					li {
+						display:list-item;
+						color:$grey;
+						font-family:$font-fam;
+						font-weight:$fwregular;
+						font-size:16px;
+						line-height:20px;
+						margin-bottom:10px;
+						text-align:left;
+					}
+				}
+			}
+			display:none;
+			@include respond-at(899px) {
+				display:block;
+			}
+		}
+	}
