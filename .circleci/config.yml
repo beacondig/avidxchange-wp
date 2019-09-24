@@ -118,8 +118,8 @@ jobs:
                     mv tmp_remote/.git .git
                     rm -rf tmp_remote
                     git add -A
-                    git commit -m"deploy"
-                    git push origin master
+                    git commit -m "deploy"
+                    git push -f origin master
 
 workflows:
     version: 2 
