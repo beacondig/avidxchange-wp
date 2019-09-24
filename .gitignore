@@ -13,6 +13,8 @@ styles/css/style.css
 # ignore images, htaccess, and error_log files
 **/img
 *.jpg
+*.gif
+*.png
 *.mp4
 *.xlsx
 *.htaccess
@@ -41,6 +43,7 @@ wp-content/advanced-cache.php
 wp-content/wp-cache-config.php
 wp-content/cache/*
 wp-content/cache/supercache/*
+wp-content/plugins
 
 # wpengine specific
 .smushit-status
