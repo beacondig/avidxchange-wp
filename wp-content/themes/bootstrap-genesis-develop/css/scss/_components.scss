@@ -245,7 +245,7 @@ header .mobile-nav ul li,
 		right: 0;
 		bottom: 100px;
 		text-align: center;
-		z-index: 3;
+		z-index: 0;
 		transition: right 750ms ease;
 
 		@include tablet-down() {
