@@ -54,9 +54,9 @@
 
 /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ p { color: #404041; font-weight: 400; font-size: 18px; line-height: 28px; font-family: "Artegra Sans Alt",sans-serif; }
 
-/* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .btn, .demo-form form input[type=submit], .header-scroll .mobile-nav a.demo-button, .header-scroll .mobile-nav ul li.demo-request, .home-opening .opening-demo-form form ul li input[type=submit], .home-search .searchbox form button, header .mobile-nav a.demo-button, header .mobile-nav ul li.demo-request { text-align: center; font-weight: 700; font-family: "Artegra Sans Alt",sans-serif; color: #fff; text-decoration: none; cursor: pointer; display: inline-block; font-size: 17px; line-height: 42px; height: 42px; position: relative; text-transform: uppercase; padding: 0 20px; border: 2px solid #0684c9; border-radius: 6px; background: #0684c9; width: auto; -webkit-transition: background .3s linear; transition: background .3s linear; z-index: 3; letter-spacing: 1px; }
+/* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .btn, .demo-form form input[type=submit], .header-scroll .mobile-nav a.demo-button, .header-scroll .mobile-nav ul li.demo-request, .home-opening .opening-demo-form form ul li input[type=submit], .home-search .searchbox form button, .request-demo .gform_button, header .mobile-nav a.demo-button, header .mobile-nav ul li.demo-request { text-align: center; font-weight: 700; font-family: "Artegra Sans Alt",sans-serif; color: #fff; text-decoration: none; cursor: pointer; display: inline-block; font-size: 17px; line-height: 42px; height: 42px; position: relative; text-transform: uppercase; padding: 0 20px; border: 2px solid #0684c9; border-radius: 6px; background: #0684c9; width: auto; -webkit-transition: background .3s linear; transition: background .3s linear; z-index: 3; letter-spacing: 1px; }
 
-/* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .btn:hover, .demo-form form input[type=submit]:hover, .header-scroll .mobile-nav a.demo-button:hover, .header-scroll .mobile-nav ul li.demo-request:hover, .home-opening .opening-demo-form form ul li input[type=submit]:hover, .home-search .searchbox form button:hover, header .mobile-nav a.demo-button:hover, header .mobile-nav ul li.demo-request:hover { background: #fff; color: #0684c9; }
+/* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .btn:hover, .demo-form form input[type=submit]:hover, .header-scroll .mobile-nav a.demo-button:hover, .header-scroll .mobile-nav ul li.demo-request:hover, .home-opening .opening-demo-form form ul li input[type=submit]:hover, .home-search .searchbox form button:hover, .request-demo .gform_button:hover, header .mobile-nav a.demo-button:hover, header .mobile-nav ul li.demo-request:hover { background: #fff; color: #0684c9; }
 
 /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .link { font-weight: 500; font-family: "Artegra Sans Alt",sans-serif; font-size: 18px; text-transform: uppercase; color: #0684c9; text-decoration: none; }
 
@@ -249,6 +249,100 @@
 /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ footer .policy { float: right; color: #404041; font-family: "Artegra Sans Alt",sans-serif; font-size: 16px; font-weight: 400; }
 
 /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ footer .policy a { color: #404041; text-decoration: none; }
+
+/* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .section { padding-top: 50px; padding-bottom: 50px; }
+
+/* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .section.is-white { background-color: #fff; }
+
+/* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .section.is-medium { padding-top: 70px; padding-bottom: 70px; }
+
+/* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .section.is-small { padding-top: 25px; padding-bottom: 25px; }
+
+/* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .section.is-gapless { padding-top: 0; padding-bottom: 0; }
+
+/* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .section.bottom-is-gapless { padding-bottom: 0; }
+
+/* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .container.is-medium { max-width: 70%; }
+
+/* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .container.is-half { max-width: 50%; }
+
+/* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .container.is-small { max-width: 40%; }
+
+/* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .section-title { margin-bottom: 60px; font-size: 30px; font-weight: 900; line-height: 1.3; }
+
+/* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .section-title.has-small-gap { margin-bottom: 40px; }
+
+/* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .section-title.has-smaller-gap { margin-bottom: 30px; }
+
+/* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .section-title.is-white { color: #fff; }
+
+/* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .item-title { font-size: 24px; font-weight: 700; line-height: 1.2; }
+
+/* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .wrapper > .header-scroll, .wrapper > header { z-index: 4; }
+
+/* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .header-scroll .mobile-nav ul li, header .mobile-nav ul li { padding-top: 10px; padding-bottom: 10px; font-size: 19px; }
+
+/* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .m-nav-container { padding-top: 46px; }
+
+/* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .top-menu { padding-bottom: 10px; }
+
+/* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .avid-hero { position: relative; height: 90vh; min-height: 800px; overflow: hidden; background: #404041; }
+
+/* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .avid-hero .hero-image { position: absolute; right: 0; bottom: 100px; text-align: center; z-index: 0; -webkit-transition: right 750ms ease; transition: right 750ms ease; }
+
+/* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .avid-hero .hero-body { position: relative; z-index: 2; color: #fff; text-align: left; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); }
+
+/* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .avid-hero .hero-body .content { max-width: 65%; }
+
+/* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .avid-hero .hero-body .content h1 { font-size: 49px; line-height: 1.2; font-weight: 700; color: #fff; text-transform: uppercase; padding-bottom: 15px; }
+
+/* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .avid-hero .hero-body .content h1 span { color: #a4d137; }
+
+/* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .avid-hero .hero-body .content p { color: #fff; padding-bottom: 20px; max-width: 75%; }
+
+/* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .avid-hero .hero-body .content a { display: none; }
+
+/* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .avid-hero:after { bottom: 0; background: #fff; content: ''; display: block; height: 200px; left: 0; position: absolute; right: 0; z-index: 4; -webkit-backface-visibility: hidden; -webkit-transform: skewY(-5deg); transform: skewY(-5deg); -webkit-transform-origin: 100% 0; transform-origin: 100% 0; }
+
+/* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .avid-industries { z-index: 3; text-align: center; }
+
+/* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .avid-industries .industries .item { padding: 10px; }
+
+/* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .avid-industries .industries .industry { position: relative; }
+
+/* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .avid-industries .industries .industry .item-title { position: absolute; top: 40px; left: 35px; color: #fff; text-align: left; z-index: 10; }
+
+/* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .avid-industries .industries .industry .overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #a4d137; background: -webkit-gradient(linear, left top, right top, from(#a4d137), to(#72bd42)); background: linear-gradient(to right, #a4d137 0, #72bd42 100%); -webkit-transition: opacity .3s; transition: opacity .3s; opacity: 0; }
+
+/* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .avid-industries .industries .industry .overlay:hover { opacity: .5; }
+
+/* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .avid-search { z-index: 4; }
+
+/* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .avid-search .searchbox { background: #eef1f4; position: relative; padding: 80px 50px; margin-bottom: -200px; z-index: 5; }
+
+/* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .avid-search .searchbox .section-title { text-align: center; }
+
+/* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .avid-search .searchbox .searchform .field { width: 90%; margin-left: auto; margin-right: auto; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; }
+
+/* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .avid-search .searchbox .searchform .label { display: block; margin: 0 auto 3px; padding-left: 0; width: 90%; font-family: "Artegra Sans Alt",sans-serif; font-size: 14px; font-weight: 500; text-align: left; color: #404041; }
+
+/* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .avid-search .searchbox .searchform .input-group { width: 75%; padding-right: 25px; }
+
+/* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .avid-search .searchbox .searchform .search-input { height: 42px; }
+
+/* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .avid-search .searchbox .searchform .search-submit { width: 25%; }
+
+/* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .avid-search:after { bottom: 0; background: #fff; content: ''; display: block; height: 200px; left: 0; position: absolute; right: 0; z-index: 4; -webkit-backface-visibility: hidden; -webkit-transform: skewY(-5deg); transform: skewY(-5deg); -webkit-transform-origin: 100% 0; transform-origin: 100% 0; }
+
+/* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .request-demo { padding-top: 280px; background-color: #98ce45; background-image: linear-gradient(45deg, #98ce45 0, #4fbf43 100%); }
+
+/* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .request-demo .form-wrapper { padding-left: 40px; }
+
+/* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .request-demo .gfield { margin-top: 0 !important; }
+
+/* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .request-demo .gfield input, .request-demo .gfield select { height: 50px; border: 0; padding-left: 15px !important; padding-right: 15px !important; }
+
+/* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .request-demo .gfield select { margin-top: 12px; }
 
 /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .demo-form { background: url(../img/demo_bg.png) no-repeat; background-size: cover; background-position: center; padding: 80px 0; text-align: center; }
 
@@ -732,7 +826,23 @@
   /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .about-transform-companies { padding: 0; }
   /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .about-press-room .about-leadership .leader-info .name, .about-press-room .about-leadership .leader-info .position { font-size: 20px; } }
 
-@media only screen and (max-width: 999px) { /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .page-template-template-about .demo-form:before { height: 150px; }
+@media only screen and (max-width: 1024.98px) { /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .container.is-medium { max-width: 80%; }
+  /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .container.is-half { max-width: 60%; }
+  /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .container.is-small { max-width: 50%; }
+  /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .section-title { font-size: 28px; }
+  /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .item-title { font-size: 22px; }
+  /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .avid-hero { height: 60vh; }
+  /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .avid-hero .hero-body .content { max-width: 50%; }
+  /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .avid-hero .hero-body .content h1 { font-size: 39px; }
+  /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .avid-search .searchbox { padding-left: 60px; padding-right: 60px; }
+  /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .avid-search .searchbox .searchform .field { width: 100%; }
+  /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .avid-search .searchbox .searchform .label { width: 100%; }
+  /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .avid-search .searchbox .searchform .input-group { width: 70%; }
+  /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .avid-search .searchbox .searchform .search-submit { width: 30%; } }
+
+@media only screen and (max-width: 999px) { /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .avid-hero:after { height: 150px; }
+  /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .avid-search:after { height: 150px; }
+  /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .page-template-template-about .demo-form:before { height: 150px; }
   /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .partial-inner-page-header:after { height: 150px; }
   /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .home-opening { padding: 150px 0 0; height: auto; min-height: 0; }
   /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .home-opening .opening-demo-form { right: auto; width: 90%; margin: 0 auto; display: block; position: relative; max-width: 500px; padding: 50px 30px 150px; }
@@ -756,6 +866,21 @@
   /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .about-locations .main-office .map { width: 53%; }
   /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .about-locations .main-office .office-info p { font-size: 25px; }
   /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .about-locations ul li { width: 45%; } }
+
+@media only screen and (max-width: 991.98px) { /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .section { padding-top: 40px; padding-bottom: 40px; }
+  /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .section.is-medium { padding-top: 60px; padding-bottom: 60px; }
+  /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .container.is-medium { max-width: 85%; }
+  /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .container.is-half { max-width: 70%; }
+  /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .container.is-small { max-width: 60%; }
+  /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .section-title { font-size: 26px; }
+  /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .item-title { font-size: 20px; }
+  /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .avid-hero { min-height: 850px; }
+  /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .avid-hero .hero-image { bottom: 90px; }
+  /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .avid-hero .hero-image img { max-width: 350px; }
+  /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .avid-hero .hero-body .content { max-width: 75%; }
+  /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .avid-hero .hero-body .content p { max-width: 70%; }
+  /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .avid-search .searchbox { padding-left: 30px; padding-right: 30px; }
+  /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .request-demo .form-wrapper { padding-left: 0; padding-top: 40px; } }
 
 @media only screen and (max-width: 899px) { /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .demo-form h1 { font-size: 32px; line-height: 40px; }
   /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .partial-inner-page-header { height: auto; }
@@ -805,6 +930,19 @@
   /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .about-press-room { background-size: auto 1315px; }
   /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .about-press-room .about-leadership { height: 880px; } }
 
+@media only screen and (max-width: 767.98px) { /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .container.is-medium { max-width: 90%; }
+  /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .container.is-half { max-width: 80%; }
+  /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .container.is-small { max-width: 70%; }
+  /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .section-title { font-size: 24px; }
+  /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .item-title { font-size: 18px; }
+  /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .avid-hero { min-height: 560px; }
+  /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .avid-hero .hero-image { display: none; }
+  /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .avid-hero .hero-body .content { max-width: 100%; }
+  /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .avid-hero .hero-body .content h1 { font-size: 32px; }
+  /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .avid-hero .hero-body .content p { max-width: 100%; }
+  /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .avid-search .searchbox { padding-left: 20px; padding-right: 20px; }
+  /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .request-demo { padding-top: 180px; } }
+
 @media only screen and (max-width: 749px) { /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .home-search { padding: 150px 0 150px; }
   /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .home-search .searchbox form label { width: 100%; }
   /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .home-search .searchbox form label input { width: 100%; }
@@ -850,6 +988,10 @@
   /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .about-foundation .about-flex .section-info, .about-join .about-flex .section-info { width: 100%; }
   /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .about-foundation .about-flex .section-image, .about-join .about-flex .section-image { width: 100%; } }
 
+@media only screen and (max-width: 575.98px) { /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .avid-hero { min-height: 800px; }
+  /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .avid-search .searchbox .searchform .input-group { padding-right: 0; width: 100%; }
+  /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .avid-search .searchbox .searchform .search-submit { width: 100%; } }
+
 @media only screen and (max-width: 549px) { /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .about-press-room { background-size: auto 1355px; }
   /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .about-press-room .about-leadership { height: 915px; } }
 
@@ -864,7 +1006,7 @@
 @media only screen and (max-width: 399px) { /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .home-industries .next, .home-industries .prev { margin: 0 25px 50px; }
   /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .home-testimonials .next, .home-testimonials .prev { margin: 50px 25px 0; } }
 
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .btn, .demo-form form input[type=submit], .header-scroll .mobile-nav a.demo-button, .header-scroll .mobile-nav ul li.demo-request, .home-opening .opening-demo-form form ul li input[type=submit], .home-search .searchbox form button, header .mobile-nav a.demo-button, header .mobile-nav ul li.demo-request { line-height: 50px; }
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .btn, .demo-form form input[type=submit], .header-scroll .mobile-nav a.demo-button, .header-scroll .mobile-nav ul li.demo-request, .home-opening .opening-demo-form form ul li input[type=submit], .home-search .searchbox form button, .request-demo .gform_button, header .mobile-nav a.demo-button, header .mobile-nav ul li.demo-request { line-height: 50px; }
   /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .header-scroll .mobile-nav a.demo-button, header .mobile-nav a.demo-button { line-height: 38px; }
   /* line 1, /Users/dennisedson/Desktop/work/Clients/Avid/avidxchange-wp/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.css */ .header-scroll nav ul li.demo-btn a, header nav ul li.demo-btn a { line-height: 38px; } }
 
