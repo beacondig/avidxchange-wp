@@ -10,4 +10,16 @@ jQuery(function() {
 			jQuery(this).addClass('active');
 			jQuery('.solutions-streamline ul.info li.'+item).addClass('active');
 		});
+		
+		// Streamline Mobile Slider
+		jQuery('.solutions-streamline .mobile > ul').bxSlider({
+			auto:false,
+			infiniteLoop:true,
+			nextSelector:'.solutions-streamline .mobile .next',
+			prevSelector:'.solutions-streamline .mobile .prev',
+			speed:1000,
+			pager:false,
+			randomStart:false, 
+			touchEnabled:false
+		});
 });
