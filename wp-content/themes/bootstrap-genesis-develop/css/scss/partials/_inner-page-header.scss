@@ -10,6 +10,9 @@
 		@include respond-at(899px) {
 			height:auto;
 		}
+		.page-template-template-integrations & {
+			@include angled(bottom, after, -5.0deg, #f5f6f7);
+		}
 		.container {
 			height:100%;
 			&:before, &:after {

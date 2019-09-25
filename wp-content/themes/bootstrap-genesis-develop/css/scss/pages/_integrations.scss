@@ -1,0 +1,236 @@
+.integrations {
+		background:#f5f6f7;
+		padding:80px 0;
+		.left-side {
+			display:inline-block;
+			vertical-align:top;
+			width:250px;
+			text-align:left;
+			padding-top:100px;
+			.search-container {
+				background:$lightgrey;
+				padding:30px 20px 15px;
+				box-sizing:border-box;
+				width:100%;
+				.alphalist {
+					display:flex;
+					flex-flow:row wrap;
+					justify-content:center;
+					padding-top:30px;
+					a, span {
+						font-size:16px;
+						line-height:16px;
+						max-height:20px;
+						margin:0 2.5% 15px;
+						padding:0;
+					}
+					a {
+						color:$grey;
+						&.alphachosen {
+							color:$brightblue !important;
+							font-weight:$fwbold;
+						}
+						&:hover {
+							color:$brightblue;
+						}
+					}
+				}
+			}
+			.search-title {
+				color:$grey;
+				text-transform:uppercase;
+				font-family:$font-fam;
+				font-weight:$fwblack;
+				letter-spacing:1px;
+				padding-bottom:10px;
+				font-size:28px;
+			}
+			.intgmag {
+				position:absolute;
+				margin-left:170px;
+				margin-top:-4px;
+				i {
+					color:$brightblue;
+					font-size:20px;
+				}
+			}
+			input {
+				border:none;
+				height:40px;
+				width:100%;
+				box-sizing:border-box;
+				padding-left:10px;
+			}
+			.a-container {
+				padding-top:50px;
+				.a-image {
+					margin-bottom:30px;
+				}
+				.title {
+					font-size:28px;
+					line-height:32px;
+					font-weight:$fwbold;
+					letter-spacing:1px;
+					text-transform:uppercase;
+					padding-bottom:30px;
+				}
+				p {
+					padding-bottom:30px;
+				}
+			}
+		}
+		.right-side {
+			width:calc(100% - 350px);
+			text-align:left;
+			margin-left:25px;
+			display:inline-block;
+			vertical-align:top;
+			.slider-container {
+				text-align:center;
+				margin-bottom:50px;
+			}
+			.next, .prev {
+				display:inline-block;
+				vertical-align:top;
+				width:50px;
+				position:relative;
+				margin:0 50px;
+				img {
+					width:100%;
+				}
+				a {
+					display:block;
+					opacity:0;
+					width:100%;
+					height:100%;
+					position:absolute;
+					top:0;
+					left:0;
+				}
+			}
+			ul li {
+				.featured-logo {
+					display:inline-block;
+					vertical-align:top;
+					box-sizing:border-box;
+					background:#fff;
+					box-shadow:0 20px 40px -15px rgba(0,0,0,0.3);
+					position:relative;
+					width:420px;
+					height:325px;
+					margin:15px 35px 50px;
+					img {
+						position:relative;
+						top:50%;
+						transform:translateY(-50%);
+						width:auto;
+						max-width:80%;
+						height:auto;
+						max-height:200px;
+						margin:0 auto;
+					}
+					.banner {
+						background:$limegreen;
+						color:#fff;
+						text-transform:uppercase;
+						font-family:$font-fam;
+						font-weight:$fwbold;
+						font-size:20px;
+						letter-spacing:1px;
+						position:absolute;
+						top:10px;
+						left:0;
+						padding:13px 20px 13px 40px;
+						&:before {
+							content:'';
+							width:0;
+							height:0;
+							border-top:25px solid $limegreen;
+							border-left:0px solid transparent;
+							border-right:25px solid transparent;
+							position:absolute;
+							right:-25px;
+							top:0;
+						}
+						&:after {
+							content:'';
+							width:0;
+							height:0;
+							border-bottom:25px solid $limegreen;
+							border-left:0px solid transparent;
+							border-right:25px solid transparent;
+							position:absolute;
+							right:-25px;
+							bottom:0;
+						}
+					}
+				}
+				.featured-info {
+					display:inline-block;
+					vertical-align:top;
+					text-align:left;
+					width:calc(100% - 500px);
+					margin-top:20px;
+					.title {
+						color:$grey;
+						text-transform:uppercase;
+						font-weight:$fwblack;
+						font-size:30px;
+						letter-spacing:1px;
+						padding-bottom:30px;
+					}
+					p {
+						padding-bottom:30px;
+					}
+				}
+			}
+			.integrations-wrapper {
+				display:flex;
+				justify-content:space-between;
+				flex-flow:row wrap;
+				padding-left:20px;
+				margin-bottom:100px;
+				.integration-item {
+					width:30%;
+					height:300px;
+					margin-bottom:50px;
+					box-shadow: 0px 25px 40px -37px $grey;
+					background:#fff;
+					.intgbg {
+						width:100%;
+						height:100%;
+						border:none;
+						border-radius:0;
+						background:transparent;
+						position:relative;
+						.intimg {
+							width:100%;
+							height:100%;
+							img {
+								max-width:90%;
+								margin:0 auto;
+								top:50%;
+								transform:translateY(-50%);
+								position:relative;
+								display:block !important;
+							}
+						}
+						.intgcover {
+							width:100%;
+							height:100%;
+							left:0;
+							right:0;
+							.vsp {
+								top:50%;
+								transform:translateY(-50%);
+								position:relative;
+								padding:0;
+							}
+						}
+					}
+				}
+			}
+			
+			
+		}
+}

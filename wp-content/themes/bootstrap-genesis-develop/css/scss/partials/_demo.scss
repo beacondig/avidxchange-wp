@@ -17,6 +17,11 @@
 			padding:250px 0 80px;
 			margin-top:-25px;
 		}
+		.page-template-template-integrations & {
+			@include angled(top, before, 5.0deg, #f5f6f7);
+			padding:250px 0 80px;
+			margin-top:-25px;
+		}
 		h1 {
 			color:#fff;
 			font-size:$heading2;
