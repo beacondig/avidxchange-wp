@@ -1,12 +1,5 @@
-
-<?php get_header('new'); ?>
+<?php get_header(); ?>
 </div>
-<link rel='stylesheet' id='theme-styles-css'  href='http://avidxdev.wpengine.com/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.min.css' type='text/css' media='all' />
-<link rel='stylesheet' id='slick-css'  href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css' type='text/css' media='all' />
-<link rel='stylesheet' id='slick-theme-css'  href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css' type='text/css' media='all' />
-<link rel='stylesheet' id='components-css'  href='http://avidxdev.wpengine.com/wp-content/themes/bootstrap-genesis-develop/css/components.min.css' type='text/css' media='all' />
-<link rel='stylesheet' id='duplicate-post-css'  href='http://avidxdev.wpengine.com/wp-content/plugins/duplicate-post/duplicate-post.css' type='text/css' media='all' />
-<link rel='stylesheet' id='new-royalslider-core-css-css'  href='http://avidxdev.wpengine.com/wp-content/plugins/new-royalslider/lib/royalslider/royalslider.css' type='text/css' media='all' />
 
 
 <!--- form modal start (Embedded field values - DJ style) --->
@@ -41,10 +34,9 @@
 </div><?php */?>
 <!--- form modal end --->
 
-
-<div class="header-blog-inner">
-<div class="hero-body">
-<div class="container">
+<div class="headerbluebg">
+<div class="xbg">
+<div class="container mobilesquish">
 <?php $str = get_field('resource_type');
 $str = str_replace("-", " ", $str); ?>
 <div class="pageTitleTop">Resources/<?php echo $str; ?></div>
@@ -159,7 +151,7 @@ $str = str_replace("-", " ", $str); ?>
 		</div>
 	<?php } else { ?>
 		<div class="container">
-			<div class="row rowmargin-top">
+			<div class="row rowpadding">
 				<?php if( get_field('show_about') == 'No' or get_field('show_about') == '' ): ?>
 					<div class="col-md-8 col-sm-7">
 				<?php endif;?>
@@ -185,26 +177,8 @@ $str = str_replace("-", " ", $str); ?>
                 <?php if( get_field('show_about') == 'No' or get_field('show_about') == '' ): ?>
 					<div class="col-md-4 col-sm-5">
 				<?php endif;?>
-
-		<div class="col-md-5 author-top">
-		<div class="col-md-4 col-sm-4">
-	<img src="<?php the_field('author_image'); ?> ">	
-	</div>
-	<div class="col-md-8 col-sm-8">
-<h3>By: <?php the_field('author_name'); ?></h3>
-<h3> <?php the_time('F h Y'); ?> </h3>
-<a href="<?php the_field('author_linkText'); ?>"><img src="http://avidxdev.wpengine.com/wp-content/uploads/2019/09/linkdin-green-1a.png"></a>
-<a href="<?php the_field('author_linkText'); ?>"><img src="http://avidxdev.wpengine.com/wp-content/uploads/2019/09/twitter-01-edita.png"></a>
-<a href="<?php the_field('author_linkText'); ?>"><img src="http://avidxdev.wpengine.com/wp-content/uploads/2019/09/facebook-logo-01-edita.png"></a>
-
-	</div>
-
-		
-		</div>
-
-
 				<?php if( get_field('show_about') == 'Yes' ): ?>
-					<div class="col-md-12 blog-content">
+					<div class="col-md-5">
 				<?php endif;?>
 					<?php if( get_field('show_about') == 'No' or get_field('show_about') == '' ): ?>
 						<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("OnDemand Webinar Sidebar") ) : ?>
@@ -215,8 +189,16 @@ $str = str_replace("-", " ", $str); ?>
 						<p><?php the_field('about_webinar'); ?></p>
 					<?php endif;?>
 				</div>
-			
-			
+				<div class="clearfix"></div>
+			<?php if( get_field('show_about') == 'Yes' ): ?>
+					<div class="col-sm-12">
+						<div style="border: 1px solid #1e95d3; border-radius: 10px; padding: 25px; margin: 25px 0;">
+						<h6 style="text-align: center; max-width: 850px; margin: auto;">Interested in learning more from an AP Automation expert?</h6>
+						<div class="twentyspacer"></div>
+						<div style="text-align: center;"><a title="Request a Call" class="ctabutton mediumbutton" data-toggle="modal" data-target="#intModal">Request a Call</a></div>
+						</div>
+					</div>
+			<?php endif;?>
 		</div>
 		</div>
 	<?php } ?>
@@ -256,116 +238,7 @@ $str = str_replace("-", " ", $str); ?>
 <?php genesis_after_content(); ?>
 
 </div><!-- end #content-sidebar-wrap -->
-
-
-
-
-
-
-
 <?php genesis_after_content_sidebar_wrap(); ?>
-
-
-
-
-
-<style>
-
-.hero-body a {
-    display: none;
-}
-.request-demo {
-    	background-position: center top;
-	margin-top:40px;
-	padding-top:180px;
-}
-
-</style>
-
-
-<div class="author-content">
-<div class="container">
-	<div class="col-md-4 col-sm-4">
-	<img src="<?php the_field('author_image'); ?> ">	
-	</div>
-	<div class="col-md-8 col-sm-8">
-<h3><?php the_field('author_name'); ?></h3>
-<p><?php the_field('author_content'); ?></p>
-<a href="<?php the_field('author_linkText'); ?>">Read More By Jason</a>
-	</div>
-
-</div>
-</div>
-
-<div class="mix-post-outer mix-post-outer-margin">
-	<div class="container">
-<div class="mix-post-inner">
-		<?php $wp_query = new WP_Query(array('post_type'=>'resources', 'post_status'=>'publish', 'posts_per_page'=>3)); ?>
-
-		<?php if ( $wp_query->have_posts() ) : ?>
-		 <?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
-		<div class="mix-post-inner1">
-		        <div  class="top-image" style="background-image: url(<?php echo get_the_post_thumbnail_url( $post_id, 'large' ); ?>) !important;"></div>		
-			<div class="mix-post-inner-desc">			
-				<h2><?php echo get_the_title(); ?></h2>
-
-				<p class="cat"> <?php 
-		$terms = get_the_terms( $post->ID , 'category' );	
-		$len = count($terms );
-		foreach ( $terms as $index => $term ) {
-			
-			if ($index == $len - 1) {
-        				echo $term->name." | ";    
-			}
-			else
-			{
-				echo $term->name.", ";
-			}
-
-		}
-
-the_time('F Y'); 
-
-?></p>
-
-				<p>  <?php the_content(); ?> </p>
-			<br><a href="<?php the_permalink(); ?>" class="learnmore">READ MORE > </a>
-			</div>
-		</div>
-
-    		<?php endwhile; ?>
-    <!-- end of the loop -->
- 
-    <?php wp_reset_postdata(); ?>
- 
-<?php else : ?>
-    <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
-<?php endif; ?>
-</div>
-			<a href="/resource" class="loadmore">SEE ALL RESOURCES</a>
-
-	</div>
-</div>
-
-
-
-
-
-
-
-<section class="section request-demo" id="demoRequest">
-	<div class="container">
-
-	<h2 class="section-title is-white has-smaller-gap center">GET UPDATES FROM US TO YOUR INBOX</h2>
-	<div class="form-outer-wrap">
-	<?php echo do_shortcode( '[gravityform id="39" title="true" description="true"]' ); ?>
-	</div>
-	</div>
-</section>
-
-
-
-
 
 <script>
 jQuery(document).ready(function($) {
@@ -377,4 +250,4 @@ jQuery(document).ready(function($) {
 });
 </script>
 
-<?php get_footer( 'new' ); ?>
+<?php get_footer(); ?>
