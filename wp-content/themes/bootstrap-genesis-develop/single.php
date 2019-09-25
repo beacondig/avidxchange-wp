@@ -286,21 +286,12 @@ $str = str_replace("-", " ", $str); ?>
 <div class="author-content">
 <div class="container">
 	<div class="col-md-4 col-sm-4">
-<<<<<<< HEAD
-	<img src="<?php the_field('author_image'); ?> ">	
-	</div>
-	<div class="col-md-8 col-sm-8">
-<h3><?php the_field('author_name'); ?></h3>
-<p><?php the_field('author_content'); ?></p>
-<a href="<?php the_field('author_linkText'); ?>">Read More By Jason</a>
-=======
 	<?php echo get_avatar(get_the_author_meta('ID'), 96); ?>	
 	</div>
 	<div class="col-md-8 col-sm-8">
 <h3><?php echo get_the_author_link(); ?></h3>
 <p><?php echo get_the_author_meta('description'); ?></p>
 <a href="<?php the_field('author_linkText'); ?>">Read More By <?php echo get_the_author_meta( 'first_name' ); ?></a>
->>>>>>> update the post view
 	</div>
 
 </div>
