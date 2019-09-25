@@ -1,0 +1,349 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Cresta Social Share Counter PRO\n"
+"Report-Msgid-Bugs-To: http://crestaproject.com\n"
+"POT-Creation-Date: 2015-10-01 18:26:45+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-10-02 11:12+0100\n"
+"Last-Translator: \n"
+"Language-Team: WP-Translations <wpt@wp-translations.org>\n"
+"X-Generator: Poedit 1.6.4\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
+"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
+"esc_html_x:1,2c\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: ../\n"
+"X-Textdomain-Support: yes\n"
+"Language: it_IT\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: cresta-metabox.php:14
+msgid "Cresta Social Share Counter"
+msgstr "Cresta Social Share Counter"
+
+#: cresta-metabox.php:29
+msgid "Hide icons in this page?"
+msgstr "Mascondere bottoni social in questa pagina?"
+
+#: cresta-social-share-counter-pro.php:50
+msgid "Settings"
+msgstr "Opzioni"
+
+#: cresta-social-share-counter-pro.php:994
+msgid "You do not have sufficient permissions to access this page."
+msgstr "Non hai i permessi sufficienti per poter accedere a questa pagina."
+
+#: cresta-social-share-counter-pro.php:997
+msgid "Settings Saved..."
+msgstr "Opzioni Salvate..."
+
+#: cresta-social-share-counter-pro.php:1114
+msgid "Cresta Social Share Counter Settings"
+msgstr "Opzioni Cresta Social Share Counter"
+
+#: cresta-social-share-counter-pro.php:1120
+msgid "Select buttons to display on website :"
+msgstr "Seleziona i bottoni da mostrare nel sito :"
+
+#: cresta-social-share-counter-pro.php:1128
+msgid "Twitter username (optional):"
+msgstr "Nome utente Twitter (opzionale):"
+
+#: cresta-social-share-counter-pro.php:1152
+msgid "(only visible on smartphones Android and iPhone)"
+msgstr "(visibile solo su smartphone Android e iPhone)"
+
+#: cresta-social-share-counter-pro.php:1162
+msgid "Choose buttons style :"
+msgstr "Scegli lo stile dei bottoni :"
+
+#: cresta-social-share-counter-pro.php:1235
+msgid "Social Network Colors :"
+msgstr "Colori dei Social Network:"
+
+#: cresta-social-share-counter-pro.php:1237
+msgid "Colors option:"
+msgstr "Opzioni Colori:"
+
+#: cresta-social-share-counter-pro.php:1237
+msgid "Use default colors"
+msgstr "Usa colori di default"
+
+#: cresta-social-share-counter-pro.php:1237
+msgid "Use custom colors"
+msgstr "Usa colori personalizzati"
+
+#: cresta-social-share-counter-pro.php:1240
+msgid "FaceBook custom color:"
+msgstr "Colore personalizzato Facebook"
+
+#: cresta-social-share-counter-pro.php:1245
+msgid "Twitter custom color:"
+msgstr "Colore personalizzato Twitter"
+
+#: cresta-social-share-counter-pro.php:1250
+msgid "Google Plus custom color:"
+msgstr "Colore personalizzato Google Plus"
+
+#: cresta-social-share-counter-pro.php:1255
+msgid "Linkedin custom color:"
+msgstr "Colore personalizzato Linkedin"
+
+#: cresta-social-share-counter-pro.php:1260
+msgid "Pinterest custom color:"
+msgstr "Colore personalizzato Pinterest"
+
+#: cresta-social-share-counter-pro.php:1265
+msgid "Stumbleupon custom color:"
+msgstr "Colore personalizzato StumbleUpon"
+
+#: cresta-social-share-counter-pro.php:1270
+msgid "VK custom color:"
+msgstr "Colore personalizzato VK"
+
+#: cresta-social-share-counter-pro.php:1275
+msgid "Buffer custom color:"
+msgstr "Colore personalizzato Buffer"
+
+#: cresta-social-share-counter-pro.php:1280
+msgid "Reddit custom color:"
+msgstr "Colore personalizzato Reddit"
+
+#: cresta-social-share-counter-pro.php:1285
+msgid "WhatsApp custom color:"
+msgstr "Colore personalizzato WhatsApp"
+
+#: cresta-social-share-counter-pro.php:1290
+msgid "Email Button custom color:"
+msgstr "Colore personalizzato botton Email"
+
+#: cresta-social-share-counter-pro.php:1295
+msgid "Print Button custom color:"
+msgstr "Colore personalizzato bottone Stampa"
+
+#: cresta-social-share-counter-pro.php:1301
+msgid "Display Setting :"
+msgstr "Opzioni di visualizzazione :"
+
+#: cresta-social-share-counter-pro.php:1303
+msgid "Enable reflection on the buttons"
+msgstr "Abilita riflesso sui bottoni"
+
+#: cresta-social-share-counter-pro.php:1306
+msgid "Enable shadow on the buttons"
+msgstr "Abilita ombra sui bottoni"
+
+#: cresta-social-share-counter-pro.php:1309
+msgid "Enable animation"
+msgstr "Abilita animazioni"
+
+#: cresta-social-share-counter-pro.php:1312
+msgid "Choose animation:"
+msgstr "Scegli animazione:"
+
+#: cresta-social-share-counter-pro.php:1350
+msgid "Show Social Counter"
+msgstr "Mostra contatore social"
+
+#: cresta-social-share-counter-pro.php:1353
+msgid "Single Shares Text Color:"
+msgstr "Colore testo singola condivisione:"
+
+#: cresta-social-share-counter-pro.php:1357
+msgid "Single Shares Background Color:"
+msgstr "Colore sfondo singola divisione:"
+
+#: cresta-social-share-counter-pro.php:1359
+msgid ""
+"Single Share Box: Use the same colors of social networks (Will use the "
+"default colors of the social network, no custom colors)"
+msgstr ""
+"Box Singola Condivisione: Usa gli stessi colori dei social network (Viene "
+"usato il colore di default dei vari social network, non il colore "
+"personalizzato)"
+
+#: cresta-social-share-counter-pro.php:1362
+msgid "Total Shares Text Color:"
+msgstr "Colore del testo delle condivisioni totali"
+
+#: cresta-social-share-counter-pro.php:1366
+msgid "Show Total Shares"
+msgstr "Mostra le condivisioni totali"
+
+#: cresta-social-share-counter-pro.php:1369
+msgid "Total Shares Text:"
+msgstr "Testo condivisioni totali"
+
+#: cresta-social-share-counter-pro.php:1373
+msgid "Float Position :"
+msgstr "Posizione bottoni galleggianti :"
+
+#: cresta-social-share-counter-pro.php:1375
+msgid "Show Floating Buttons"
+msgstr "Mostra bottoni galleggianti"
+
+#: cresta-social-share-counter-pro.php:1378
+msgid "Float Buttons Position:"
+msgstr "Posizione bottoni galleggianti"
+
+#: cresta-social-share-counter-pro.php:1378
+#: cresta-social-share-counter-pro.php:1405
+msgid "Left"
+msgstr "Sinistra"
+
+#: cresta-social-share-counter-pro.php:1378
+#: cresta-social-share-counter-pro.php:1405
+msgid "Right"
+msgstr "Destra"
+
+#: cresta-social-share-counter-pro.php:1381
+msgid "Position From Top:"
+msgstr "Posizione da sopra:"
+
+#: cresta-social-share-counter-pro.php:1383
+msgid "Position From Left or Right:"
+msgstr "Posizione da sinistra o destra:"
+
+#: cresta-social-share-counter-pro.php:1385
+msgid "Z-Index:"
+msgstr "Z-Index:"
+
+#: cresta-social-share-counter-pro.php:1385
+msgid ""
+"Increase this number if the floating buttons are covered by other items on "
+"the screen."
+msgstr ""
+"Aumenta questo numero se i bottoni galleggianti sono coperti da altri "
+"elementi nello schermo."
+
+#: cresta-social-share-counter-pro.php:1387
+msgid "Enable button to hide/show the floating buttons"
+msgstr "Abilita il tasto per nascondere/mostrare i bottoni galleggianti"
+
+#: cresta-social-share-counter-pro.php:1390
+msgid "Disable Floating Buttons On Mobile"
+msgstr "Disabilita bottoni galleggianti su mobile"
+
+#: cresta-social-share-counter-pro.php:1394
+msgid "Post and Page Position :"
+msgstr "Posizione negli articoli e nelle pagine :"
+
+#: cresta-social-share-counter-pro.php:1396
+msgid "Add Social Buttons before post/page content"
+msgstr "Inserisci bottoni social prima di ogni articolo/pagina"
+
+#: cresta-social-share-counter-pro.php:1399
+msgid "Add Social Buttons after post/page content"
+msgstr "Inserisci bottoni social dopo ogni articolo/pagina"
+
+#: cresta-social-share-counter-pro.php:1402
+msgid ""
+"Use small buttons (When activated, the in content buttons will be smaller)"
+msgstr ""
+"Usa bottoni piccoli (Quando attivo, i bottoni social avranno dimensioni "
+"minori. Non disponibile per i bottoni galleggianti)"
+
+#: cresta-social-share-counter-pro.php:1405
+msgid "Buttons Position (in content):"
+msgstr "Posizione dei bottoni (nel contenuto):"
+
+#: cresta-social-share-counter-pro.php:1405
+msgid "Center"
+msgstr "Centro"
+
+#: cresta-social-share-counter-pro.php:1408
+msgid "In Content Buttons Hover Animation:"
+msgstr "Animazione dei bottoni nel contenuto quando si passa sopra col mouse"
+
+#: cresta-social-share-counter-pro.php:1425
+msgid "You can place the shortcode"
+msgstr "Puoi posizionare lo shortcode"
+
+#: cresta-social-share-counter-pro.php:1425
+msgid "wherever you want to display the social buttons."
+msgstr "dove preferisci mostrare i bottoni social."
+
+#: cresta-social-share-counter-pro.php:1429
+msgid "Show on :"
+msgstr "Mostra in :"
+
+#: cresta-social-share-counter-pro.php:1447
+msgid "Tooltip :"
+msgstr "Tooltip :"
+
+#: cresta-social-share-counter-pro.php:1449
+msgid "Show Tooltip"
+msgstr "Mostra Tooltip"
+
+#: cresta-social-share-counter-pro.php:1490
+msgid "Plugin License"
+msgstr "Licenza del Plugin"
+
+#: cresta-social-share-counter-pro.php:1497
+msgid "Enter your license key"
+msgstr "Inserisci la tua chiave di licenza"
+
+#: cresta-social-share-counter-pro.php:1503
+msgid "active"
+msgstr "attiva"
+
+#: cresta-social-share-counter-pro.php:1505
+msgid "Deactivate License"
+msgstr "Disattiva Licenza"
+
+#: cresta-social-share-counter-pro.php:1508
+msgid "Activate License"
+msgstr "Attiva Licenza"
+
+#: cresta-social-share-counter-pro.php:1513
+#, php-format
+msgid ""
+"License key is valid for one year from the date of purchase. With the "
+"license key you can update the plugin directly from the WordPress Dashboard "
+"and get support.<br/>After one year, license key may be renewed at a "
+"10% discount from the purchase price of a new license (two weeks before the "
+"expiration of the license key will receive an email and you can decide "
+"whether to renew the license or not).</br>If you decide not to renew the "
+"license key no problem, you can continue to use the plugin as always, but "
+"you will not receive updates and support."
+msgstr ""
+"La chiave di licenza è valida per un anno dalla data di acquisto del plugin. "
+"Con la chiave di licenza puoi effettuare aggiornamenti direttamente dalla "
+"tua Dashboard di WordPress e ottenere supporto tecnico.<br/>Dopo un anno, la "
+"chiave di licenza può essere rinnovata al 10% di sconto del prezzo di una "
+"nuova licenza (due settimane prima della scadenza della chiave di licenza "
+"riceverai una mail e potrai decidere se rinnovare la licenza oppure no).<br/"
+">Se decidi di non rinnovare la chiave di licenza, nessun problema, potrai "
+"continuare ad utilizzare il plugin come sempre, ma non potrai ricevere "
+"aggiornamenti e supporto."
+
+#: inc/EDD_SL_Plugin_Updater.php:173
+#, php-format
+msgid ""
+"There is a new version of %1$s available. <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">View version %3$s details</a>."
+msgstr ""
+"Nuova versione di %1$s disponibile. <a target=\"_blank\" class=\"thickbox\" "
+"href=\"%2$s\">Visualizza i %3$s dettagli</a>."
+
+#: inc/EDD_SL_Plugin_Updater.php:180
+#, php-format
+msgid ""
+"There is a new version of %1$s available. <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">View version %3$s details</a> or <a href=\"%4$s"
+"\">update now</a>."
+msgstr ""
+"Nuova versione di %1$s disponibile. <a target=\"_blank\" class=\"thickbox\" "
+"href=\"%2$s\">Visualizza i %3$s dettagli</a> oppure <a href=\"%4$s"
+"\">aggiorna ora</a>."
+
+#: inc/EDD_SL_Plugin_Updater.php:322
+msgid "You do not have permission to install plugin updates"
+msgstr "Non hai i permessi per installare aggiornamenti del plugin"
+
+#: inc/EDD_SL_Plugin_Updater.php:322
+msgid "Error"
+msgstr "Errore"

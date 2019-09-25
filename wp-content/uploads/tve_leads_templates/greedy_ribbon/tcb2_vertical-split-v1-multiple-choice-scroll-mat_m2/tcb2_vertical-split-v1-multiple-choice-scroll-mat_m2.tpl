@@ -1,0 +1,26 @@
+<div class="thrv-greedy-ribbon tve_no_drag tve_no_icons thrv_wrapper tve_editor_main_content tve_empty_dropzone" data-css="tve-u-05b4a15bdd0a43">
+<div class="thrv_wrapper thrv-page-section" data-css="tve-u-15b4a15bdd0a77">
+<div class="tve-page-section-out" data-css="tve-u-25b4a15bdd0abb"></div>
+<div class="tve-page-section-in tve_empty_dropzone tve-section-full-height" data-css="tve-u-35b4a15bdd0b17"><div class="thrv_wrapper thrv-columns" data-css="tve-u-45b4a15bdd0b6f"><div class="tcb-flex-row tcb-resized v-2 tcb--cols--2" data-css="tve-u-55b4a15bdd0bad"><div class="tcb-flex-col c-66" data-css="tve-u-65b4a15bdd0bf1" style=""><div class="tcb-col tve_empty_dropzone" data-css="tve-u-75b4a15bdd0c37"><div class="thrv_wrapper thrv_heading" data-tag="h2" data-css="tve-u-85b4a15bdd0c7b"><h2 data-css="tve-u-95b4a15bdd0cdb"><strong>Subscribe to</strong></h2></div><div class="thrv_wrapper thrv_text_element tve_empty_dropzone" data-css="tve-u-105b4a15bdd0d3d"><p data-css="tve-u-115b4a15bdd0d98">our newsletter and receive the exclusive <strong>wildlife Yellowstone Park guide</strong></p></div><div class="tcb-clear" data-css="tve-u-125b4a15bdd0dda"><div class="thrv_wrapper thrv_lead_generation" data-connection="api" data-css="tve-u-135b4a15bdd0e1f"><input type="hidden" class="tve-lg-err-msg" value="{&quot;email&quot;:&quot;Email address invalid&quot;,&quot;phone&quot;:&quot;Phone number invalid&quot;,&quot;password&quot;:&quot;Password invalid&quot;,&quot;passwordmismatch&quot;:&quot;Password mismatch error&quot;,&quot;required&quot;:&quot;Required field missing&quot;}">
+<div class="thrv_lead_generation_container tve_clearfix">
+<form action="#" method="post" novalidate="novalidate">
+<div class="tve_lead_generated_inputs_container tve_clearfix tve_empty_dropzone">
+<div class="tve_lg_input_container tve_lg_input" data-css="tve-u-145b4a15bdd0e63" data-tcb_hover_state_parent="">
+<input type="text" data-field="name" name="name" placeholder="Name" data-placeholder="Name">
+</div>
+<div class="tve_lg_input_container tve_lg_input" data-css="tve-u-155b4a15bdd0ea4" data-tcb_hover_state_parent="">
+<input type="email" data-field="email" data-required="1" data-validation="email" name="email" placeholder="Email" data-placeholder="Email">
+</div>
+<div class="tve_lg_input_container tve_submit_container tve_lg_submit tcb-icon-display tve_empty_dropzone" data-css="tve-u-165b4a15bdd0eea" data-tcb_hover_state_parent=""><div class="thrv_wrapper thrv_icon" data-css="tve-u-175b4a15bdd0f30"><svg class="tcb-icon" viewBox="0 0 9 28" data-name="angle-right">
+<path d="M9.297 15c0 0.125-0.063 0.266-0.156 0.359l-7.281 7.281c-0.094 0.094-0.234 0.156-0.359 0.156s-0.266-0.063-0.359-0.156l-0.781-0.781c-0.094-0.094-0.156-0.219-0.156-0.359 0-0.125 0.063-0.266 0.156-0.359l6.141-6.141-6.141-6.141c-0.094-0.094-0.156-0.234-0.156-0.359s0.063-0.266 0.156-0.359l0.781-0.781c0.094-0.094 0.234-0.156 0.359-0.156s0.266 0.063 0.359 0.156l7.281 7.281c0.094 0.094 0.156 0.234 0.156 0.359z"></path>
+</svg></div>
+<button type="submit" class="tve-froala">Download now</button>
+</div>
+</div>
+</form>
+</div>
+</div></div><div class="thrv_wrapper thrv_text_element tve_empty_dropzone" data-css="tve-u-185b4a15bdd0f7b"><p data-css="tve-u-195b4a15bdd0fc2" style="text-align: left;">By signing up you agree to <span data-css="tve-u-205b4a15bdd1006" style="color: rgb(255, 255, 255);"><a href="" target="_blank"><u>our terms</u></a></span></p></div></div></div><div class="tcb-flex-col c-33" data-css="tve-u-215b4a15bdd104b" style=""><div class="tcb-col tve_empty_dropzone"><div class="thrv_wrapper tve_image_caption tcb-mobile-hidden" data-css="tve-u-225b4a15bdd1090"><span class="tve_image_frame" style="width: 100%;"><img class="tve_image wp-image-20517" alt="" width="516" height="624" title="vertical_split_screen_filler_bkg_03" data-id="20517" src="{tve_leads_base_url}/images/vertical_split_screen_filler_bkg_03.jpg" style="width: 100%;"></span></div></div></div></div></div><div class="thrv_wrapper thrv_icon tcb-icon-display tve_evt_manager_listen tve_et_click tve_ea_thrive_leads_form_close" data-css="tve-u-235b4a15bdd10d5" data-tcb-events="__TCB_EVENT_[{&quot;a&quot;:&quot;thrive_leads_form_close&quot;,&quot;t&quot;:&quot;click&quot;}]_TNEVE_BCT__"><svg class="tcb-icon" viewBox="0 0 18 28" data-name="angle-double-down">
+<path d="M16.797 13.5c0 0.125-0.063 0.266-0.156 0.359l-7.281 7.281c-0.094 0.094-0.234 0.156-0.359 0.156s-0.266-0.063-0.359-0.156l-7.281-7.281c-0.094-0.094-0.156-0.234-0.156-0.359s0.063-0.266 0.156-0.359l0.781-0.781c0.094-0.094 0.219-0.156 0.359-0.156 0.125 0 0.266 0.063 0.359 0.156l6.141 6.141 6.141-6.141c0.094-0.094 0.234-0.156 0.359-0.156s0.266 0.063 0.359 0.156l0.781 0.781c0.094 0.094 0.156 0.234 0.156 0.359zM16.797 7.5c0 0.125-0.063 0.266-0.156 0.359l-7.281 7.281c-0.094 0.094-0.234 0.156-0.359 0.156s-0.266-0.063-0.359-0.156l-7.281-7.281c-0.094-0.094-0.156-0.234-0.156-0.359s0.063-0.266 0.156-0.359l0.781-0.781c0.094-0.094 0.219-0.156 0.359-0.156 0.125 0 0.266 0.063 0.359 0.156l6.141 6.141 6.141-6.141c0.094-0.094 0.234-0.156 0.359-0.156s0.266 0.063 0.359 0.156l0.781 0.781c0.094 0.094 0.156 0.234 0.156 0.359z"></path>
+</svg></div></div>
+</div>
+</div>
