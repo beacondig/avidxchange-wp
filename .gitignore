@@ -1,26 +1,12 @@
-# ignore all files starting with .
-\.*
-# include .gitignore (i.e. do NOT ignore)
-!.gitignore
-# include .editorconfig (i.e. do NOT ignore)
-!.editorconfig
-# ignore all files that start with ~
-~*
-# ignore all node modules
+#node modules
 **/node_modules
+wp-content/plugins/*
+wp-content/ai1wm-backups
+wp-content/themes/*
+!wp-content/themes/bootstrap-genesis-develop
+.vscode
 
-#ignore media files outside of theme
-**/img
-*.jpg
-*.gif
-*.png
-*.mp4
-*.xlsx
-downloads
-!wp-content/themes/**/.jpg
-!wp-content/themes/**/.png
-!wp-content/themes/**/.gif
-#wpengine recommended ignored
+
 *~
 .DS_Store
 .svn
@@ -39,18 +25,18 @@ wp-content/advanced-cache.php
 wp-content/wp-cache-config.php
 wp-content/cache/*
 wp-content/cache/supercache/*
-wp-content/plugins
-#ignore unnecessary themes
-wp-content/themes/twentyten
-wp-content/themes/twentyeleven
-wp-content/themes/twentytwelve
-wp-content/themes/twentythirteen
-wp-content/themes/twentyfourteen
-wp-content/themes/twentyfifteen
-wp-content/themes/twentysixteen
-wp-content/themes/twentyseventeen
-wp-content/themes/index.php
-wp-content/plugins/index.php
+
+# wpengine specific
+.smushit-status
+.gitattributes
+_wpeprivate*
+wp-content/object-cache.php
+wp-content/mu-plugins/mu-plugin.php
+wp-content/mu-plugins/slt-force-strong-passwords.php
+wp-content/mu-plugins/stop-long-comments.php
+wp-content/mu-plugins/force-strong-passwords*
+wp-content/mu-plugins/wpengine-common*
+wp-content/mysql.sql
 
 # wp core (as of 4.9.5)
 /db-config.php
@@ -93,6 +79,38 @@ wp-content/plugins/index.php
 /wp-content/themes/index.php
 /wp-content/plugins/index.php
 /wp-content/plugins/akismet*
-/wp-content/mu-plugins/
-/wp-content/ai1wm-backups
-/wp-content/plugins
+
+# large/disallowed file types
+# a CDN should be used for these
+*.hqx
+*.bin
+*.exe
+*.dll
+*.deb
+*.dmg
+*.iso
+*.img
+*.msi
+*.msp
+*.msm
+*.mid
+*.midi
+*.kar
+*.mp3
+*.ogg
+*.m4a
+*.ra
+*.3gpp
+*.3gp
+*.mp4
+*.mpeg
+*.mpg
+*.mov
+*.webm
+*.flv
+*.m4v
+*.mng
+*.asx
+*.asf
+*.wmv
+*.avi
