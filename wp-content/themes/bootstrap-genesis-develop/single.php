@@ -1,5 +1,5 @@
 
-<?php get_header('new'); ?>
+<?php get_header('new'); ?> 
 </div>
 <link rel='stylesheet' id='theme-styles-css'  href='http://avidxdev.wpengine.com/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.min.css' type='text/css' media='all' />
 <link rel='stylesheet' id='slick-css'  href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css' type='text/css' media='all' />
