@@ -225,11 +225,14 @@
 				padding:10% 0 22%;
 			}
 			@include respond-at(1599px) {
-				padding:8% 0 20%;
+				padding:15% 0 25%;
 			}
 			@include respond-at(1199px) {
-				padding:5% 0 24%;
+				padding:15% 0 30%;
 				margin-top:165px;
+			}
+			@include respond-at(999px) {
+				padding:15% 0 37%;
 			}
 			@include respond-at(899px) {
 				padding:0;

@@ -92,7 +92,7 @@
 						<p><?php echo get_field('about_leadership_team_description');?></p>
 						<div class="name"><?php echo get_field('about_leadership_team_name');?>,</div>
 						<div class="position"><?php echo get_field('about_leadership_team_position');?></div>
-						<a class="btn" href="#">Leadership Team</a>
+						<a class="btn" href="<?php echo get_field('about_leadership_button_url');?>"><?php echo get_field('about_leadership_button_text');?></a>
 					</div>
 				</div>
 			</div>
