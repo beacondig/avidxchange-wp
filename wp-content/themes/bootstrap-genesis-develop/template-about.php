@@ -24,7 +24,7 @@
 					<div class="map">
 						<?php
 							$address = ''.get_field('about_corporate_street_address').' '.get_field('about_corporate_city').' '.get_field('about_corporate_state_letters').' '.get_field('about_corporate_zip_code').'';
-							$address = urlencode(strtolower(str_replace(',','', $address)));
+							$address = rawurlencode(strtolower(str_replace(',','', $address)));
 						?>
 						<a href="https://maps.google.com/maps?q=<?php echo $address;?>" target="_blank">
 							<img src="<?php echo get_field('about_corporate_office_map_image');?>" />
@@ -41,8 +41,8 @@
 					<ul>
 						<?php while(have_rows('about_regional_offices')): the_row();?>	
 							<?php
-								$r_address = ''.the_sub_field('about_corporate_street_address').' '.the_sub_field('about_corporate_city').' '.the_sub_field('about_corporate_state_letters').' '.the_sub_field('about_corporate_zip_code').'';
-								$r_address = urlencode(strtolower(str_replace(',','', $address)));
+								$r_address = get_sub_field('office_street_address').' '.get_sub_field('office_city_name').' '.get_sub_field('office_state_letters').' '.get_sub_field('office_zip_code');
+								$r_address = rawurlencode(strtolower(str_replace(',','', $r_address)));
 							?>
 							<li>
 								<a href="https://maps.google.com/maps?q=<?php echo $r_address;?>" target="_blank">
@@ -53,7 +53,7 @@
 									<div class="city-info">
 										<p><?php echo the_sub_field('office_title');?></p>
 										<p><?php echo the_sub_field('office_street_address');?></p>
-										<p><?php echo the_sub_field('office_city_name');?> <?php echo the_sub_field('office_state_letters');?>, <?php echo the_sub_field('office_zip_code');?></p>
+										<p><?php echo the_sub_field('office_city_name');?>, <?php echo the_sub_field('office_state_letters');?> <?php echo the_sub_field('office_zip_code');?></p>
 									</div>
 								</a>
 							</li>
