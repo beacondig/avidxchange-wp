@@ -1,4 +1,4 @@
-<?php /*Template Name: Homepage Page New */ ?>
+<?php /* Template Name: Homepage Page New */ ?>
 <?php get_header('new'); ?>
 		<section class="home-opening opening">
 			<div class="opening-video">
@@ -9,6 +9,9 @@
 					<h1><?php echo get_field('opening_title');?></h1>
 					<p><?php echo get_field('opening_description');?></p>
 					<a class="btn" href="#demoRequest">Let's Talk</a>
+					<?php if(get_field('opening_button_2_link_url')) { ?>
+						<a class="btn second" href="<?php echo get_field('opening_button_2_link_url');?>"><?php echo get_field('opening_button_2_text');?></a>
+					<?php } ?>
 				</div>
 			</div>
 			<div class="opening-demo-form">

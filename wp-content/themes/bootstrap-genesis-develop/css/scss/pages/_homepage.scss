@@ -175,8 +175,14 @@
 						width:100%;
 					}
 				}
-				a {
-					display:none;
+				a.second {
+				background:transparent;
+				border:2px solid #fff;
+				margin-left:15px;
+				color:#fff;
+				&:hover {
+					background:$brightblue;
+					color:#fff;
 				}
 			}
 		}

@@ -1,4 +1,4 @@
-<?php/* Template Name: Industries */
+<?php /* Template Name: Industries */
 get_header( 'new' );
 ?>
 	<?php get_template_part('partials/content', 'inner-page-header'); ?>
