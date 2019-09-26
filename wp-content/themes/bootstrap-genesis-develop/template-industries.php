@@ -1,38 +1,10 @@
-<?php
-/**
- * Template Name: Industries
- *
- * @package avidxchange
- */
-
-defined( 'ABSPATH' ) || die( "Can't access directly" );
-
+<?php/* Template Name: Industries */
 get_header( 'new' );
 ?>
-
-	<section class="avid-hero">
-		<div class="hero-body">
-			<div class="container">
-				<div class="content">
-					<h1><?php the_field( 'opening_title' ); ?></h1>
-					<p><?php the_field( 'opening_description' ); ?></p>
-					<a class="btn" href="#demoRequest">Let's Talk</a>
-				</div>
-			</div>
-		</div>
-		<div class="hero-image">
-			<?php
-			$hero_image = get_field( 'opening_image' );
-			$hero_image = isset( $hero_image['sizes'] ) && isset( $hero_image['sizes']['medium'] ) ? $hero_image['sizes']['medium'] : '';
-			?>
-			<img src="<?php echo esc_url( $hero_image ); ?>" />
-		</div>
-	</section>
-
+	<?php get_template_part('partials/content', 'inner-page-header'); ?>
 	<section class="section is-small is-white avid-industries">
 		<div class="container is-half">
 			<h2 class="section-title"><?php the_field( 'industries_heading' ); ?>Featured Industries</h2>
-
 			<?php if ( have_rows( 'industries' ) ) : ?>
 				<ul class="row industries">
 					<?php
@@ -50,7 +22,6 @@ get_header( 'new' );
 			<?php endif; ?>
 		</div>
 	</section>
-
 	<section class="section is-medium bottom-is-gapless avid-search">
 		<div class="container is-half">	
 			<div class="searchbox">
@@ -71,7 +42,5 @@ get_header( 'new' );
 			</div>
 		</div>
 	</section>
-
 	<?php get_template_part( 'partials/sections/section', 'request-demo' ); ?>
-
 <?php get_footer( 'new' ); ?>
