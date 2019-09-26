@@ -176,13 +176,14 @@
 					}
 				}
 				a.second {
-				background:transparent;
-				border:2px solid #fff;
-				margin-left:15px;
-				color:#fff;
-				&:hover {
-					background:$brightblue;
+					background:transparent;
+					border:2px solid #fff;
+					margin-left:15px;
 					color:#fff;
+					&:hover {
+						background:$brightblue;
+						color:#fff;
+					}
 				}
 			}
 		}
@@ -734,9 +735,7 @@
 				padding-right:5%;
 				color:$limegreen;
 				text-align:right;
-				@include respond-at(699px) {
-					font-size:19px;
-				}
+				
 			}
 		}
 }
