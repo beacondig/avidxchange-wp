@@ -1,0 +1,43 @@
+.avid-industries {
+		background:#fff;
+		padding:0;
+		h2 {
+			font-size:$heading3;
+			padding-bottom:50px;
+		}
+		.desktop {
+			display:block;
+			@include respond-at(899px) {
+				display:none;
+			}
+			ul {
+				display:flex;
+				flex-flow:row wrap;
+				justify-content:space-evenly;
+				li {
+					width:33%;
+					margin-bottom:5px;
+				}
+			}
+		}
+		.mobile {
+			display:none;
+			@include respond-at(899px) {
+				display:block;
+			}
+			
+		}
+}
+
+.avid-search .searchbox {
+		background: #eef1f4;
+		padding: 80px 60px;
+		box-shadow: 0px 50px 50px -40px #404041;
+		margin: 0 auto -200px;
+		display: block;
+		width: 100%;
+		max-width: 1200px;
+		position: relative;
+		z-index: 9;
+		box-sizing: border-box;
+}
