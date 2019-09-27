@@ -1,4 +1,5 @@
 <?php /* Template Name: Homepage Page New */ ?>
+<?php $loop = new WP_Query( array( 'post_type' => 'integrations', 'posts_per_page' => -1, 'order' => 'ASC', 'orderby' => 'title' ) ); ?>
 <?php get_header('new'); ?>
 		<section class="home-opening opening">
 			<div class="opening-video">
@@ -87,17 +88,66 @@
 					<?php endif; ?>
 				<div class="searchbox">
 					<div class="heading"><?php echo get_field('homepage_accounting_systems_search_heading');?></div>
-					<form role="search" method="get" id="searchbox" action="<?php echo home_url( '/' ); ?>">
+					<form role="search" method="get" id="searchbox" action="#">
 						<label>Enter Your Search Term Here<br />
-							<input type="search" value="" name="s" />
+							<input type="search" value="" id="intg-search-input" />
 						</label>
-						<button type="submit" form="searchbox" class="search-submit">Search  <i class="fas fa-search"></i></button>
+						<button type="button" class="search-submit" disabled>Search  <i class="fas fa-search"></i></button>
 					</form>
+					<div id="content-sidebar-wrap">
+						<div id="content" class="hfeed">
+							<div class="integrations-wrapper">
+								<?php $ict = 0;
+								$modid = 1;
+								while ( $loop->have_posts() ) : $loop->the_post(); ?>
+									<div class="integration-item" data-letter="<?php echo strtoupper(substr(get_the_title(),0,1)); ?>" data-integration="<?php echo get_the_title(); ?>" style="display:none;">
+										<?php if(get_field('display_as_popup') == "yes"){ ?> 
+											<a class="loopintg" data-toggle="modal" data-target="#pop<?php echo $modid; ?>" style="cursor:pointer;">
+											<?php $modid++; ?>
+										<?php } else { ?>
+											<a class="loopintg" href="<?php the_permalink(); ?>">
+										<?php } ?>
+											<div class="intgbg">
+												<div class="intgcover">
+													<div class="vsp">
+														<h5><?php echo get_the_title(); ?></h5>
+														<div class="separatorsm"></div>
+														<div class="stsz">View Details&nbsp;&raquo;</div>
+													</div>
+												</div>
+												<div class="intimg">
+													<?php $thumb_id = get_post_thumbnail_id();
+													$thumb_url = wp_get_attachment_image_src($thumb_id,'three-column', true);
+													echo '<img data-original="'.$thumb_url[0].'" width="'.$thumb_url[1].'" height="'.$thumb_url[2].'" class="lazy" />'; ?>
+												</div>
+											</div>
+										</a>
+										<div class="thirtyspacer"></div>
+									</div>
+									<?php $ict++; ?>
+								<?php endwhile; wp_reset_query(); ?>
+							</div>
+							<div class="container-fluid noresultsdiv hnores" style="margin:0px 0px 40px;">
+								<div class="container" style="width:100%;">
+									<div class="clearfix"></div>
+										<div class="col-md-12 center">
+											<div class="row">
+												<p>Sorry, we couldn't find any accounting systems to match your search.</p>
+												<p><a href="/contact/">Contact Us</a> today to see if we can help.</p>
+											</div>
+										</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri() . '/js/custom/integrations_script.js';?>"></script>
 				</div>
 			</div>
 		</section>
 		<section class="home-industries">
 			<h2>Transforming Industries</h2>
+			<p>We’re the ones who believe there’s a better way for businesses to process invoices and make payments without the endless piles of paper so many accounts payable departments find themselves buried in. So, we dedicated ourselves to building that better way with a suite of software and service solutions aimed at becoming the automated ally for those same AP teams.</p>
 			<div class="prev"><img src="<?php echo get_stylesheet_directory_uri();?>/img/home/left-arrow-blue.png" /></div>
 			<div class="next"><img src="<?php echo get_stylesheet_directory_uri();?>/img/home/right-arrow-blue.png" /></div>
 			<?php if(have_rows('transforming_industries_items')): ?>

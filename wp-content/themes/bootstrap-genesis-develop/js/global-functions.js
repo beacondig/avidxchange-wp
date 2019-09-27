@@ -42,4 +42,14 @@ jQuery(function() {
 		}
 		moveScroller();
 		
+		// Jump to target
+		jQuery('a[href^="#"]').on('click',function (e) {
+			e.preventDefault();
+			var target = this.hash,
+			$target = jQuery(target);
+			jQuery('html, body').stop().animate({
+				'scrollTop': $target.offset().top - 83}, 900, 'swing', function () {
+			});
+		});
+		
 });
