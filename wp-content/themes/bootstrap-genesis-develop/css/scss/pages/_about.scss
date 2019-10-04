@@ -184,6 +184,9 @@
 				flex-flow:column nowrap;
 				justify-content:center;
 			}
+			@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+				justify-content:center;
+			}
 			li {
 				width:25%;
 				text-align:center;

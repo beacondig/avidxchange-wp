@@ -3,7 +3,7 @@
 		<?php get_template_part('partials/content', 'inner-page-header'); ?>
 		<section class="solutions-outdated-processes">
 			<div class="container">
-				<h2>Outdated Processes Are Dragging Down Your Business</h2>
+				<h2><?php echo get_field('processes_heading');?></h2>
 				<?php if(have_rows('processes_items')): ?>
 					<ul>
 						<?php while(have_rows('processes_items')): the_row();?>
@@ -19,7 +19,6 @@
 		</section>
 		<section class="solutions-streamline">
 			<div class="container">
-				<h2>Solutions That Help You Streamline</h2>
 				<?php get_template_part('partials/content', 'tabs-module'); ?>
 			</div>
 		</section>
@@ -39,7 +38,9 @@
 									<div class="name"><?php echo the_sub_field('name');?></div>
 									<div class="company"><?php echo the_sub_field('position');?></div>
 									<p><?php echo the_sub_field('short_description');?></p>
-									<a class="btn" href="<?php echo the_sub_field('button_link_url');?>"><?php echo the_sub_field('button_text');?></a>
+									<?php if(get_field('button_link_url')) { ?>
+										<a class="btn" href="<?php echo the_sub_field('button_link_url');?>"><?php echo the_sub_field('button_text');?></a>
+									<?php } ?>
 								</div>
 							</li>
 						<?php endwhile; ?>
@@ -62,6 +63,26 @@
 					</ul>
 				<?php endif; ?>
 				<a class="btn" href="#">View All </a>
+			</div>
+		</section>
+		<section class="solutions-beginners-guide">
+			<div class="container">
+				<h2>Check Out Our Beginners Guide to AP Automation</h2>
+				<p>Whether you are brand new to accounts payable or a long-time industry veteran, this guide contains useful insights to help you reach for industry-leading levels of productivity and cost-savings for your business. Check out the chapters below to start learning everything you need to know to become an AP guru.</p>
+				<?php if(have_rows('solutions_guide_chapter_links')): ?>
+					<?php $c = 1;?>
+					<ul>
+						<?php while(have_rows('solutions_guide_chapter_links')): the_row();?>	
+							<li>
+								<a href="<?php echo the_sub_field('chapter_link');?>">
+									<div class="num"><?php echo $c;?></div>
+									<div class="title"><?php echo the_sub_field('box_title');?></div>
+								</a>
+							</li>
+							<?php $c++;?>
+						<?php endwhile; ?>
+					</ul>
+				<?php endif; ?>
 			</div>
 		</section>
 		<?php get_template_part('partials/content', 'demo'); ?>

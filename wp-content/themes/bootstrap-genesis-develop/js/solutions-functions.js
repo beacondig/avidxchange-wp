@@ -1,18 +1,16 @@
 jQuery(function() {
 		
 		// Solutions Tabs Change
-		jQuery('.solutions-streamline ul.headers li').on('cilck', function() {
-			alert('header clicked!');
+		jQuery('.tabs-module ul.headers li').on('click', function() {
 			var item = jQuery(this).data('item');
-			console.log(item);
-			jQuery('.solutions-streamline ul.headers li.active').removeClass('active');
-			jQuery('.solutions-streamline ul.info li.active').removeClass('active');
+			jQuery('.tabs-module ul.headers li.active').removeClass('active');
+			jQuery('.tabs-module ul.info li.active').removeClass('active');
 			jQuery(this).addClass('active');
-			jQuery('.solutions-streamline ul.info li.'+item).addClass('active');
+			jQuery('.tabs-module ul.info li.'+item).addClass('active');
 		});
 		
 		// Streamline Mobile Slider
-		jQuery('.solutions-streamline .mobile > ul').bxSlider({
+		jQuery('.tabs-module .mobile > ul').bxSlider({
 			auto:false,
 			infiniteLoop:true,
 			nextSelector:'.solutions-streamline .mobile .next',

@@ -32,51 +32,37 @@
 						</div>
 					</div>
 					<div class="a-container">
-						<div class="a-image"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/sidebar-image@2x.png" /></div>
-						<div class="title">Lorem Ipsum</div>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incidi ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat ullamco</p>
-						<a class="btn" href="#">Learn More</a>
+						<div class="a-image"><img src="<?php echo get_field('promo_box_image'); ?>" /></div>
+						<div class="title"><?php echo get_field('promo_box_title');?></div>
+						<p><?php echo get_field('promo_box_description');?></p>
+						<?php if(get_field('promo_box_button_url')) { ?>
+							<a class="btn" href="<?php echo get_field('promo_box_button_url');?>"><?php echo get_field('promo_box_button_text');?></a>
+						<?php } ?>
 					</div>
 				</div>
 				<div class="right-side">
 					<div class="slider-container desktop">
-						<ul class="featured">
-							<li>
-								<div class="featured-logo">
-									<div class="banner">Featured</div>
-									<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/solutions/quickbooks-logo-black.png" />
-								</div>
-								<div class="featured-info">
-									<div class="title">Intuit Quickbooks</div>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incidi ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat ullamco laboris nisi ut aliquip ex. ea commodo conseq. Duis aute irure dolor in rep rehenderit in vo</p>
-									<a class="btn" href="#">Learn More</a>
-								</div>
-							</li>
-							<li>
-								<div class="featured-logo">
-									<div class="banner">Featured</div>
-									<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/solutions/quickbooks-logo-black.png" />
-								</div>
-								<div class="featured-info">
-									<div class="title">Intuit Quickbooks</div>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incidi ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat ullamco laboris nisi ut aliquip ex. ea commodo conseq. Duis aute irure dolor in rep rehenderit in vo</p>
-									<a class="btn" href="#">Learn More</a>
-								</div>
-							</li>
-							<li>
-								<div class="featured-logo">
-									<div class="banner">Featured</div>
-									<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/solutions/quickbooks-logo-black.png" />
-								</div>
-								<div class="featured-info">
-									<div class="title">Intuit Quickbooks</div>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incidi ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat ullamco laboris nisi ut aliquip ex. ea commodo conseq. Duis aute irure dolor in rep rehenderit in vo</p>
-									<a class="btn" href="#">Learn More</a>
-								</div>
-							</li>
-						</ul>
-						<div class="prev"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/home/left-arrow-blue.png" /></div>
-						<div class="next"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/home/right-arrow-blue.png" /></div>
+						<?php if(have_rows('featured_integrations_items')): ?>
+							<ul class="featured">
+								<?php while(have_rows('featured_integrations_items')): the_row();?>
+									<li>
+										<div class="featured-logo">
+											<div class="banner">Featured</div>
+											<img src="<?php echo the_sub_field('logo');?>" />
+										</div>
+										<div class="featured-info">
+											<div class="title"><?php echo the_sub_field('title'); ?></div>
+											<p><?php echo the_sub_field('description');?></p>
+											<?php if(get_sub_field('button_url')) { ?>
+												<a class="btn" href="<?php echo the_sub_field('button_url');?>"><?php echo the_sub_field('button_text');?></a>
+											<?php } ?>
+										</div>
+									</li>
+								<?php endwhile; ?>
+							</ul>
+							<div class="prev"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/home/left-arrow-blue.png" /></div>
+							<div class="next"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/home/right-arrow-blue.png" /></div>
+						<?php endif; ?>
 					</div>
 					<div class="mobile">
 						<div class="search-container">	
@@ -120,6 +106,9 @@
 											<a class="loopintg" href="<?php the_permalink(); ?>">
 										<?php } ?>
 											<div class="intgbg">
+												<?php if(get_field('avid_partner') == "yes") { ?>
+													<div class="banner">AvidXchange Partner</div>
+												<?php } ?>
 												<div class="intgcover">
 													<div class="vsp">
 														<h5><?php echo get_the_title(); ?></h5>
@@ -155,52 +144,38 @@
 							</div>
 						</div>
 						<div class="slider-container mobile">
-							<div class="prev"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/solutions/solutions-left-arrow.png" /></div>
-							<div class="next"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/solutions/solutions-right-arrow.png" /></div>
-							<ul class="featured">
-								<li>
-									<div class="featured-logo">
-										<div class="banner">Featured</div>
-										<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/solutions/quickbooks-logo-black.png" />
-									</div>
-									<div class="featured-info">
-										<div class="title">Intuit Quickbooks</div>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incidi ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat ullamco laboris nisi ut aliquip ex. ea commodo conseq. Duis aute irure dolor in rep rehenderit in vo</p>
-										<a class="btn" href="#">Learn More</a>
-									</div>
-								</li>
-								<li>
-									<div class="featured-logo">
-										<div class="banner">Featured</div>
-										<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/solutions/quickbooks-logo-black.png" />
-									</div>
-									<div class="featured-info">
-										<div class="title">Intuit Quickbooks</div>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incidi ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat ullamco laboris nisi ut aliquip ex. ea commodo conseq. Duis aute irure dolor in rep rehenderit in vo</p>
-										<a class="btn" href="#">Learn More</a>
-									</div>
-								</li>
-								<li>
-									<div class="featured-logo">
-										<div class="banner">Featured</div>
-										<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/solutions/quickbooks-logo-black.png" />
-									</div>
-									<div class="featured-info">
-										<div class="title">Intuit Quickbooks</div>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incidi ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat ullamco laboris nisi ut aliquip ex. ea commodo conseq. Duis aute irure dolor in rep rehenderit in vo</p>
-										<a class="btn" href="#">Learn More</a>
-									</div>
-								</li>
-							</ul>
+							<?php if(have_rows('featured_integrations_items')): ?>
+								<div class="prev"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/solutions/solutions-left-arrow.png" /></div>
+								<div class="next"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/solutions/solutions-right-arrow.png" /></div>
+								<ul class="featured">
+									<?php while(have_rows('featured_integrations_items')): the_row();?>
+										<li>
+											<div class="featured-logo">
+												<div class="banner">Featured</div>
+												<img src="<?php echo the_sub_field('logo');?>" />
+											</div>
+											<div class="featured-info">
+												<div class="title"><?php echo the_sub_field('title'); ?></div>
+												<p><?php echo the_sub_field('description');?></p>
+												<?php if(the_sub_field('button_url')) { ?>
+													<a class="btn" href="<?php echo the_sub_field('button_url');?>"><?php echo the_sub_field('button_text');?></a>
+												<?php } ?>
+											</div>
+										</li>
+									<?php endwhile; ?>
+								</ul>
+							<?php endif; ?>
 						</div>
 					<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri() . '/js/custom/integrations_script.js';?>"></script>
 					<div class="mobile">
 						<div class="a-container">
-							<div class="a-image"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/sidebar-image@2x.png" /></div>
-							<div class="title">Lorem Ipsum</div>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incidi ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat ullamco</p>
-							<a class="btn" href="#">Learn More</a>
-						</div>
+						<div class="a-image"><img src="<?php echo get_field('promo_box_image'); ?>" /></div>
+						<div class="title"><?php echo get_field('promo_box_title');?></div>
+						<p><?php echo get_field('promo_box_description');?></p>
+						<?php if(get_field('promo_box_button_url')) { ?>
+							<a class="btn" href="<?php echo get_field('promo_box_button_url');?>"><?php echo get_field('promo_box_button_text');?></a>
+						<?php } ?>
+					</div>
 					</div>
 				</div>
 			</div>

@@ -83,7 +83,7 @@
 			}
 		}
 		.right-side {
-			width:calc(100% - 350px);
+			width:calc(100% - 285px);
 			text-align:left;
 			margin-left:25px;
 			display:inline-block;
@@ -240,9 +240,9 @@
 			}
 			.integrations-wrapper {
 				display:flex;
-				justify-content:space-between;
+				justify-content:flex-start;
 				flex-flow:row wrap;
-				padding-left:20px;
+				padding-left:40px;
 				margin-bottom:100px;
 				@include respond-at(899px) {
 					padding-left:0;
@@ -253,12 +253,20 @@
 					margin-bottom:50px;
 					box-shadow: 0px 25px 40px -37px $grey;
 					background:#fff;
+					margin-right:3%;
+					@include respond-at(1299px) {
+						width:47%;
+					}
 					@include respond-at(899px) {
 						height:225px;
 					}
 					@include respond-at(699px) {
-						width:47%;
 						height:200px;
+					}
+					@include respond-at(599px) {
+						width:100%;
+						height:300px;
+						margin-right:0;
 					}
 					.intgbg {
 						width:100%;
@@ -267,9 +275,56 @@
 						border-radius:0;
 						background:transparent;
 						position:relative;
+						.banner {
+							background:$limegreen;
+							color:#fff;
+							text-transform:uppercase;
+							font-family:$font-fam;
+							font-weight:$fwbold;
+							font-size:16px;
+							letter-spacing:1px;
+							position:absolute;
+							top:10px;
+							left:0;
+							padding:13px 20px 13px 20px;
+							z-index:9;
+							@include respond-at(1399px) {
+								font-size:14px;
+								padding:13px 15px 13px 15px;
+							}
+							&:before {
+								content:'';
+								width:0;
+								height:0;
+								border-top:25px solid $limegreen;
+								border-left:0px solid transparent;
+								border-right:25px solid transparent;
+								position:absolute;
+								right:-25px;
+								top:0;
+								@include respond-at(1599px) {
+									right:-24px;
+								}
+							}
+							&:after {
+								content:'';
+								width:0;
+								height:0;
+								border-bottom:25px solid $limegreen;
+								border-left:0px solid transparent;
+								border-right:25px solid transparent;
+								position:absolute;
+								right:-25px;
+								bottom:0;
+								@include respond-at(1599px) {
+									right:-24px;
+								}
+							}
+						}
 						.intimg {
 							width:100%;
 							height:100%;
+							overflow:hidden;
 							img {
 								max-width:90%;
 								margin:0 auto;
@@ -285,6 +340,7 @@
 							left:0;
 							right:0;
 							background-color:$brightblue;
+							z-index:10;
 							.vsp {
 								top:50%;
 								transform:translateY(-50%);
@@ -343,6 +399,9 @@
 					position:absolute;
 					margin-left:89%;
 					margin-top:-4px;
+					@include respond-at(599px) {
+						margin-left:80%;
+					}
 					i {
 						color:$brightblue;
 						font-size:20px;

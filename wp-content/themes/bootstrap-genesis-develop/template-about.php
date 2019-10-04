@@ -53,6 +53,7 @@
 									<div class="city-info">
 										<p><?php echo the_sub_field('office_title');?></p>
 										<p><?php echo the_sub_field('office_street_address');?></p>
+										<p><?php echo the_sub_field('office_suite');?></p>
 										<p><?php echo the_sub_field('office_city_name');?>, <?php echo the_sub_field('office_state_letters');?> <?php echo the_sub_field('office_zip_code');?></p>
 									</div>
 								</a>

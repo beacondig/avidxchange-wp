@@ -1,3 +1,4 @@
+				<h2><?php echo get_field('solution_tabs_header');?></h2>
 				<div class="tabs-module">
 					<div class="desktop">
 						<?php if(have_rows('solution_items')): ?>
@@ -18,41 +19,37 @@
 								<?php $i = 1; ?>
 								<?php while(have_rows('solution_items')): the_row();?>
 									<?php if($i == 1) { ?>
-										<li class="solution<?php echo $h;?> active">
+										<li class="solution<?php echo $i;?> active">
 											<div class="img-container">
 												<img src="<?php echo the_sub_field('solution_image');?>" />
 											</div>
 											<div class="text">
-												<div class="text-spacer">
-													<div class="title"><?php echo the_sub_field('solution_title');?></div>
-													<?php if(have_rows('solutions_bullets')): ?>
-														<ul>
-															<?php while(have_rows('solutions_bullets')): the_row();?>
-																<li><?php echo the_sub_field('bullet');?></li>
-															<?php endwhile; ?>
-														</ul>
-													<?php endif; ?>
-													<a class="btn" href="<?php echo the_sub_field('solution_link_url');?>"><?php echo the_sub_field('solution_link_button_text');?></a>
-												</div>
+												<div class="title"><?php echo the_sub_field('solution_title');?></div>
+												<?php if(have_rows('solutions_bullets')): ?>
+													<ul>
+														<?php while(have_rows('solutions_bullets')): the_row();?>
+															<li><?php echo the_sub_field('bullet');?></li>
+														<?php endwhile; ?>
+													</ul>
+												<?php endif; ?>
+												<a class="btn" href="<?php echo the_sub_field('solution_link_url');?>"><?php echo the_sub_field('solution_link_button_text');?></a>
 											</div>
 										</li>
 									<?php }else{ ?>
-										<li class="solution<?php echo $h;?>">
+										<li class="solution<?php echo $i;?>">
 											<div class="img-container">
 												<img src="<?php echo the_sub_field('solution_image');?>" />
 											</div>
 											<div class="text">
-												<div class="text-spacer">
-													<div class="title"><?php echo the_sub_field('solution_title');?></div>
-													<?php if(have_rows('solutions_bullets')): ?>
-														<ul>
-															<?php while(have_rows('solutions_bullets')): the_row();?>
-																<li><?php echo the_sub_field('bullet');?></li>
-															<?php endwhile; ?>
-														</ul>
-													<?php endif; ?>
-													<a class="btn" href="<?php echo the_sub_field('solution_link_url');?>"><?php echo the_sub_field('solution_link_button_text');?></a>
-												</div>
+												<div class="title"><?php echo the_sub_field('solution_title');?></div>
+												<?php if(have_rows('solutions_bullets')): ?>
+													<ul>
+														<?php while(have_rows('solutions_bullets')): the_row();?>
+															<li><?php echo the_sub_field('bullet');?></li>
+														<?php endwhile; ?>
+													</ul>
+												<?php endif; ?>
+												<a class="btn" href="<?php echo the_sub_field('solution_link_url');?>"><?php echo the_sub_field('solution_link_button_text');?></a>
 											</div>
 										</li>
 									<?php } ?>

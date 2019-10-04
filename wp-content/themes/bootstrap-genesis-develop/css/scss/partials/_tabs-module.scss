@@ -19,6 +19,7 @@
 					padding:12px 15px 10px;
 					background:#fff;
 					color:$grey;
+					transition:background 500ms ease, color 500ms ease;
 					&:hover, &.active {
 						background:$grey;
 						color:#fff;
@@ -42,7 +43,7 @@
 				>li {
 					display:flex;
 					flex-flow:row nowrap;
-					justifiy-content:space-between;
+					justify-content:space-between;
 					align-items:center;
 					width:100%;
 					position:absolute;
@@ -50,14 +51,14 @@
 					left:0;
 					opacity:0;
 					visibility:hidden;
-					transition:opacity 800ms ease, visibility 500ms ease;
+					transition:opacity 800ms ease-in-out;
 					&.active {
 						opacity:1;
 						visibility:visible;
 						position:relative;
 					}
 					.img-container {
-						max-width:45%;
+						width:45%;
 						img {
 							width:100%;
 							box-shadow:0 0 20px -5px rgba(0,0,0,0.3);
@@ -65,7 +66,7 @@
 					}
 					.text {
 						text-align:left;
-						max-width:45%;
+						width:45%;
 						margin-left:5%;
 						.title {
 							color:$grey;

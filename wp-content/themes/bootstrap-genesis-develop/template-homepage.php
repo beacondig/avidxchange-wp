@@ -79,6 +79,7 @@
 		<section class="home-search">
 			<div class="container">	
 				<h2><?php echo get_field('homepage_accounting_systems_heading');?></h2>
+				<p>We know how important it is for your accounting system to remain your system of record. That’s why we’re dedicated to building seamless integrations between our accounts -payable software and over 150 accounting systems. After all, we’re here to help streamline your payment processes, not pile on to your pain.</p>
 				<?php if(have_rows('homepage_accounting_systems_logos')): ?>
 					<ul>
 						<?php while(have_rows('homepage_accounting_systems_logos')): the_row();?>	
@@ -89,7 +90,7 @@
 				<div class="searchbox">
 					<div class="heading"><?php echo get_field('homepage_accounting_systems_search_heading');?></div>
 					<form role="search" method="get" id="searchbox" action="#">
-						<label>Enter Your Search Term Here<br />
+						<label>Does AvidXchange integrate with…<br />
 							<input type="search" value="" id="intg-search-input" />
 						</label>
 						<button type="button" class="search-submit" disabled>Search  <i class="fas fa-search"></i></button>
@@ -170,13 +171,21 @@
 		</section>
 		<section class="home-testimonials">
 			<div class="container">
+				<h2>One Mission, multiple solutions.</h2>
+				<p>Our mission is consistent across the board: To transform the way companies pay bills. But we know how much payment processes can differ across industries. So we’ve put in the legwork to understand the processes and unique needs of your business—–and build AP software solutions that are tailor-made to your needs.</p>
 				<?php if(have_rows('homepage_testimonials_items')): ?>
 					<ul>
 						<?php while(have_rows('homepage_testimonials_items')): the_row();?>	
 							<li>
-								<div class="img-container"><img src="<?php echo the_sub_field('testimonial_logo');?>" /></div>
-								<div class="quote"><?php echo the_sub_field('testimonial_description');?>”</div>
-								<div class="person">- <?php echo the_sub_field('testimonial_speaker');?></div>
+								<div class="video-container">
+									<div class="video-spacer">
+										<iframe src="<?php echo the_sub_field('testimonial_video');?>" title="AvidXchange" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="100%" height="100%" ></iframe>
+									</div>
+								</div>
+								<div class="text-container">
+									<div class="quote"><?php echo the_sub_field('testimonial_description');?>”</div>
+									<div class="person">- <?php echo the_sub_field('testimonial_speaker');?> <?php if(the_sub_field('testimonial_speaker_company')) {?>, <?php echo the_sub_field('testimonial_speaker_company');}?></div>
+								</div>
 							</li>
 						<?php endwhile; ?>
 					</ul>

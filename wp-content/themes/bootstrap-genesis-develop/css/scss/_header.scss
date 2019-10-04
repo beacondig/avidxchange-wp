@@ -52,10 +52,12 @@ header {
 					font-family:$font-fam;
 					font-weight:$fwregular;
 					padding:0 15px;
-					font-size:13px;
+					font-size:12px;
 					color:#fff;
-					text-transform:uppercase;
 					position:relative;
+					&::first-letter {
+						text-transform:uppercase;
+					}
 					&:before {
 						content:'\00B7';
 						color:#fff;
@@ -160,9 +162,9 @@ header {
 				position:fixed;
 				display:block;
 				width:105%;
-				max-width:500px;
+				max-width:550px;
 				box-sizing:border-box;
-				right:-505px;
+				right:-555px;
 				box-shadow:0 5px 20px -5px rgba(0,0,0,0.3);
 				transition:right 800ms ease;
 				overflow-y:scroll;
@@ -177,8 +179,10 @@ header {
 					padding-top:15px;
 					padding-left:40px;
 					height:50px;
+					display:none;
 					@include respond-at(599px) {
 						padding-left:30px;
+						display:block;
 					}
 				}
 				.mobile-close {
@@ -211,17 +215,37 @@ header {
 					margin:0;
 					text-transform:uppercase;
 					color:#fff;
-					font-weight:$fwblack;
-					font-size:30px;
-					line-height:35px;
+					font-weight:$fwmedium;
+					font-size:20px;
+					line-height:25px;
 					border:none;
 					text-align:left;
 					padding:20px 40px;
 					background:$grey;
+					position:relative;
+					&.menu-item-has-children > a {
+						padding-right:15px;
+						&:after {
+							content:"";
+							position:absolute;
+							background:url('../img/after-arrow.png') no-repeat;
+							background-size:12px;
+							background-position:center;
+							margin-left:5px;
+							cursor:pointer;
+							top:24;
+							width:12px;
+							height:12px;
+						}
+					}
 					&.tap ul.sub-menu {
 						max-height:1000px;
 						opacity:1;
 						padding-top:30px;
+						background:transparent;
+					}
+					&.tap {
+						background:$brightblue;
 					}
 					@include respond-at(599px) {
 						padding:15px 30px;
@@ -272,27 +296,17 @@ header {
 						transition:max-height 500ms ease, opacity 500ms ease, padding-top 800ms ease;
 						li {
 							font-weight:$fwregular;
-							font-size:20px;
+							font-size:16px;
 							line-height:26px;
 							letter-spacing:1px;
-							padding:10px 20px 10px 60px;
+							padding:10px 10px 10px 30px;
+							background:transparent;
 							@include respond-at(599px) {
 								padding:10px 10px 10px 50px;
 								font-size:18px;
 								line-height:24px;
 							}
-							&:hover {
-								background:$grey;
-							}
-							&:before {
-								content:'';
-								width:15px;
-								height:1px;
-								background:#fff;
-								position:absolute;
-								margin-left:-25px;
-								margin-top:10px;
-							}
+							
 						}
 					}
 				}
@@ -348,18 +362,19 @@ header nav ul li {
 			flex-flow:column nowrap;
 			justify-content:space-evenly;
 			align-items:stretch;
-			padding:20px 0;
+			padding:20px 0 0;
 			text-align:left;
 			display:none;
 			left:0;
 			top:18px;
+			box-shadow:0 10px 20px -15px rgba(0,0,0,0.3);
 			li {
 				display:block;
 				margin:0;
 				text-transform:uppercase;
 				color:$grey;
 				align-self:stretch;
-				font-weight:$fwbold;
+				font-weight:$fwregular;
 				font-size:13px;
 				line-height:16px;
 				border:none;

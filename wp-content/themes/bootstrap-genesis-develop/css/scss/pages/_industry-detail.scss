@@ -1,0 +1,246 @@
+.industry-detail-opening {
+		background:url('../img/header-gray-pattern.png') no-repeat;
+		background-size:cover;
+		background-position:center top;
+		text-align:center;
+		@include angled(bottom, after, -5.0deg, #f6f6f6);
+		position:relative;
+		.type {
+			color:$limegreen;
+			text-transform:uppercase;
+			font-weight:$fwblack;
+			font-size:24px;
+			padding-top:225px;
+		}
+		h1 {
+			color:#fff;
+			font-weight:$fwbold;
+			text-transform:uppercase;
+			font-size:$heading3;
+			width:90%;
+			max-width:800px;
+			display:block;
+			margin:0 auto;
+			padding-bottom:300px;
+		}
+}
+
+.industry-detail-benefit-values {
+		background:#f6f6f6;
+		text-align:center;
+		z-index:auto;
+		h2 {
+			color:$grey;
+			font-weight:$fwblack;
+			font-size:$heading4;
+			z-index:4;
+			position:relative;
+		}
+		p {
+			width:90%;
+			max-width:800px;
+			padding-bottom:50px;
+			display:block;
+			margin:0 auto;
+			z-index:4;
+			position:relative;
+		}
+		ul {
+			display:flex;
+			flex-flow:wrap;
+			justify-content:space-between;
+			z-index:5;
+			position:relative;
+			li {
+				width:47%;
+				box-sizing:border-box;
+				padding:30px;
+				margin-bottom:30px;
+				background:#fff;
+				box-shadow: 0px 35px 40px -50px #404041;
+				text-align:left;
+				img {
+					padding-bottom:10px;
+				}
+				h3 {
+					padding-bottom:15px;
+				}
+				p {
+					padding-bottom:10px;
+					width:100%;
+					font-size:18px;
+					line-height:24px;
+				}
+				ul {
+					display:block;
+					list-style:disc;
+					margin-left:25px;
+					li {
+						display:list-item;
+						margin:0;
+					}
+				}
+			}
+		}
+}
+
+.industry-detail-logos {
+		background:url('../img/home/blueangle_bg2.png') no-repeat;
+		background-size:100% 90%;
+		background-position:center top;
+		padding:250px 0 250px;
+		text-align:center;
+		color:#fff;
+		margin:-165px auto 0;
+		z-index:4;
+		@include angled(bottom, after, 5.0deg, #ffffff);
+		@include respond-at(999px) {
+			padding:200px 0 150px;
+			margin: -165px auto 0;
+		}
+		@include respond-at(749px) {
+			padding:150px 0 150px;
+		}
+		h2 {
+			color:#fff;
+			font-size:$heading2;
+			@include respond-at(999px) {
+				font-size:$heading3;
+			}
+			@include respond-at(699px) {
+				font-size:$heading5;
+			}
+		}
+		ul {
+			width:100%;
+			margin:80px auto 50px;
+			display:flex;
+			justify-content:space-around;
+			align-items:center;
+			flex-flow:row wrap;
+			@include respond-at(899px) {
+				margin:80px auto 150px;
+			}
+			li {
+				max-width:22%;
+				min-width:20%;
+				margin:0 2% 80px;
+				@include respond-at(1499px) {
+					margin:0 2%;
+				}
+				@include respond-at(999px) {
+					height:auto;
+					margin:0 2% 30px;
+				}
+				@include respond-at(699px) {
+					max-width:40%;
+				}
+				img {
+					width:auto;
+					height:auto;
+					max-width:100%;
+					max-height:150px;
+				}
+			}
+		}
+		a.btn {
+			background:#fff;
+			color:$brightblue;
+			border:2px solid #fff;
+			margin-bottom:150px;
+			&:hover {
+				background:transparent;
+				color:#fff;
+			}
+		}
+}
+
+.industry-detail-solutions {
+		text-align:center;
+		z-index:4;
+		margin-top:-150px;
+		h2 {
+			font-size:$heading3;
+		}
+}
+
+.industry-detail-testimony-videos {
+		text-align:center;
+		padding-top:185px;
+		margin-top:-180px;
+		.container {
+			width:100%;
+			max-width:100%;
+		}
+		@include respond-at(1599px) {
+			padding-top:160px;
+			margin-top:-160px;
+		}
+		ul li {
+			overflow:hidden;
+			height:1080px;
+			@include respond-at(1599px) {
+				height:920px;
+			}
+		}
+		@include angled(top, before, -3.0deg, #ffffff);
+		.bx-controls-direction {
+			display:none;
+		}
+		.bx-pager.bx-default-pager {
+			z-index:10;
+			position:relative;
+			top:-225px;
+		}
+		.bx-pager.bx-default-pager .bx-pager-item {
+			width:18px;
+			height:18px;
+			border-radius:50%;
+			display:inline-block;
+			vertical-align:top;
+			margin:0 5px 8px;
+			transition:width 300ms ease;
+			&:hover a {
+				background:$limegreen;
+				width:18px;
+				height:18px;
+				top:-1px;
+				position:relative;
+			}
+			a {
+				text-indent:-9999px;
+				display:block;
+				width:16px;
+				height:16px;
+				border-radius:50%;
+				background:$grey;
+				&.active {
+					background:$limegreen;
+					width:18px;
+					height:18px;
+					top:-1px;
+					position:relative;
+				}
+			}
+		}
+}
+
+.industry-detail-customer-logos {
+		background:url('../img/gradient-angled-background.png') no-repeat;
+		background-size:100% 100%;
+		background-position:center top;
+		z-index:6;
+		position:relative;
+		margin-top:-245px;
+		padding:200px 0;
+		margin-bottom:-250px;
+		text-align:center;
+		ul {
+			display:flex;
+			flex-flow:row wrap;
+			justify-content:space-between;
+			li {
+				width:24%;
+			}
+		}
+}

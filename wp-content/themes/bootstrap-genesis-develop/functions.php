@@ -1298,6 +1298,11 @@ function theme_scripts() {
 		}elseif(is_page_template('template-solutions.php')) {
 			wp_enqueue_script('bxslider', get_stylesheet_directory_uri() . '/js/jquery.bxslider.min.js', array('jquery'), filemtime(get_stylesheet_directory().'/js/jquery.bxslider.min.js'));
 			wp_enqueue_script('solutions-functions', get_stylesheet_directory_uri() . '/js/solutions-functions.js', array('jquery', 'bxslider'), filemtime(get_stylesheet_directory().'/js/solutions-functions.js'),TRUE);
+		}elseif(is_page_template('template-industry-detail.php')) {
+			wp_enqueue_script('bxslider', get_stylesheet_directory_uri() . '/js/jquery.bxslider.min.js', array('jquery'), filemtime(get_stylesheet_directory().'/js/jquery.bxslider.min.js'));
+			wp_enqueue_script('fitvids', get_stylesheet_directory_uri() . '/js/jquery.fitvids.js', array('jquery'), filemtime(get_stylesheet_directory().'/js/jquery.fitvids.js'));
+			wp_enqueue_script('industry-detail', get_stylesheet_directory_uri() . '/js/industry-details.js', array('jquery','bxslider'), filemtime(get_stylesheet_directory().'/js/industry-details.js'),TRUE);
+			wp_enqueue_script('solutions-functions', get_stylesheet_directory_uri() . '/js/solutions-functions.js', array('jquery', 'bxslider'), filemtime(get_stylesheet_directory().'/js/solutions-functions.js'),TRUE);
 		}elseif(is_page_template('template-integrations.php')) {
 			wp_enqueue_script('bxslider', get_stylesheet_directory_uri() . '/js/jquery.bxslider.min.js', array('jquery'), filemtime(get_stylesheet_directory().'/js/jquery.bxslider.min.js'));
 			wp_enqueue_script('integrations-functions', get_stylesheet_directory_uri() . '/js/integrations-functions.js', array('jquery', 'bxslider'), filemtime(get_stylesheet_directory().'/js/integrations-functions.js'),TRUE);

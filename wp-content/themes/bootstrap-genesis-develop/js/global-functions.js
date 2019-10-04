@@ -23,6 +23,20 @@ jQuery(function() {
 			}
 		});
 		
+		// Mobile Nav Touch Functionality
+		jQuery('.mobile-nav .m-nav-container ul li.menu-item-has-children').on('touchstart',function(e) {
+			e.preventDefault();
+			if (jQuery(this).hasClass('tap')) {
+				jQuery(this).removeClass('tap');
+			}else{
+				jQuery('.mobile-nav .m-nav-container ul li').each(function() {
+					jQuery(this).removeClass('tap');
+				});
+				jQuery(this).addClass('tap');
+				
+			}
+		});
+		
 		// Sticky menu functionality
 		function moveScroller() {
 			var move = function() {

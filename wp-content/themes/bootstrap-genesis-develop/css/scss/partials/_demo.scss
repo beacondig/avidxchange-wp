@@ -9,6 +9,7 @@
 			margin-top:-250px;
 		}
 		.page-template-template-solutions & {
+			@include angled(top, before, 5.0deg, #ffffff);
 			padding:300px 0 80px;
 			margin-top:-250px;
 		}
