@@ -176,6 +176,10 @@
 			padding-top:160px;
 			margin-top:-160px;
 		}
+		@include respond-at(1499px) {
+			padding-top:95px;
+			margin-top:-95px;
+		}
 		ul li {
 			overflow:hidden;
 			height:1080px;

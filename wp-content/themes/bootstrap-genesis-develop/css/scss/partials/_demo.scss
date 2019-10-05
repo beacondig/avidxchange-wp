@@ -7,6 +7,9 @@
 		.home &, .page-template-template-homepage & {
 			padding:300px 0 80px;
 			margin-top:-250px;
+			@include respond-at(599px) {
+				padding:200px 0 80px;
+			}
 		}
 		.page-template-template-solutions & {
 			@include angled(top, before, 5.0deg, #ffffff);
@@ -35,6 +38,10 @@
 			@include respond-at(899px) {
 				font-size:$heading3;
 				line-height:40px;
+			}
+			@include respond-at(699px) {
+				font-size:21px;
+				line-height:28px;
 			}
 		}
 		form {
@@ -84,6 +91,7 @@
 						color:$grey;
 						font-size:16px;
 						font-weight:400;
+						line-height:36px;
 					}
 				}
 				select {
