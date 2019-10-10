@@ -157,8 +157,8 @@
 											<div class="featured-info">
 												<div class="title"><?php echo the_sub_field('title'); ?></div>
 												<p><?php echo the_sub_field('description');?></p>
-												<?php if(the_sub_field('button_url')) { ?>
-													<a class="btn" href="<?php echo the_sub_field('button_url');?>"><?php echo the_sub_field('button_text');?></a>
+												<?php if(get_sub_field('button_url')) { ?>
+													<a class="btn" style="margin-bottom:30px;" href="<?php echo the_sub_field('button_url');?>"><?php echo the_sub_field('button_text');?></a>
 												<?php } ?>
 											</div>
 										</li>

@@ -3,13 +3,13 @@
 <?php get_header('new'); ?>
 		<section class="home-opening opening">
 			<div class="opening-video">
-				<video  poster="<?php echo get_stylesheet_directory_uri();?>/img/home/header_bg.png" height="480" width="100%" loop="true" autobuffer autoplay preload="auto" muted="true" src="<?php echo get_stylesheet_directory_uri();?>/img/home/home-video1920.mp4" type="video/mp4"></video>
+				<video height="480" width="100%" loop="true" autobuffer autoplay playsinline preload="auto" muted="true" src="<?php echo get_stylesheet_directory_uri();?>/img/home/home-video1920.mp4" type="video/mp4" style="background:#404041;"></video>
 			</div>
 			<div class="opening-content">
 				<div class="form-cut">
 					<h1><?php echo get_field('opening_title');?></h1>
 					<p><?php echo get_field('opening_description');?></p>
-					<a class="btn" href="#demoRequest">Let's Talk</a>
+					<!--<a class="btn" href="#demoRequest">Let's Talk</a>-->
 					<?php if(get_field('opening_button_2_link_url')) { ?>
 						<a class="btn second" href="<?php echo get_field('opening_button_2_link_url');?>"><?php echo get_field('opening_button_2_text');?></a>
 					<?php } ?>
@@ -17,25 +17,7 @@
 			</div>
 			<div class="opening-demo-form">
 				<div class="heading">Focus On What Matters</div>
-				<form action="#" method="post" id="homeDemo">
-					<ul>
-						<li>
-							<input type="text" name="first_name" placeholder="First Name" />
-						</li>
-						<li>
-							<input type="text" name="last_name" placeholder="Last Name" />
-						</li>
-						<li>
-							<input type="email" name="email_address" placeholder="Email Address" />
-						</li>
-						<li>
-							<input type="text" name="industry" placeholder="Industry" />
-						</li>
-						<li>
-							<input type="submit" value="Let's Talk" />
-						</li>
-					</ul>
-				</form>
+				<?php echo do_shortcode('[gravityform id=41 title=false description=false ajax=true]');?>
 			</div>
 		</section>
 		<section class="home-details">

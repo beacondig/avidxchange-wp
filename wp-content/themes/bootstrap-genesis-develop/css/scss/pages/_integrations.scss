@@ -63,6 +63,14 @@
 				width:100%;
 				box-sizing:border-box;
 				padding-left:10px;
+				&::-ms-clear, &::-ms-reveal {
+					display:none;
+					width:0;
+					height:0;
+				}
+				&::-webkit-search-decoration, &::-webkit-search-cancel-button, &::-webkit-search-results-button, &::-webkit-search-results-decoration {
+					display:none;
+				}
 			}
 			.a-container {
 				padding-top:50px;

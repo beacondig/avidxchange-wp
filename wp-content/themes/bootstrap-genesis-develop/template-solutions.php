@@ -62,7 +62,7 @@
 						<?php endwhile; ?>
 					</ul>
 				<?php endif; ?>
-				<a class="btn" href="#">View All </a>
+				<a class="btn" href="<?php echo get_page_link(6164);?>">View All </a>
 			</div>
 		</section>
 		<section class="solutions-beginners-guide">

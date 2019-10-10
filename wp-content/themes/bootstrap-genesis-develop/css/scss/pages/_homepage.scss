@@ -6,15 +6,15 @@
 		overflow:hidden;
 		background:$grey;
 		@include respond-at(1449px) {
-			min-height:700px;
+			min-height:750px;
 		}
 		@include respond-at(999px) {
-			padding:150px 0 0;
+			padding:150px 0;
 			height:auto;
 			min-height:0;
 		}
 		@include respond-at(699px) {
-			padding:100px 0 0;
+			padding:100px 0 150px;
 		}
 		.opening-video {
 			position:fixed;
@@ -55,7 +55,7 @@
 				right:auto;
 				width:90%;
 				margin:0 auto;
-				display:block;
+				display:none;
 				position:relative;
 				max-width:500px;
 				padding:50px 30px 150px;
@@ -76,6 +76,9 @@
 				letter-spacing:1px;
 				padding-bottom:30px;
 			}
+			.gform_wrapper {
+				margin:0 !important;
+			}
 			form {
 				width:400px;
 				display:block;
@@ -87,27 +90,120 @@
 				ul li {
 					display:block;
 					margin-bottom:20px;
+					margin-top:0 !important;
+					padding-right:0 !important;
+					label {
+						display:none !important;
+					}
 					input {
-						background:#fff;
-						border:none;
-						height:50px;
+						background:#fff  !important;
+						border:none  !important;
+						height:43px !important;
 						box-sizing:border-box;
-						padding-left:10px;
-						width:100%;
-						font-size:14px;
+						padding-left:10px  !important;
+						width:100% !important;
+						font-size:14px  !important;
+						line-height:36px;
+						margin:0 !important;
 						@include placeholder {
 							font-family:$font-fam;
 							font-weight:$fwregular;
 							color:$grey;
 							font-size:14px;
-							line-height:48px;
-						}
-						&[type="submit"] {
-							@extend %button-style;
-							width:auto;
+							line-height:36px;
 						}
 					}
+					select {
+						background:#fff  !important;
+						width:100%  !important;
+						box-sizing:border-box;
+						padding-left:10px !important;
+						height:43px  !important;
+						border:none  !important;
+						-webkit-appearance: none;
+						-moz-appearance: none;
+						appearance: none;
+						position:relative  !important;
+						&::-ms-expand {
+							display:none;
+						}
+						@include respond-at(849px) {
+							display:block;
+							width:100%;
+							margin:30px auto 20px !important;
+						}
+						
+					}
+					.ginput_container.ginput_container_select {
+						position:relative;
+					}
+					.ginput_container.ginput_container_select:after {
+						content:'';
+						background-image:url('../img/select-arrow.png');
+						background-repeat:no-repeat;
+						background-size:27px;
+						background-position:center;
+						position:absolute;
+						right:8px;
+						top:0;
+						width:27px;
+						height:40px;
+						pointer-events:none;
+					}
+					&.gfield.gfield_error .ginput_container.ginput_container_select:after {
+						content:'';
+						background-image:url('../img/select-arrow.png');
+						background-repeat:no-repeat;
+						background-size:27px;
+						background-position:center;
+						position:absolute;
+						right:25px;
+						top:8px;
+						width:27px;
+						height:40px;
+						pointer-events:none;
+						@include respond-at(849px) {
+							top:38px;
+						}
+					}
+					.gform_wrapper li.hidden_label input {
+						margin:0 !important;
+					}
 				}
+				.gform_footer {
+						padding:0 !important;
+						margin:0 !important;
+						text-align:center !important;
+						input[type="submit"] {
+							text-align:center !important;
+							font-weight: 700 !important;
+							font-family:$font-fam !important;
+							color:#fff !important;
+							text-decoration:none !important;
+							cursor:pointer !important;
+							display:inline-block !important;
+							font-size:17px !important;
+							line-height:42px !important;
+							height:42px !important;
+							position:relative !important;
+							text-transform:uppercase !important;
+							padding:0 20px !important;
+							border:2px solid $brightblue !important;
+							border-radius:6px !important;
+							background:$brightblue !important;
+							width:auto !important;
+							transition:background 300ms linear !important;
+							z-index:3 !important;
+							letter-spacing:1px !important;
+							&:hover {
+								background:#fff !important;
+								color:$brightblue !important;
+							}
+							@media all and (-ms-high-contrast:none), (-ms-high-contrast:active) {
+								line-height:50px;
+							}
+						}
+					}
 			}
 		}
 		.opening-content {
@@ -147,8 +243,8 @@
 					margin:0 auto 30px;
 				}
 				h1 {
-					font-size:$heading1;
-					font-weight:$fwblack;
+					font-size:54px;
+					font-weight:$fwbold;
 					color:#fff;
 					text-transform:uppercase;
 					padding-bottom:15px;
@@ -310,6 +406,7 @@
 					font-size:$heading3;
 					text-transform:uppercase;
 					padding-bottom:15px;
+					line-height:35px;
 				}
 				p {
 					font-size:16px;
@@ -569,7 +666,7 @@
 		z-index:3;
 		text-align:center;
 		@include respond-at(1399px) {
-			padding:150px 0 80px;
+			padding:185px 0 80px;
 		}
 		h2 {
 			font-size:$heading2;

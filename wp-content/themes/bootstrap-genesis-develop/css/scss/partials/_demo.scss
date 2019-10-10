@@ -59,7 +59,7 @@
 			ul li {
 				display:inline-block;
 				vertical-align:top;
-				width:45% !important;
+				width:47% !important;
 				margin-bottom:20px;
 				position:relative;
 				background:transparent !important;
@@ -70,7 +70,7 @@
 					margin:0 auto 20px;
 				}
 				&:nth-child(odd) {
-					margin-right:10%;
+					margin-right:5%;
 					@include respond-at(849px) {
 						margin-right:auto;
 					}
@@ -85,7 +85,6 @@
 					padding-left:10px !important;
 					height:43px;
 					border:none;
-					border-radius:6px;
 					@include placeholder {
 						font-family:$font-fam;
 						color:$grey;
@@ -105,7 +104,6 @@
 					-moz-appearance: none;
 					appearance: none;
 					position:relative;
-					border-radius:6px;
 					&::-ms-expand {
 						display:none;
 					}
@@ -159,6 +157,7 @@
 				padding:0 20px !important;
 				margin:20px auto 0 !important;
 				width:auto !important;
+				height:40px !important;
 				&:hover {
 					color:#fff;
 					background:$brightblue;

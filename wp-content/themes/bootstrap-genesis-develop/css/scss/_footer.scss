@@ -26,6 +26,8 @@ footer {
 			align-items:flex-start;
 			padding-bottom:30px;
 			border-bottom:1px solid $lightgrey;
+			list-style:none;
+			padding-left:0;
 			@include respond-at(699px) {
 				display:block;
 				text-align:center;
@@ -61,6 +63,8 @@ footer {
 				}
 				ul.sub-menu {
 					padding-top:30px;
+					list-style:none;
+					padding-inline-start:0 !important;
 					@include respond-at(699px) {
 						padding-top:15px;
 					}
@@ -79,6 +83,7 @@ footer {
 				display:inline-block;
 				text-align:right;
 				margin-top:-25px;
+				list-style:none;
 				@include respond-at(849px) {
 					float:none;
 					margin:15px auto;
