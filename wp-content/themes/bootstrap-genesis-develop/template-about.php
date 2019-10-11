@@ -12,7 +12,7 @@
 								<div class="img-c"><img src="<?php echo the_sub_field('icon');?>" /></div>
 								<div class="stat"><?php echo the_sub_field('stat');?></div>
 								<p><?php echo the_sub_field('description');?></p>
-							</li>
+							</li> 
 						<?php endwhile; ?>
 					</ul>
 				<?php endif; ?>
@@ -63,30 +63,31 @@
 				<?php endif; ?>
 			</div>
 		</section>
-		<section class="about-press-room">
+		<section class="about-press-room about-press-style2">
 			<div class="container">
 				<h2>Press Room</h2>
-				<ul>
-					<li>
-						<div class="title">Title</div>
-						<div class="date">October 1st, 2020</div>
-						<p>Description dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
-						<a href="#">Read More</a>
-					</li>
-					<li>
-						<div class="title">Title</div>
-						<div class="date">October 1st, 2020</div>
-						<p>Description dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
-						<a href="#">Read More</a>
-					</li>
-					<li>
-						<div class="title">Title</div>
-						<div class="date">October 1st, 2020</div>
-						<p>Description dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
-						<a href="#">Read More</a>
-					</li>
+				<ul> 
+					<?php 
+					$args = array( 
+					  'numberposts'		=> 3, // -1 is for all
+					  'post_type'		=> 'press', // or 'post', 'page'
+					  'orderby' 		=> 'title', // or 'date', 'rand'
+ 					  'order' 		=> 'ASC', // or 'DESC'
+					);
+					$lastposts = get_posts( $args );
+					if($lastposts):
+					  foreach ( $lastposts as $post ) :
+					  setup_postdata( $post ); ?>
+						<li>
+							<div class="title"><?php the_title(); ?></div>
+							<div class="date"><?php echo get_the_date() ?></div>
+							<p><?php echo $trimmed = wp_trim_words(get_the_content(), 15, '...'); ?></p>
+							<a href="<?php the_permalink(); ?>">Read More</a>
+						</li> 
+					  <?php endforeach; wp_reset_postdata(); ?>
+					<?php endif; ?>
 				</ul>
-				<a class="btn" href="#">Seel All News</a>
+				<a class="btn" href="#">See All News</a>
 				<div class="about-leadership">
 					<div class="leader-image"><img src="<?php echo get_field('about_leadership_team_image');?>" /></div>
 					<div class="leader-info">
