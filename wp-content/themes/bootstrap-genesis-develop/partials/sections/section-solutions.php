@@ -1,82 +1,89 @@
-<?php
-/**
- * Template Part: Solutions
- *
- * @package avidxchange
- */
-
-defined( 'ABSPATH' ) || die( "Can't access directly" );
-?>
-
-<section class="section is-small is-white our-solutions">
-	<div class="container">	
-		<h2 class="section-title"><?php the_field( 'solutions_title' ); ?></h2>
-
-		<?php
-		$tab_menu    = '';
-		$tab_content = '';
-
-		if ( have_rows( 'solutions' ) ) {
-			while ( have_rows( 'solutions' ) ) {
-				the_row();
-				ob_start();
-
-				$name = get_sub_field( 'name' );
-				$slug = sanitize_title( $name );
-
-				$image     = get_sub_field( 'image' );
-				$image_url = isset( $image['sizes'] ) && isset( $image['sizes']['medium_large'] ) ? $image['sizes']['medium_large'] : '';
-
-				$link_type = get_field( 'link_type' );
-				$link_url  = $link_type ? get_field( 'link_' . $link_type . '_url' ) : '';
-				$link_url  = avid_parse_custom_url( $link_url );
-				?>
-
-				<li class="tab-menu-item">
-					<a href="#solution-<?php echo esc_attr( $slug ); ?>">
-						<?php echo esc_html( $name ); ?>
-					</a>
-				</li>
-
-				<?php
-				$tab_menu .= ob_get_clean();
-
-				ob_start();
-				?>
-
-				<li class="tab-content-item" data-id="solution-<?php echo esc_attr( $slug ); ?>">
-					<div class="row">
-						<div class="col-xs-12 col-md-5 image-wrapper">
-							<img alt="Image" src="<?php echo esc_url( $image_url ); ?>">
-						</div>
-						<div class="col-xs-12 col-md-7 content-wrapper">
-							<h3 class="item-title">
-								<?php the_sub_field( 'title' ); ?>
-							</h3>
-							<div class="content">
-								<?php the_sub_field( 'content' ); ?>
-							</div>
-							<a href="<?php echo esc_url( $link_url ); ?>" class="btn btn-primary">
-								<?php the_sub_field( 'button_text' ); ?>
-							</a>
-						</div>
-					</div>
-				</li>
-
-				<?php
-				$tab_content .= ob_get_clean();
-			}
-		}
-		?>
-
-		<div class="avid-tabs">
-			<ul class="tab-menu">
-				<?php echo $tab_menu; ?>
-			</ul>
-			<ul class="tab-content">
-				<?php echo $tab_content; ?>
-			</ul>
-		</div>
-
-	</div>
-</section>
+<?php /*Template Name: Solutions Template */ ?>
+<?php get_header('new'); ?>
+		<?php get_template_part('partials/content', 'inner-page-header'); ?>
+		<section class="solutions-outdated-processes">
+			<div class="container">
+				<h2><?php echo get_field('processes_heading');?></h2>
+				<?php if(have_rows('processes_items')): ?>
+					<ul>
+						<?php while(have_rows('processes_items')): the_row();?>
+							<li>
+								<div class="img-c"><img src="<?php echo the_sub_field('icon');?>" /></div>
+								<div class="stat"><?php echo the_sub_field('stat');?></div>
+								<p><?php echo the_sub_field('description');?></p>
+							</li>
+						<?php endwhile; ?>
+					</ul>
+				<?php endif; ?>
+			</div>
+		</section>
+		<section class="solutions-streamline">
+			<div class="container">
+				<?php get_template_part('partials/content', 'tabs-module'); ?>
+			</div>
+		</section>
+		<section class="solutions-find-success">
+			<div class="container">
+				<h2>Find Success With Avidxchange</h2>
+				<?php if(have_rows('success_items')): ?>
+					<ul>
+						<?php while(have_rows('success_items')): the_row();?>	
+							<li>
+								<div class="video-container">
+									<div class="video-spacer">
+										<iframe src="<?php echo the_sub_field('wistia_video_iframe_url');?>" title="<?php echo the_sub_field('name');?> - <?php echo the_sub_field('position');?>" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="100%" height="100%" ></iframe>
+									</div>
+								</div>
+								<div class="text">
+									<div class="name"><?php echo the_sub_field('name');?></div>
+									<div class="company"><?php echo the_sub_field('position');?></div>
+									<p><?php echo the_sub_field('short_description');?></p>
+									<?php if(get_field('button_link_url')) { ?>
+										<a class="btn" href="<?php echo the_sub_field('button_link_url');?>"><?php echo the_sub_field('button_text');?></a>
+									<?php } ?>
+								</div>
+							</li>
+						<?php endwhile; ?>
+					</ul>
+				<?php endif; ?>
+			</div>
+		</section>
+		<section class="solutions-accounting-systems">
+			<div class="container">
+				<h2>Accounting Systems Integrations</h2>
+				<?php if(have_rows('solutions_accounting_systems_items')): ?>
+					<ul>
+						<?php while(have_rows('solutions_accounting_systems_items')): the_row();?>	
+							<li>
+								<a href="<?php echo the_sub_field('logo_page_link');?>">
+									<img src="<?php echo the_sub_field('logo_image');?>" />
+								</a>
+							</li>
+						<?php endwhile; ?>
+					</ul>
+				<?php endif; ?>
+				<a class="btn" href="<?php echo get_page_link(6164);?>">View All </a>
+			</div>
+		</section>
+		<section class="solutions-beginners-guide">
+			<div class="container">
+				<h2>Check Out Our Beginners Guide to AP Automation</h2>
+				<p>Whether you are brand new to accounts payable or a long-time industry veteran, this guide contains useful insights to help you reach for industry-leading levels of productivity and cost-savings for your business. Check out the chapters below to start learning everything you need to know to become an AP guru.</p>
+				<?php if(have_rows('solutions_guide_chapter_links')): ?>
+					<?php $c = 1;?>
+					<ul>
+						<?php while(have_rows('solutions_guide_chapter_links')): the_row();?>	
+							<li>
+								<a href="<?php echo the_sub_field('chapter_link');?>">
+									<div class="num"><?php echo $c;?></div>
+									<div class="title"><?php echo the_sub_field('box_title');?></div>
+								</a>
+							</li>
+							<?php $c++;?>
+						<?php endwhile; ?>
+					</ul>
+				<?php endif; ?>
+			</div>
+		</section>
+		<?php get_template_part('partials/content', 'requestdemo'); ?>
+<?php get_footer('new'); ?>
