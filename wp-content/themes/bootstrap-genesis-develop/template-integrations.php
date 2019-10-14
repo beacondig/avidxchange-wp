@@ -2,7 +2,7 @@
 <?php $loop = new WP_Query( array( 'post_type' => 'integrations', 'posts_per_page' => -1, 'order' => 'ASC', 'orderby' => 'title' ) ); ?>
 <?php get_header('new'); ?>
 		<?php get_template_part('partials/content', 'inner-page-header'); ?>
-		<section class="integrations">
+		<section class="integrations integrations-outer">
 			<div class="container">
 				<div class="left-side">
 					<div class="search-container">	
@@ -128,7 +128,9 @@
 									<?php $ict++; ?>
 								<?php endwhile; wp_reset_query(); ?>
 							</div>
-							
+							<div class="show-more">
+								<a id="load-int">show more</a>
+							</div>
 								<div class="container-fluid noresultsdiv hnores" style="margin:0px 0px 40px;">
 									<div class="container" style="width:100%;">
 										<div class="clearfix"></div>

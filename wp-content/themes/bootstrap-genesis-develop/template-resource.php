@@ -4,7 +4,7 @@
 <link rel='stylesheet' id='components-css'  href='http://avidxdev.wpengine.com/wp-content/themes/bootstrap-genesis-develop/css/components.min.css' type='text/css' media='all' />
 <link rel='stylesheet' id='duplicate-post-css'  href='http://avidxdev.wpengine.com/wp-content/plugins/duplicate-post/duplicate-post.css' type='text/css' media='all' />
 <link rel='stylesheet' id='new-royalslider-core-css-css'  href='http://avidxdev.wpengine.com/wp-content/plugins/new-royalslider/lib/royalslider/royalslider.css' type='text/css' media='all' />
-
+<link rel='stylesheet' id='theme-styles-css'  href='http://avidxdev.wpengine.com/wp-content/themes/bootstrap-genesis-develop/style.css' type='text/css' media='all' />
 <?php
 /**
  * Template Name: Resource New
@@ -17,8 +17,9 @@ defined( 'ABSPATH' ) || die( "Can't access directly" );
 
 get_header( 'new' );
 
-get_template_part( 'partials/sections/section', 'industries-hero' );
+get_template_part( 'partials/sections/section', 'resource-hero' );
 ?>
+
 
 <div class="filters">
 <div class="container">
@@ -65,6 +66,7 @@ $wpb_all_query = new WP_Query(array('post_type'=>'post', 'post_status'=>'publish
 
  
     <!-- the loop -->
+
     <?php while ( $wpb_all_query->have_posts() ) : $wpb_all_query->the_post(); ?>
 <div class="resource-top-blog-inner">  
 	<div class="row">
@@ -74,7 +76,7 @@ $wpb_all_query = new WP_Query(array('post_type'=>'post', 'post_status'=>'publish
 
 	</div>
 	<div class="col-md-6 col-sm-6">
-		<h5>BLOG POST THOUGHT LEADERSHIP</h5>
+		<h5>Blog</h5>
 		<h2><?php the_title(); ?></h2>
 <p>
 		<?php 
@@ -87,7 +89,7 @@ echo "...";
 
 </p>
         <a href="<?php the_permalink(); ?>" class="learnmore">LEARN MORE</a>
-	<a href="/blog" class="blog-link">See all Thought Leadership from AvidXchange ></a>
+	<a href="/blog" class="blog-link">See all Thought Leadership from AvidXchange <span>></span></a>
 	</div></div></div>
     <?php endwhile; ?>
     <!-- end of the loop -->
@@ -103,7 +105,21 @@ echo "...";
 
 <script>
 
-jQuery(document).ready(function($) { 
+jQuery(document).ready(function($) {
+$('a[href="#demoRequest"]').click(function(event){
+	event.preventDefault(); 
+	var offset_top = $("#demoRequest").offset().top;
+	$('html, body').animate({ scrollTop: (offset_top)  }, 'slow');
+});
+
+$(window).on('load resize',function() {
+   if($(window).width() <= 767){
+	var top_to_fix = $('.resource-top-blog-inner .row > .col-md-6:nth-child(1)').height();
+	$('.resource-top-blog ul.slick-dots').css('top',top_to_fix+20);
+   }
+});
+
+
  $('.resource-top-blog .container').slick({
 dots: true,
 infinite: true,
@@ -141,6 +157,7 @@ responsive: [
  // instead of a settings object
 ]
 });
+
 });
 </script>
 
@@ -149,14 +166,28 @@ responsive: [
 
 
 
-<div class="mix-post-outer">
+<div class="mix-post-outer resource-post-outer">
 	<div class="container">
 <div class="mix-post-inner">
-		<?php $wp_query = new WP_Query(array('post_type'=>'resources', 'post_status'=>'publish', 'posts_per_page'=>9)); ?>
+	<?php $counter = 0 ?>
+		<?php $wp_query = new WP_Query(array('post_type'=>'resources', 'post_status'=>'publish', 'posts_per_page'=>8)); ?>
 
 		<?php if ( $wp_query->have_posts() ) : ?>
 		 <?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
-		<div class="mix-post-inner1">
+<?php if($counter == 2) { ?>
+<div class="mix-post-inner1 custom-post">
+<div class="custom-post-inner">
+
+<div class="telegram-image">
+<img src="http://avidxdev.wpengine.com/wp-content/uploads/2019/10/telegram-icon.png">
+</div>
+<p>GET UPDATES FROM US TO YOUR INBOX </p>
+<a href="#demoRequest">Sign me Up</a>
+</div>
+</div>
+
+<?php } ?>
+		<div class="mix-post-inner1  resource-post-<?php echo $counter ?>">
 		        <div  class="top-image" style="background-image: url(<?php echo get_the_post_thumbnail_url( $post_id, 'large' ); ?>) !important;"></div>		
 			<div class="mix-post-inner-desc">			
 				<h2><?php echo get_the_title(); ?></h2>
@@ -179,12 +210,11 @@ responsive: [
 the_time('F Y'); 
 
 ?></p>
-
-				<p>   <?php the_content(); ?> </p>
+				<p><?php the_field('mini_description'); ?></p>
 			<a href="<?php the_permalink(); ?>" class="learnmore">READ MORE > </a>
 			</div>
 		</div>
-
+<?php $counter = $counter + 1; ?>
     		<?php endwhile; ?>
     <!-- end of the loop -->
  
@@ -194,8 +224,9 @@ the_time('F Y');
     <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
 <?php endif; ?>
 </div>
-
+<div class="loadmore-wrap loadmore-header-style"> 
 <a class="loadmore">VIEW MORE RESOURCES</a>
+	</div>
 	</div>
 </div>
 
@@ -248,10 +279,8 @@ jQuery(function($) {
 }
 
 </style>
-
-
-
-
+<div class="request-demo-out">
+<div class="bottom-design"></div>
 <section class="section request-demo" id="demoRequest">
 	<div class="container">
 
@@ -260,8 +289,9 @@ jQuery(function($) {
 	<?php echo do_shortcode( '[gravityform id="39" title="true" description="true"]' ); ?>
 	</div>
 
-	</div>
+	</div> 
 </section>
+</div>
 
 
 
