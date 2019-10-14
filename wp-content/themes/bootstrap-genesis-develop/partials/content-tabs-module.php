@@ -70,6 +70,9 @@
 											</div>
 											<div class="text">
 												<div class="text-spacer">
+													<?php if(is_page_template('template-solutions.php')) { ?>
+														<div class="title" style="color:#0684c9;font-size:22px;padding-bottom:5px;"><?php echo the_sub_field('solution_tab_text');?></div>
+													<?php } ?>
 													<div class="title"><?php echo the_sub_field('solution_title');?></div>
 													<?php if(have_rows('solutions_bullets')): ?>
 														<ul>

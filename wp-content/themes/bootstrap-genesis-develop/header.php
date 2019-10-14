@@ -36,7 +36,7 @@
 						?>
 					</div>
 					<div class="logo">
-						<a href="https://www.avidxchange.com/" target="_blank">
+						<a href="/">
 							<span>
 								<object data="<?php echo get_stylesheet_directory_uri();?>/img/logo.svg">
 									<img src="<?php echo get_stylesheet_directory_uri();?>/img/logo.png" alt="AvidX" />

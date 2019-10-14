@@ -95,6 +95,15 @@
 					label {
 						display:none !important;
 					}
+					&.gfield.gfield_error {
+						background:transparent !important;
+						border:none !important;
+						padding-top:0 !important;
+						margin-top:0 !important;
+					}
+					.ginput_container {
+						margin-top:0 !important;
+					}
 					input {
 						background:#fff  !important;
 						border:none  !important;
@@ -171,39 +180,56 @@
 					}
 				}
 				.gform_footer {
-						padding:0 !important;
-						margin:0 !important;
+					padding:0 !important;
+					margin:0 !important;
+					text-align:center !important;
+					input[type="submit"] {
 						text-align:center !important;
-						input[type="submit"] {
-							text-align:center !important;
-							font-weight: 700 !important;
-							font-family:$font-fam !important;
-							color:#fff !important;
-							text-decoration:none !important;
-							cursor:pointer !important;
-							display:inline-block !important;
-							font-size:17px !important;
-							line-height:42px !important;
-							height:42px !important;
-							position:relative !important;
-							text-transform:uppercase !important;
-							padding:0 20px !important;
-							border:2px solid $brightblue !important;
-							border-radius:6px !important;
-							background:$brightblue !important;
-							width:auto !important;
-							transition:background 300ms linear !important;
-							z-index:3 !important;
-							letter-spacing:1px !important;
-							&:hover {
-								background:#fff !important;
-								color:$brightblue !important;
-							}
-							@media all and (-ms-high-contrast:none), (-ms-high-contrast:active) {
-								line-height:50px;
-							}
+						font-weight: 700 !important;
+						font-family:$font-fam !important;
+						color:#fff !important;
+						text-decoration:none !important;
+						cursor:pointer !important;
+						display:inline-block !important;
+						font-size:17px !important;
+						line-height:42px !important;
+						height:42px !important;
+						position:relative !important;
+						text-transform:uppercase !important;
+						padding:0 20px !important;
+						border:2px solid $brightblue !important;
+						border-radius:6px !important;
+						background:$brightblue !important;
+						width:auto !important;
+						transition:background 300ms linear !important;
+						z-index:3 !important;
+						letter-spacing:1px !important;
+						&:hover {
+							background:#fff !important;
+							color:$brightblue !important;
+						}
+						@media all and (-ms-high-contrast:none), (-ms-high-contrast:active) {
+							line-height:50px;
 						}
 					}
+				}
+				
+			}
+			.gform_wrapper div.validation_error {
+				display:none;
+			}
+			.gform_wrapper .validation_message {
+				color:#C32727 !important;
+			}
+			.gform_wrapper li.gfield.gfield_error.gfield_contains_required div.gfield_description {
+				text-align:left !important;
+				padding-top:5px !important;
+			}
+			img.gform_ajax_spinner {
+				display: none !important;
+			}
+			.gform_wrapper ul.gform_fields li.gfield.gfield_error+li.gfield.gfield_error {
+				margin-top:0 !important;
 			}
 		}
 		.opening-content {
@@ -275,6 +301,12 @@
 					max-width:850px;
 					@include respond-at(1599px) {
 						width:100%;
+					}
+				}
+				a.talk {
+					display:none;
+					@include respond-at(999px) {
+						display:inline-block;
 					}
 				}
 				a.second {
@@ -707,20 +739,25 @@
 		}
 		ul li {
 			overflow:hidden;
-			max-height:375px;
+			height:365px;
 			position:relative;
-			@include respond-at(1599px) {
-				max-height:365px;
-			}
 			@include respond-at(699px) {
 				width: 250px !important;
 			}
 			@include respond-at(499px) {
-				max-height:200px;
+				height:200px;
+			}
+			&:hover {
+				@include linearGradient($green, $limegreen);
+				img {
+					opacity:0.3;
+				}
 			}
 			img {
 				width:100%;
-				clip: rect(0px, 450px, 375px, 0px);
+				clip: rect(0px, 450px, 365px, 0px);
+				opacity:1;
+				transition:opacity 500ms ease;
 			}
 			.title {
 				font-family:$font-fam;

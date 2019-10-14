@@ -70,8 +70,16 @@ jQuery(function() {
 			nextText: '',
 			prevText: '',
 			hideControlOnEnd:false,
-			touchEnabled:true
+			touchEnabled:true,
+			onSlideBefore:function($slideElement, oldIndex, newIndex) {
+				var iSrc = $slideElement.find('iframe').data('src');
+				jQuery('.home-testimonials ul').children().find('iframe').attr('src', '');
+				$slideElement.find('iframe').attr('src', iSrc);
+			}
 		});
+		
+		var loadFirst = jQuery('.home-testimonials ul li:first-child').find('iframe').data('src');
+		jQuery('.home-testimonials ul li:first-child').find('iframe').attr('src', loadFirst);
 		
 		//jQuery('.home-testimonials ul li:first-child').addClass('active');
 });

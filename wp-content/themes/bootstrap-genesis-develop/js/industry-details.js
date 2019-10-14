@@ -14,7 +14,6 @@ jQuery(function() {
 				var iSrc = $slideElement.find('iframe').data('src');
 				jQuery('.industry-detail-testimony-videos ul').children().find('iframe').attr('src', '');
 				$slideElement.find('iframe').attr('src', iSrc);
-				console.log('Slide Changed!');
 			}
 		});
 		

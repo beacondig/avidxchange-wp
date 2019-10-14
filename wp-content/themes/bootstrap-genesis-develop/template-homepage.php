@@ -9,7 +9,7 @@
 				<div class="form-cut">
 					<h1><?php echo get_field('opening_title');?></h1>
 					<p><?php echo get_field('opening_description');?></p>
-					<!--<a class="btn" href="#demoRequest">Let's Talk</a>-->
+					<a class="btn talk" href="#demoRequest">Let's Talk</a>
 					<?php if(get_field('opening_button_2_link_url')) { ?>
 						<a class="btn second" href="<?php echo get_field('opening_button_2_link_url');?>"><?php echo get_field('opening_button_2_text');?></a>
 					<?php } ?>
@@ -133,14 +133,18 @@
 			<p>We’re the ones who believe there’s a better way for businesses to process invoices and make payments without the endless piles of paper so many accounts payable departments find themselves buried in. So, we dedicated ourselves to building that better way with a suite of software and service solutions aimed at becoming the automated ally for those same AP teams.</p>
 			<div class="prev"><img src="<?php echo get_stylesheet_directory_uri();?>/img/home/left-arrow-blue.png" /></div>
 			<div class="next"><img src="<?php echo get_stylesheet_directory_uri();?>/img/home/right-arrow-blue.png" /></div>
-			<?php if(have_rows('transforming_industries_items')): ?>
+			<?php $pages = get_pages(array('parent'=>5851, 'sort_order'=>'ASC', 'sort_column'=>'menu_order'));?>
+			<?php if (!empty($pages)): ?>
 				<ul>
-					<?php while(have_rows('transforming_industries_items')): the_row();?>	
+					<?php foreach ($pages as $key => $page_item): ?>
 						<li>
-							<div class="title"><?php echo the_sub_field('title');?></div>
-							<img src="<?php echo the_sub_field('image');?>" />
+							<a href="<?php echo esc_url(get_permalink($page_item->ID)); ?>">
+								<div class="title" ><?php echo get_field( 'industry_type', $page_item->ID); ?></div>
+								<img src="<?php echo get_field('industry_preview_image', $page_item->ID);?>" />
+							</a>
 						</li>
-					<?php endwhile; ?>
+					<?php endforeach ?>
+					<?php wp_reset_postdata(); ?>
 				</ul>
 			<?php endif; ?>
 		</section>
@@ -161,7 +165,7 @@
 							<li>
 								<div class="video-container">
 									<div class="video-spacer">
-										<iframe src="<?php echo the_sub_field('testimonial_video');?>" title="AvidXchange" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="100%" height="100%" ></iframe>
+										<iframe data-src="<?php echo the_sub_field('testimonial_video');?>" title="AvidXchange" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="100%" height="100%" ></iframe>
 									</div>
 								</div>
 								<div class="text-container">
