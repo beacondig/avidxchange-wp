@@ -17,11 +17,70 @@
 				<?php endif; ?>
 			</div>
 		</section>
-		<section class="solutions-streamline">
-			<div class="container">
-				<?php get_template_part('partials/content', 'tabs-module'); ?>
+		<section class="home-details selections-outer-wrap"> 
+			<div class="b-container">
+				<h2><?php echo get_field('solution_tabs_header01');?></h2>
+				<div class="selections">
+					<?php if(have_rows('homepage_automate_your_ap_items')): ?>
+						<ul>
+							<?php while(have_rows('homepage_automate_your_ap_items')): the_row();?>
+								<li data-img="<?php echo the_sub_field('item_image');?>">
+									<div class="heading"><?php echo the_sub_field('title');?></div>
+									<div class="info">
+
+										<h3><?php echo the_sub_field('content_title');?></h3>
+
+										<?php if(have_rows('button_repeator')): ?>
+										<ul>
+										<?php while(have_rows('button_repeator')): the_row();?>
+										    <li><?php echo the_sub_field('list_content');?></li>
+										<?php endwhile; ?>
+										</ul>
+										<?php endif; ?>
+
+										<a href="<?php echo the_sub_field('learn_more_link');?>" class="link">Learn More <i class="fas fa-arrow-right"></i></a>
+									</div>
+								</li>
+							<?php endwhile; ?>
+						</ul>
+					<?php endif; ?>
+				</div>
+				<div class="selection-image">
+					<img src="<?php echo get_stylesheet_directory_uri();?>/img/home/browser.png" />
+				</div>
+				<div class="mobile-selections">
+					<?php if(have_rows('homepage_automate_your_ap_items')): ?>
+						<ul>
+							<?php while(have_rows('homepage_automate_your_ap_items')): the_row();?>	
+								<li>
+									<img src="<?php echo the_sub_field('item_image');?>" />
+									<div class="heading"><?php echo the_sub_field('title');?></div>
+									<div class="info">
+																				<h3><?php echo the_sub_field('content_title');?></h3>
+
+										<?php if(have_rows('button_repeator')): ?>
+										<ul>
+										<?php while(have_rows('button_repeator')): the_row();?>
+										    <li><?php echo the_sub_field('list_content');?></li>
+										<?php endwhile; ?>
+										</ul>
+										<?php endif; ?>
+
+										<a href="<?php echo the_sub_field('learn_more_link');?>" class="link">Learn More <i class="fas fa-arrow-right"></i></a>
+									</div>
+								</li>
+							<?php endwhile; ?>
+						</ul>
+					<?php endif; ?>
+				</div>
 			</div>
 		</section>
+
+		<!--<section class="solutions-streamline">
+			<div class="container">
+				<?php //get_template_part('partials/content', 'tabs-module'); ?>
+			</div>
+		</section>-->
 		<section class="solutions-find-success">
 			<div class="container">
 				<h2>Find Success With Avidxchange</h2>
@@ -85,5 +144,5 @@
 				<?php endif; ?>
 			</div>
 		</section>
-		<?php get_template_part('partials/content', 'demo'); ?>
+		<?php get_template_part('partials/content', 'requestdemo'); ?>
 <?php get_footer('new'); ?>
