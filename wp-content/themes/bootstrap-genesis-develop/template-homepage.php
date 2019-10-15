@@ -110,6 +110,7 @@
 									<?php $ict++; ?>
 								<?php endwhile; wp_reset_query(); ?>
 							</div>
+<div class="show-all-integration"><a>see all integrations</a></div>
 							<div class="container-fluid noresultsdiv hnores" style="margin:0px 0px 40px;">
 								<div class="container" style="width:100%;">
 									<div class="clearfix"></div>
@@ -158,7 +159,7 @@
 		<section class="home-testimonials">
 			<div class="container">
 				<h2>One Mission, multiple solutions.</h2>
-				<p>Our mission is consistent across the board: To transform the way companies pay bills. But we know how much payment processes can differ across industries. So we’ve put in the legwork to understand the processes and unique needs of your business—–and build AP software solutions that are tailor-made to your needs.</p>
+				<p>Our mission is consistent across the board: To transform the way companies pay bills. But we know how much payment processes can differ across industries. So we’ve put in the legwork to understand the processes and unique needs of your business and build AP software solutions that are tailor-made to your needs.</p>
 				<?php if(have_rows('homepage_testimonials_items')): ?>
 					<ul>
 						<?php while(have_rows('homepage_testimonials_items')): the_row();?>	
@@ -180,5 +181,5 @@
 				<div class="next"><img src="<?php echo get_stylesheet_directory_uri();?>/img/home/right-arrow-green.png" /></div>
 			</div>
 		</section>
-		<?php get_template_part('partials/content', 'demo'); ?>
+		<?php get_template_part('partials/content', 'requestdemo'); ?>
 <?php get_footer('new'); ?>
