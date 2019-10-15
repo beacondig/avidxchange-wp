@@ -654,6 +654,9 @@ section.integrations.integrations-outer {
 
 
 /********** Industries Details page***********/
+section.home-details.selections-outer-wrap + section {
+    margin-top: 0px !important;
+}
 .industry-detail-logos + .selections-outer-wrap {
     margin-top: -160px;
     position: relative;

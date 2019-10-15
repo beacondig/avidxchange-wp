@@ -106,5 +106,7 @@
 			</div>
 		</div>
 	</section>
+<div class="new-form-design new-form-design2">
 	<?php get_template_part( 'partials/sections/section', 'request-demo' ); ?>
+</div>
 <?php get_footer( 'new' ); ?>

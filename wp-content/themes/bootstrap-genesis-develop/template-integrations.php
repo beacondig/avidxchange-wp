@@ -182,5 +182,5 @@
 				</div>
 			</div>
 		</section>
-		<?php get_template_part('partials/content', 'demo'); ?>
+		<?php get_template_part('partials/content', 'requestdemo'); ?>
 <?php get_footer('new'); ?>
