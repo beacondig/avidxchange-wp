@@ -24,16 +24,20 @@ jQuery(function() {
 		});
 		
 		// Mobile Nav Touch Functionality
-		jQuery('.mobile-nav .m-nav-container ul li.menu-item-has-children').on('touchstart',function(e) {
+		jQuery('.mobile-nav .m-nav-container ul li a').on('touchstart',function(e) {
 			e.preventDefault();
-			if (jQuery(this).hasClass('tap')) {
-				jQuery(this).removeClass('tap');
+			var submenu = jQuery(this).parent('li').find('ul');
+			if(submenu.length) {
+				if (jQuery(this).parent('li').hasClass('tap')) {
+					jQuery(this).parent('li').removeClass('tap');
+				}else{
+					jQuery('.mobile-nav .m-nav-container ul li').each(function() {
+						jQuery(this).removeClass('tap');
+					});
+					jQuery(this).parent('li').addClass('tap');
+				}
 			}else{
-				jQuery('.mobile-nav .m-nav-container ul li').each(function() {
-					jQuery(this).removeClass('tap');
-				});
-				jQuery(this).addClass('tap');
-				
+				location.href = this.href;
 			}
 		});
 		
