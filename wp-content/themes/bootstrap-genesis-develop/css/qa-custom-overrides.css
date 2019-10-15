@@ -42,6 +42,31 @@ body .gform_wrapper.gform_validation_error ul li.gfield {
   top: 0;
   left: 0;
 }
+.show-all-integration a:hover {
+    background: #fff; 
+    color: #0684c9;
+}
+.show-all-integration {
+	display:none;
+}
+.show-all-integration a {
+    text-transform: uppercase;
+    padding: 12px 20px;
+    border: 2px solid #0684c9;
+    border-radius: 6px;
+    background: #0684c9;
+    width: auto;
+    transition: background 300ms linear;
+    z-index: 3;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
 .home-industries ul li:hover picture:after {
   position: absolute;
   content: "";
@@ -411,11 +436,62 @@ section.solutions-outdated-processes {
 .solutions-beginners-guide {
     padding-bottom:60px !important;
 }
+.home-details .selections h3 {
+    font-size: 24px;
+    line-height: 30px;
+    padding-bottom: 20px;
+}
+.home-details .selections li ul,
+.mobile-selections li ul {
+    list-style: disc;
+    display: block;
+    margin-bottom: 30px;
+    margin-left: 16px; 
+}
 
+section.home-details.selections-outer-wrap .selections {
+    height:auto !important;
+}
+section.home-details.selections-outer-wrap {
+    padding: 20px 0px 30px !important;
+}
+.home-details .selections>ul>li {
+    padding-bottom:12px;
+} 
+.mobile-selections li h3 {
+    font-size: 20px;
+    line-height: 28px;
+    padding-bottom: 20px;
+}
+section.home-details.selections-outer-wrap h2 {
+    font-size: 32px;
+    margin: 0 auto;
+    display: block;
+    line-height: 45px;
+    text-align: center;
+    padding: 30px 0px 60px;
+}
+.home-details .selections li ul li,
+.mobile-selections li ul li {
+    display: list-item;
+    color: #404041;
+    font-family: "Artegra Sans Alt",sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 10px;
+}
 @media only screen and (min-width: 899px) {
    .page-id-5858 .partial-inner-page-header .header-image {
        bottom: 0px;
    } 
+}
+@media only screen and (max-width: 899px) {
+section.home-details.selections-outer-wrap h2 {
+    font-size: 26px;
+    line-height: 36px;
+    padding: 30px 0px;
+} 
 }
 
 
@@ -574,4 +650,15 @@ section.integrations.integrations-outer {
     padding-left: 0px !important;
     padding-right: 0px !important;
 
+}
+
+
+/********** Industries Details page***********/
+section.home-details.selections-outer-wrap + section {
+    margin-top: 0px !important;
+}
+.industry-detail-logos + .selections-outer-wrap {
+    margin-top: -160px;
+    position: relative;
+    z-index: 999;
 }
