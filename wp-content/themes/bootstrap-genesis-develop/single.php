@@ -352,7 +352,8 @@ the_time('F Y');
 
 
 
-
+<div class="request-demo-out">
+<div class="bottom-design"></div>
 <section class="section request-demo" id="demoRequest">
 	<div class="container">
 
@@ -362,6 +363,7 @@ the_time('F Y');
 	</div>
 	</div>
 </section>
+</div>
 
 
 
