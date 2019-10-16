@@ -134,3 +134,10 @@ wp-content/mysql.sql
 *.asf
 *.wmv
 *.avi
+/wp-admin/css/colors/blue/colors.css
+/wp-admin/css/colors/coffee/colors.css
+/wp-admin/css/colors/ectoplasm/colors.css
+/wp-admin/css/colors/light/colors.css
+/wp-admin/css/colors/midnight/colors.css
+/wp-admin/css/colors/ocean/colors.css
+/wp-admin/css/colors/sunrise/colors.css
