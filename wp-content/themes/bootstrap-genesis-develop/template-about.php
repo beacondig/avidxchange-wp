@@ -71,7 +71,7 @@
 					$args = array( 
 					  'numberposts'		=> 3, // -1 is for all
 					  'post_type'		=> 'press', // or 'post', 'page'
-					  'orderby' 		=> 'title', // or 'date', 'rand'
+					  'orderby' 		=> 'date', // or 'date', 'rand'
  					  'order' 		=> 'ASC', // or 'DESC'
 					);
 					$lastposts = get_posts( $args );

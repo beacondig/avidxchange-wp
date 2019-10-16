@@ -54,7 +54,7 @@
 	<p><?php the_field('banner_description'); ?></p>
 <?php endif; ?>
 <h1 class="bbh1"><?php the_field('banner_title'); ?></h1>
-<div class="bannerplay"><a data-toggle="modal" data-target="#myModal"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></div>
+<div class="bannerplay"><a data-toggle="modal" data-target="#myModal"><i class="fab fa-youtube" aria-hidden="true"></i></a></div>
 </div></div>
 <?php if(!get_field('career_banner_image')): ?>
 	</div>
