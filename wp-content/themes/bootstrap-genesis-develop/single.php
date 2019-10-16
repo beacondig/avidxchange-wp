@@ -1,13 +1,16 @@
-<?php get_header('new'); ?>
-</div>
-<link rel='stylesheet' id='theme-styles-css' href='http://avidxdev.wpengine.com/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.min.css' type='text/css' media='all' />
+
+
 <link rel='stylesheet' id='slick-css' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css' type='text/css' media='all' />
 <link rel='stylesheet' id='slick-theme-css' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css' type='text/css' media='all' />
-<link rel='stylesheet' id='components-css' href='http://avidxdev.wpengine.com/wp-content/themes/bootstrap-genesis-develop/css/components.min.css' type='text/css' media='all' />
-<link rel='stylesheet' id='duplicate-post-css' href='http://avidxdev.wpengine.com/wp-content/plugins/duplicate-post/duplicate-post.css' type='text/css' media='all' />
-<link rel='stylesheet' id='new-royalslider-core-css-css' href='http://avidxdev.wpengine.com/wp-content/plugins/new-royalslider/lib/royalslider/royalslider.css' type='text/css' media='all' />
-
-
+<!--
+												why are these styles here?
+<link rel='stylesheet' id='theme-styles-css' href='http://avidxdev.wpengine.com/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='components-css'  href='http://avidxdev.wpengine.com/wp-content/themes/bootstrap-genesis-develop/css/components.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='duplicate-post-css'  href='http://avidxdev.wpengine.com/wp-content/plugins/duplicate-post/duplicate-post.css' type='text/css' media='all' />
+<link rel='stylesheet' id='new-royalslider-core-css-css'  href='http://avidxdev.wpengine.com/wp-content/plugins/new-royalslider/lib/royalslider/royalslider.css' type='text/css' media='all' />
+<link rel='stylesheet' id='theme-styles-css' href='http://avidxdev.wpengine.com/wp-content/themes/bootstrap-genesis-develop/style.css' type='text/css' media='all' />
+-->
+<?php get_header('new'); ?>
 <!--- form modal start (Embedded field values - DJ style) --->
 <div class="modal fade" id="intModal" role="dialog">
   <div class="modal-dialog modal-sm">
