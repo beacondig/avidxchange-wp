@@ -61,7 +61,7 @@
 		<section class="home-search">
 			<div class="container">	
 				<h2><?php echo get_field('homepage_accounting_systems_heading');?></h2>
-				<p>We know how important it is for your accounting system to remain your system of record. That’s why we’re dedicated to building seamless integrations between our accounts -payable software and over 150 accounting systems. After all, we’re here to help streamline your payment processes, not pile on to your pain.</p>
+				<p>We know how important it is for your accounting system to remain your system of record. That’s why we’re dedicated to building seamless integrations between our accounts payable software and over 150 accounting systems. After all, we’re here to help streamline your payment processes, not pile on to your pain.</p>
 				<?php if(have_rows('homepage_accounting_systems_logos')): ?>
 					<ul>
 						<?php while(have_rows('homepage_accounting_systems_logos')): the_row();?>	
