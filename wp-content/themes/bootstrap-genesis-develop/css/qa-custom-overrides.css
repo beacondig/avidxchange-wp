@@ -659,3 +659,9 @@ section.integrations.integrations-outer {
     position: relative;
     z-index: 999;
 }
+
+/********** blog page search ***********/
+.page-template-full-width-g .elementor-search-form__container{
+  padding: 10px 0;
+  line-height: 50px;
+}
