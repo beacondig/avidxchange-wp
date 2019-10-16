@@ -498,7 +498,7 @@ section.home-details.selections-outer-wrap h2 {
 
 /*************About Page*************/
 .header-scroll.active {
-    z-index: 9999999 !important;
+    z-index: 8000 !important;
 }
 .about-press-room.about-press-style2 ul li .title {
     font-size: 24px;
@@ -660,8 +660,3 @@ section.integrations.integrations-outer {
     z-index: 999;
 }
 
-/********** blog page search ***********/
-.page-template-full-width-g .elementor-search-form__container{
-  padding: 10px 0;
-  line-height: 50px;
-}
