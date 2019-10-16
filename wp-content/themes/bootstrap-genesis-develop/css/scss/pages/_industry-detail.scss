@@ -120,6 +120,7 @@
 		@include respond-at(999px) {
 			padding:200px 0 150px;
 			margin: -165px auto 0;
+			background-size:100% 83%;
 		}
 		@include respond-at(749px) {
 			padding:150px 0 150px;
