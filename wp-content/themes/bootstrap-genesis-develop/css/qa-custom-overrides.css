@@ -3,8 +3,8 @@
 -------------------------------------*/
 /* header scss */
 
-/* formsmain css */
-body .gform_wrapper.gform_validation_error ul li.gfield {
+/* formsmain css - transferred */
+/*body .gform_wrapper.gform_validation_error ul li.gfield {
   margin-top: 0;
 }
 .gfield_error select {
@@ -12,10 +12,10 @@ body .gform_wrapper.gform_validation_error ul li.gfield {
 }
 .demo-form form ul li:nth-child(2n + 1) {
   margin-right: 3%;
-}
+}*/
 /* homepage scss */
 
-@media (min-width: 900px) {
+/*@media (min-width: 900px) {
   .home-opening .opening-content .form-cut h1 {
     font-size: 54px;
     font-weight: 700;
@@ -87,11 +87,11 @@ body .gform_wrapper.gform_validation_error ul li.gfield {
   opacity: 0.7;
   -webkit-transition: opacity 300ms ease-in-out;
   transition: opacity 300ms ease-in-out;
-}
+}*/
 /* navigation light */
 
 /***************Real Estate Page *********/
-.industry-detail-benefit-values ul li .benefit {
+/*.industry-detail-benefit-values ul li .benefit {
     padding: 5px;
 }
 .industry-detail-benefit-values ul li .benefit h3 {
@@ -99,9 +99,9 @@ body .gform_wrapper.gform_validation_error ul li.gfield {
 }
 .industry-detail-benefit-values ul li .benefit img {
     padding-bottom: 15px;
-}
+}*/
 @media only screen and (max-width: 899px) {
-  .resource-post-outer .post-outer-wrap .post-item-out {
+/*  .resource-post-outer .post-outer-wrap .post-item-out {
     margin: 0 auto 30px;
     max-width: 600px;
     width: 46%;
@@ -112,7 +112,7 @@ body .gform_wrapper.gform_validation_error ul li.gfield {
     -ms-flex-flow: row wrap;
     flex-flow: row wrap;
     margin-top: -40px;
-  }
+  }*/
   .new-form-design .request-demo .row .col-md-6:nth-child(2) {
     padding-top: 0px;
   }
@@ -533,7 +533,7 @@ section.about-press-room.about-press-style2 .leader-info {
 
 
 /************Integration Page *********/
-.show-more a#load-int:hover {
+/*.show-more a#load-int:hover {
 	background: #a4d137;
 	color:#fff;
 }
@@ -568,7 +568,7 @@ section.integrations.integrations-outer {
     position: relative;
     z-index: 99999 !important;
     bottom: 85px;
-}
+}*/
 .integrations .left-side {
     padding-bottom: 45px;
 }
@@ -658,4 +658,10 @@ section.integrations.integrations-outer {
     margin-top: -160px;
     position: relative;
     z-index: 999;
+}
+
+/********** blog page search ***********/
+.page-template-full-width-g .elementor-search-form__container{
+  padding: 10px 0;
+  line-height: 50px;
 }

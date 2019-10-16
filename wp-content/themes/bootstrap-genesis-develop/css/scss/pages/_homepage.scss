@@ -299,7 +299,7 @@
 					padding-bottom:20px;
 					width:75%;
 					max-width:850px;
-					@include respond-at(1599px) {
+					@include respond-at(999px) {
 						width:100%;
 					}
 				}
@@ -689,6 +689,13 @@
 					}
 				}
 			}
+			.show-all-integration {
+				display:none;
+				a {
+					@extend %button-style;
+					
+				}
+			}
 		}
 }
 
@@ -768,9 +775,11 @@
 				letter-spacing:1px;
 				position:absolute;
 				top:30px;
-				left:10px;
+				left:30px;
 				width:200px;
 				line-height:24px;
+				z-index:1;
+				text-align:left;
 			}
 		}
 }
@@ -893,13 +902,6 @@
 		ul li {
 			margin-bottom:100px;
 			position:relative;
-			opacity:1;
-			transition:opacity 800ms ease;
-			&.active {
-				opacity:1;
-				transition:opacity 800ms ease;
-			}
-			
 			.video-container {
 				height:auto;
 				position:relative;
@@ -989,13 +991,9 @@
 				font-family:$font-fam;
 				font-style:italic;
 				font-weight:$fwlight;
-				font-size:25px;
+				font-size:18px;
 				color:#fff;
 				text-align:left;
-				@include respond-at(699px) {
-					font-size:19px;
-					line-height:25px;
-				}
 			}
 		}
 }

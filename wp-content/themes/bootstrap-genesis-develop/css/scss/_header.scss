@@ -1,4 +1,4 @@
-header {
+header.site-header-new {
 		position:absolute;
 		background:$grey;
 		width:100%;
@@ -384,7 +384,7 @@ header {
 		}
 }
 
-header nav ul li {
+header.site-header-new nav ul li {
 		font-family:$font-fam;
 		color:#fff;
 		text-transform:uppercase;
@@ -400,6 +400,9 @@ header nav ul li {
 		position:relative;
 		&:hover, &.current_page_item {
 			border-bottom:2px solid $limegreen;
+		}
+		&.demo-btn.current_page_item {
+			border-bottom:none;
 		}
 		a {
 			color:#fff;
@@ -475,6 +478,9 @@ header nav ul li {
 			&:hover {
 				border-bottom:2px solid transparent;
 			}
+			&.current_page_item:hover {
+				border-bottom:none;
+			}
 			a {
 				color:#fff;
 				box-sizing:border-box;
@@ -504,7 +510,7 @@ header nav ul li {
 }
 
 .header-scroll {
-		@extend header;
+		@extend header.site-header-new;
 		position:fixed;
 		top:-120px;
 		opacity:0;

@@ -28,7 +28,7 @@
 			);
 		?>
 		<div class="wrapper">
-			<header class="<?php echo get_field('header_style');?>">
+			<header class="site-header-new <?php echo get_field('header_style');?>">
 				<div class="container">
 					<div class="top-menu">
 						<?php
@@ -76,7 +76,7 @@
 						?>
 					</div>
 					<div class="logo">
-						<a href="https://www.avidxchange.com/" target="_blank">
+						<a href="/">
 							<span>
 								<object data="<?php echo get_stylesheet_directory_uri();?>/img/logo.svg">
 									<img src="<?php echo get_stylesheet_directory_uri();?>/img/logo.png" alt="AvidX" />

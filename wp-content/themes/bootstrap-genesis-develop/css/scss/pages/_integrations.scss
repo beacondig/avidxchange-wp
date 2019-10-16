@@ -359,6 +359,16 @@
 					}
 				}
 			}
+			.show-more {
+				text-align:center;
+				margin:15px 0 0;
+				position:relative;
+				z-index:9999 !important;
+				bottom:85px;
+				a {
+					@extend %button-style;
+				}
+			}
 			.mobile {
 				display:none;
 				@include respond-at(899px) {

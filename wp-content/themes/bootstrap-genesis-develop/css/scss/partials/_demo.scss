@@ -61,6 +61,7 @@
 				vertical-align:top;
 				width:47% !important;
 				margin-bottom:20px;
+				margin-top:0 !important;
 				position:relative;
 				background:transparent !important;
 				border:none !important;
@@ -104,6 +105,7 @@
 					-moz-appearance: none;
 					appearance: none;
 					position:relative;
+					margin-top:12px;
 					&::-ms-expand {
 						display:none;
 					}
@@ -122,7 +124,7 @@
 					background-position:center;
 					position:absolute;
 					right:25px;
-					top:0;
+					top:12px;
 					width:27px;
 					height:40px;
 					pointer-events:none;
@@ -135,7 +137,7 @@
 					background-position:center;
 					position:absolute;
 					right:25px;
-					top:8px;
+					top:20px;
 					width:27px;
 					height:40px;
 					pointer-events:none;
@@ -185,5 +187,8 @@
 		}
 		.gform_wrapper ul.gform_fields li.gfield.gfield_error+li.gfield.gfield_error {
 			margin-top:0 !important;
+		}
+		.gfield_error select {
+			border: 1px solid #790000 !important;
 		}
 }

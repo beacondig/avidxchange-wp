@@ -118,6 +118,28 @@
 					}
 					.industry {
 						height:100%;
+						position:relative;
+						.overlay {
+							position: absolute;
+							top: 0;
+							left: 0;
+							width: 100%;
+							height: 100%;
+							@include linearGradient($limegreen, #72bd42);
+							transition: opacity 0.3s;
+							opacity: 0;
+							&:hover {
+								opacity: 0.5;
+							}
+						}
+						.item-title {
+							position: absolute;
+							top: 30px;
+							left: 30px;
+							color: #fff;
+							text-align: left;
+							z-index: 10;
+						}
 					}
 				}
 			}
@@ -135,91 +157,89 @@
 		position: relative;
 		z-index: 9;
 		box-sizing: border-box;
-		
-				label {
-					display:inline-block;
-					vertical-align:top;
-					width:calc(100% - 200px);
-					text-align:left;
-					color:$grey;
-					font-family:$font-fam;
-					font-weight:$fwregular;
-					font-size:14px;
-					@include respond-at(749px) {
-						width:100%;
-					}
-					input {
-						box-sizing:border-box;
-						border:1px solid #dadada;
-						padding-left:10px;
-						width:90%;
-						height:43px;
-						margin-top:3px;
-						@include respond-at(749px) {
-							width:100%;
-						}
+		label {
+			display:inline-block;
+			vertical-align:top;
+			width:calc(100% - 200px);
+			text-align:left;
+			color:$grey;
+			font-family:$font-fam;
+			font-weight:$fwregular;
+			font-size:14px;
+			@include respond-at(749px) {
+				width:100%;
+			}
+			input {
+				box-sizing:border-box;
+				border:1px solid #dadada;
+				padding-left:10px;
+				width:90%;
+				height:43px;
+				margin-top:3px;
+				@include respond-at(749px) {
+					width:100%;
+				}
+			}
+		}
+		button {
+			@extend %button-style;
+			padding:0 40px;
+			margin-top:22px;
+			@include respond-at(799px) {
+				display:block;
+				margin:15px auto;
+				width:100%;
+			}
+		}
+	}
+	.integrations-wrapper {
+		display:flex;
+		justify-content:space-between;
+		flex-flow:row wrap;
+		margin:30px auto;
+		.integration-item {
+			width:21%;
+			height:165px;
+			margin-bottom:15px;
+			box-shadow: 0px 25px 40px -37px $grey;
+			background:#fff;
+			@include respond-at(699px) {
+				width:49%;
+			}
+			.intgbg {
+				width:100%;
+				height:165px;
+				border:none;
+				border-radius:0;
+				background:transparent;
+				position:relative;
+				.intimg {
+					width:100%;
+					height:165px;
+					img {
+						max-width:90%;
+						margin:0 auto;
+						top:50%;
+						transform:translateY(-50%);
+						position:relative;
+						display:block !important;
+						height:auto;
+						max-height:100%;
 					}
 				}
-				button {
-					@extend %button-style;
-					padding:0 40px;
-					margin-top:22px;
-					@include respond-at(799px) {
-						display:block;
-						margin:15px auto;
-						width:100%;
+				.intgcover {
+					width:100%;
+					height:165px;
+					left:0;
+					right:0;
+					background-color:$brightblue;
+					.vsp {
+						top:50%;
+						transform:translateY(-50%);
+						position:relative;
+						padding:0;
 					}
 				}
 			}
-			.integrations-wrapper {
-				display:flex;
-				justify-content:space-between;
-				flex-flow:row wrap;
-				margin:30px auto;
-				.integration-item {
-					width:21%;
-					height:165px;
-					margin-bottom:15px;
-					box-shadow: 0px 25px 40px -37px $grey;
-					background:#fff;
-					@include respond-at(699px) {
-						width:49%;
-					}
-					.intgbg {
-						width:100%;
-						height:165px;
-						border:none;
-						border-radius:0;
-						background:transparent;
-						position:relative;
-						.intimg {
-							width:100%;
-							height:165px;
-							img {
-								max-width:90%;
-								margin:0 auto;
-								top:50%;
-								transform:translateY(-50%);
-								position:relative;
-								display:block !important;
-								height:auto;
-								max-height:100%;
-							}
-						}
-						.intgcover {
-							width:100%;
-							height:165px;
-							left:0;
-							right:0;
-							background-color:$brightblue;
-							.vsp {
-								top:50%;
-								transform:translateY(-50%);
-								position:relative;
-								padding:0;
-							}
-						}
-					}
-				}
-		
-}
+		}
+	}

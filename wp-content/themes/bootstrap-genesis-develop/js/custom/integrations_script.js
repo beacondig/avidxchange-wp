@@ -21,7 +21,7 @@ jQuery(document).ready(function (a) {
 			b.toUpperCase().indexOf(c.toUpperCase()) != -1 ? (a(this).addClass('active-int')) : a(this).removeClass('active-int')		
 			console.log(a('.integrations-wrapper').find('.active-int').length);
 			if(a('body').find('.show-all-integration').length > 0){
-			if(a('.integrations-wrapper').find('.active-int').length > 4){
+			if(a('.integrations-wrapper').find('.active-int').length > 12){
 				load_more_int_fun();
 				a('.show-all-integration').show();
 			}
@@ -62,10 +62,10 @@ a('.show-all-integration a').click(function () {
 function load_more_int_fun(){
 	a(".integration-item.active-int").hide();
         size_li = a(".integration-item.active-int").size();
-        x=4;
+        x=12;
         a('.integration-item.active-int:lt('+x+')').show();
         a('.show-all-integration a').click(function () {
-        x= (x+4 <= size_li) ? x+4 : size_li;
+        x= (x+12 <= size_li) ? x+12 : size_li;
         a('.integration-item.active-int:lt('+x+')').show();
         if(x == size_li){
             a('.show-all-integration').hide();

@@ -8,7 +8,7 @@
 			<div class="desktop">
 				<?php $pages = get_pages(array('parent'=>5851, 'sort_order'=>'ASC', 'sort_column'=>'menu_order'));?>
 				<?php if (!empty($pages)): ?>
-					<ul class="industries" style="justify-content: flex-start !important;">
+					<ul class="industries">
 						<?php foreach ($pages as $key => $page_item): ?>
 							<li>
 								<a href="<?php echo esc_url(get_permalink($page_item->ID)); ?>">
