@@ -348,7 +348,18 @@ the_time('F Y');
 </div>
 
 
+<style>
 
+.hero-body a {
+    display: none;
+}
+.request-demo {
+    	background-position: center top;
+	margin-top:40px;
+	padding-top:180px;
+}
+
+</style>
 
 
 
