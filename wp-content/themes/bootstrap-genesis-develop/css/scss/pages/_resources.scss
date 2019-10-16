@@ -3,4 +3,10 @@
         z-index: 10;
         position: relative;
     }
+    .resource-post-outer{
+        margin-bottom: 0;
+        &:before{
+            content: initial;
+        }
+    }
 }
