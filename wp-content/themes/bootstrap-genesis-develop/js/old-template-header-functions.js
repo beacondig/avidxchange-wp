@@ -50,12 +50,14 @@ jQuery(function() {
 				ot = jQuery('.headerbluebg').height();
 			}else if(jQuery('.res-banner-in').length){
 				ot = jQuery('.res-banner-in').height();
-			}else if(jQuery('.dm-hero').length) {
-				ot = jQuery('.dm-hero').height();
+			}else if(jQuery('.res-banner-in').length){
+				ot = jQuery('.res-banner-in').height();
+			}else if(jQuery('.new-header-banner').length) {
+				ot = jQuery('.new-header-banner').height();
 			}else{
 				ot = jQuery('.elementor-top-section').height();
 			}
-			var s = jQuery('.header-scroll');
+			var s = jQuery('.header-scroll'); 
 			if(st >= ot) {
 				s.addClass('active');
 			} else {
