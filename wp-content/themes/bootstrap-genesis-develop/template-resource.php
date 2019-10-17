@@ -1,15 +1,15 @@
-<link rel='stylesheet' id='theme-styles-css' href='http://avidxdev.wpengine.com/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.min.css' type='text/css' media='all' />
+
 <link rel='stylesheet' id='slick-css' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css' type='text/css' media='all' />
 <link rel='stylesheet' id='slick-theme-css' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css' type='text/css' media='all' />
 <!--
 												why are these styles here?
-
+<link rel='stylesheet' id='theme-styles-css' href='http://avidxdev.wpengine.com/wp-content/themes/bootstrap-genesis-develop/css/theme-styles.min.css' type='text/css' media='all' />
 <link rel='stylesheet' id='components-css'  href='http://avidxdev.wpengine.com/wp-content/themes/bootstrap-genesis-develop/css/components.min.css' type='text/css' media='all' />
 <link rel='stylesheet' id='duplicate-post-css'  href='http://avidxdev.wpengine.com/wp-content/plugins/duplicate-post/duplicate-post.css' type='text/css' media='all' />
 <link rel='stylesheet' id='new-royalslider-core-css-css'  href='http://avidxdev.wpengine.com/wp-content/plugins/new-royalslider/lib/royalslider/royalslider.css' type='text/css' media='all' />
-
--->
 <link rel='stylesheet' id='theme-styles-css' href='http://avidxdev.wpengine.com/wp-content/themes/bootstrap-genesis-develop/style.css' type='text/css' media='all' />
+-->
+
 <?php
 /**
  * Template Name: Resource New
@@ -22,39 +22,61 @@ defined('ABSPATH') || die("Can't access directly");
 
 get_header('new');
 
-get_template_part('partials/sections/section', 'resource-hero');
+get_template_part('partials/content', 'inner-page-header');
 ?>
 
 
 <div class="filters">
 	<div class="container">
-		<div class="col-md-3 col-sm-3">
+		<div class="col-md-3 col-sm-3 resource-type">
 			<span>Filter by Type:</span>
 			<select>
-				<option>Show All</option>
+				<option data-filter=" ">All Resources</option>
+				<option data-filter="webinars">Webinars</option>
+				<option data-filter="product">Product Info</option>
+				<option data-filter="short">Short Videos</option>
+				<option data-filter="ebook">eBooks</option>
+				<option data-filter="whitepaper">Whitepapers</option>
+				<option data-filter="testimonial">Testimonials</option>
 			</select>
 		</div>
 
-		<div class="col-md-3 col-sm-3">
+		<div class="col-md-3 col-sm-3 industry-type">
 			<span>Filter by Industry:</span>
 			<select>
-				<option>Show All</option>
+				<option data-filter=" ">Show All</option>
+				<option data-filter="association">Association Management</option>
+				<option data-filter="construction">Construction</option>
+				<option data-filter="nonprofit">Nonprofit</option>
+				<option data-filter="property">Property Management</option>
 			</select>
 		</div>
 
 
-		<div class="col-md-3 col-sm-3">
+		<div class="col-md-3 col-sm-3 topic">
 			<span>Filter by Topic:</span>
 			<select>
-				<option>Show All</option>
+				<option data-filter=" ">Show All</option>
+				<option data-filter="accounts">Accounts Payable</option>
+				<option data-filter="ap">AP Efficiency</option>
+				<option data-filter="approval">Approval Workflow</option>
+				<option data-filter="automated">Automated Payments</option>
+				<option data-filter="electronic">Electronic Invoicing</option>
+				<option data-filter="best">Payment Best Practices</option>
+				<option data-filter="trends">Payment Trends</option>
 			</select>
 		</div>
 
 
-		<div class="col-md-3 col-sm-3">
+		<div class="col-md-3 col-sm-3 job-title">
 			<span>Filter by Job Title:</span>
 			<select>
-				<option>Show All</option>
+				<option data-filter=" ">Show All</option>
+				<option data-filter="ap">AP Manager</option>
+				<option data-filter="cfo">CFO</option>
+				<option data-filter="controller">Controller</option>
+				<option data-filter="partner">Partner</option>
+				<option data-filter="vendor">Vendor</option>
 			</select>
 		</div>
 	</div>
@@ -182,7 +204,7 @@ get_template_part('partials/sections/section', 'resource-hero');
 			<?php if ($wp_query->have_posts()) : ?>
 				<?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
 					<?php if ($counter == 2) { ?>
-						<div class="mix-post-inner1 custom-post">
+						<div class="mix-post-inner1 all custom-post">
 							<div class="custom-post-inner">
 
 								<div class="telegram-image">
@@ -194,7 +216,20 @@ get_template_part('partials/sections/section', 'resource-hero');
 						</div>
 
 					<?php } ?>
-					<div class="mix-post-inner1  resource-post-<?php echo $counter ?>">
+					
+			<div class="mix-post-inner1 all <?php 
+						$terms = get_the_terms($post->ID, 'category');
+						$len = count($terms);
+						foreach ($terms as $index => $term) {
+
+							if ($index == $len - 1) {
+							echo $term->name . "  ";
+							} else {
+							echo $term->name . " ";
+							}
+						} 
+
+ 					?> resource-post-<?php echo $counter ?>">
 						<div class="top-image" style="background-image: url(<?php echo get_the_post_thumbnail_url($post_id, 'large'); ?>) !important;"></div>
 						<div class="mix-post-inner-desc">
 							<h2><?php echo get_the_title(); ?></h2>
@@ -269,6 +304,138 @@ get_template_part('partials/sections/section', 'resource-hero');
 	});
 </script>
 
+<script type="text/javascript">
+
+jQuery(document).ready(function($){
+	$(".mix-post-inner1").show();
+    $(".resource-type select").change(function(){ 
+        $(this).find("option:selected").each(function(){
+            var optionValue = $(this).attr("data-filter");
+	    if(optionValue == " "){
+		$(".mix-post-inner1.Whitepaper").show();
+		$(".mix-post-inner1.Testimonial").show();
+		$(".mix-post-inner1.eBook").show();
+		$(".mix-post-inner1.Short").show();
+		$(".mix-post-inner1.Short").show();
+		$(".mix-post-inner1.custom-post").show();
+            }
+	if(optionValue){
+                $(".mix-post-inner1").not("." + optionValue).hide();
+                $("." + optionValue).show();
+
+            } else{
+                $(".mix-post-inner1").hide();
+		
+        }
+        });
+    });
+});
+
+
+
+ jQuery(document).ready(function($){
+	$(".mix-post-inner1").show();
+    $(".industry-type select").change(function(){ 
+        $(this).find("option:selected").each(function(){
+            var optionValue = $(this).attr("data-filter");
+	    if(optionValue == " "){
+		$(".mix-post-inner1.Construction").show();
+		$(".mix-post-inner1.Association").show();
+		$(".mix-post-inner1.Nonprofit").show();
+		$(".mix-post-inner1.Property").show();
+		//$(".mix-post-inner1.custom-post").show();
+            }
+	if(optionValue){
+                $(".mix-post-inner1").not("." + optionValue).hide();
+                $("." + optionValue).show();
+
+            } else{
+                $(".mix-post-inner1").hide();
+		
+        }
+        });
+    });
+});
+
+
+
+ jQuery(document).ready(function($){
+	$(".mix-post-inner1").show();
+    $(".topic select").change(function(){ 
+        $(this).find("option:selected").each(function(){
+            var optionValue = $(this).attr("data-filter");
+	    if(optionValue == " "){
+		$(".mix-post-inner1.Accounts").show();
+		$(".mix-post-inner1.Efficiency").show();
+		$(".mix-post-inner1.Approval").show();
+		$(".mix-post-inner1.Automated").show();
+		$(".mix-post-inner1.Electronic").show();
+		$(".mix-post-inner1.Practices").show();
+		$(".mix-post-inner1.Trends").show();
+		//$(".mix-post-inner1.custom-post").show();
+            }
+	if(optionValue){
+                $(".mix-post-inner1").not("." + optionValue).hide();
+                $("." + optionValue).show();
+
+            } else{
+                $(".mix-post-inner1").hide();
+		
+        }
+        });
+    });
+});
+
+
+
+
+ jQuery(document).ready(function($){
+	$(".mix-post-inner1").show();
+    $(".job-title select").change(function(){ 
+        $(this).find("option:selected").each(function(){
+            var optionValue = $(this).attr("data-filter");
+	    if(optionValue == " "){
+		$(".mix-post-inner1.Manager").show();
+		$(".mix-post-inner1.CFO").show();
+		$(".mix-post-inner1.Controller").show();
+		$(".mix-post-inner1.Partner").show();
+		$(".mix-post-inner1.Vendor").show();
+		//$(".mix-post-inner1.custom-post").show();
+            }
+	if(optionValue){
+                $(".mix-post-inner1").not("." + optionValue).hide();
+                $("." + optionValue).show();
+
+            } else{
+                $(".mix-post-inner1").hide();
+		
+        }
+        });
+    });
+});
+
+
+jQuery(function ($) { 
+    $(".resource-post-outer .mix-post-inner .mix-post-inner1").hide();
+    $(".resource-post-outer .mix-post-inner .mix-post-inner1").slice(0, 6).show();
+    $(".resource-post-outer .loadmore").on('click', function (e) {
+        e.preventDefault();
+        $(".resource-post-outer .mix-post-inner .mix-post-inner1:hidden").slice(0, 6).show();
+        if ($(".resource-post-outer .mix-post-inner .mix-post-inner1:hidden").length == 0) {
+            $(".resource-post-outer .loadmore").fadeOut('slow');
+        }
+    });
+});
+
+
+</script>
+
+
+<style>
+.resource-post-outer:after {
+    background:transparent !important;
+}
+</style>
 <div class="request-demo-out">
 	<div class="bottom-design"></div>
 	<section class="section request-demo" id="demoRequest">
