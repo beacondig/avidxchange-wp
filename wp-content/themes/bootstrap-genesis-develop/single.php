@@ -48,7 +48,7 @@
 <!--- form modal end --->
 
 
-<div class="header-blog-inner">
+<div class="header-blog-inner new-header-banner">
   <div class="hero-body">
     <div class="container">
       <div class="pageTitleTop">Blog:</div>
