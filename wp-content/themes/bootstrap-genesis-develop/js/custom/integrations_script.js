@@ -22,7 +22,7 @@ jQuery(document).ready(function (a) {
 			console.log(a('.integrations-wrapper').find('.active-int').length);
 			if(a('body').find('.show-all-integration').length > 0){
 			if(a('.integrations-wrapper').find('.active-int').length > 12){
-				load_more_int_fun();
+				//load_more_int_fun();
 				a('.show-all-integration').show();
 			}
 			else{
@@ -57,19 +57,16 @@ jQuery(document).ready(function (a) {
 
 
 a('.show-all-integration a').click(function () {
-	load_more_int_fun();
-});
-function load_more_int_fun(){
-	a(".integration-item.active-int").hide();
-        size_li = a(".integration-item.active-int").size();
-        x=12;
-        a('.integration-item.active-int:lt('+x+')').show();
-        a('.show-all-integration a').click(function () {
-        x= (x+12 <= size_li) ? x+12 : size_li;
-        a('.integration-item.active-int:lt('+x+')').show();
+	x= (x+12 <= size_li) ? x+12 : size_li;
+        a('.integration-item:lt('+x+')').show();
         if(x == size_li){
             a('.show-all-integration').hide();
         }
-        });
-}
+});
+/*function load_more_int_fun(){
+	a(".integration-item").hide();
+        size_li = a(".integration-item").size();
+        x=12;
+        a('.integration-item:lt('+x+')').show();
+}*/
 });
