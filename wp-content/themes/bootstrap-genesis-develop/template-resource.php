@@ -220,6 +220,7 @@ get_template_part('partials/content', 'inner-page-header');
 			<div class="mix-post-inner1 all <?php 
 						$terms = get_the_terms($post->ID, 'category');
 						$len = count($terms);
+						
 						foreach ($terms as $index => $term) {
 
 							if ($index == $len - 1) {
@@ -307,6 +308,25 @@ get_template_part('partials/content', 'inner-page-header');
 <script type="text/javascript">
 
 jQuery(document).ready(function($){
+
+	$('.filters select').change(function(){
+		var countoption = 0;
+		$('.filters select').each(function(){
+		$(this).find("option:selected").each(function(){
+			var optionValueWrap = $(this).attr("data-filter");
+			if(optionValueWrap == " "){
+				countoption = countoption + 1;
+			}
+		}); 
+		});
+		if(countoption == 4){
+			$('.resource-top-blog').show();
+			$('.slick-dots li:nth-child(1) button').click();
+		}
+		else{
+			$('.resource-top-blog').hide();
+		} 
+	}); 
 	$(".mix-post-inner1").show();
     $(".resource-type select").change(function(){ 
         $(this).find("option:selected").each(function(){
@@ -325,7 +345,6 @@ jQuery(document).ready(function($){
 
             } else{
                 $(".mix-post-inner1").hide();
-		
         }
         });
     });
@@ -348,10 +367,8 @@ jQuery(document).ready(function($){
 	if(optionValue){
                 $(".mix-post-inner1").not("." + optionValue).hide();
                 $("." + optionValue).show();
-
             } else{
                 $(".mix-post-inner1").hide();
-		
         }
         });
     });
@@ -377,10 +394,8 @@ jQuery(document).ready(function($){
 	if(optionValue){
                 $(".mix-post-inner1").not("." + optionValue).hide();
                 $("." + optionValue).show();
-
             } else{
                 $(".mix-post-inner1").hide();
-		
         }
         });
     });

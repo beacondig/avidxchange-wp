@@ -87,7 +87,7 @@
 					  <?php endforeach; wp_reset_postdata(); ?>
 					<?php endif; ?>
 				</ul>
-				<a class="btn" href="#">See All News</a>
+				<a class="btn" href="/news/">See All News</a>
 				<div class="about-leadership">
 					<div class="leader-image"><img src="<?php echo get_field('about_leadership_team_image');?>" /></div>
 					<div class="leader-info">
