@@ -31,7 +31,7 @@ get_template_part('partials/content', 'inner-page-header');
 		<div class="col-md-3 col-sm-3 resource-type">
 			<span>Filter by Type:</span>
 			<select>
-				<option data-filter=" ">All Resources</option>
+				<option data-filter=" ">Show All</option>
 				<option data-filter="webinars">Webinars</option>
 				<option data-filter="product">Product Info</option>
 				<option data-filter="short">Short Videos</option>
