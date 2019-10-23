@@ -67,8 +67,7 @@
 		</section>
 		<section class="solutions-beginners-guide">
 			<div class="container">
-				<h2>Check Out Our Beginners Guide to AP Automation</h2>
-				<p>Whether you are brand new to accounts payable or a long-time industry veteran, this guide contains useful insights to help you reach for industry-leading levels of productivity and cost-savings for your business. Check out the chapters below to start learning everything you need to know to become an AP guru.</p>
+			<?php echo the_sub_field('solutions_beginners_guide_heading');?>
 				<?php if(have_rows('solutions_guide_chapter_links')): ?>
 					<?php $c = 1;?>
 					<ul>

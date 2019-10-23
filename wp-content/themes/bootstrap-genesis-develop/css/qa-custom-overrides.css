@@ -1243,14 +1243,14 @@ section.about-press-room.about-press-style2 .leader-info {
 
 
 /************Integration Page *********/
-.show-more a#load-int:hover {
+/* .show-more a#load-int:hover {
 background: #a4d137;
 color:#fff;
-}
+} */
 section.integrations.integrations-outer {
   padding-bottom: 0px;
 }
-.show-more a#load-int {
+/* .show-more a#load-int {
   color: #404041;
   font-weight: 700;
   box-sizing: border-box;
@@ -1271,7 +1271,7 @@ section.integrations.integrations-outer {
   font-size: 24px;
   font-family: "Artegra Sans Alt",sans-serif;
   cursor: pointer;
-}
+} */
 .integrations.integrations-outer .show-more {
   text-align: center;
   margin: 15px 0px 0px;
