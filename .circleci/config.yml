@@ -4,7 +4,7 @@ defaults: &defaults
     docker:
         - image: circleci/node:10.13.0
     working_directory: ~/avidxchange-wp
-
+ 
 jobs:
     build:
         <<: *defaults

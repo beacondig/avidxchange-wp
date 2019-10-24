@@ -28,10 +28,10 @@ jQuery(function() {
 
 jQuery(function ($) {
 $(".integrations-wrapper .integration-item").hide();
-$(".integrations-wrapper .integration-item").slice(0, 4).show();
+$(".integrations-wrapper .integration-item").slice(0, 12).show();
 $("#load-int").on('click', function (e) {
 	e.preventDefault();
-	$(".integrations-wrapper .integration-item:hidden").slice(0, 4).show();
+	$(".integrations-wrapper .integration-item:hidden").show();
 	if ($(".integrations-wrapper .integration-item:hidden").length == 0) {
 		$("#load-int").fadeOut('slow');
 	}
