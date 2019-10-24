@@ -108,15 +108,12 @@
 }
 
 .industry-detail-logos {
-		background:url('../img/home/blueangle_bg2.png') no-repeat;
-		background-size:100% 90%;
-		background-position:center top;
-		padding:250px 0 250px;
+		padding:250px 0 50px;
 		text-align:center;
 		color:#fff;
 		margin:-165px auto 0;
 		z-index:4;
-		@include angled(bottom, after, 5.0deg, #ffffff);
+		@include angled(top, before, -5.0deg, #ffffff);
 		@include respond-at(999px) {
 			padding:200px 0 150px;
 			margin: -165px auto 0;
@@ -126,18 +123,17 @@
 			padding:150px 0 150px;
 		}
 		h2 {
-			color:#fff;
-			font-size:$heading2;
-			@include respond-at(999px) {
-				font-size:$heading3;
-			}
+			color:$grey;
+			font-size:$heading3;
+			position:relative;
+			z-index:9;
 			@include respond-at(699px) {
 				font-size:$heading5;
 			}
 		}
 		ul {
 			width:100%;
-			margin:80px auto 50px;
+			margin:50px auto;
 			display:flex;
 			justify-content:space-around;
 			align-items:center;
@@ -146,7 +142,7 @@
 				margin:80px auto 150px;
 			}
 			li {
-				max-width:22%;
+				max-width:30%;
 				min-width:20%;
 				margin:0 2% 80px;
 				@include respond-at(1499px) {
@@ -168,21 +164,14 @@
 			}
 		}
 		a.btn {
-			background:#fff;
-			color:$brightblue;
-			border:2px solid #fff;
 			margin-bottom:150px;
-			&:hover {
-				background:transparent;
-				color:#fff;
-			}
 		}
 }
 
 .industry-detail-solutions {
 		text-align:center;
 		z-index:4;
-		margin-top:-150px;
+		padding-top:0;
 		h2 {
 			font-size:$heading3;
 		}
@@ -195,6 +184,16 @@
 		.container {
 			width:100%;
 			max-width:100%;
+		}
+		@include respond-at(1899px) {
+			padding-top:165px;
+		}
+		@include respond-at(1799px) {
+			padding-top:130px;
+			margin-top:-190px;
+		}
+		@include respond-at(1699px) {
+			padding-top:110px;
 		}
 		@include respond-at(1599px) {
 			padding-top:160px;
@@ -278,13 +277,11 @@
 }
 
 .industry-detail-customer-logos {
-		background:url('../img/gradient-angled-background.png') no-repeat;
-		background-size:100% 100%;
-		background-position:center top;
+		@include angled(top, before, -3.0deg, #ffffff);
 		z-index:6;
 		position:relative;
-		margin-top:-245px;
-		padding:80px 0 200px;
+		margin-top:-195px;
+		padding:180px 0 200px;
 		text-align:center;
 		@include respond-at(1199px) {
 			margin-top:-250px;
@@ -322,7 +319,11 @@
 			margin-top:-555px;
 			padding:30px 0 50px;
 		}
-		
+		h2 {
+			color:$grey;
+			font-size:32px;
+			padding-bottom:50px;
+		}
 		ul {
 			display:flex;
 			flex-flow:row wrap;
@@ -403,6 +404,7 @@
 			-ms-flex-flow: row wrap;
 			flex-flow:row nowrap;
 			justify-content:center;
+			margin-bottom:-145px;
 			@include respond-at(899px) {
 				flex-flow:row wrap;
 				margin-top:-100px;

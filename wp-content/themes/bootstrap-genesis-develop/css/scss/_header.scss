@@ -371,6 +371,12 @@ header.site-header-new {
 							letter-spacing:1px;
 							padding:10px 10px 10px 30px;
 							background:transparent;
+							&:hover {
+								background:#fff;
+								a {
+									color:$brightblue;
+								}
+							}
 							@include respond-at(599px) {
 								padding:10px 10px 10px 50px;
 								font-size:18px;
@@ -510,7 +516,7 @@ header.site-header-new nav ul li {
 }
 
 .header-scroll {
-		@extend header.site-header-new;
+		@extend header, .site-header-new;
 		position:fixed;
 		top:-120px;
 		opacity:0;

@@ -333,6 +333,23 @@
 		@include respond-at(999px) {
 			padding:0 0 250px;
 		}
+		h2 {
+			font-size:$heading2;
+			padding-bottom:20px;
+			width:100%;
+			text-align:center;
+			@include respond-at(749px) {
+				font-size:$heading3;
+			}
+		}
+		p {
+			padding-bottom:50px;
+			width:80%;
+			max-width:1200px;
+			margin:0 auto;
+			display:block;
+			text-align:center;
+		}
 		.selections{
 			display:inline-block;
 			vertical-align:top;
@@ -352,8 +369,7 @@
 				display:block;
 				margin-bottom:30px;
 				cursor:pointer;
-				&:hover, &.open {
-					
+				&:hover, &.open {	
 					.heading {
 						color:$brightblue;
 					}
@@ -385,6 +401,9 @@
 					opacity:0;
 					p {
 						padding-bottom:15px;
+						text-align:left;
+						width:100%;
+						margin:0;
 					}
 				}
 			}
@@ -439,11 +458,17 @@
 					text-transform:uppercase;
 					padding-bottom:15px;
 					line-height:35px;
+					text-align:center;
 				}
 				p {
 					font-size:16px;
 					line-height:20px;
 					padding-bottom:20px;
+				}
+				a.link {
+					margin:0 auto;
+					text-align:center;
+					display:block;
 				}
 			}
 			.bx-wrapper {
@@ -522,6 +547,7 @@
 		}
 		@include respond-at(749px) {
 			padding:150px 0 150px;
+			background-size:100% 1000px;
 		}
 		h2 {
 			color:#fff;
@@ -588,6 +614,10 @@
 			box-sizing:border-box;
 			@include respond-at(999px) {
 				padding:50px 30px;
+			}
+			@include respond-at(599px) {
+				width:120%;
+				margin-left:-10%;
 			}
 			.heading {
 				color:$grey;
@@ -751,7 +781,7 @@
 			@include respond-at(699px) {
 				width: 250px !important;
 			}
-			@include respond-at(499px) {
+			@include respond-at(599px) {
 				height:200px;
 			}
 			&:hover {

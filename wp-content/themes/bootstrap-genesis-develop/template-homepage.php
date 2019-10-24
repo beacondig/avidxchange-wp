@@ -22,6 +22,8 @@
 		</section>
 		<section class="home-details">
 			<div class="b-container">
+				<h2>Automation = Liberation</h2>
+				<p>Our software solutions completely automate your accounts payable and payment process, liberating your AP from the endless paper chase that’s eating up time and money and replacing it with a digital application that provides you with 24/7 on-demand access.</p>
 				<div class="selections">
 					<?php if(have_rows('homepage_automate_your_ap_items')): ?>
 						<ul>
@@ -61,7 +63,7 @@
 		<section class="home-search">
 			<div class="container">	
 				<h2><?php echo get_field('homepage_accounting_systems_heading');?></h2>
-				<p>We know how important it is for your accounting system to remain your system of record. That’s why we’re dedicated to building seamless integrations between our accounts payable software and over 150 accounting systems. After all, we’re here to help streamline your payment processes, not pile on to your pain.</p>
+				<p><?php echo get_field('homepage_accounting_systems_intro');?></p>
 				<?php if(have_rows('homepage_accounting_systems_logos')): ?>
 					<ul>
 						<?php while(have_rows('homepage_accounting_systems_logos')): the_row();?>	
@@ -130,8 +132,8 @@
 			</div>
 		</section>
 		<section class="home-industries">
-			<h2>Transforming Industries</h2>
-			<p>We’re the ones who believe there’s a better way for businesses to process invoices and make payments without the endless piles of paper so many accounts payable departments find themselves buried in. So, we dedicated ourselves to building that better way with a suite of software and service solutions aimed at becoming the automated ally for those same AP teams.</p>
+			<h2><?php echo get_field('transforming_industries_header');?></h2>
+			<p><?php echo get_field('transforming_industries_intro');?></p>
 			<div class="prev"><img src="<?php echo get_stylesheet_directory_uri();?>/img/home/left-arrow-blue.png" /></div>
 			<div class="next"><img src="<?php echo get_stylesheet_directory_uri();?>/img/home/right-arrow-blue.png" /></div>
 			<?php $pages = get_pages(array('parent'=>5851, 'sort_order'=>'ASC', 'sort_column'=>'menu_order'));?>
@@ -158,8 +160,8 @@
 		</section>
 		<section class="home-testimonials">
 			<div class="container">
-				<h2>One Mission, multiple solutions.</h2>
-				<p>Our mission is consistent across the board: To transform the way companies pay bills. But we know how much payment processes can differ across industries. So we’ve put in the legwork to understand the processes and unique needs of your business and build AP software solutions that are tailor-made to your needs.</p>
+				<h2><?php echo get_field('homepage_testimonials_header');?></h2>
+				<p><?php echo get_field('homepage_testimonials_intro');?></p>
 				<?php if(have_rows('homepage_testimonials_items')): ?>
 					<ul>
 						<?php while(have_rows('homepage_testimonials_items')): the_row();?>	
