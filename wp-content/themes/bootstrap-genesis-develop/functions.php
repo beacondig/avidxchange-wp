@@ -1270,10 +1270,16 @@ function theme_styles() {
 			wp_enqueue_style('theme-styles', get_stylesheet_directory_uri() . '/css/theme-styles.css', array(), filemtime(get_stylesheet_directory().'/css/theme-styles.css') );
 			wp_enqueue_style('new-hf-styles', get_stylesheet_directory_uri() . '/css/new-hf-styles.css', array(), filemtime(get_stylesheet_directory().'/css/new-hf-styles.css') );
 			wp_enqueue_style('theme-style-overrides', get_stylesheet_directory_uri() . '/css/qa-custom-overrides.css', array(), filemtime(get_stylesheet_directory().'/css/qa-custom-overrides.css') );
-		} elseif (is_page_template( 'template-industries.php' ) || is_page_template( 'template-industry-detail.php' ) || is_page_template( 'single.php') || is_page_template( 'template-resource.php' )) {
-			wp_enqueue_style('theme-styles', get_stylesheet_directory_uri() . '/css/theme-styles.min.css', array(), filemtime(get_stylesheet_directory().'/css/theme-styles.min.css') );
+		} elseif (is_page_template( 'template-industries.php' ) || is_page_template( 'template-industry-detail.php' ) || is_page_template( 'single.php')) {
 			wp_enqueue_style('components', get_stylesheet_directory_uri() . '/css/components.min.css', filemtime(get_stylesheet_directory().'/css/components.min.css') );
-			wp_enqueue_style('theme-styles2', get_stylesheet_directory_uri() . '/css/theme-styles.css', array(), filemtime(get_stylesheet_directory().'/css/theme-styles.css') );
+			wp_enqueue_style('theme-styles', get_stylesheet_directory_uri() . '/css/theme-styles.css', array(), filemtime(get_stylesheet_directory().'/css/theme-styles.css') );
+			wp_enqueue_style('new-hf-styles', get_stylesheet_directory_uri() . '/css/new-hf-styles.css', array(), filemtime(get_stylesheet_directory().'/css/new-hf-styles.css') );
+			wp_enqueue_style('theme-style-overrides', get_stylesheet_directory_uri() . '/css/qa-custom-overrides.css', array(), filemtime(get_stylesheet_directory().'/css/qa-custom-overrides.css') );
+		}elseif(is_page_template( 'template-resources2.php' ) || is_page_template( 'template-resource.php' )) {
+			wp_enqueue_style('slick-css', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css');
+			wp_enqueue_style('slick-theme-css', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css');
+			wp_enqueue_style('components', get_stylesheet_directory_uri() . '/css/components.min.css', filemtime(get_stylesheet_directory().'/css/components.min.css') );
+			wp_enqueue_style('theme-styles', get_stylesheet_directory_uri() . '/css/theme-styles.css', array(), filemtime(get_stylesheet_directory().'/css/theme-styles.css') );
 			wp_enqueue_style('new-hf-styles', get_stylesheet_directory_uri() . '/css/new-hf-styles.css', array(), filemtime(get_stylesheet_directory().'/css/new-hf-styles.css') );
 			wp_enqueue_style('theme-style-overrides', get_stylesheet_directory_uri() . '/css/qa-custom-overrides.css', array(), filemtime(get_stylesheet_directory().'/css/qa-custom-overrides.css') );
 		}elseif(is_page_template('template-site-demo-thank-you.php')) {
@@ -1316,7 +1322,9 @@ function theme_scripts() {
 			wp_enqueue_script('global-functions', get_stylesheet_directory_uri() . '/js/global-functions.js', array('jquery'), filemtime(get_stylesheet_directory().'/js/global-functions.js'),TRUE);
 		}elseif(is_page_template('template-site-demo-thank-you.php')) {
 			wp_enqueue_script('global-functions', get_stylesheet_directory_uri() . '/js/global-functions.js', array('jquery'), filemtime(get_stylesheet_directory().'/js/global-functions.js'),TRUE);
-		}elseif(is_page_template('template-resource.php')) {
+		}elseif(is_page_template('template-resource.php') || is_page_template('template-resources2.php')) {
+			wp_enqueue_script('slick-js', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js', array('jquery'));
+			wp_enqueue_script('resources-functions', get_stylesheet_directory_uri() . '/js/resources-functions.js', array('jquery', 'slick-js'), filemtime(get_stylesheet_directory().'/js/resources-functions.js'),TRUE);
 			wp_enqueue_script('global-functions', get_stylesheet_directory_uri() . '/js/global-functions.js', array('jquery'), filemtime(get_stylesheet_directory().'/js/global-functions.js'),TRUE);
 		}
 		elseif(is_page_template('single.php')) {
@@ -1359,3 +1367,93 @@ add_action( 'genesis_before_footer', 'add_scroll_button' );
 function add_scroll_button() {
 	?> <a href="#" class="back-to-top hidden-sm hidden-xs"><i class="fa fa-chevron-up"></i></a> <?php
 } */
+
+add_action('wp_ajax_load_posts_by_ajax', 'load_posts_by_ajax_callback');
+add_action('wp_ajax_nopriv_load_posts_by_ajax', 'load_posts_by_ajax_callback');
+
+function load_posts_by_ajax_callback() {
+		check_ajax_referer('load_more_posts', 'security');
+		$paged = $_POST['page'];
+		$cat_slug = $_POST['cat_slug'];
+		$args = array(
+			'post_type' => 'resources',
+			'post_status' => 'publish',
+			'posts_per_page' => '6',
+			'category_name' => ''.$cat_slug.'',
+			'paged' => $paged,
+		);
+		$my_posts = new WP_Query( $args );
+		if ( $my_posts->have_posts() ) :
+        ?>
+        <?php while ( $my_posts->have_posts() ) : $my_posts->the_post(); ?>
+           <div class="mix-post-inner1 all <?php 
+				$terms = get_the_terms($post->ID, 'category');
+				$len = count($terms);
+				foreach ($terms as $index => $term) {
+					if ($index == $len - 1) {
+						echo $term->slug . "  ";
+					} else {
+						echo $term->slug . " ";
+					}
+				} 
+				?> resource-post-<?php echo $counter ?>">
+				<div class="top-image" style="background-image: url(<?php echo get_the_post_thumbnail_url($post_id, 'large'); ?>) !important;"></div>
+				<div class="mix-post-inner-desc">
+					<h2><?php echo get_the_title(); ?></h2>
+					<p class="cat"> 
+						<?php echo get_field('resource_type', $post->ID);?> | <?php the_time('F Y');?>
+					</p>
+					<p><?php echo get_field('mini_description', $post->ID); ?></p>
+					<a href="<?php the_permalink(); ?>" class="learnmore">READ MORE > </a>
+				</div>
+			</div>
+        <?php endwhile; ?>
+        <?php
+    endif;
+ 
+    wp_die();
+}
+
+add_action('wp_ajax_filter_load', 'ajax_filter_function'); 
+add_action('wp_ajax_nopriv_filter_load', 'ajax_filter_function');
+
+function ajax_filter_function() {
+		check_ajax_referer('filter_load', 'security');
+		$cat_slug = $_POST['cat_slug'];
+		$args = array(
+			'post_type' => 'resources',
+			'post_status' => 'publish',
+			'posts_per_page' => '-1',
+			'category_name' => ''.$cat_slug.''
+		);
+		$my_posts = new WP_Query( $args );
+		if ( $my_posts->have_posts() ) :
+        ?>
+        <?php while ( $my_posts->have_posts() ) : $my_posts->the_post(); ?>
+           <div class="mix-post-inner1 all <?php 
+				$terms = get_the_terms($post->ID, 'category');
+				$len = count($terms);
+				foreach ($terms as $index => $term) {
+					if ($index == $len - 1) {
+						echo $term->slug . "  ";
+					} else {
+						echo $term->slug . " ";
+					}
+				} 
+				?> resource-post-<?php echo $counter ?>">
+				<div class="top-image" style="background-image: url(<?php echo get_the_post_thumbnail_url($post_id, 'large'); ?>) !important;"></div>
+				<div class="mix-post-inner-desc">
+					<h2><?php echo get_the_title(); ?></h2>
+					<p class="cat"> 
+						<?php echo get_field('resource_type', $post->ID);?> | <?php the_time('F Y');?>
+					</p>
+					<p><?php echo get_field('mini_description', $post->ID); ?></p>
+					<a href="<?php the_permalink(); ?>" class="learnmore">READ MORE > </a>
+				</div>
+			</div>
+        <?php endwhile; ?>
+        <?php
+    endif;
+ 
+    wp_die();
+}

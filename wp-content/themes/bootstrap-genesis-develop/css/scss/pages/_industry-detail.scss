@@ -328,6 +328,9 @@
 			display:flex;
 			flex-flow:row wrap;
 			justify-content:space-between;
+			-webkit-box-align: baseline;
+			-ms-flex-align: baseline;
+			align-items: baseline;
 			@include respond-at(699px) {
 				justify-content:center;
 			}

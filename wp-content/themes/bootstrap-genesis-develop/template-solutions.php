@@ -67,7 +67,7 @@
 		</section>
 		<section class="solutions-beginners-guide">
 			<div class="container">
-			<?php echo the_sub_field('solutions_beginners_guide_heading');?>
+			<?php echo get_field('solutions_beginners_guide_heading');?>
 				<?php if(have_rows('solutions_guide_chapter_links')): ?>
 					<?php $c = 1;?>
 					<ul>

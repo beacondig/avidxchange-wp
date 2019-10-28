@@ -93,11 +93,11 @@
 /***************Health Care Page *********/
 
 
-.industry-detail-customer-logos ul {
-  -webkit-box-align: baseline !important;
-      -ms-flex-align: baseline !important;
-          align-items: baseline !important;
-}
+/*.industry-detail-customer-logos ul {
+		-webkit-box-align: baseline !important;
+		-ms-flex-align: baseline !important;
+        align-items: baseline !important;
+}*/
 
 /***************Real Estate Page *********/
 /*.industry-detail-benefit-values ul li .benefit {
@@ -109,7 +109,7 @@
 .industry-detail-benefit-values ul li .benefit img {
   padding-bottom: 15px;
 }*/
-.partial-inner-page-header .header-image img{width: auto}
+/*.partial-inner-page-header .header-image img{width: auto}*/
 @media only screen and (max-width: 899px) {
 /*  .resource-post-outer .post-outer-wrap .post-item-out {
   margin: 0 auto 30px;
@@ -207,7 +207,7 @@ section#demoRequest {
 }
 
 /************Resource ***************/
-.mix-post-inner {
+/*.mix-post-inner {
   -ms-flex-pack: distribute !important;
       justify-content: space-around !important;
 }
@@ -225,7 +225,7 @@ section#demoRequest {
 .resource-top-blog-inner a.learnmore:hover {
   background: #a4d137 !important;
   color: #fff !important;
-}
+}*/
 .res-banner-out .res-banner-btn .btn-primary:hover {
   background: #a4d137 !important;
   color: #fff !important;
@@ -242,33 +242,13 @@ section#demoRequest {
   border-radius: 3px !important;
   background: transparent !important;
 }
-.mix-post-inner1 a.learnmore,.resource-top-blog-inner a.learnmore{
-  border: 2px solid #a4d137;
-  color: #404041;
-  -webkit-transition: background 500ms ease;
-  transition: background 500ms ease;
-  display: inline-block;
-  text-decoration: none;
-  font-size: 16px;
-  text-align: center;
-  position: relative;
-  border-radius: 3px;
-  min-width: 168px;
-}
+/*
 .loadmore-wrap {
 margin-top:25px; 
 }
 .resource-top-blog-inner a.learnmore {
   padding: 12px 20px 8px 20px;
-}
-.request-demo-out #demoRequest.request-demo {
-  background-image: url(http://avidxdev.wpengine.com/wp-content/uploads/2019/10/green-rectangle1.png) !important;
-  background-color: transparent !important;
-  background-size: cover !important;
-  background-position: top !important;
-  padding: 140px 0px 100px !important;
-  position: relative;
-}
+}*/
 .request-demo-out {
   position: relative;
 }
@@ -289,6 +269,7 @@ margin-top:25px;
           transform: rotate(180deg);
   overflow:hidden;
 }
+/*
 .loadmore-wrap.loadmore-header-style {
   background: transparent;
   margin-top:25px;
@@ -300,14 +281,14 @@ margin-top:25px;
   border-radius: 3px;
   z-index: 99999999;
   position: relative; 
-}
+}*/
 .res-banner-out.partial-inner-page-header .header-image img {
   width: auto;
 } 
-.loadmore-wrap.loadmore-header-style a:hover {
+/*.loadmore-wrap.loadmore-header-style a:hover {
   background: #a4d137;
   color: #fff !important;
-}
+}*/
 .resource-post-outer {
   padding-bottom: 40px;
 }
@@ -338,6 +319,7 @@ letter-spacing: 1px;
 background: #fff;
 color: #0684c9;
 }
+/*
 .mix-post-inner-desc p {
 font-size: 16px;
 line-height: 1.4;
@@ -392,7 +374,7 @@ text-align: center;
 max-width: 135px;
 margin: 0 auto;
 margin-bottom: 30px;
-}
+}*/
 .filters .col-md-3 select {
   font-family: "Artegra Sans Alt",sans-serif;
   color: #404041;
@@ -895,11 +877,12 @@ section#demoRequest {
   text-transform: uppercase;
   font-family: "Artegra Sans Alt",sans-serif;
 }
+/*
 .mix-post-inner1 a.learnmore:hover,
 .resource-top-blog-inner a.learnmore:hover {
   background: #a4d137 !important;
   color: #fff !important;
-}
+}*/
 .res-banner-out .res-banner-btn .btn-primary:hover {
   background: #a4d137 !important;
   color: #fff !important;
@@ -916,6 +899,7 @@ section#demoRequest {
   border-radius: 3px !important;
   background: transparent !important;
 }
+/*
 .resource-top-blog { 
     padding-top: 100px;
     padding-bottom: 40px;
@@ -942,9 +926,9 @@ max-width: initial !important;
 }
 .resource-top-blog-inner a.learnmore {
   padding: 12px 20px 8px 20px;
-}
+}*/
 .request-demo-out #demoRequest.request-demo {
-  background-image: url(http://avidxdev.wpengine.com/wp-content/uploads/2019/10/green-rectangle1.png) !important;
+  background-image: url('../img/green-rectangle1.png') !important;
   background-color: transparent !important;
   background-size: cover !important;
   background-position: top !important;
@@ -954,7 +938,7 @@ max-width: initial !important;
 .request-demo-out {
   position: relative;
 }
-
+/*
 .loadmore-wrap.loadmore-header-style {
   background: transparent;
   margin-top:60px; 
@@ -964,17 +948,18 @@ max-width: initial !important;
   background-color: transparent;
   color: #404041 !important;
   border-radius: 3px;
-}
+}*/
 .res-banner-out.partial-inner-page-header .header-image img {
   width: auto;
 } 
+/*
 .loadmore-wrap.loadmore-header-style a:hover {
   background: #a4d137;
   color: #fff !important;
 }
 .resource-post-outer {
   padding-bottom: 40px;
-}
+}*/
 .res-banner-out .res-banner-btn .btn-primary {
 text-align: center;
 font-weight: 700;
@@ -1002,6 +987,7 @@ letter-spacing: 1px;
 background: #fff;
 color: #0684c9;
 }
+/*
 .mix-post-inner-desc p {
 font-size: 16px;
 line-height: 1.4;
@@ -1094,7 +1080,7 @@ margin-bottom: 30px;
   font-family: "Artegra Sans Alt",sans-serif;
   padding-bottom: 8px;
   font-size: 18px;
-}
+}*/
 @-webkit-keyframes fadeScaleIn{
     from{
 	opacity:0;
