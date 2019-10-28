@@ -112,22 +112,22 @@
 									<?php $ict++; ?>
 								<?php endwhile; wp_reset_query(); ?>
 							</div>
-<div class="show-all-integration"><a>see all integrations</a></div>
+							
 							<div class="container-fluid noresultsdiv hnores" style="margin:0px 0px 40px;">
 								<div class="container" style="width:100%;">
 									<div class="clearfix"></div>
 										<div class="col-md-12 center">
 											<div class="row">
-												<p>Sorry, we couldn't find any accounting systems to match your search.</p>
-												<p><a href="/contact/">Contact Us</a> today to see if we can help.</p>
+												<p style="color:#404041;">Sorry, we couldn't find any accounting systems to match your search.</p>
 											</div>
 										</div>
 									<div class="clearfix"></div>
 								</div>
 							</div>
+							<div class="show-all-integration"><a href="<?php echo get_page_link(6164);?>">see all integrations</a></div>
 						</div>
 					</div>
-					<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri() . '/js/custom/integrations_script.js';?>"></script>
+					<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri() . '/js/custom/home-integrations.js';?>"></script>
 				</div>
 			</div>
 		</section>

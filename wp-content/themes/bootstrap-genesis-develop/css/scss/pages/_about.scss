@@ -28,6 +28,7 @@
 				display:inline-block;
 				vertical-align:bottom;
 				width:45%;
+				position:relative;
 				@include respond-at(1399px) {
 					width:50%;
 				}
@@ -38,6 +39,14 @@
 					width:100%;
 					display:block;
 					margin:0 auto 15px;
+				}
+				.overlay {
+					position:absolute;
+					top:0;
+					left:0;
+					width:100%;
+					height:100%;
+					background:rgba(0,0,0,0.3);
 				}
 				img {
 					width:100%;
@@ -115,6 +124,14 @@
 					width:100%;
 					overflow:hidden;
 					position:relative;
+					.overlay {
+						position:absolute;
+						top:0;
+						left:0;
+						width:100%;
+						height:100%;
+						background:rgba(0,0,0,0.5);
+					}
 					img {
 						width:100%;
 					}

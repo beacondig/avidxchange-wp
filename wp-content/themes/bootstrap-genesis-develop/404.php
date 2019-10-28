@@ -28,7 +28,11 @@ function genesis_404() {
 	) );
 ?>
 	<div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
-    <div class="fiftyspacer"></div>
+	<script>
+		jQuery('header').addClass('light');
+		jQuery('.header-scroll').remove();
+	</script>
+	<div class="fiftyspacer"></div>
 <?php
 		printf( '<h1 class="entry-title" style="text-align:center; font-size:150px;">%s</h1>', apply_filters( 'genesis_404_entry_title', __( '404', 'genesis' ) ) );
 		echo '<h2 style="text-align:center;margin-top: -10px;">Not Found</h2>';

@@ -27,6 +27,7 @@
 							$address = rawurlencode(strtolower(str_replace(',','', $address)));
 						?>
 						<a href="https://maps.google.com/maps?q=<?php echo $address;?>" target="_blank">
+							<div class="overlay"></div>
 							<img src="<?php echo get_field('about_corporate_office_map_image');?>" />
 						</a>
 					</div>
@@ -47,6 +48,7 @@
 							<li>
 								<a href="https://maps.google.com/maps?q=<?php echo $r_address;?>" target="_blank">
 									<div class="city-view">
+										<div class="overlay"></div>
 										<img src="<?php echo the_sub_field('office_background_image');?>" />
 										<div class="city-name"><?php echo the_sub_field('office_city_name');?>, <?php echo the_sub_field('office_state_letters');?></div>
 									</div>

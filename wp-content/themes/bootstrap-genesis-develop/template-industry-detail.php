@@ -6,7 +6,7 @@
 				<h1><?php echo get_field('industry_h1_title');?></h1>
 			</div>
 		</section>
-		<section class="industry-detail-benefit-values">
+		<section class="industry-detail-benefit-values" style="padding-bottom:80px;">
 			<div class="container">
 				<h2><?php the_field( 'benefit_title' ); ?></h2>
 				<p><?php the_field( 'benefit_description' ); ?></p>
@@ -28,7 +28,24 @@
 				<?php endif; ?>
 			</div>
 		</section>
-		<section class="industry-detail-logos">
+		<section class="solutions-accounting-systems">
+			<div class="container">
+				<h2><?php echo get_field('accounting_system_title');?></h2>
+				<?php if(have_rows('accounting_system_logos')): ?>
+					<ul>
+						<?php while(have_rows('accounting_system_logos')): the_row();?>	
+							<li>
+								<a href="<?php echo the_sub_field('logo_page_link');?>">
+									<img src="<?php echo the_sub_field('logo');?>" />
+								</a>
+							</li>
+						<?php endwhile; ?>
+					</ul>
+				<?php endif; ?>
+				<a class="btn" href="<?php echo get_page_link(6164);?>">View All </a>
+			</div>
+		</section>
+		<!--<section class="industry-detail-logos">
 			<div class="container">	
 				<h2><?php echo get_field('accounting_system_title');?></h2>
 				<?php if(have_rows('accounting_system_logos')): ?>
@@ -40,8 +57,8 @@
 				<?php endif; ?>
 				<a class="btn" href="<?php echo get_field('accounting_system_link_custom_url');?>"><?php echo get_field('accounting_system_link_text');?></a>
 			</div>
-		</section>
-		<section class="industry-detail-solutions solutions-streamline">
+		</section>-->
+		<section class="industry-detail-solutions solutions-streamline" style="padding-top:80px;">
 			<div class="container"> 
 				<?php get_template_part('partials/content', 'tabs-module'); ?>
 			</div>
