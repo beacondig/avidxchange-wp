@@ -59,7 +59,7 @@
 		<section class="lp-spotlight">
 			<div class="container">
 				<div class="fadein">
-					<h1>Customer Spotlight</h1>
+					<h1>Video Library</h1>
 					<div class="next"><img src="<?php echo get_stylesheet_directory_uri();?>/img/right-arrow.png" /></div>
 					<div class="prev"><img src="<?php echo get_stylesheet_directory_uri();?>/img/left-arrow.png" /></div>
 					<ul>
