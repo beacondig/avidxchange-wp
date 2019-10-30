@@ -1386,3 +1386,16 @@ footer{
   -webkit-box-shadow: 0px -1px 1px 0px rgba(0,0,0,0.1);
           box-shadow: 0px -1px 1px 0px rgba(0,0,0,0.1);
 }
+/**********  press single ***********/
+
+.press-template-default footer ul.menu {
+  width: 100%;
+}
+
+
+.press-template-default .event-newsletter {
+  float: none;
+  margin-left: 0vw !important;
+  left: 0;
+  width: 100vw;
+}
