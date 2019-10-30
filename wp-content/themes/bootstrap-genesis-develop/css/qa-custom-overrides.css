@@ -1399,3 +1399,10 @@ footer{
   left: 0;
   width: 100vw;
 }
+
+/**********  global ***********/
+a:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: 10px;
+}
