@@ -1399,7 +1399,10 @@ footer{
   left: 0;
   width: 100vw;
 }
-
+.headerbluebg h1 {
+  color: #fff;
+  font-size: 44px;
+}
 /**********  global ***********/
 a:focus {
   outline: thin dotted;
