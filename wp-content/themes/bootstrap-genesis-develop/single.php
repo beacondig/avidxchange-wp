@@ -61,7 +61,7 @@
             <div class="post-top-col2">
               <div class="post-top-author-detials">
                 <div class="post-top-author-img">
-                  <?php echo get_avatar(get_the_author_meta('ID'), 96); ?>
+                  <?php echo get_avatar(get_the_author_meta('ID'), 200); ?>
                 </div>
                 <div class="post-top-author-info">
                   <h4>By: <?php echo get_the_author_link(); ?></h4>
@@ -119,7 +119,7 @@
   <div class="author-content bottom-author-desc">
     <div class="container">
       <div class="col-md-4 col-sm-4">
-        <?php echo get_avatar(get_the_author_meta('ID'), 96); ?>
+        <?php echo get_avatar(get_the_author_meta('ID'), 200); ?>
       </div>
       <div class="col-md-8 col-sm-8">
         <h3><?php echo get_the_author_link(); ?></h3>
