@@ -4,17 +4,11 @@
 
 <!--- form modal start (Embedded field values - DJ style) --->
 <div class="modal fade" id="intModal" role="dialog">
-  <div class="modal-dialog modal-sm">
-  
-    <div class="modal-content">
-        <button type="button" class="closeblue" data-dismiss="modal">&times;</button>
-		<div class="modal-header"><h6>Speak to an AP Automation expert</h6>Fill out your information and we’ll connect you with one of our AP Automation experts.</div>
-      <div class="modal-body">
-        <div><div class="demoformblue demoformpopblue"><?php echo do_shortcode('[gravityform id=15 title=false description=false ajax=true tabindex=49]'); ?></div></div>
-      </div>
-    </div>
-    
-  </div>
+		<button type="button" class="closeblue" data-dismiss="modal">&times;</button>
+		<div class="opening-demo-form" style="opacity:1; visibility:visible;">
+			<div class="heading">Need an AP ally?</div>
+			<?php echo do_shortcode('[gravityform id=15 title=false description=false ajax=true]');?>
+		</div>
 </div>
 <!--- form modal end --->
 <!--- form modal start (Optimizely Style) --->

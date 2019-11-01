@@ -41,6 +41,21 @@ jQuery(function() {
 			}
 		});
 		
+		// Nav Demo Button Functionality
+		jQuery('header nav ul li.demo-btn a, header.site-header-new .mobile-nav a.demo-button, .header-scroll nav ul li.demo-btn a').on('click', function(e) {
+			e.preventDefault();
+			var link = jQuery(this).attr('href');
+			if(jQuery('header.site-header-new .mobile-nav a.demo-button').css('display') == 'none') {
+				window.location.href = link;
+			}else{
+				jQuery('.form-cover, .form-close, .opening-demo-form').addClass('open');
+			}
+		});
+		
+		jQuery('.form-cover, .form-close').on('click', function() {
+			jQuery('.form-cover, .form-close, .opening-demo-form').removeClass('open');
+		});
+		
 		// Sticky menu functionality
 		function moveScroller() {
 			var move = function() {

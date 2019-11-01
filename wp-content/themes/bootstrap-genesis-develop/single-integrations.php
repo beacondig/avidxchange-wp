@@ -105,17 +105,11 @@
 <?php endif; ?>
 <!--- form modal start (blue modal) --->
 <div class="modal fade" id="intModal" role="dialog">
-  <div class="modal-dialog modal-sm">
-  
-    <div class="modal-content">
-        <button type="button" class="closeblue" data-dismiss="modal">&times;</button>
-      <div class="modal-header"><h6 class="ab1">Speak to an AP Automation expert</h6><h6 class="ab2">Speak to an AvidXchange + <?php echo get_the_title(); ?> Integration expert</h6>Fill out your information and we’ll connect you with one of our AP Automation experts.</div>
-      <div class="modal-body">
-        <div><div class="demoformblue demoformpopblue"><?php echo do_shortcode('[gravityform id=8 title=false description=false ajax=true tabindex=49]'); ?></div></div>
-      </div>
-    </div>
-    
-  </div>
+		<button type="button" class="closeblue" data-dismiss="modal">&times;</button>
+		<div class="opening-demo-form" style="opacity:1; visibility:visible;">
+			<div class="heading">Need an AP ally?</div>
+			<?php echo do_shortcode('[gravityform id=8 title=false description=false ajax=true]');?>
+		</div>
 </div>
 <!--- form modal end --->
 
@@ -332,12 +326,25 @@
 						<h2 style="color:#FFF;"><?php the_field('cta_title'); ?></h2>
 						<p><?php the_field('cta_content'); ?></p>
 						<div class="twentyspacer"></div>
-						<a id="bottomCTA" title="<?php the_field('demo_button_text'); ?>" class="ctabutton mediumbutton" data-toggle="modal" data-target="#demoModal1"><?php the_field('demo_button_text'); ?></a>
+						<a id="bottomCTA" title="<?php the_field('demo_button_text'); ?>" class="ctabutton mediumbutton"><?php the_field('demo_button_text'); ?></a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+	<script>
+		jQuery(function() {
+			jQuery('#bottomCTA').on('click', function(e) {
+				e.preventDefault();
+				var link = jQuery(this).attr('href');
+				if(jQuery('header.site-header-new .mobile-nav a.demo-button').css('display') == 'none') {
+					window.location.href = link;
+				}else{
+					jQuery('.form-cover, .form-close, .opening-demo-form').addClass('open');
+				}
+			});
+		});
+	</script>
 <?php endif; ?>
 
 <?php if( get_field('layout') == 'No' or get_field('layout') == '' ): ?>

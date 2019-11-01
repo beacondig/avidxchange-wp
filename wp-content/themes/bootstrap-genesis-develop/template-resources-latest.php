@@ -1,4 +1,4 @@
-<?php /* Template Name: Resources 2 */ ?>
+<?php /* Template Name: Resources Latest */ ?>
 <?php get_header(); ?>
 <?php get_template_part('partials/content', 'inner-page-header');?>
 		<div class="filters">
@@ -7,7 +7,7 @@
 					<span>Filter by Type:</span>
 					<select>
 						<option data-filter=" ">Show All</option>
-						<option data-filter="webinars">Webinars</option>
+						<option data-filter="webinar">Webinars</option>
 						<option data-filter="product-info">Product Info</option>
 						<option data-filter="short-videos">Short Videos</option>
 						<option data-filter="ebook">eBooks</option>
@@ -137,7 +137,7 @@
 					<?php else : ?>
 						<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
 					<?php endif; ?>
-					<div class="no-posts" style="display:none;">No Resources Match the selected filters. Please try another option.</div>
+					<div class="no-posts" style="display:none;">No Resources match the selected filters. Please try another option.</div>
 				</div>
 				<div class="loadmore-wrap loadmore-header-style">
 					<a class="loadmore">VIEW MORE RESOURCES</a>

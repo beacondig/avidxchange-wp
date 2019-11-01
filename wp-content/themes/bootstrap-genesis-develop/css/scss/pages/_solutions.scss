@@ -133,6 +133,7 @@
 				.name, .company {
 					color:$grey;
 					font-size:24px;
+					line-height:28px;
 					text-transform:uppercase;
 					font-weight:$fwblack;
 				}
@@ -144,6 +145,8 @@
 				}
 				p {
 					padding-bottom:50px;
+					font-size:22px;
+					line-height:32px;
 				}
 			}
 			@include respond-at(899px) {
@@ -167,7 +170,7 @@
 }
 
 .solutions-accounting-systems {
-		background:$lightgrey;
+		background:#f6f6f6;
 		padding:80px 0;
 		text-align:center;
 		z-index:4;
@@ -213,7 +216,7 @@
 					max-width:100%;
 					width:auto;
 					height:auto;
-					max-height:100px;
+					max-height:100%;
 					top:50%;
 					transform:translateY(-50%);
 				}

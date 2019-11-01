@@ -2,7 +2,7 @@
 				<div class="container">
 					<?php
 						$specsf = array(
-							'menu'=> 'Footer Nav',
+							'menu'=> 'Footer Nav (2019 brand launch)',
 							'echo'=> true,
 							'fallback_cb'=> 'false',
 							'depth'=> 0
@@ -41,7 +41,7 @@
 							</li>
 						</ul>
 					</div>
-					<div class="policy"><a href="/policy">Privacy Policy</a> | <a href="/notice-to-customers/">Customer Notice</a> | NMSL ID #: 1494826</div>
+					<div class="policy"><a href="/privacy-policy">Privacy Policy</a> | <a href="/notice-to-customers/">Customer Notice</a> | NMSL ID #: 1494826</div>
 					<div class="copy">&copy; 2019 Avidxchange. All rights reserved.</div>
 				</div>
 			</footer>

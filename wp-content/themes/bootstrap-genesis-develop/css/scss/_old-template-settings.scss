@@ -30,6 +30,25 @@ $fwlight:300;
     @media only screen and (max-width: $media){ @content; }
 }	
 
+@mixin linearGradient($left, $right){
+		background: $left; /* Old browsers */
+		background: -moz-linear-gradient(left,  $left 0%, $right 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, right top, color-stop(0%,$left), color-stop(100%,$right)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(left,  $left 0%,$right 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(left,  $left 0%,$right 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(left,  $left 0%,$right 100%); /* IE10+ */
+		background: linear-gradient(to right,  $left 0%,$right 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$left', endColorstr='$right',GradientType=0 ); /* IE6-9 */
+}
+
+@mixin placeholder {
+  #{if(&, "&", "*")}::-webkit-input-placeholder {@content}
+  #{if(&, "&", "*")}:-moz-placeholder           {@content}
+ #{if(&, "&", "*")}::-moz-placeholder          {@content}
+  #{if(&, "&", "*")}:-ms-input-placeholder      {@content}  
+}
+
+
 %button-style {
 		text-align:center;
 		font-weight: 700;
@@ -86,6 +105,7 @@ $fwlight:300;
 		width:100%;
 		position:relative;
 		display:block;
+		overflow:visible;
 }
 
 .container, .b-container {

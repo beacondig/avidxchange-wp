@@ -15,10 +15,6 @@
 					<?php } ?>
 				</div>
 			</div>
-			<div class="opening-demo-form">
-				<div class="heading">Focus On What Matters</div>
-				<?php echo do_shortcode('[gravityform id=41 title=false description=false ajax=true]');?>
-			</div>
 		</section>
 		<section class="home-details">
 			<div class="b-container">

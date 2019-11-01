@@ -1,13 +1,13 @@
 jQuery(function() {
 		
 	// Animate in form
-	function displayForm() {
+	/*function displayForm() {
 		jQuery('.home-opening .opening-demo-form').addClass('visible');
 	};
 	
 	// Opening FadeIn
 	window.onload  = setTimeout(displayForm, 1500);
-	
+	*/
 	// Home Details click
 	jQuery('.home-details .selections ul li').on('click', function() {
 		var imgSrc = jQuery(this).data('img');

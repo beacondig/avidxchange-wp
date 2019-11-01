@@ -44,6 +44,9 @@
 					}
 					.industry {
 						height:100%;
+						.overlay {
+							@include linearGradient(#72bd42, $limegreen);
+						}
 					}
 				}
 			}
@@ -245,6 +248,11 @@
 	}
 	
 	.new-form-design {
+		.request-demo {
+			background: url(../img/demo_bg.png) no-repeat;
+			background-size: cover;
+			background-position: center;
+		}
 		ul li {
 			&.gfield.gfield_error {
 				background:transparent !important;

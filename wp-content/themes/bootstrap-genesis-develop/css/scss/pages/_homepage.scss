@@ -38,200 +38,6 @@
 				max-width:none;
 			}
 		}
-		.opening-demo-form {
-			position:absolute;
-			right:-100%;
-			bottom:0;
-			padding:75px 80px 225px;
-			box-sizing:border-box;
-			text-align:center;
-			z-index:3;
-			transition:right 800ms ease;
-			@include linearGradient($limegreen, #72bd42);
-			@include respond-at(1599px) {
-				padding:50px 50px 200px;
-			}
-			@include respond-at(999px) {
-				right:auto;
-				width:90%;
-				margin:0 auto;
-				display:none;
-				position:relative;
-				max-width:500px;
-				padding:50px 30px 150px;
-				@include respond-at(649px) {
-					width:100%;
-					max-width:100%;
-				}
-			}
-			&.visible {
-				right:0;
-			}
-			.heading {
-				font-family:$font-fam;
-				font-size:24px;
-				text-transform:uppercase;
-				color:#fff;
-				font-weight:$fwblack;
-				letter-spacing:1px;
-				padding-bottom:30px;
-			}
-			.gform_wrapper {
-				margin:0 !important;
-			}
-			form {
-				width:400px;
-				display:block;
-				margin:0 auto;
-				@include respond-at(1099px) {
-					width:90%;
-					max-width:350px;
-				}
-				ul li {
-					display:block;
-					margin-bottom:20px;
-					margin-top:0 !important;
-					padding-right:0 !important;
-					label {
-						display:none !important;
-					}
-					&.gfield.gfield_error {
-						background:transparent !important;
-						border:none !important;
-						padding-top:0 !important;
-						margin-top:0 !important;
-					}
-					.ginput_container {
-						margin-top:0 !important;
-					}
-					input {
-						background:#fff  !important;
-						border:none  !important;
-						height:43px !important;
-						box-sizing:border-box;
-						padding-left:10px  !important;
-						width:100% !important;
-						font-size:14px  !important;
-						line-height:36px;
-						margin:0 !important;
-						@include placeholder {
-							font-family:$font-fam;
-							font-weight:$fwregular;
-							color:$grey;
-							font-size:14px;
-							line-height:36px;
-						}
-					}
-					select {
-						background:#fff  !important;
-						width:100%  !important;
-						box-sizing:border-box;
-						padding-left:10px !important;
-						height:43px  !important;
-						border:none  !important;
-						-webkit-appearance: none;
-						-moz-appearance: none;
-						appearance: none;
-						position:relative  !important;
-						&::-ms-expand {
-							display:none;
-						}
-						@include respond-at(849px) {
-							display:block;
-							width:100%;
-							margin:30px auto 20px !important;
-						}
-						
-					}
-					.ginput_container.ginput_container_select {
-						position:relative;
-					}
-					.ginput_container.ginput_container_select:after {
-						content:'';
-						background-image:url('../img/select-arrow.png');
-						background-repeat:no-repeat;
-						background-size:27px;
-						background-position:center;
-						position:absolute;
-						right:8px;
-						top:0;
-						width:27px;
-						height:40px;
-						pointer-events:none;
-					}
-					&.gfield.gfield_error .ginput_container.ginput_container_select:after {
-						content:'';
-						background-image:url('../img/select-arrow.png');
-						background-repeat:no-repeat;
-						background-size:27px;
-						background-position:center;
-						position:absolute;
-						right:25px;
-						top:8px;
-						width:27px;
-						height:40px;
-						pointer-events:none;
-						@include respond-at(849px) {
-							top:38px;
-						}
-					}
-					.gform_wrapper li.hidden_label input {
-						margin:0 !important;
-					}
-				}
-				.gform_footer {
-					padding:0 !important;
-					margin:0 !important;
-					text-align:center !important;
-					input[type="submit"] {
-						text-align:center !important;
-						font-weight: 700 !important;
-						font-family:$font-fam !important;
-						color:#fff !important;
-						text-decoration:none !important;
-						cursor:pointer !important;
-						display:inline-block !important;
-						font-size:17px !important;
-						line-height:42px !important;
-						height:42px !important;
-						position:relative !important;
-						text-transform:uppercase !important;
-						padding:0 20px !important;
-						border:2px solid $brightblue !important;
-						border-radius:6px !important;
-						background:$brightblue !important;
-						width:auto !important;
-						transition:background 300ms linear !important;
-						z-index:3 !important;
-						letter-spacing:1px !important;
-						&:hover {
-							background:#fff !important;
-							color:$brightblue !important;
-						}
-						@media all and (-ms-high-contrast:none), (-ms-high-contrast:active) {
-							line-height:50px;
-						}
-					}
-				}
-				
-			}
-			.gform_wrapper div.validation_error {
-				display:none;
-			}
-			.gform_wrapper .validation_message {
-				color:#C32727 !important;
-			}
-			.gform_wrapper li.gfield.gfield_error.gfield_contains_required div.gfield_description {
-				text-align:left !important;
-				padding-top:5px !important;
-			}
-			img.gform_ajax_spinner {
-				display: none !important;
-			}
-			.gform_wrapper ul.gform_fields li.gfield.gfield_error+li.gfield.gfield_error {
-				margin-top:0 !important;
-			}
-		}
 		.opening-content {
 			position:relative;
 			z-index:2;
@@ -250,24 +56,10 @@
 			.form-cut {
 				padding-left:10.5%;
 				box-sizing:border-box;
-				width:calc(100% - 525px);
-				@include respond-at(1799px) {
-					padding-left:8.5%;
-				}
-				@include respond-at(1699px) {
-					padding-left:5.5%;
-				}
-				@include respond-at(1599px) {
-					padding-left:4.5%;
-				}
-				@include respond-at(1099px) {
-					width:calc(100% - 475px);
-				}
-				@include respond-at(999px) {
-					width:100%;
-					padding:0;
-					margin:0 auto 30px;
-				}
+				width:100%;
+				padding:0;
+				margin:0 auto 30px;
+				text-align:center;
 				h1 {
 					font-size:54px;
 					font-weight:$fwbold;
@@ -299,15 +91,14 @@
 					padding-bottom:20px;
 					width:75%;
 					max-width:850px;
+					margin:0 auto;
+					display:block;
 					@include respond-at(999px) {
 						width:100%;
 					}
 				}
 				a.talk {
-					display:none;
-					@include respond-at(999px) {
-						display:inline-block;
-					}
+					display:inline-block;
 				}
 				a.second {
 					background:transparent;
@@ -785,7 +576,7 @@
 				height:200px;
 			}
 			&:hover {
-				@include linearGradient($green, $limegreen);
+				@include linearGradient(#72bd42, $limegreen);
 				img {
 					opacity:0.3;
 				}
