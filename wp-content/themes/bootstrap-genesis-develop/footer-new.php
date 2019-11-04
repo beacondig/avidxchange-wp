@@ -42,7 +42,7 @@
 						</ul>
 					</div>
 					<div class="policy"><a href="/privacy-policy">Privacy Policy</a> | <a href="/notice-to-customers/">Customer Notice</a> | NMSL ID #: 1494826</div>
-					<div class="copy">&copy; 2019 Avidxchange. All rights reserved.</div>
+					<div class="copy">&copy; 2019 AvidXchange. All rights reserved.</div>
 				</div>
 			</footer>
 		</div> <!-- End of Wrapper Div -->

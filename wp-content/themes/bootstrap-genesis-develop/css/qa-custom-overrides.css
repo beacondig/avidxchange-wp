@@ -1413,3 +1413,18 @@ a:focus {
 .integrations-template-default .headerbluebg p{
   color: #fff
 }
+.dl-form{
+  display: flex;
+  padding: 20px;
+  align-items: center;
+}
+.dl-form div{
+  margin-left: auto
+}
+.dl-form .newsletterForm2{
+  padding-top: 0px !important
+}
+.dl-form .ginput_container{
+  width: 100% !important;
+  margin-left: 0 !important;
+}
