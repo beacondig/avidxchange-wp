@@ -40,9 +40,9 @@ jQuery(function() {
 			location.href = this.href;
 		}
 	});
-	
+	jQuery('.page-template-page-products #DemoBtn').attr("href", "/demo");
 	// Nav Demo Button Functionality
-		jQuery('header nav ul li.demo-btn a, header.site-header-new .mobile-nav a.demo-button, .header-scroll nav ul li.demo-btn a').on('click', function(e) {
+		jQuery('.page-template-page-products #DemoBtn, header nav ul li.demo-btn a, header.site-header-new .mobile-nav a.demo-button, .header-scroll nav ul li.demo-btn a').on('click', function(e) {
 			e.preventDefault();
 			var link = jQuery(this).attr('href');
 			if(jQuery('header.site-header-new .mobile-nav a.demo-button').css('display') == 'none') {
