@@ -40,9 +40,9 @@ jQuery(function() {
 			location.href = this.href;
 		}
 	});
-	jQuery('.page-template-page-products #DemoBtn').attr("href", "/demo");
+	jQuery('.page-template-page-products #DemoBtn, .page-template-page-products #ctaDemoBtn').attr("href", "/demo");
 	// Nav Demo Button Functionality
-		jQuery('.page-template-page-products #DemoBtn, header nav ul li.demo-btn a, header.site-header-new .mobile-nav a.demo-button, .header-scroll nav ul li.demo-btn a').on('click', function(e) {
+		jQuery('.page-template-page-products #ctaDemoBtn, .page-template-page-products #DemoBtn, header nav ul li.demo-btn a, header.site-header-new .mobile-nav a.demo-button, .header-scroll nav ul li.demo-btn a').on('click', function(e) {
 			e.preventDefault();
 			var link = jQuery(this).attr('href');
 			if(jQuery('header.site-header-new .mobile-nav a.demo-button').css('display') == 'none') {
@@ -55,7 +55,7 @@ jQuery(function() {
 		jQuery('.form-cover, .form-close').on('click', function() {
 			jQuery('.form-cover, .form-close, .opening-demo-form').removeClass('open');
 		});
-	
+		
 	// Sticky menu functionality
 	function moveScroller() {
 		var move = function() {
